@@ -1,0 +1,21 @@
+Ana
+Consultar/agregar/eliminar (todo) paciente
+Consultar/agregar antecedentes
+
+Pablo
+Consultar/agregar/eliminar plan de ejercicios
+Consultar/agregar/eliminar/modificar ejercicio
+
+Daniel
+Consultar/agregar/eliminar/modificar cita
+Consultar/agregar plan de tratamiento
+
+Diego
+Consultar/agregar/modificar técnica
+Consultar/agregar/modificar materiales
+
+Login
+Menú principal
+
+Corregir de las tablas:
+Check duración de la cita
