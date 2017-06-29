@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccesoBaseDatosDiego.cs" />
+    <Compile Include="AccesoBaseDatos.cs" />
     <Compile Include="AgregarMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
