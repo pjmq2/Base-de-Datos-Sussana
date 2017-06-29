@@ -46,22 +46,88 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoBaseDatosDiego.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="AgregarMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AgregarMaterial.Designer.cs">
+      <DependentUpon>AgregarMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarTecnica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarTecnica.Designer.cs">
+      <DependentUpon>AgregarTecnica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarMateriales.Designer.cs">
+      <DependentUpon>ConsultarMateriales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarTecnicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarTecnicas.Designer.cs">
+      <DependentUpon>ConsultarTecnicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarMateriales.Designer.cs">
+      <DependentUpon>EliminarMateriales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarTecnicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarTecnicas.Designer.cs">
+      <DependentUpon>EliminarTecnicas.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarMaterial.Designer.cs">
+      <DependentUpon>ModificarMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarTecnica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarTecnica.Designer.cs">
+      <DependentUpon>ModificarTecnica.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AgregarMaterial.resx">
+      <DependentUpon>AgregarMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarTecnica.resx">
+      <DependentUpon>AgregarTecnica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarMateriales.resx">
+      <DependentUpon>ConsultarMateriales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarTecnicas.resx">
+      <DependentUpon>ConsultarTecnicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarMateriales.resx">
+      <DependentUpon>EliminarMateriales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarTecnicas.resx">
+      <DependentUpon>EliminarTecnicas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarMaterial.resx">
+      <DependentUpon>ModificarMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarTecnica.resx">
+      <DependentUpon>ModificarTecnica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,6 +1,6 @@
 ﻿namespace BD_Grupo3_VS
 {
-    partial class Form1
+    partial class ModificarMaterial
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // ModificarMateriales
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(584, 461);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Name = "ModificarMateriales";
+            this.Text = "Modificar material";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-
