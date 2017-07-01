@@ -83,9 +83,9 @@
             this.LBL_Observaciones.AutoSize = true;
             this.LBL_Observaciones.Location = new System.Drawing.Point(12, 217);
             this.LBL_Observaciones.Name = "LBL_Observaciones";
-            this.LBL_Observaciones.Size = new System.Drawing.Size(78, 13);
+            this.LBL_Observaciones.Size = new System.Drawing.Size(81, 13);
             this.LBL_Observaciones.TabIndex = 4;
-            this.LBL_Observaciones.Text = "Observaciones";
+            this.LBL_Observaciones.Text = "Observaciones:";
             // 
             // TXT_Padecimiento
             // 
@@ -100,9 +100,9 @@
             this.LBL_Padecimiento.AutoSize = true;
             this.LBL_Padecimiento.Location = new System.Drawing.Point(12, 145);
             this.LBL_Padecimiento.Name = "LBL_Padecimiento";
-            this.LBL_Padecimiento.Size = new System.Drawing.Size(71, 13);
+            this.LBL_Padecimiento.Size = new System.Drawing.Size(74, 13);
             this.LBL_Padecimiento.TabIndex = 2;
-            this.LBL_Padecimiento.Text = "Padecimiento";
+            this.LBL_Padecimiento.Text = "Padecimiento:";
             // 
             // TXT_Cedula
             // 
@@ -117,9 +117,9 @@
             this.LBL_Cedula.AutoSize = true;
             this.LBL_Cedula.Location = new System.Drawing.Point(12, 65);
             this.LBL_Cedula.Name = "LBL_Cedula";
-            this.LBL_Cedula.Size = new System.Drawing.Size(40, 13);
+            this.LBL_Cedula.Size = new System.Drawing.Size(43, 13);
             this.LBL_Cedula.TabIndex = 0;
-            this.LBL_Cedula.Text = "Cédula";
+            this.LBL_Cedula.Text = "Cédula:";
             // 
             // ToolTip1
             // 
@@ -128,7 +128,7 @@
             // LINK_Menu
             // 
             this.LINK_Menu.AutoSize = true;
-            this.LINK_Menu.Location = new System.Drawing.Point(614, 15);
+            this.LINK_Menu.Location = new System.Drawing.Point(614, 28);
             this.LINK_Menu.Name = "LINK_Menu";
             this.LINK_Menu.Size = new System.Drawing.Size(89, 13);
             this.LINK_Menu.TabIndex = 1;
@@ -138,12 +138,13 @@
             // LINK_ListaTrata
             // 
             this.LINK_ListaTrata.AutoSize = true;
-            this.LINK_ListaTrata.Location = new System.Drawing.Point(551, 48);
+            this.LINK_ListaTrata.Location = new System.Drawing.Point(550, 60);
             this.LINK_ListaTrata.Name = "LINK_ListaTrata";
             this.LINK_ListaTrata.Size = new System.Drawing.Size(153, 13);
             this.LINK_ListaTrata.TabIndex = 2;
             this.LINK_ListaTrata.TabStop = true;
             this.LINK_ListaTrata.Text = "Lista de Planes de Tratamiento";
+            this.LINK_ListaTrata.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_ListaTrata_LinkClicked);
             // 
             // LBL_Titulo
             // 
@@ -165,8 +166,10 @@
             this.Controls.Add(this.LINK_ListaTrata);
             this.Controls.Add(this.LINK_Menu);
             this.Controls.Add(this.GB_PlanTrata);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AgregarPlanTratamiento";
             this.Text = "AgregarPlanTratamiento";
+            this.Load += new System.EventHandler(this.AgregarPlanTratamiento_Load);
             this.GB_PlanTrata.ResumeLayout(false);
             this.GB_PlanTrata.PerformLayout();
             this.ResumeLayout(false);

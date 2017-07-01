@@ -52,11 +52,20 @@
     <Compile Include="AgregarPlanTratamiento.Designer.cs">
       <DependentUpon>AgregarPlanTratamiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarPlanTratamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarPlanTratamiento.Designer.cs">
+      <DependentUpon>ConsultarPlanTratamiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlanTratamiento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AgregarPlanTratamiento.resx">
       <DependentUpon>AgregarPlanTratamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarPlanTratamiento.resx">
+      <DependentUpon>ConsultarPlanTratamiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -49,5 +49,17 @@ namespace CitaPlanTratamiento
                 }
             }
         }
+
+        private void AgregarPlanTratamiento_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LINK_ListaTrata_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ConsultarPlanTratamiento consulta = new ConsultarPlanTratamiento();
+            consulta.Show();
+            this.Hide();
+        }
     }
 }

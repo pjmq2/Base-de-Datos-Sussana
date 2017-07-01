@@ -7,3 +7,4 @@ c:\users\daniel\documents\visual studio 2017\Projects\CitaPlanTratamiento\CitaPl
 c:\users\daniel\documents\visual studio 2017\Projects\CitaPlanTratamiento\CitaPlanTratamiento\obj\Debug\CitaPlanTratamiento.csproj.GenerateResource.Cache
 c:\users\daniel\documents\visual studio 2017\Projects\CitaPlanTratamiento\CitaPlanTratamiento\obj\Debug\CitaPlanTratamiento.exe
 c:\users\daniel\documents\visual studio 2017\Projects\CitaPlanTratamiento\CitaPlanTratamiento\obj\Debug\CitaPlanTratamiento.pdb
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\CitaPlanTratamiento\CitaPlanTratamiento\obj\Debug\CitaPlanTratamiento.ConsultarPlanTratamiento.resources
