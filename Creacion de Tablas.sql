@@ -52,8 +52,8 @@ create table CITA(
 	Fecha		datetime	not null,
 	Precio		int			not null,
 	Descripcion	varchar(500),
-	Duracion	float
-		CHECK (Duracion >= 0 AND Duracion <= 4),
+	Duracion	Decimal(4, 2),
+		CHECK (Duracion >= 1.0 AND Duracion <= 4.0),
 	Lugar		varchar(50),
 	Estado_Paciente varchar(50),
 	Constraint PKCita primary key (CedPaciente, Padec_Act, Fecha),
@@ -200,18 +200,18 @@ create table REFERENCIA(
 
 --Borrar TODO
 
-Drop table PACIENTE
-Drop table CIRUGIAS
-Drop table PLAN_TRATAMIENTO
-Drop table PLAN_EJERCICIOS
-Drop table CITA
-Drop table ANT_PAT
-Drop table TIPO_ANT
-Drop table DATOS_CLINICOS
-Drop table TECNICAS
-Drop table SE_REALIZA
-Drop table MATERIAL
-Drop table REQUIERE_DE
-Drop table TAREAS_PLAN_EJERCICIOS
-Drop table EJERCICIO
-Drop table CONSTA_DE
+drop table CONSTA_DE
+drop table EJERCICIO
+drop table TAREAS_PLAN_EJERCICIOS
+drop table REQUIERE_DE
+drop table MATERIAL
+drop table SE_REALIZAN
+drop table TECNICAS
+drop table DATOS_CLINICOS
+drop table TIPO_ANT
+drop table ANT_PAT
+drop table CITA
+drop table PLAN_EJERCICIOS
+drop table PLAN_TRATAMIENTO
+drop table CIRUGIAS
+drop table PACIENTE
