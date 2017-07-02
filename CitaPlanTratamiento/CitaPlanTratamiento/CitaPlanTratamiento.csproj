@@ -46,12 +46,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoBaseDatos.cs" />
+    <Compile Include="AgregarCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarCita.Designer.cs">
+      <DependentUpon>AgregarCita.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarPlanTratamiento.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AgregarPlanTratamiento.Designer.cs">
       <DependentUpon>AgregarPlanTratamiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cita.cs" />
     <Compile Include="ConsultarPlanTratamiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +68,9 @@
     <Compile Include="PlanTratamiento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AgregarCita.resx">
+      <DependentUpon>AgregarCita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarPlanTratamiento.resx">
       <DependentUpon>AgregarPlanTratamiento.cs</DependentUpon>
     </EmbeddedResource>

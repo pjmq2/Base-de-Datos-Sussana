@@ -16,7 +16,7 @@ namespace CitaPlanTratamiento
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AgregarPlanTratamiento());
+            Application.Run(new AgregarCita());
         }
     }
 }
