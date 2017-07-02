@@ -1,4 +1,4 @@
-﻿namespace CitaPlanTratamiento
+﻿namespace BD_Grupo3_VS
 {
     partial class AgregarCita
     {
@@ -296,6 +296,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AgregarCita";
             this.Text = "AgregarCita";
+            this.Load += new System.EventHandler(this.AgregarCita_Load);
             this.GB_AgregarCita.ResumeLayout(false);
             this.GB_AgregarCita.PerformLayout();
             this.ResumeLayout(false);

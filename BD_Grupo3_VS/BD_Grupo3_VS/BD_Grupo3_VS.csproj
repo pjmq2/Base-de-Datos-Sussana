@@ -46,11 +46,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoBaseDatos.cs" />
+    <Compile Include="AgregarCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarCita.Designer.cs">
+      <DependentUpon>AgregarCita.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AgregarMaterial.Designer.cs">
       <DependentUpon>AgregarMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarPlanTratamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarPlanTratamiento.Designer.cs">
+      <DependentUpon>AgregarPlanTratamiento.cs</DependentUpon>
     </Compile>
     <Compile Include="AgregarTecnica.cs">
       <SubType>Form</SubType>
@@ -58,11 +70,18 @@
     <Compile Include="AgregarTecnica.Designer.cs">
       <DependentUpon>AgregarTecnica.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cita.cs" />
     <Compile Include="ConsultarMateriales.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConsultarMateriales.Designer.cs">
       <DependentUpon>ConsultarMateriales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarPlanTratamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarPlanTratamiento.Designer.cs">
+      <DependentUpon>ConsultarPlanTratamiento.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultarTecnicas.cs">
       <SubType>Form</SubType>
@@ -100,16 +119,26 @@
     <Compile Include="ModificarTecnica.Designer.cs">
       <DependentUpon>ModificarTecnica.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlanTratamiento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AgregarCita.resx">
+      <DependentUpon>AgregarCita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarMaterial.resx">
       <DependentUpon>AgregarMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarPlanTratamiento.resx">
+      <DependentUpon>AgregarPlanTratamiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarTecnica.resx">
       <DependentUpon>AgregarTecnica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarMateriales.resx">
       <DependentUpon>ConsultarMateriales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarPlanTratamiento.resx">
+      <DependentUpon>ConsultarPlanTratamiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarTecnicas.resx">
       <DependentUpon>ConsultarTecnicas.cs</DependentUpon>

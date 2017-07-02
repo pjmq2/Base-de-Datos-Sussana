@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CitaPlanTratamiento
+namespace BD_Grupo3_VS
 {
     public partial class AgregarCita : Form
     {
@@ -56,6 +56,11 @@ namespace CitaPlanTratamiento
                         "algún plan de tratamiento asociado al paciente", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void AgregarCita_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

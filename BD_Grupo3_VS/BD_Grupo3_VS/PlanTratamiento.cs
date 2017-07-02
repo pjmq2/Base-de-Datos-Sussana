@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CitaPlanTratamiento
+namespace BD_Grupo3_VS
 {
 
 

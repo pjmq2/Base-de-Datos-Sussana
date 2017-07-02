@@ -15,3 +15,23 @@ D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.EliminarTecnicas.resources
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ModificarMaterial.resources
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ModificarTecnica.resources
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarCita.resources
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarMaterial.resources
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarPlanTratamiento.resources
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarTecnica.resources
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarMateriales.resources
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarPlanTratamiento.resources
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarTecnicas.resources
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.EliminarMateriales.resources
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.EliminarTecnicas.resources
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.Login.resources
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ModificarMaterial.resources
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ModificarTecnica.resources
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.Properties.Resources.resources
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.csproj.GenerateResource.Cache
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.exe
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.pdb
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\bin\Debug\BD_Grupo3_VS.exe.config
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\bin\Debug\BD_Grupo3_VS.exe
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\bin\Debug\BD_Grupo3_VS.pdb

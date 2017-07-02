@@ -16,5 +16,10 @@ namespace BD_Grupo3_VS
         {
             InitializeComponent();
         }
+
+        private void AgregarMaterial_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

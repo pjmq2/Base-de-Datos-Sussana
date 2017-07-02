@@ -1,4 +1,4 @@
-﻿namespace CitaPlanTratamiento
+﻿namespace BD_Grupo3_VS
 {
     partial class AgregarPlanTratamiento
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CitaPlanTratamiento
+namespace BD_Grupo3_VS
 {
     public partial class ConsultarPlanTratamiento : Form
 
