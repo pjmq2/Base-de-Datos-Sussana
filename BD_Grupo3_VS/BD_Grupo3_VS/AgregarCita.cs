@@ -27,7 +27,7 @@ namespace CitaPlanTratamiento
         private void BTN_Agregar_Click(object sender, EventArgs e)
         {
             int precioAg = Convert.ToInt32(TXT_Precio.Text);
-            float duracionAg = float.Parse(TXT_Duracion.Text);
+            decimal duracionAg = decimal.Parse(TXT_Duracion.Text);
 
             int result = cita.agregarCita(TXT_Cedula.Text, TXT_Padecimiento.Text, dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm"), precioAg, TXT_Descripcion.Text,
              duracionAg, CB_Lugar.Text,TXT_Estado.Text);

@@ -18,7 +18,7 @@ namespace CitaPlanTratamiento
         }
 
         public int agregarCita(string cedula, string padecimiento, string fechaHora, int precio, string descripcion,
-            float duracion, string lugar, string estado)
+            decimal duracion, string lugar, string estado)
         {
             String insertar = "INSERT into CITA (CedPaciente,Padec_Act,Fecha,Precio,Descripcion,Duracion,Lugar,Estado_Paciente)" +
                 " VALUES(" +cedula+ ",'" +padecimiento+ "','" +fechaHora+ "','" + precio + "','" + descripcion + "','" + duracion + "','" + lugar + "','" + estado + "')";

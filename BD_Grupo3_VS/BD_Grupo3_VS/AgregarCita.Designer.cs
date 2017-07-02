@@ -35,8 +35,6 @@
             this.LINK_Modificar = new System.Windows.Forms.LinkLabel();
             this.LINK_Eliminar = new System.Windows.Forms.LinkLabel();
             this.GB_AgregarCita = new System.Windows.Forms.GroupBox();
-            this.TXT_Especfique = new System.Windows.Forms.TextBox();
-            this.LBL_Especifique = new System.Windows.Forms.Label();
             this.CB_Lugar = new System.Windows.Forms.ComboBox();
             this.BTN_Agregar = new System.Windows.Forms.Button();
             this.TXT_Estado = new System.Windows.Forms.TextBox();
@@ -112,8 +110,6 @@
             // 
             // GB_AgregarCita
             // 
-            this.GB_AgregarCita.Controls.Add(this.TXT_Especfique);
-            this.GB_AgregarCita.Controls.Add(this.LBL_Especifique);
             this.GB_AgregarCita.Controls.Add(this.CB_Lugar);
             this.GB_AgregarCita.Controls.Add(this.BTN_Agregar);
             this.GB_AgregarCita.Controls.Add(this.TXT_Estado);
@@ -137,25 +133,6 @@
             this.GB_AgregarCita.TabIndex = 5;
             this.GB_AgregarCita.TabStop = false;
             this.GB_AgregarCita.Text = "Agregar una Cita";
-            // 
-            // TXT_Especfique
-            // 
-            this.TXT_Especfique.Location = new System.Drawing.Point(555, 228);
-            this.TXT_Especfique.Name = "TXT_Especfique";
-            this.TXT_Especfique.Size = new System.Drawing.Size(142, 20);
-            this.TXT_Especfique.TabIndex = 19;
-            this.TXT_Especfique.Visible = false;
-            // 
-            // LBL_Especifique
-            // 
-            this.LBL_Especifique.AutoSize = true;
-            this.LBL_Especifique.Location = new System.Drawing.Point(443, 231);
-            this.LBL_Especifique.Name = "LBL_Especifique";
-            this.LBL_Especifique.Size = new System.Drawing.Size(65, 13);
-            this.LBL_Especifique.TabIndex = 18;
-            this.LBL_Especifique.Text = "Especifique:";
-            this.LBL_Especifique.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.LBL_Especifique.Visible = false;
             // 
             // CB_Lugar
             // 
@@ -351,8 +328,6 @@
         private System.Windows.Forms.Label LBL_Estado;
         private System.Windows.Forms.Label LBL_Lugar;
         private System.Windows.Forms.Button BTN_Agregar;
-        private System.Windows.Forms.TextBox TXT_Especfique;
-        private System.Windows.Forms.Label LBL_Especifique;
         private System.Windows.Forms.ComboBox CB_Lugar;
     }
 }
