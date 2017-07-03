@@ -1,6 +1,15 @@
 Use DB_GRUPO3
 
---Tabla Estudiante
+--Tabla Usuario
+
+CREATE TABLE Usuario(
+	cedulaUsuario	char(9)	NOT NULL,
+	nombreUsuario	varchar(40)	NOT NULL,
+	passwordHash	binary(64)	NOT NULL,
+	salt UNIQUEIDENTIFIER
+)
+
+--Tabla Paciente
 create table PACIENTE(
 	Cedula		char(9)			not null,
 	NombreP		varchar(20)		not null,

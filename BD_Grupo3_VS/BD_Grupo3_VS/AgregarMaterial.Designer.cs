@@ -112,7 +112,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AgregarMaterial";
             this.Text = "Agregar material";
-            this.Load += new System.EventHandler(this.AgregarMaterial_Load);
             this.gb_informacionDelMaterial.ResumeLayout(false);
             this.gb_informacionDelMaterial.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_precio)).EndInit();

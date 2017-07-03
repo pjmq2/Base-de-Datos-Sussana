@@ -16,7 +16,7 @@ namespace BD_Grupo3_VS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AgregarCita());
+            Application.Run(new Login());
         }
     }
 }
