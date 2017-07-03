@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 namespace BD_Grupo3_VS
 {
 
-
     class PlanTratamiento
     {
         AccesoBaseDatos bd;
@@ -60,7 +59,5 @@ namespace BD_Grupo3_VS
             }
             return tabla;
         }
-
-        
     }
 }
