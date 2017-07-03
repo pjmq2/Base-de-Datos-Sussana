@@ -46,6 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoBaseDatos.cs" />
+    <Compile Include="AgregarAntecedentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarAntecedentes.Designer.cs">
+      <DependentUpon>AgregarAntecedentes.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarCita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="AgregarMaterial.Designer.cs">
       <DependentUpon>AgregarMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarPaciente.Designer.cs">
+      <DependentUpon>AgregarPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="AgregarPlanTratamiento.cs">
       <SubType>Form</SubType>
@@ -70,12 +82,25 @@
     <Compile Include="AgregarTecnica.Designer.cs">
       <DependentUpon>AgregarTecnica.cs</DependentUpon>
     </Compile>
+    <Compile Include="Antecedentes.cs" />
     <Compile Include="Cita.cs" />
+    <Compile Include="ConsultarAntecedente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarAntecedente.Designer.cs">
+      <DependentUpon>ConsultarAntecedente.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultarMateriales.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConsultarMateriales.Designer.cs">
       <DependentUpon>ConsultarMateriales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarPaciente.Designer.cs">
+      <DependentUpon>ConsultarPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultarPlanTratamiento.cs">
       <SubType>Form</SubType>
@@ -120,15 +145,22 @@
     <Compile Include="ModificarTecnica.Designer.cs">
       <DependentUpon>ModificarTecnica.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paciente.cs" />
     <Compile Include="PlanTratamiento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tecnica.cs" />
+    <EmbeddedResource Include="AgregarAntecedentes.resx">
+      <DependentUpon>AgregarAntecedentes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarCita.resx">
       <DependentUpon>AgregarCita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarMaterial.resx">
       <DependentUpon>AgregarMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarPaciente.resx">
+      <DependentUpon>AgregarPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarPlanTratamiento.resx">
       <DependentUpon>AgregarPlanTratamiento.cs</DependentUpon>
@@ -136,8 +168,14 @@
     <EmbeddedResource Include="AgregarTecnica.resx">
       <DependentUpon>AgregarTecnica.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarAntecedente.resx">
+      <DependentUpon>ConsultarAntecedente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarMateriales.resx">
       <DependentUpon>ConsultarMateriales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarPaciente.resx">
+      <DependentUpon>ConsultarPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarPlanTratamiento.resx">
       <DependentUpon>ConsultarPlanTratamiento.cs</DependentUpon>
