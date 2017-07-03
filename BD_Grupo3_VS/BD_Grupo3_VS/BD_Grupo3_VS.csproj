@@ -120,6 +120,12 @@
     <Compile Include="EliminarMateriales.Designer.cs">
       <DependentUpon>EliminarMateriales.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarPaciente.Designer.cs">
+      <DependentUpon>EliminarPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="EliminarTecnicas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarMateriales.resx">
       <DependentUpon>EliminarMateriales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarPaciente.resx">
+      <DependentUpon>EliminarPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarTecnicas.resx">
       <DependentUpon>EliminarTecnicas.cs</DependentUpon>

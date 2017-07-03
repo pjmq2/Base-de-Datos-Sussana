@@ -32,3 +32,15 @@ AS
 DELETE FROM CITA
 WHERE CedPaciente = @cedula
 
+GO
+CREATE PROCEDURE eliminarPaciente 
+@nombre varchar(20)
+AS
+select distinct Paciente.Cedula
+into #temp
+from Paciente
+WHERE Paciente.NombreP = @nombre
+delete Paciente
+where Cedula in (select * from #temp)
+drop table #temp
+
