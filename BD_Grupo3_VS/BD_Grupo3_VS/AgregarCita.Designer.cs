@@ -87,6 +87,7 @@
             this.LINK_ConsultarCita.TabIndex = 2;
             this.LINK_ConsultarCita.TabStop = true;
             this.LINK_ConsultarCita.Text = "Consultar Citas";
+            this.LINK_ConsultarCita.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_ConsultarCita_LinkClicked);
             // 
             // LINK_Modificar
             // 
@@ -107,6 +108,7 @@
             this.LINK_Eliminar.TabIndex = 4;
             this.LINK_Eliminar.TabStop = true;
             this.LINK_Eliminar.Text = "Eliminar Cita";
+            this.LINK_Eliminar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_Eliminar_LinkClicked);
             // 
             // GB_AgregarCita
             // 

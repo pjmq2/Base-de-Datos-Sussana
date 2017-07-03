@@ -20,3 +20,15 @@ BEGIN CATCH
 	SET @estado=ERROR_MESSAGE()
 END CATCH
 END
+
+CREATE PROCEDURE consultaTodasCitas
+AS
+SELECT C.CedPaciente,A.NombreP,A.Apellido1,A.Apellido2,C.Fecha,C.Precio,C.Descripcion,C.Duracion,C.Lugar,C.Estado_Paciente
+FROM CITA C JOIN PLAN_TRATAMIENTO P ON P.CedPaciente = C.CedPaciente and P.Pad_Actual = C.Padec_Act join Paciente A ON A.Cedula = P.CedPaciente
+
+CREATE PROCEDURE eliminarCita
+@cedula char(9)
+AS
+DELETE FROM CITA
+WHERE CedPaciente = @cedula
+

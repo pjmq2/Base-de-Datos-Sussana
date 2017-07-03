@@ -62,5 +62,19 @@ namespace BD_Grupo3_VS
         {
 
         }
+
+        private void LINK_ConsultarCita_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ConsultarCitas consulta = new ConsultarCitas();
+            consulta.Show();
+            this.Hide();
+        }
+
+        private void LINK_Eliminar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            EliminarCita elimina = new EliminarCita();
+            elimina.Show();
+            this.Hide();
+        }
     }
 }
