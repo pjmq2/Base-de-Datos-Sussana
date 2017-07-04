@@ -36,6 +36,12 @@ namespace BD_Grupo3_VS
             }
 
             return tabla;
-        } 
+        }
+
+        public int eliminarMaterial(string nombre)
+        {
+            return bd.eliminarMaterial(nombre);
+        }
+
     }
 }

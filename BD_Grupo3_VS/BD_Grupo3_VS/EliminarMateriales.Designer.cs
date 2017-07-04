@@ -33,9 +33,9 @@
             this.lbl_borradoDeMateriales = new System.Windows.Forms.Label();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_buscar = new System.Windows.Forms.Button();
-            this.txt_nombre = new System.Windows.Forms.TextBox();
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.dgv_materiales = new System.Windows.Forms.DataGridView();
+            this.cmb_nombre = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_materiales)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,6 +48,7 @@
             this.lnk_agregarMaterial.TabIndex = 16;
             this.lnk_agregarMaterial.TabStop = true;
             this.lnk_agregarMaterial.Text = "Agregar material";
+            this.lnk_agregarMaterial.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_agregarMaterial_LinkClicked);
             // 
             // lnk_menuPrincipal
             // 
@@ -79,6 +80,7 @@
             this.btn_eliminar.TabIndex = 13;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_buscar
             // 
@@ -88,13 +90,7 @@
             this.btn_buscar.TabIndex = 12;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = true;
-            // 
-            // txt_nombre
-            // 
-            this.txt_nombre.Location = new System.Drawing.Point(65, 59);
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(250, 20);
-            this.txt_nombre.TabIndex = 11;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // lbl_nombre
             // 
@@ -114,22 +110,31 @@
             this.dgv_materiales.Size = new System.Drawing.Size(660, 364);
             this.dgv_materiales.TabIndex = 9;
             // 
+            // cmb_nombre
+            // 
+            this.cmb_nombre.FormattingEnabled = true;
+            this.cmb_nombre.Location = new System.Drawing.Point(65, 59);
+            this.cmb_nombre.Name = "cmb_nombre";
+            this.cmb_nombre.Size = new System.Drawing.Size(250, 21);
+            this.cmb_nombre.TabIndex = 17;
+            // 
             // EliminarMateriales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.cmb_nombre);
             this.Controls.Add(this.lnk_agregarMaterial);
             this.Controls.Add(this.lnk_menuPrincipal);
             this.Controls.Add(this.lbl_borradoDeMateriales);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_buscar);
-            this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.lbl_nombre);
             this.Controls.Add(this.dgv_materiales);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EliminarMateriales";
             this.Text = "Eliminar materiales";
+            this.Load += new System.EventHandler(this.EliminarMateriales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_materiales)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -143,8 +148,8 @@
         private System.Windows.Forms.Label lbl_borradoDeMateriales;
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Button btn_buscar;
-        private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.DataGridView dgv_materiales;
+        private System.Windows.Forms.ComboBox cmb_nombre;
     }
 }
