@@ -70,6 +70,7 @@
             this.lnk_consultarTecnicas.TabIndex = 20;
             this.lnk_consultarTecnicas.TabStop = true;
             this.lnk_consultarTecnicas.Text = "Consultar técnicas";
+            this.lnk_consultarTecnicas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_consultarTecnicas_LinkClicked);
             // 
             // lnk_menuPrincipal
             // 
@@ -80,6 +81,7 @@
             this.lnk_menuPrincipal.TabIndex = 19;
             this.lnk_menuPrincipal.TabStop = true;
             this.lnk_menuPrincipal.Text = "Volver al menú principal";
+            this.lnk_menuPrincipal.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_menuPrincipal_LinkClicked);
             // 
             // nud_precio
             // 
