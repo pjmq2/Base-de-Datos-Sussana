@@ -58,6 +58,12 @@
     <Compile Include="AgregarCita.Designer.cs">
       <DependentUpon>AgregarCita.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarEjercicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarEjercicio.Designer.cs">
+      <DependentUpon>AgregarEjercicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="AgregarPaciente.Designer.cs">
       <DependentUpon>AgregarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarPlanEjercicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarPlanEjercicios.Designer.cs">
+      <DependentUpon>AgregarPlanEjercicios.cs</DependentUpon>
     </Compile>
     <Compile Include="AgregarPlanTratamiento.cs">
       <SubType>Form</SubType>
@@ -90,6 +102,12 @@
     <Compile Include="ConsultarAntecedente.Designer.cs">
       <DependentUpon>ConsultarAntecedente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarEjercicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarEjercicios.Designer.cs">
+      <DependentUpon>ConsultarEjercicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultarMateriales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +119,12 @@
     </Compile>
     <Compile Include="ConsultarPaciente.Designer.cs">
       <DependentUpon>ConsultarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarPlanEjercicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarPlanEjercicios.Designer.cs">
+      <DependentUpon>ConsultarPlanEjercicios.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultarPlanTratamiento.cs">
       <SubType>Form</SubType>
@@ -162,11 +186,17 @@
     <EmbeddedResource Include="AgregarCita.resx">
       <DependentUpon>AgregarCita.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarEjercicio.resx">
+      <DependentUpon>AgregarEjercicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarMaterial.resx">
       <DependentUpon>AgregarMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarPaciente.resx">
       <DependentUpon>AgregarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarPlanEjercicios.resx">
+      <DependentUpon>AgregarPlanEjercicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarPlanTratamiento.resx">
       <DependentUpon>AgregarPlanTratamiento.cs</DependentUpon>
@@ -177,11 +207,17 @@
     <EmbeddedResource Include="ConsultarAntecedente.resx">
       <DependentUpon>ConsultarAntecedente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarEjercicios.resx">
+      <DependentUpon>ConsultarEjercicios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarMateriales.resx">
       <DependentUpon>ConsultarMateriales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarPaciente.resx">
       <DependentUpon>ConsultarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarPlanEjercicios.resx">
+      <DependentUpon>ConsultarPlanEjercicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarPlanTratamiento.resx">
       <DependentUpon>ConsultarPlanTratamiento.cs</DependentUpon>

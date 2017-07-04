@@ -76,5 +76,6 @@ namespace BD_Grupo3_VS
             elimina.Show();
             this.Hide();
         }
+
     }
 }
