@@ -51,7 +51,12 @@
             this.gb_informacionDelMaterial.Controls.Add(this.txt_nombre);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.gb_informacionDelMaterial.Location = new System.Drawing.Point(40, 28);
+=======
+            this.gb_informacionDelMaterial.Location = new System.Drawing.Point(51, 31);
+            this.gb_informacionDelMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> 780deaad7e74c2b04785dc3ee512f2ef96e10064
 =======
             this.gb_informacionDelMaterial.Location = new System.Drawing.Point(51, 31);
             this.gb_informacionDelMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -76,7 +81,12 @@
             0});
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.nud_precio.Location = new System.Drawing.Point(121, 117);
+=======
+            this.nud_precio.Location = new System.Drawing.Point(161, 114);
+            this.nud_precio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> 780deaad7e74c2b04785dc3ee512f2ef96e10064
 =======
             this.nud_precio.Location = new System.Drawing.Point(161, 114);
             this.nud_precio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -98,7 +108,12 @@
             // 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btn_guardar.Location = new System.Drawing.Point(175, 159);
+=======
+            this.btn_guardar.Location = new System.Drawing.Point(233, 176);
+            this.btn_guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> 780deaad7e74c2b04785dc3ee512f2ef96e10064
 =======
             this.btn_guardar.Location = new System.Drawing.Point(233, 176);
             this.btn_guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -119,7 +134,12 @@
             this.lbl_precio.AutoSize = true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.lbl_precio.Location = new System.Drawing.Point(43, 119);
+=======
+            this.lbl_precio.Location = new System.Drawing.Point(57, 117);
+            this.lbl_precio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+>>>>>>> 780deaad7e74c2b04785dc3ee512f2ef96e10064
 =======
             this.lbl_precio.Location = new System.Drawing.Point(57, 117);
             this.lbl_precio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -138,7 +158,12 @@
             this.lbl_nombre.AutoSize = true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.lbl_nombre.Location = new System.Drawing.Point(43, 82);
+=======
+            this.lbl_nombre.Location = new System.Drawing.Point(57, 64);
+            this.lbl_nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+>>>>>>> 780deaad7e74c2b04785dc3ee512f2ef96e10064
 =======
             this.lbl_nombre.Location = new System.Drawing.Point(57, 64);
             this.lbl_nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -156,7 +181,12 @@
             // 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.txt_nombre.Location = new System.Drawing.Point(121, 79);
+=======
+            this.txt_nombre.Location = new System.Drawing.Point(161, 60);
+            this.txt_nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> 780deaad7e74c2b04785dc3ee512f2ef96e10064
 =======
             this.txt_nombre.Location = new System.Drawing.Point(161, 60);
             this.txt_nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
