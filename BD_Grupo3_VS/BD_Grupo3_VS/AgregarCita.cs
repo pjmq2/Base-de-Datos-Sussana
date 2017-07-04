@@ -27,7 +27,7 @@ namespace BD_Grupo3_VS
         private void BTN_Agregar_Click(object sender, EventArgs e)
         {
             int precioAg = Convert.ToInt32(TXT_Precio.Text);
-            decimal duracionAg = decimal.Parse(TXT_Duracion.Text);
+            decimal duracionAg = Convert.ToDecimal(TXT_Duracion.Text);
 
             int result = cita.agregarCita(TXT_Cedula.Text, TXT_Padecimiento.Text, dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm"), precioAg, TXT_Descripcion.Text,
              duracionAg, CB_Lugar.Text,TXT_Estado.Text);
@@ -74,6 +74,13 @@ namespace BD_Grupo3_VS
         {
             EliminarCita elimina = new EliminarCita();
             elimina.Show();
+            this.Hide();
+        }
+
+        private void LINK_Modificar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ModificarCita mc = new ModificarCita();
+            mc.Show();
             this.Hide();
         }
     }

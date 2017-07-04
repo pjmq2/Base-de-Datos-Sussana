@@ -60,5 +60,13 @@ namespace BD_Grupo3_VS
             String eliminar = "EXEC eliminarCita " + cedula;
             return bd.actualizarDatos(eliminar);
         }
+
+        public int modificarCita(string CedAnterior, string cedula, string padecimiento, string fechaHora, int precio, string descripcion,
+            decimal duracion, string lugar, string estado)
+        {
+            String modificar = "EXEC ModificarCita @ceduCambiar = '" + CedAnterior + "', @cedula = '" + cedula + "', @padecimiento = '" + padecimiento + "', @fecha = '" + fechaHora + "', @precio" +
+                " = '" + precio + "', @descripcion = '" + descripcion + "', @duracion = '" + duracion + "', @lugar = '" + lugar + "', @estado = '" + estado + "'";
+            return bd.actualizarDatos(modificar);
+        }
     }
 }
