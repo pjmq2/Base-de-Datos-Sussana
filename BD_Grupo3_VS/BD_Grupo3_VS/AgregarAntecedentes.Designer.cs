@@ -46,68 +46,76 @@
             this.LBL_Titulo.AutoSize = true;
             this.LBL_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Titulo.ForeColor = System.Drawing.Color.Maroon;
-            this.LBL_Titulo.Location = new System.Drawing.Point(163, 10);
+            this.LBL_Titulo.Location = new System.Drawing.Point(217, 12);
+            this.LBL_Titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Titulo.Name = "LBL_Titulo";
-            this.LBL_Titulo.Size = new System.Drawing.Size(192, 33);
+            this.LBL_Titulo.Size = new System.Drawing.Size(248, 42);
             this.LBL_Titulo.TabIndex = 5;
             this.LBL_Titulo.Text = "Antecedentes";
             // 
             // LBL_Cedula
             // 
             this.LBL_Cedula.AutoSize = true;
-            this.LBL_Cedula.Location = new System.Drawing.Point(15, 81);
+            this.LBL_Cedula.Location = new System.Drawing.Point(20, 100);
+            this.LBL_Cedula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Cedula.Name = "LBL_Cedula";
-            this.LBL_Cedula.Size = new System.Drawing.Size(43, 13);
+            this.LBL_Cedula.Size = new System.Drawing.Size(56, 17);
             this.LBL_Cedula.TabIndex = 6;
             this.LBL_Cedula.Text = "Cédula:";
             // 
             // LINK_ListaPacientes
             // 
             this.LINK_ListaPacientes.AutoSize = true;
-            this.LINK_ListaPacientes.Location = new System.Drawing.Point(408, 26);
+            this.LINK_ListaPacientes.Location = new System.Drawing.Point(544, 32);
+            this.LINK_ListaPacientes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LINK_ListaPacientes.Name = "LINK_ListaPacientes";
-            this.LINK_ListaPacientes.Size = new System.Drawing.Size(131, 13);
+            this.LINK_ListaPacientes.Size = new System.Drawing.Size(173, 17);
             this.LINK_ListaPacientes.TabIndex = 7;
             this.LINK_ListaPacientes.TabStop = true;
             this.LINK_ListaPacientes.Text = "Ir a Lista de Antecedentes";
             // 
             // TXT_Cedula
             // 
-            this.TXT_Cedula.Location = new System.Drawing.Point(170, 81);
+            this.TXT_Cedula.Location = new System.Drawing.Point(227, 100);
+            this.TXT_Cedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TXT_Cedula.Name = "TXT_Cedula";
-            this.TXT_Cedula.Size = new System.Drawing.Size(154, 20);
+            this.TXT_Cedula.Size = new System.Drawing.Size(204, 22);
             this.TXT_Cedula.TabIndex = 8;
             // 
             // LBL_Nombre
             // 
             this.LBL_Nombre.AutoSize = true;
-            this.LBL_Nombre.Location = new System.Drawing.Point(15, 44);
+            this.LBL_Nombre.Location = new System.Drawing.Point(20, 54);
+            this.LBL_Nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Nombre.Name = "LBL_Nombre";
-            this.LBL_Nombre.Size = new System.Drawing.Size(127, 13);
+            this.LBL_Nombre.Size = new System.Drawing.Size(168, 17);
             this.LBL_Nombre.TabIndex = 9;
             this.LBL_Nombre.Text = "Nombre del antecedente:";
             // 
             // TXT_Nombre
             // 
-            this.TXT_Nombre.Location = new System.Drawing.Point(170, 41);
+            this.TXT_Nombre.Location = new System.Drawing.Point(227, 50);
+            this.TXT_Nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TXT_Nombre.Name = "TXT_Nombre";
-            this.TXT_Nombre.Size = new System.Drawing.Size(154, 20);
+            this.TXT_Nombre.Size = new System.Drawing.Size(204, 22);
             this.TXT_Nombre.TabIndex = 10;
             // 
             // LBL_Descripcion
             // 
             this.LBL_Descripcion.AutoSize = true;
-            this.LBL_Descripcion.Location = new System.Drawing.Point(15, 124);
+            this.LBL_Descripcion.Location = new System.Drawing.Point(20, 153);
+            this.LBL_Descripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Descripcion.Name = "LBL_Descripcion";
-            this.LBL_Descripcion.Size = new System.Drawing.Size(66, 13);
+            this.LBL_Descripcion.Size = new System.Drawing.Size(86, 17);
             this.LBL_Descripcion.TabIndex = 11;
             this.LBL_Descripcion.Text = "Descripción:";
             // 
             // TXT_Descripcion
             // 
-            this.TXT_Descripcion.Location = new System.Drawing.Point(170, 124);
+            this.TXT_Descripcion.Location = new System.Drawing.Point(227, 153);
+            this.TXT_Descripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TXT_Descripcion.Name = "TXT_Descripcion";
-            this.TXT_Descripcion.Size = new System.Drawing.Size(154, 20);
+            this.TXT_Descripcion.Size = new System.Drawing.Size(204, 22);
             this.TXT_Descripcion.TabIndex = 12;
             // 
             // GB_InfoAntecedente
@@ -119,30 +127,34 @@
             this.GB_InfoAntecedente.Controls.Add(this.LBL_Nombre);
             this.GB_InfoAntecedente.Controls.Add(this.LBL_Cedula);
             this.GB_InfoAntecedente.Controls.Add(this.TXT_Nombre);
-            this.GB_InfoAntecedente.Location = new System.Drawing.Point(31, 62);
+            this.GB_InfoAntecedente.Location = new System.Drawing.Point(41, 76);
+            this.GB_InfoAntecedente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GB_InfoAntecedente.Name = "GB_InfoAntecedente";
-            this.GB_InfoAntecedente.Size = new System.Drawing.Size(497, 245);
+            this.GB_InfoAntecedente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GB_InfoAntecedente.Size = new System.Drawing.Size(663, 302);
             this.GB_InfoAntecedente.TabIndex = 13;
             this.GB_InfoAntecedente.TabStop = false;
             this.GB_InfoAntecedente.Text = "Detellas del antecedente";
             // 
             // BTN_Agregar
             // 
-            this.BTN_Agregar.Location = new System.Drawing.Point(380, 194);
+            this.BTN_Agregar.Location = new System.Drawing.Point(507, 239);
+            this.BTN_Agregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_Agregar.Name = "BTN_Agregar";
-            this.BTN_Agregar.Size = new System.Drawing.Size(90, 35);
+            this.BTN_Agregar.Size = new System.Drawing.Size(120, 43);
             this.BTN_Agregar.TabIndex = 23;
             this.BTN_Agregar.Text = "Agregar";
             this.BTN_Agregar.UseVisualStyleBackColor = true;
             // 
             // AgregarAntecedentes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 319);
+            this.ClientSize = new System.Drawing.Size(735, 393);
             this.Controls.Add(this.GB_InfoAntecedente);
             this.Controls.Add(this.LINK_ListaPacientes);
             this.Controls.Add(this.LBL_Titulo);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AgregarAntecedentes";
             this.Text = "AgregarAntecedentes";
             this.GB_InfoAntecedente.ResumeLayout(false);

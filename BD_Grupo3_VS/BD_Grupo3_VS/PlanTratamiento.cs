@@ -12,7 +12,7 @@ namespace BD_Grupo3_VS
     class PlanTratamiento
     {
         AccesoBaseDatos bd;
-       public PlanTratamiento()
+        public PlanTratamiento()
         {
             bd = new AccesoBaseDatos();
         }

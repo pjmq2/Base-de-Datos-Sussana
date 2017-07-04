@@ -77,11 +77,14 @@ namespace BD_Grupo3_VS
             this.Hide();
         }
 
+<<<<<<< HEAD
+=======
         private void LINK_Modificar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ModificarCita mc = new ModificarCita();
             mc.Show();
             this.Hide();
         }
+>>>>>>> 95a0de56570cb7e57627b73318774ea5fa0d9e2a
     }
 }

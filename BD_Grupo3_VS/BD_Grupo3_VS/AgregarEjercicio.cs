@@ -10,19 +10,16 @@ using System.Windows.Forms;
 
 namespace BD_Grupo3_VS
 {
-    public partial class AgregarTecnica : Form
+    public partial class AgregarEjercicio : Form
     {
-        Tecnica tecnica;
-
-        public AgregarTecnica()
+        public AgregarEjercicio()
         {
             InitializeComponent();
-            tecnica = new Tecnica();
         }
 
-        private void btn_guardar_Click(object sender, EventArgs e)
+        private void txt_nombre_TextChanged(object sender, EventArgs e)
         {
-            int result = tecnica.agregarTecnica(txt_nombre.Text, (int)nud_precio.Value, txt_descripcion.Text);
+
         }
     }
 }
