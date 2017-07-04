@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,11 +19,11 @@ namespace BD_Grupo3_VS
         public int agregarMaterial(string nombre, int precio)
         {
             String insertar = "INSERT into MATERIAL (Nombre, Precio)" +
-                 " VALUES (" + nombre + ",'" + precio + "')";
+                 " VALUES ('" + nombre + "'," + precio + ")";
             return bd.actualizarDatos(insertar);
         }
 
-        public DataTable consultarMateriales()
+        public DataTable consultarMateriales(string filtroNombre)
         {
             DataTable tabla = null;
 

@@ -30,12 +30,12 @@
         {
             this.dgv_materiales = new System.Windows.Forms.DataGridView();
             this.lbl_nombre = new System.Windows.Forms.Label();
-            this.txt_nombre = new System.Windows.Forms.TextBox();
+            this.txt_filtro = new System.Windows.Forms.TextBox();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.lbl_consultaDeMateriales = new System.Windows.Forms.Label();
             this.lnk_menuPrincipal = new System.Windows.Forms.LinkLabel();
-            this.lnk_agregarMaterial = new System.Windows.Forms.LinkLabel();
+            this.lnk_eliminarMaterial = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_materiales)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,12 +57,12 @@
             this.lbl_nombre.TabIndex = 1;
             this.lbl_nombre.Text = "Nombre:";
             // 
-            // txt_nombre
+            // txt_filtro
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(65, 58);
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(250, 20);
-            this.txt_nombre.TabIndex = 2;
+            this.txt_filtro.Location = new System.Drawing.Point(65, 58);
+            this.txt_filtro.Name = "txt_filtro";
+            this.txt_filtro.Size = new System.Drawing.Size(250, 20);
+            this.txt_filtro.TabIndex = 2;
             // 
             // btn_buscar
             // 
@@ -103,33 +103,36 @@
             this.lnk_menuPrincipal.TabIndex = 7;
             this.lnk_menuPrincipal.TabStop = true;
             this.lnk_menuPrincipal.Text = "Volver al menú principal";
+            this.lnk_menuPrincipal.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_menuPrincipal_LinkClicked);
             // 
-            // lnk_agregarMaterial
+            // lnk_eliminarMaterial
             // 
-            this.lnk_agregarMaterial.AutoSize = true;
-            this.lnk_agregarMaterial.Location = new System.Drawing.Point(589, 30);
-            this.lnk_agregarMaterial.Name = "lnk_agregarMaterial";
-            this.lnk_agregarMaterial.Size = new System.Drawing.Size(83, 13);
-            this.lnk_agregarMaterial.TabIndex = 8;
-            this.lnk_agregarMaterial.TabStop = true;
-            this.lnk_agregarMaterial.Text = "Agregar material";
+            this.lnk_eliminarMaterial.AutoSize = true;
+            this.lnk_eliminarMaterial.Location = new System.Drawing.Point(589, 30);
+            this.lnk_eliminarMaterial.Name = "lnk_eliminarMaterial";
+            this.lnk_eliminarMaterial.Size = new System.Drawing.Size(82, 13);
+            this.lnk_eliminarMaterial.TabIndex = 8;
+            this.lnk_eliminarMaterial.TabStop = true;
+            this.lnk_eliminarMaterial.Text = "Eliminar material";
+            this.lnk_eliminarMaterial.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_eliminarMaterial_LinkClicked);
             // 
             // ConsultarMateriales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 461);
-            this.Controls.Add(this.lnk_agregarMaterial);
+            this.Controls.Add(this.lnk_eliminarMaterial);
             this.Controls.Add(this.lnk_menuPrincipal);
             this.Controls.Add(this.lbl_consultaDeMateriales);
             this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.btn_buscar);
-            this.Controls.Add(this.txt_nombre);
+            this.Controls.Add(this.txt_filtro);
             this.Controls.Add(this.lbl_nombre);
             this.Controls.Add(this.dgv_materiales);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ConsultarMateriales";
             this.Text = "Materiales";
+            this.Load += new System.EventHandler(this.ConsultarMateriales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_materiales)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -140,11 +143,11 @@
 
         private System.Windows.Forms.DataGridView dgv_materiales;
         private System.Windows.Forms.Label lbl_nombre;
-        private System.Windows.Forms.TextBox txt_nombre;
+        private System.Windows.Forms.TextBox txt_filtro;
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Label lbl_consultaDeMateriales;
         private System.Windows.Forms.LinkLabel lnk_menuPrincipal;
-        private System.Windows.Forms.LinkLabel lnk_agregarMaterial;
+        private System.Windows.Forms.LinkLabel lnk_eliminarMaterial;
     }
 }

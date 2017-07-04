@@ -24,6 +24,21 @@ namespace BD_Grupo3_VS
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             int result = material.agregarMaterial(txt_nombre.Text, (int)nud_precio.Value);
+            if(result == 0)
+            {
+                MessageBox.Show("El material ha sido agregado exitosamente",
+                    "Resultado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.None);
+                txt_nombre.Clear();
+                nud_precio.Value = 0;
+            } else if(result == 2627)
+            {
+                MessageBox.Show("Ya existe dicho material en el sistema.",
+                    "Resultado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
 
         private void lnk_menuPrincipal_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
