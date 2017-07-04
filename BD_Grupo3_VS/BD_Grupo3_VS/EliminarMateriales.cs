@@ -12,10 +12,14 @@ namespace BD_Grupo3_VS
 {
     public partial class EliminarMateriales : Form
     {
+        Material material;
         public EliminarMateriales()
         {
             InitializeComponent();
+            material = new Material();
         }
+
+
 
     }
 }

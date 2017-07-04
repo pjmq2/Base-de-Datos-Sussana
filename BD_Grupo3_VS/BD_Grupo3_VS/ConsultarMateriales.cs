@@ -50,5 +50,10 @@ namespace BD_Grupo3_VS
         {
             llenarTabla(dgv_materiales, null);
         }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            this.llenarTabla(dgv_materiales, txt_filtro.Text);
+        }
     }
 }

@@ -27,6 +27,14 @@ namespace BD_Grupo3_VS
         {
             DataTable tabla = null;
 
+            if(filtroNombre == null)
+            {
+                bd.ejecutarConsultaTabla("SELECT * FROM Material");
+            } else
+            {
+                bd.ejecutarConsultaTabla("SELECT * FROM Material WHERE Nombre LIKE '%" + filtroNombre + "%'");
+            }
+
             return tabla;
         } 
     }

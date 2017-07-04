@@ -45,6 +45,7 @@
             this.dgv_materiales.GridColor = System.Drawing.SystemColors.Control;
             this.dgv_materiales.Location = new System.Drawing.Point(12, 85);
             this.dgv_materiales.Name = "dgv_materiales";
+            this.dgv_materiales.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgv_materiales.Size = new System.Drawing.Size(660, 364);
             this.dgv_materiales.TabIndex = 0;
             // 
@@ -72,6 +73,7 @@
             this.btn_buscar.TabIndex = 3;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_modificar
             // 
