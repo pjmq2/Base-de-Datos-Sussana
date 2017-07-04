@@ -73,6 +73,7 @@
             this.LBL_Modificar.TabIndex = 2;
             this.LBL_Modificar.TabStop = true;
             this.LBL_Modificar.Text = "Modificar Cita";
+            this.LBL_Modificar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LBL_Modificar_LinkClicked);
             // 
             // linkLabel1
             // 

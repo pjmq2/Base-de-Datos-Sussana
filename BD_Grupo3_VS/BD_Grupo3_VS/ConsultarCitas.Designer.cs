@@ -94,6 +94,7 @@
             this.LINK_Modificar.TabIndex = 4;
             this.LINK_Modificar.TabStop = true;
             this.LINK_Modificar.Text = "Modificar Cita";
+            this.LINK_Modificar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_Modificar_LinkClicked);
             // 
             // LINK_Eliminar
             // 

@@ -69,5 +69,12 @@ namespace BD_Grupo3_VS
             elimina.Show();
             this.Hide();
         }
+
+        private void LINK_Modificar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ModificarCita mc = new ModificarCita();
+            mc.Show();
+            this.Hide();
+        }
     }
 }

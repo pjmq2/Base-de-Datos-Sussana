@@ -44,3 +44,14 @@ delete Paciente
 where Cedula in (select * from #temp)
 drop table #temp
 
+
+CREATE PROCEDURE ModificarCita
+@cedula char(9),@padecimiento varchar(50),@fecha datetime, @precio int, @descripcion varchar(500), @duracion decimal(4,2),
+@lugar varchar(50), @estado varchar(50),@ceduCambiar char(9)
+AS
+UPDATE CITA
+SET CedPaciente = @cedula, Padec_Act = @padecimiento, Fecha = @fecha, Precio = @precio, Descripcion = @descripcion,
+Duracion = @duracion, Lugar = @lugar, Estado_Paciente = @estado
+WHERE CedPaciente = @ceduCambiar
+
+
