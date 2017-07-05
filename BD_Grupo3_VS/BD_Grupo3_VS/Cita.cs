@@ -55,17 +55,17 @@ namespace BD_Grupo3_VS
             }
             return tabla;
         }
-        public int eliminarCita(string cedula)
+        public int eliminarCita(string cedula, string fecha)
         {
-            String eliminar = "EXEC eliminarCita " + cedula;
+            String eliminar = "EXEC eliminarCita '" + cedula + "', '" + fecha + "'";
             return bd.actualizarDatos(eliminar);
         }
 
         public int modificarCita(string CedAnterior, string cedula, string padecimiento, string fechaHora, int precio, string descripcion,
-            decimal duracion, string lugar, string estado)
+            decimal duracion, string lugar, string estado, string fechaCambiar)
         {
             String modificar = "EXEC ModificarCita @ceduCambiar = '" + CedAnterior + "', @cedula = '" + cedula + "', @padecimiento = '" + padecimiento + "', @fecha = '" + fechaHora + "', @precio" +
-                " = '" + precio + "', @descripcion = '" + descripcion + "', @duracion = '" + duracion + "', @lugar = '" + lugar + "', @estado = '" + estado + "'";
+                " = '" + precio + "', @descripcion = '" + descripcion + "', @duracion = '" + duracion + "', @lugar = '" + lugar + "', @estado = '" + estado + "', @fechaCambiar = '" + fechaCambiar + "'";
             return bd.actualizarDatos(modificar);
         }
     }

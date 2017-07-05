@@ -60,6 +60,7 @@
             this.lnk_menuPrincipal.TabIndex = 15;
             this.lnk_menuPrincipal.TabStop = true;
             this.lnk_menuPrincipal.Text = "Volver al menú principal";
+            this.lnk_menuPrincipal.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_menuPrincipal_LinkClicked);
             // 
             // lbl_borradoDeMateriales
             // 

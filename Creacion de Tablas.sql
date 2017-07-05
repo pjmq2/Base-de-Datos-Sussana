@@ -61,7 +61,7 @@ create table PLAN_EJERCICIOS(
 create table CITA(
 	CedPaciente	char(9)		not null,
 	Padec_Act	varchar(50)	not null,
-	Fecha		datetime	not null,
+	Fecha		varchar(18)	not null,
 	Precio		int			not null,
 	Descripcion	varchar(500),
 	Duracion	Decimal(4, 2),
@@ -117,7 +117,7 @@ create table TECNICAS(
 create table SE_REALIZAN(
 	CedPaciente	char(9)	not null,
 	Padec_Act	varchar(50)	not null,
-	Fecha_Cita	datetime	not null,
+	Fecha_Cita	varchar(18)	not null,
 	Nombre_Tec	varchar(50)	not null
 	Constraint PKSe_Realiza primary key (CedPaciente, Padec_Act, Fecha_Cita, Nombre_Tec),
 	Constraint FKSRaCita foreign key (CedPaciente, Padec_Act, Fecha_Cita) references CITA(CedPaciente, Padec_Act, Fecha)

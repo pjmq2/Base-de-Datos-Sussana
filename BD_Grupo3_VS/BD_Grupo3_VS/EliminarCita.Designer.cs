@@ -36,9 +36,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TXT_Cedula = new System.Windows.Forms.TextBox();
-            this.TXT_Fecha = new System.Windows.Forms.TextBox();
             this.BTN_Eliminar = new System.Windows.Forms.Button();
             this.dgvEliminar = new System.Windows.Forms.DataGridView();
+            this.DTP_Fecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,13 +121,6 @@
             this.TXT_Cedula.Size = new System.Drawing.Size(156, 20);
             this.TXT_Cedula.TabIndex = 7;
             // 
-            // TXT_Fecha
-            // 
-            this.TXT_Fecha.Location = new System.Drawing.Point(441, 95);
-            this.TXT_Fecha.Name = "TXT_Fecha";
-            this.TXT_Fecha.Size = new System.Drawing.Size(156, 20);
-            this.TXT_Fecha.TabIndex = 8;
-            // 
             // BTN_Eliminar
             // 
             this.BTN_Eliminar.Location = new System.Drawing.Point(644, 86);
@@ -146,14 +139,22 @@
             this.dgvEliminar.Size = new System.Drawing.Size(706, 302);
             this.dgvEliminar.TabIndex = 10;
             // 
+            // DTP_Fecha
+            // 
+            this.DTP_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.DTP_Fecha.Location = new System.Drawing.Point(449, 95);
+            this.DTP_Fecha.Name = "DTP_Fecha";
+            this.DTP_Fecha.Size = new System.Drawing.Size(156, 20);
+            this.DTP_Fecha.TabIndex = 11;
+            // 
             // EliminarCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 474);
+            this.Controls.Add(this.DTP_Fecha);
             this.Controls.Add(this.dgvEliminar);
             this.Controls.Add(this.BTN_Eliminar);
-            this.Controls.Add(this.TXT_Fecha);
             this.Controls.Add(this.TXT_Cedula);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -181,8 +182,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TXT_Cedula;
-        private System.Windows.Forms.TextBox TXT_Fecha;
         private System.Windows.Forms.Button BTN_Eliminar;
         private System.Windows.Forms.DataGridView dgvEliminar;
+        private System.Windows.Forms.DateTimePicker DTP_Fecha;
     }
 }

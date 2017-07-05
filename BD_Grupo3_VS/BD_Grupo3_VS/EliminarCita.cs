@@ -30,7 +30,8 @@ namespace BD_Grupo3_VS
 
         private void BTN_Eliminar_Click(object sender, EventArgs e)
         {
-            int result = cita.eliminarCita(TXT_Cedula.Text);
+
+            int result = cita.eliminarCita(TXT_Cedula.Text,DTP_Fecha.Value.ToString("dd/MM/yyyy HH:mm"));
 
             if(result == 0)
             {

@@ -29,7 +29,7 @@ namespace BD_Grupo3_VS
             int precioAg = Convert.ToInt32(TXT_Precio.Text);
             decimal duracionAg = Convert.ToDecimal(TXT_Duracion.Text);
 
-            int result = cita.agregarCita(TXT_Cedula.Text, TXT_Padecimiento.Text, dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm"), precioAg, TXT_Descripcion.Text,
+            int result = cita.agregarCita(TXT_Cedula.Text, TXT_Padecimiento.Text, dateTimePicker1.Value.ToString("dd/MM/yyyy HH:mm"), precioAg, TXT_Descripcion.Text,
              duracionAg, CB_Lugar.Text,TXT_Estado.Text);
 
             if (result == 0)
