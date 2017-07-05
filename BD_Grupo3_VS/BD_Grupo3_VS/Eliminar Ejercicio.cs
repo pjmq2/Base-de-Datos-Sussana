@@ -7,15 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using System.Data;
-using System.Data.SqlClient;
 
 namespace BD_Grupo3_VS
 {
-    public partial class AgregarPlanEjercicios : Form
+    public partial class Eliminar_Ejercicio : Form
     {
-        public AgregarPlanEjercicios()
+        public Eliminar_Ejercicio()
         {
             InitializeComponent();
         }

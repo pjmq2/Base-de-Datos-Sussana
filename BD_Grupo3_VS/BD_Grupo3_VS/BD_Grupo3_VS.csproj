@@ -138,6 +138,13 @@
     <Compile Include="ConsultarTecnicas.Designer.cs">
       <DependentUpon>ConsultarTecnicas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ejercicio.cs" />
+    <Compile Include="Eliminar Ejercicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar Ejercicio.Designer.cs">
+      <DependentUpon>Eliminar Ejercicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="EliminarMateriales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +183,7 @@
       <DependentUpon>ModificarTecnica.cs</DependentUpon>
     </Compile>
     <Compile Include="Paciente.cs" />
+    <Compile Include="PlanDeEjercicios.cs" />
     <Compile Include="PlanTratamiento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -224,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarTecnicas.resx">
       <DependentUpon>ConsultarTecnicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar Ejercicio.resx">
+      <DependentUpon>Eliminar Ejercicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarMateriales.resx">
       <DependentUpon>EliminarMateriales.cs</DependentUpon>

@@ -29,28 +29,30 @@
         private void InitializeComponent()
         {
             this.gb_informacionDelMaterial = new System.Windows.Forms.GroupBox();
-            this.btn_guardar = new System.Windows.Forms.Button();
+            this.lbl_imagen = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TXT_Descripcion = new System.Windows.Forms.TextBox();
+            this.btn_LoadAndSave = new System.Windows.Forms.Button();
             this.lbl_descripcion = new System.Windows.Forms.Label();
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.LBL_Titulo = new System.Windows.Forms.Label();
-            this.TXT_Descripcion = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbl_imagen = new System.Windows.Forms.Label();
             this.LINK_Eliminar = new System.Windows.Forms.LinkLabel();
             this.LINK_Modificar = new System.Windows.Forms.LinkLabel();
             this.LINK_ConsultarCita = new System.Windows.Forms.LinkLabel();
             this.LINK_Menu = new System.Windows.Forms.LinkLabel();
+            this.btn_Guardar = new System.Windows.Forms.Button();
             this.gb_informacionDelMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gb_informacionDelMaterial
             // 
+            this.gb_informacionDelMaterial.Controls.Add(this.btn_Guardar);
             this.gb_informacionDelMaterial.Controls.Add(this.lbl_imagen);
             this.gb_informacionDelMaterial.Controls.Add(this.pictureBox1);
             this.gb_informacionDelMaterial.Controls.Add(this.TXT_Descripcion);
-            this.gb_informacionDelMaterial.Controls.Add(this.btn_guardar);
+            this.gb_informacionDelMaterial.Controls.Add(this.btn_LoadAndSave);
             this.gb_informacionDelMaterial.Controls.Add(this.lbl_descripcion);
             this.gb_informacionDelMaterial.Controls.Add(this.lbl_nombre);
             this.gb_informacionDelMaterial.Controls.Add(this.txt_nombre);
@@ -63,15 +65,44 @@
             this.gb_informacionDelMaterial.TabStop = false;
             this.gb_informacionDelMaterial.Text = "Información del Ejercicio";
             // 
-            // btn_guardar
+            // lbl_imagen
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(440, 253);
-            this.btn_guardar.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(100, 28);
-            this.btn_guardar.TabIndex = 5;
-            this.btn_guardar.Text = "Guardar";
-            this.btn_guardar.UseVisualStyleBackColor = true;
+            this.lbl_imagen.AutoSize = true;
+            this.lbl_imagen.Location = new System.Drawing.Point(58, 216);
+            this.lbl_imagen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_imagen.Name = "lbl_imagen";
+            this.lbl_imagen.Size = new System.Drawing.Size(58, 17);
+            this.lbl_imagen.TabIndex = 12;
+            this.lbl_imagen.Text = "Imagen:";
+            this.lbl_imagen.UseMnemonic = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(162, 216);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(222, 65);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // TXT_Descripcion
+            // 
+            this.TXT_Descripcion.Location = new System.Drawing.Point(162, 83);
+            this.TXT_Descripcion.Margin = new System.Windows.Forms.Padding(4);
+            this.TXT_Descripcion.Multiline = true;
+            this.TXT_Descripcion.Name = "TXT_Descripcion";
+            this.TXT_Descripcion.Size = new System.Drawing.Size(355, 116);
+            this.TXT_Descripcion.TabIndex = 10;
+            // 
+            // btn_LoadAndSave
+            // 
+            this.btn_LoadAndSave.Location = new System.Drawing.Point(162, 288);
+            this.btn_LoadAndSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_LoadAndSave.Name = "btn_LoadAndSave";
+            this.btn_LoadAndSave.Size = new System.Drawing.Size(222, 29);
+            this.btn_LoadAndSave.TabIndex = 5;
+            this.btn_LoadAndSave.Text = "Buscar y Guardar";
+            this.btn_LoadAndSave.UseVisualStyleBackColor = true;
+            this.btn_LoadAndSave.Click += new System.EventHandler(this.btn_LoadAndSave_Click);
             // 
             // lbl_descripcion
             // 
@@ -113,34 +144,6 @@
             this.LBL_Titulo.Size = new System.Drawing.Size(178, 42);
             this.LBL_Titulo.TabIndex = 7;
             this.LBL_Titulo.Text = "Ejercicios";
-            // 
-            // TXT_Descripcion
-            // 
-            this.TXT_Descripcion.Location = new System.Drawing.Point(162, 83);
-            this.TXT_Descripcion.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_Descripcion.Multiline = true;
-            this.TXT_Descripcion.Name = "TXT_Descripcion";
-            this.TXT_Descripcion.Size = new System.Drawing.Size(355, 116);
-            this.TXT_Descripcion.TabIndex = 10;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(162, 216);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(222, 65);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lbl_imagen
-            // 
-            this.lbl_imagen.AutoSize = true;
-            this.lbl_imagen.Location = new System.Drawing.Point(58, 216);
-            this.lbl_imagen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_imagen.Name = "lbl_imagen";
-            this.lbl_imagen.Size = new System.Drawing.Size(58, 17);
-            this.lbl_imagen.TabIndex = 12;
-            this.lbl_imagen.Text = "Imagen:";
-            this.lbl_imagen.UseMnemonic = false;
             // 
             // LINK_Eliminar
             // 
@@ -187,6 +190,16 @@
             this.LINK_Menu.TabStop = true;
             this.LINK_Menu.Text = "Ir al Menú Principal";
             // 
+            // btn_Guardar
+            // 
+            this.btn_Guardar.Location = new System.Drawing.Point(445, 253);
+            this.btn_Guardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Guardar.Name = "btn_Guardar";
+            this.btn_Guardar.Size = new System.Drawing.Size(100, 64);
+            this.btn_Guardar.TabIndex = 13;
+            this.btn_Guardar.Text = "Guardar";
+            this.btn_Guardar.UseVisualStyleBackColor = true;
+            // 
             // AgregarEjercicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -211,7 +224,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gb_informacionDelMaterial;
-        private System.Windows.Forms.Button btn_guardar;
+        private System.Windows.Forms.Button btn_LoadAndSave;
         private System.Windows.Forms.Label lbl_descripcion;
         private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.TextBox txt_nombre;
@@ -223,5 +236,6 @@
         private System.Windows.Forms.LinkLabel LINK_Modificar;
         private System.Windows.Forms.LinkLabel LINK_ConsultarCita;
         private System.Windows.Forms.LinkLabel LINK_Menu;
+        private System.Windows.Forms.Button btn_Guardar;
     }
 }

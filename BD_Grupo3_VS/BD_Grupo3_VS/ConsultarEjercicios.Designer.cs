@@ -33,10 +33,10 @@
             this.LINK_Modificar = new System.Windows.Forms.LinkLabel();
             this.LINK_Agregar = new System.Windows.Forms.LinkLabel();
             this.LINK_Menu = new System.Windows.Forms.LinkLabel();
-            this.TXT_Cedula = new System.Windows.Forms.TextBox();
             this.LBL_Nombre = new System.Windows.Forms.Label();
             this.BTN_Buscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.CMB_FiltroNombre = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,14 +97,6 @@
             this.LINK_Menu.TabStop = true;
             this.LINK_Menu.Text = "Ir al Menú Principal";
             // 
-            // TXT_Cedula
-            // 
-            this.TXT_Cedula.Location = new System.Drawing.Point(90, 106);
-            this.TXT_Cedula.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_Cedula.Name = "TXT_Cedula";
-            this.TXT_Cedula.Size = new System.Drawing.Size(414, 22);
-            this.TXT_Cedula.TabIndex = 30;
-            // 
             // LBL_Nombre
             // 
             this.LBL_Nombre.AutoSize = true;
@@ -134,14 +126,22 @@
             this.dataGridView1.Size = new System.Drawing.Size(629, 340);
             this.dataGridView1.TabIndex = 33;
             // 
+            // CMB_FiltroNombre
+            // 
+            this.CMB_FiltroNombre.FormattingEnabled = true;
+            this.CMB_FiltroNombre.Location = new System.Drawing.Point(90, 103);
+            this.CMB_FiltroNombre.Name = "CMB_FiltroNombre";
+            this.CMB_FiltroNombre.Size = new System.Drawing.Size(426, 24);
+            this.CMB_FiltroNombre.TabIndex = 34;
+            // 
             // ConsultarEjercicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 515);
+            this.Controls.Add(this.CMB_FiltroNombre);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BTN_Buscar);
-            this.Controls.Add(this.TXT_Cedula);
             this.Controls.Add(this.LBL_Nombre);
             this.Controls.Add(this.LINK_Eliminar);
             this.Controls.Add(this.LINK_Modificar);
@@ -163,9 +163,9 @@
         private System.Windows.Forms.LinkLabel LINK_Modificar;
         private System.Windows.Forms.LinkLabel LINK_Agregar;
         private System.Windows.Forms.LinkLabel LINK_Menu;
-        private System.Windows.Forms.TextBox TXT_Cedula;
         private System.Windows.Forms.Label LBL_Nombre;
         private System.Windows.Forms.Button BTN_Buscar;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox CMB_FiltroNombre;
     }
 }
