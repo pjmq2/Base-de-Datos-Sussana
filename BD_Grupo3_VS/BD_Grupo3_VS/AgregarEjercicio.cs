@@ -10,9 +10,7 @@ using System.IO;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using System.IO;
 using System.Data;
-using System.Data.SqlClient;
 
 namespace BD_Grupo3_VS
 {
