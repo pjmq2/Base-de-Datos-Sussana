@@ -31,6 +31,7 @@ create table CIRUGIAS(
 	Constraint PKCirugia primary key (CedPaciente, Cirugia),
 	Constraint FKCaPaciente foreign key	(CedPaciente) references PACIENTE(Cedula)
 		on delete no action
+		on update no action
 )
 
 --Tabla Plan_Tratamiento
@@ -41,6 +42,7 @@ create table PLAN_TRATAMIENTO(
 	Constraint PKPlan_Tratamiento primary key (CedPaciente, Pad_Actual),
 	Constraint PKPTaPaciente foreign key (CedPaciente) references PACIENTE(Cedula)
 		on delete no action
+		on update no action
 )
 
 --Tabla Plan_Tratamiento
@@ -52,6 +54,7 @@ create table PLAN_EJERCICIOS(
 	Constraint PKPlan_Ejercicios primary key (CedPaciente, Padec_Act, Nivel),
 	Constraint FKPEaPlan_Tratamiento foreign key (CedPaciente, Padec_Act) references PLAN_TRATAMIENTO(CedPaciente, Pad_Actual)
 		on delete no action
+		on update no action
 )
 
 --Tabla Cita
@@ -68,6 +71,7 @@ create table CITA(
 	Constraint PKCita primary key (CedPaciente, Padec_Act, Fecha),
 	Constraint FKCaPlan_Tratamiento foreign key (CedPaciente, Padec_Act) references PLAN_TRATAMIENTO(CedPaciente, Pad_Actual)
 		on delete no action
+		on update no action
 )
 
 --Tabla Antecedentes Patologicos
@@ -78,6 +82,7 @@ create table ANT_PAT(
 	Constraint PKAnt_Pat primary key (Nombre),
 	Constraint FKAPaPaciente foreign key (CedPaciente) references PACIENTE(Cedula)
 		on delete cascade
+		on update cascade
 )
 
 --Tabla Tipo de Antecedentes Patologicos
@@ -87,6 +92,7 @@ create table TIPO_ANT(
 	Constraint PKTipo_Ant primary key (Nombre_Ant, Tipo),
 	Constraint FKTAaAnt_Pat foreign key (Nombre_Ant) references ANT_PAT(Nombre)
 		on delete no action
+		on update no action
 )
 
 --Tabla Datos Clinicos
@@ -95,7 +101,8 @@ create table DATOS_CLINICOS(
 	Dato		varchar(500)	not null,
 	Constraint PKDatos_Clinicos primary key (CedPaciente, Dato),
 	Constraint FKDCaPaciente foreign key (CedPaciente) references PACIENTE(Cedula)
-		on delete no action,
+		on delete no action
+		on update no action
 )
 
 --Tabla Tecnicas
@@ -114,9 +121,11 @@ create table SE_REALIZAN(
 	Nombre_Tec	varchar(50)	not null
 	Constraint PKSe_Realiza primary key (CedPaciente, Padec_Act, Fecha_Cita, Nombre_Tec),
 	Constraint FKSRaCita foreign key (CedPaciente, Padec_Act, Fecha_Cita) references CITA(CedPaciente, Padec_Act, Fecha)
-		on delete no action,
+		on delete no action
+		on update no action,
 	Constraint FKSRaTecnicas foreign key (Nombre_Tec) references TECNICAS(Nombre)
 		on delete no action
+		on update no action
 )
 
 --Tabla Material
@@ -133,9 +142,11 @@ create table REQUIERE_DE(
 	Cantidad	int,
 	Constraint PKRequiere_De primary key (Nombre_Tec, Nombre_Mat),
 	Constraint FKRDaTecnicas foreign key (Nombre_Tec) references Tecnicas(Nombre)
-		on delete no action,
+		on delete no action
+		on update no action,
 	Constraint FKRDaMaterial foreign key (Nombre_Mat) references MATERIAL(Nombre)
 		on delete no action
+		on update no action
 )
 
 --Tabla Tareas del plan de ejercicios
@@ -147,6 +158,7 @@ create table TAREAS_PLAN_EJERCICIOS(
 	Constraint PKTareas_Plan_Ejercicios primary key (CedPaciente, Padec_Act, Nivel_Plan, Tarea),
 	Constraint FKTPEaPlan_Ejercicios foreign key (CedPaciente, Padec_Act, Nivel_Plan) references PLAN_EJERCICIOS(CedPaciente, Padec_Act, Nivel)
 		on delete no action
+		on update no action
 )
 
 --Tabla Ejercicios
@@ -167,9 +179,11 @@ create table CONSTA_DE(
 	Repeticion	int,
 	Constraint PKConsta_De primary key (CedPaciente, Padec_Act, Nivel_Plan, Nombre_Eje),
 	Constraint FKCDaPlan_Ejercicios foreign key (CedPaciente,Padec_Act,Nivel_Plan) references PLAN_EJERCICIOS(CedPaciente,Padec_Act,Nivel)
-		on delete no action,
+		on delete no action
+		on update no action,
 	Constraint FKCDaEjercicio foreign key (Nombre_Eje) references EJERCICIO(Nombre)
-		on delete no action,
+		on delete no action
+		on update no action
 )
 
 /*
@@ -209,6 +223,7 @@ create table REFERENCIA(
 
 --Borrar TODO
 
+drop table Usuario
 drop table CONSTA_DE
 drop table EJERCICIO
 drop table TAREAS_PLAN_EJERCICIOS

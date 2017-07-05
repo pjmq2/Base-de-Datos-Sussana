@@ -1,6 +1,7 @@
 use DB_GRUPO3
 
---
+---
+GO
 CREATE PROCEDURE dbo.agregarUsuario
 	@pLogin NVARCHAR(50),
 	@pPassword NVARCHAR(50), 
@@ -21,17 +22,37 @@ BEGIN CATCH
 END CATCH
 END
 
+---
+GO
 CREATE PROCEDURE consultaTodasCitas
 AS
 SELECT C.CedPaciente,A.NombreP,A.Apellido1,A.Apellido2,C.Fecha,C.Precio,C.Descripcion,C.Duracion,C.Lugar,C.Estado_Paciente
 FROM CITA C JOIN PLAN_TRATAMIENTO P ON P.CedPaciente = C.CedPaciente and P.Pad_Actual = C.Padec_Act join Paciente A ON A.Cedula = P.CedPaciente
 
+---
+GO
 CREATE PROCEDURE eliminarCita
 @cedula char(9)
 AS
 DELETE FROM CITA
 WHERE CedPaciente = @cedula
 
+---
+GO
+Create procedure eliminarMaterial
+	@nombre	varchar(50)
+AS
+select distinct Material.Nombre
+into #temp
+FROM Material
+Where Material.Nombre = @nombre
+
+Delete Material
+Where Nombre in (SELECT * from #temp)
+
+drop table #temp
+
+---
 GO
 CREATE PROCEDURE eliminarPaciente 
 @nombre varchar(20)
@@ -44,7 +65,8 @@ delete Paciente
 where Cedula in (select * from #temp)
 drop table #temp
 
-
+---
+GO
 CREATE PROCEDURE ModificarCita
 @cedula char(9),@padecimiento varchar(50),@fecha datetime, @precio int, @descripcion varchar(500), @duracion decimal(4,2),
 @lugar varchar(50), @estado varchar(50),@ceduCambiar char(9)
@@ -53,5 +75,3 @@ UPDATE CITA
 SET CedPaciente = @cedula, Padec_Act = @padecimiento, Fecha = @fecha, Precio = @precio, Descripcion = @descripcion,
 Duracion = @duracion, Lugar = @lugar, Estado_Paciente = @estado
 WHERE CedPaciente = @ceduCambiar
-
-

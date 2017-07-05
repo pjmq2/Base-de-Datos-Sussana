@@ -83,7 +83,6 @@
             this.btn_modificar.TabIndex = 4;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
-            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // lbl_consultaDeMateriales
             // 
