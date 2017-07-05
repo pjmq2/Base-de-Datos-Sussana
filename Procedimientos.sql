@@ -32,10 +32,10 @@ FROM CITA C JOIN PLAN_TRATAMIENTO P ON P.CedPaciente = C.CedPaciente and P.Pad_A
 ---
 GO
 CREATE PROCEDURE eliminarCita
-@cedula char(9)
+@cedula char(9), @fecha varchar(18)
 AS
 DELETE FROM CITA
-WHERE CedPaciente = @cedula
+WHERE CedPaciente = @cedula and Fecha = @fecha
 
 ---
 GO
@@ -68,10 +68,10 @@ drop table #temp
 ---
 GO
 CREATE PROCEDURE ModificarCita
-@cedula char(9),@padecimiento varchar(50),@fecha datetime, @precio int, @descripcion varchar(500), @duracion decimal(4,2),
-@lugar varchar(50), @estado varchar(50),@ceduCambiar char(9)
+@cedula char(9),@padecimiento varchar(50),@fecha varchar(18), @precio int, @descripcion varchar(500), @duracion decimal(4,2),
+@lugar varchar(50), @estado varchar(50),@ceduCambiar char(9), @fechaCambiar varchar(18)
 AS
 UPDATE CITA
 SET CedPaciente = @cedula, Padec_Act = @padecimiento, Fecha = @fecha, Precio = @precio, Descripcion = @descripcion,
 Duracion = @duracion, Lugar = @lugar, Estado_Paciente = @estado
-WHERE CedPaciente = @ceduCambiar
+WHERE CedPaciente = @ceduCambiar and Fecha = @fechaCambiar

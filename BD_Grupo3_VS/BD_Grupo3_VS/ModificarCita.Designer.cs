@@ -49,7 +49,6 @@
             this.TXT_Cedula = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.TXT_FechaModificar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TXT_CeduModificar = new System.Windows.Forms.TextBox();
             this.LBL_CedulaEliminar = new System.Windows.Forms.Label();
@@ -60,6 +59,7 @@
             this.LINK_Eliminar = new System.Windows.Forms.LinkLabel();
             this.LINK_Menu = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.DTP_FechaAnt = new System.Windows.Forms.DateTimePicker();
             this.GB_Modificar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +76,7 @@
             // 
             // GB_Modificar
             // 
+            this.GB_Modificar.Controls.Add(this.DTP_FechaAnt);
             this.GB_Modificar.Controls.Add(this.BTN_Modificar);
             this.GB_Modificar.Controls.Add(this.TXT_Estado);
             this.GB_Modificar.Controls.Add(this.label7);
@@ -94,7 +95,6 @@
             this.GB_Modificar.Controls.Add(this.TXT_Cedula);
             this.GB_Modificar.Controls.Add(this.label5);
             this.GB_Modificar.Controls.Add(this.label4);
-            this.GB_Modificar.Controls.Add(this.TXT_FechaModificar);
             this.GB_Modificar.Controls.Add(this.label3);
             this.GB_Modificar.Controls.Add(this.TXT_CeduModificar);
             this.GB_Modificar.Controls.Add(this.LBL_CedulaEliminar);
@@ -259,13 +259,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Digite los nuevos datos";
             // 
-            // TXT_FechaModificar
-            // 
-            this.TXT_FechaModificar.Location = new System.Drawing.Point(20, 233);
-            this.TXT_FechaModificar.Name = "TXT_FechaModificar";
-            this.TXT_FechaModificar.Size = new System.Drawing.Size(161, 20);
-            this.TXT_FechaModificar.TabIndex = 5;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -351,6 +344,14 @@
             this.LINK_Menu.TabStop = true;
             this.LINK_Menu.Text = "Ir al Menú Principal";
             // 
+            // DTP_FechaAnt
+            // 
+            this.DTP_FechaAnt.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.DTP_FechaAnt.Location = new System.Drawing.Point(20, 231);
+            this.DTP_FechaAnt.Name = "DTP_FechaAnt";
+            this.DTP_FechaAnt.Size = new System.Drawing.Size(162, 20);
+            this.DTP_FechaAnt.TabIndex = 24;
+            // 
             // ModificarCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,6 +365,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ModificarCita";
             this.Text = "ModificarCita";
+            this.Load += new System.EventHandler(this.ModificarCita_Load);
             this.GB_Modificar.ResumeLayout(false);
             this.GB_Modificar.PerformLayout();
             this.ResumeLayout(false);
@@ -376,7 +378,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox GB_Modificar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TXT_FechaModificar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TXT_CeduModificar;
         private System.Windows.Forms.Label LBL_CedulaEliminar;
@@ -404,5 +405,6 @@
         private System.Windows.Forms.TextBox TXT_Estado;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox CB_Lugar;
+        private System.Windows.Forms.DateTimePicker DTP_FechaAnt;
     }
 }
