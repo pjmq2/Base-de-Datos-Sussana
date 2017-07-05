@@ -65,6 +65,10 @@ delete Paciente
 where Cedula in (select * from #temp)
 drop table #temp
 
+drop procedure eliminarPaciente
+
+SELECT *
+FROM PACIENTE
 ---
 GO
 CREATE PROCEDURE ModificarCita

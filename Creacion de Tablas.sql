@@ -15,11 +15,11 @@ create table PACIENTE(
 	NombreP		varchar(20)		not null,
 	Apellido1	varchar(20)		not null,
 	Apellido2	varchar(20),
-	Edad		int				not null,
+	FechaNac	date			not null,
 	Sexo		char(1)			not null	DEFAULT 'M',
 	Valoracion	varchar(500)	not null,
 	Email		varchar(50),
-	Numero		int,
+	Telefono	int,
 	Comentarios	varchar(500),
 	Constraint PKPaciente primary key (Cedula)
 )

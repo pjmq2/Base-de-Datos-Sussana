@@ -34,7 +34,7 @@
             this.LBL_Nombre = new System.Windows.Forms.Label();
             this.DGV_Paciente = new System.Windows.Forms.DataGridView();
             this.BTN_Eliminar = new System.Windows.Forms.Button();
-            this.CMB_FiltroNombre = new System.Windows.Forms.ComboBox();
+            this.TXT_Nombre = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Paciente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,21 +97,19 @@
             this.BTN_Eliminar.Text = "Eliminar";
             this.BTN_Eliminar.UseVisualStyleBackColor = true;
             // 
-            // CMB_FiltroNombre
+            // TXT_Nombre
             // 
-            this.CMB_FiltroNombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CMB_FiltroNombre.FormattingEnabled = true;
-            this.CMB_FiltroNombre.Location = new System.Drawing.Point(107, 76);
-            this.CMB_FiltroNombre.Name = "CMB_FiltroNombre";
-            this.CMB_FiltroNombre.Size = new System.Drawing.Size(121, 21);
-            this.CMB_FiltroNombre.TabIndex = 29;
+            this.TXT_Nombre.Location = new System.Drawing.Point(97, 76);
+            this.TXT_Nombre.Name = "TXT_Nombre";
+            this.TXT_Nombre.Size = new System.Drawing.Size(154, 20);
+            this.TXT_Nombre.TabIndex = 29;
             // 
             // EliminarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(689, 447);
-            this.Controls.Add(this.CMB_FiltroNombre);
+            this.Controls.Add(this.TXT_Nombre);
             this.Controls.Add(this.BTN_Eliminar);
             this.Controls.Add(this.DGV_Paciente);
             this.Controls.Add(this.LBL_Nombre);
@@ -134,6 +132,6 @@
         private System.Windows.Forms.Label LBL_Nombre;
         private System.Windows.Forms.DataGridView DGV_Paciente;
         private System.Windows.Forms.Button BTN_Eliminar;
-        private System.Windows.Forms.ComboBox CMB_FiltroNombre;
+        private System.Windows.Forms.TextBox TXT_Nombre;
     }
 }
