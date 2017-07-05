@@ -55,5 +55,10 @@ namespace BD_Grupo3_VS
         {
             this.llenarTabla(dgv_materiales, txt_filtro.Text);
         }
+
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

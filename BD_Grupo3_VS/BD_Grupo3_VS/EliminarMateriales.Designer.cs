@@ -36,6 +36,7 @@
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.dgv_materiales = new System.Windows.Forms.DataGridView();
             this.cmb_nombre = new System.Windows.Forms.ComboBox();
+            this.btn_modificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_materiales)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,9 +69,9 @@
             this.lbl_borradoDeMateriales.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lbl_borradoDeMateriales.Location = new System.Drawing.Point(12, 13);
             this.lbl_borradoDeMateriales.Name = "lbl_borradoDeMateriales";
-            this.lbl_borradoDeMateriales.Size = new System.Drawing.Size(279, 31);
+            this.lbl_borradoDeMateriales.Size = new System.Drawing.Size(334, 31);
             this.lbl_borradoDeMateriales.TabIndex = 14;
-            this.lbl_borradoDeMateriales.Text = "Borrado de materiales";
+            this.lbl_borradoDeMateriales.Text = "Modificación de materiales";
             // 
             // btn_eliminar
             // 
@@ -118,11 +119,21 @@
             this.cmb_nombre.Size = new System.Drawing.Size(250, 21);
             this.cmb_nombre.TabIndex = 17;
             // 
+            // btn_modificar
+            // 
+            this.btn_modificar.Location = new System.Drawing.Point(516, 57);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(75, 23);
+            this.btn_modificar.TabIndex = 18;
+            this.btn_modificar.Text = "Modificar";
+            this.btn_modificar.UseVisualStyleBackColor = true;
+            // 
             // EliminarMateriales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.cmb_nombre);
             this.Controls.Add(this.lnk_agregarMaterial);
             this.Controls.Add(this.lnk_menuPrincipal);
@@ -133,7 +144,7 @@
             this.Controls.Add(this.dgv_materiales);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EliminarMateriales";
-            this.Text = "Eliminar materiales";
+            this.Text = "Modificar materiales";
             this.Load += new System.EventHandler(this.EliminarMateriales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_materiales)).EndInit();
             this.ResumeLayout(false);
@@ -151,5 +162,6 @@
         private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.DataGridView dgv_materiales;
         private System.Windows.Forms.ComboBox cmb_nombre;
+        private System.Windows.Forms.Button btn_modificar;
     }
 }
