@@ -157,12 +157,6 @@
       <DependentUpon>ConsultarTecnicas.cs</DependentUpon>
     </Compile>
     <Compile Include="Ejercicio.cs" />
-    <Compile Include="Eliminar Ejercicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Eliminar Ejercicio.Designer.cs">
-      <DependentUpon>Eliminar Ejercicio.cs</DependentUpon>
-    </Compile>
     <Compile Include="EliminarCita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,9 +272,6 @@
     <EmbeddedResource Include="ConsultarTecnicas.resx">
       <DependentUpon>ConsultarTecnicas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Eliminar Ejercicio.resx">
-      <DependentUpon>Eliminar Ejercicio.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EliminarCita.resx">
       <DependentUpon>EliminarCita.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +307,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -329,6 +321,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cita Eliminar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cita Modificar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cita Nueva.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paciente Eliminar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paciente Modificar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paciente Nuevo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plan de Tratamiento Eliminar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plan de Tratamiento Modificar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plan de Tratamiento Nuevo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plan Ejercicio Eliminar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plan Ejercicio Modificar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plan Ejercicio Nuevo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

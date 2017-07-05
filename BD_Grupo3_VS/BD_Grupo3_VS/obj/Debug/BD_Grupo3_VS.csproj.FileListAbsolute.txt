@@ -81,3 +81,12 @@ D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.EliminarCita.resources
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.MenuPrincipal.resources
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ModificarCita.resources
+C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\bin\Debug\BD_Grupo3_VS.exe.config
+C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\bin\Debug\BD_Grupo3_VS.exe
+C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\bin\Debug\BD_Grupo3_VS.pdb
+C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarCirugias.resources
+C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarDatosClinicos.resources
+C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarCitas.resources
+C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.EliminarCita.resources
+C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.MenuPrincipal.resources
+C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ModificarCita.resources

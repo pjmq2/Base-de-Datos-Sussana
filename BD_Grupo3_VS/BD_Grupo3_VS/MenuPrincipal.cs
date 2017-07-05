@@ -16,5 +16,17 @@ namespace BD_Grupo3_VS
         {
             InitializeComponent();
         }
+
+        private void BTN_NuevoPaciente_Click(object sender, EventArgs e)
+        {
+            AgregarPaciente paciente = new AgregarPaciente();
+            paciente.Show();
+            this.Hide();
+        }
+
+        private void BTN_PacienteBuscar_Click(object sender, EventArgs e)
+        {
+            /*Modificar Paciente*/
+        }
     }
 }

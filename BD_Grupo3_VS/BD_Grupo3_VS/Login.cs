@@ -19,7 +19,7 @@ namespace BD_Grupo3_VS
 
         private void bAceptar_Click(object sender, EventArgs e)
         {
-            AgregarEjercicio menu = new AgregarEjercicio();
+            MenuPrincipal menu = new MenuPrincipal();
             menu.Show();
             this.Hide();
         }

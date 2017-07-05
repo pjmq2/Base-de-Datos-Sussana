@@ -47,18 +47,26 @@ namespace BD_Grupo3_VS
             }
         }
 
-        private void agregarClienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AgregarPaciente paciente = new AgregarPaciente();
-            paciente.Show();
-            this.Hide();
-        }
-
         private void crearEjercicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AgregarPlanTratamiento plan = new AgregarPlanTratamiento();
             plan.Show();
             this.Hide();
         }
+
+        private void agregarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarPaciente paciente = new AgregarPaciente();
+            paciente.Show();
+            this.Hide();
+        }
+
+        private void eliminarPacientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EliminarPaciente paciente = new EliminarPaciente();
+            paciente.Show();
+            this.Hide();
+        }
+
     }
 }
