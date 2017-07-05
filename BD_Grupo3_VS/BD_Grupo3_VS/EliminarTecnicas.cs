@@ -16,5 +16,12 @@ namespace BD_Grupo3_VS
         {
             InitializeComponent();
         }
+
+        private void lnk_menuPrincipal_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

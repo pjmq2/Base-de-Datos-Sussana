@@ -52,5 +52,12 @@ namespace BD_Grupo3_VS
             agregarMaterial.Show();
             this.Hide();
         }
+
+        private void lnk_menuPrincipal_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

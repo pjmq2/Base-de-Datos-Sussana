@@ -27,7 +27,9 @@ namespace BD_Grupo3_VS
 
         private void lnk_menuPrincipal_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
         }
 
         private void lnk_consultarTecnicas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -62,5 +62,12 @@ namespace BD_Grupo3_VS
             llenarComboBox(cmb_nombre);
             llenarTabla(dgv_materiales);
         }
+
+        private void lnk_menuPrincipal_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
+        }
     }
 }
