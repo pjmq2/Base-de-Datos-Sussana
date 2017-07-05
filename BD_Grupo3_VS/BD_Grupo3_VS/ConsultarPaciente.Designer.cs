@@ -34,9 +34,10 @@
             this.LBL_FiltroNombre = new System.Windows.Forms.Label();
             this.LBL_FiltroGeneral = new System.Windows.Forms.Label();
             this.TXT_FiltroGeneral = new System.Windows.Forms.TextBox();
-            this.CMB_FiltroNombre = new System.Windows.Forms.ComboBox();
             this.BTN_Buscar = new System.Windows.Forms.Button();
             this.DGV_Pacientes = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TXT_FiltroNombre = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Pacientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,10 +57,10 @@
             this.LINK_Menu.AutoSize = true;
             this.LINK_Menu.Location = new System.Drawing.Point(631, 26);
             this.LINK_Menu.Name = "LINK_Menu";
-            this.LINK_Menu.Size = new System.Drawing.Size(121, 13);
+            this.LINK_Menu.Size = new System.Drawing.Size(97, 13);
             this.LINK_Menu.TabIndex = 4;
             this.LINK_Menu.TabStop = true;
-            this.LINK_Menu.Text = "Volver al Menú Principal";
+            this.LINK_Menu.Text = "Ir al Menú Principal";
             // 
             // LINK_AgregarPaciente
             // 
@@ -74,7 +75,7 @@
             // LBL_FiltroNombre
             // 
             this.LBL_FiltroNombre.AutoSize = true;
-            this.LBL_FiltroNombre.Location = new System.Drawing.Point(46, 96);
+            this.LBL_FiltroNombre.Location = new System.Drawing.Point(46, 121);
             this.LBL_FiltroNombre.Name = "LBL_FiltroNombre";
             this.LBL_FiltroNombre.Size = new System.Drawing.Size(47, 13);
             this.LBL_FiltroNombre.TabIndex = 10;
@@ -83,7 +84,7 @@
             // LBL_FiltroGeneral
             // 
             this.LBL_FiltroGeneral.AutoSize = true;
-            this.LBL_FiltroGeneral.Location = new System.Drawing.Point(313, 96);
+            this.LBL_FiltroGeneral.Location = new System.Drawing.Point(308, 121);
             this.LBL_FiltroGeneral.Name = "LBL_FiltroGeneral";
             this.LBL_FiltroGeneral.Size = new System.Drawing.Size(72, 13);
             this.LBL_FiltroGeneral.TabIndex = 12;
@@ -92,23 +93,14 @@
             // TXT_FiltroGeneral
             // 
             this.TXT_FiltroGeneral.BackColor = System.Drawing.SystemColors.Window;
-            this.TXT_FiltroGeneral.Location = new System.Drawing.Point(404, 93);
+            this.TXT_FiltroGeneral.Location = new System.Drawing.Point(406, 119);
             this.TXT_FiltroGeneral.Name = "TXT_FiltroGeneral";
             this.TXT_FiltroGeneral.Size = new System.Drawing.Size(146, 20);
             this.TXT_FiltroGeneral.TabIndex = 13;
             // 
-            // CMB_FiltroNombre
-            // 
-            this.CMB_FiltroNombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CMB_FiltroNombre.FormattingEnabled = true;
-            this.CMB_FiltroNombre.Location = new System.Drawing.Point(111, 92);
-            this.CMB_FiltroNombre.Name = "CMB_FiltroNombre";
-            this.CMB_FiltroNombre.Size = new System.Drawing.Size(121, 21);
-            this.CMB_FiltroNombre.TabIndex = 14;
-            // 
             // BTN_Buscar
             // 
-            this.BTN_Buscar.Location = new System.Drawing.Point(627, 86);
+            this.BTN_Buscar.Location = new System.Drawing.Point(627, 113);
             this.BTN_Buscar.Name = "BTN_Buscar";
             this.BTN_Buscar.Size = new System.Drawing.Size(93, 30);
             this.BTN_Buscar.TabIndex = 15;
@@ -118,19 +110,37 @@
             // DGV_Pacientes
             // 
             this.DGV_Pacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Pacientes.Location = new System.Drawing.Point(49, 144);
+            this.DGV_Pacientes.Location = new System.Drawing.Point(49, 182);
             this.DGV_Pacientes.Name = "DGV_Pacientes";
             this.DGV_Pacientes.Size = new System.Drawing.Size(671, 321);
             this.DGV_Pacientes.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(247, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "En el filtro general puede ingresar apellido o cédula";
+            // 
+            // TXT_FiltroNombre
+            // 
+            this.TXT_FiltroNombre.BackColor = System.Drawing.SystemColors.Window;
+            this.TXT_FiltroNombre.Location = new System.Drawing.Point(112, 118);
+            this.TXT_FiltroNombre.Name = "TXT_FiltroNombre";
+            this.TXT_FiltroNombre.Size = new System.Drawing.Size(146, 20);
+            this.TXT_FiltroNombre.TabIndex = 18;
             // 
             // ConsultarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 486);
+            this.ClientSize = new System.Drawing.Size(763, 515);
+            this.Controls.Add(this.TXT_FiltroNombre);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.DGV_Pacientes);
             this.Controls.Add(this.BTN_Buscar);
-            this.Controls.Add(this.CMB_FiltroNombre);
             this.Controls.Add(this.TXT_FiltroGeneral);
             this.Controls.Add(this.LBL_FiltroGeneral);
             this.Controls.Add(this.LBL_FiltroNombre);
@@ -153,8 +163,9 @@
         private System.Windows.Forms.Label LBL_FiltroNombre;
         private System.Windows.Forms.Label LBL_FiltroGeneral;
         private System.Windows.Forms.TextBox TXT_FiltroGeneral;
-        private System.Windows.Forms.ComboBox CMB_FiltroNombre;
         private System.Windows.Forms.Button BTN_Buscar;
         private System.Windows.Forms.DataGridView DGV_Pacientes;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TXT_FiltroNombre;
     }
 }

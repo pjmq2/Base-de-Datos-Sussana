@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.GB_InfoPaciente = new System.Windows.Forms.GroupBox();
+            this.DTP_FechaNac = new System.Windows.Forms.DateTimePicker();
             this.BTN_Agregar = new System.Windows.Forms.Button();
             this.TXT_Valoracion = new System.Windows.Forms.TextBox();
             this.TXT_Comentarios = new System.Windows.Forms.TextBox();
@@ -39,7 +40,7 @@
             this.RB_Masculino = new System.Windows.Forms.RadioButton();
             this.RB_Femenino = new System.Windows.Forms.RadioButton();
             this.TXT_Correo = new System.Windows.Forms.TextBox();
-            this.LBL_Correo = new System.Windows.Forms.Label();
+            this.LBL_Email = new System.Windows.Forms.Label();
             this.LBL_Sexo = new System.Windows.Forms.Label();
             this.LBL_FechaNac = new System.Windows.Forms.Label();
             this.TXT_Apellido2 = new System.Windows.Forms.TextBox();
@@ -54,7 +55,6 @@
             this.LINK_ListaPacientes = new System.Windows.Forms.LinkLabel();
             this.LNK_AgregarCirugias = new System.Windows.Forms.LinkLabel();
             this.LNK_AgregarDatosClinicos = new System.Windows.Forms.LinkLabel();
-            this.DTP_FechaNac = new System.Windows.Forms.DateTimePicker();
             this.GB_InfoPaciente.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +71,7 @@
             this.GB_InfoPaciente.Controls.Add(this.RB_Masculino);
             this.GB_InfoPaciente.Controls.Add(this.RB_Femenino);
             this.GB_InfoPaciente.Controls.Add(this.TXT_Correo);
-            this.GB_InfoPaciente.Controls.Add(this.LBL_Correo);
+            this.GB_InfoPaciente.Controls.Add(this.LBL_Email);
             this.GB_InfoPaciente.Controls.Add(this.LBL_Sexo);
             this.GB_InfoPaciente.Controls.Add(this.LBL_FechaNac);
             this.GB_InfoPaciente.Controls.Add(this.TXT_Apellido2);
@@ -88,6 +88,14 @@
             this.GB_InfoPaciente.TabIndex = 0;
             this.GB_InfoPaciente.TabStop = false;
             this.GB_InfoPaciente.Text = "Información del Paciente";
+            // 
+            // DTP_FechaNac
+            // 
+            this.DTP_FechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DTP_FechaNac.Location = new System.Drawing.Point(153, 209);
+            this.DTP_FechaNac.Name = "DTP_FechaNac";
+            this.DTP_FechaNac.Size = new System.Drawing.Size(88, 20);
+            this.DTP_FechaNac.TabIndex = 23;
             // 
             // BTN_Agregar
             // 
@@ -175,14 +183,14 @@
             this.TXT_Correo.Size = new System.Drawing.Size(154, 20);
             this.TXT_Correo.TabIndex = 12;
             // 
-            // LBL_Correo
+            // LBL_Email
             // 
-            this.LBL_Correo.AutoSize = true;
-            this.LBL_Correo.Location = new System.Drawing.Point(25, 317);
-            this.LBL_Correo.Name = "LBL_Correo";
-            this.LBL_Correo.Size = new System.Drawing.Size(41, 13);
-            this.LBL_Correo.TabIndex = 11;
-            this.LBL_Correo.Text = "Correo:";
+            this.LBL_Email.AutoSize = true;
+            this.LBL_Email.Location = new System.Drawing.Point(25, 317);
+            this.LBL_Email.Name = "LBL_Email";
+            this.LBL_Email.Size = new System.Drawing.Size(35, 13);
+            this.LBL_Email.TabIndex = 11;
+            this.LBL_Email.Text = "Email:";
             // 
             // LBL_Sexo
             // 
@@ -307,14 +315,6 @@
             this.LNK_AgregarDatosClinicos.TabStop = true;
             this.LNK_AgregarDatosClinicos.Text = "Agregar Datos Clínicos";
             // 
-            // DTP_FechaNac
-            // 
-            this.DTP_FechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DTP_FechaNac.Location = new System.Drawing.Point(153, 209);
-            this.DTP_FechaNac.Name = "DTP_FechaNac";
-            this.DTP_FechaNac.Size = new System.Drawing.Size(88, 20);
-            this.DTP_FechaNac.TabIndex = 23;
-            // 
             // AgregarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,7 +344,7 @@
         private System.Windows.Forms.TextBox TXT_Nombre;
         private System.Windows.Forms.Label LBL_Nombre;
         private System.Windows.Forms.TextBox TXT_Correo;
-        private System.Windows.Forms.Label LBL_Correo;
+        private System.Windows.Forms.Label LBL_Email;
         private System.Windows.Forms.Label LBL_Sexo;
         private System.Windows.Forms.Label LBL_FechaNac;
         private System.Windows.Forms.TextBox TXT_Apellido2;
