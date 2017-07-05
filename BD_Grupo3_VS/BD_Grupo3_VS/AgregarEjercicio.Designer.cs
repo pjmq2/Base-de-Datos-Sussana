@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gb_informacionDelMaterial = new System.Windows.Forms.GroupBox();
+            this.btn_Guardar = new System.Windows.Forms.Button();
             this.lbl_imagen = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TXT_Descripcion = new System.Windows.Forms.TextBox();
@@ -37,13 +38,26 @@
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.LBL_Titulo = new System.Windows.Forms.Label();
-            this.LINK_Eliminar = new System.Windows.Forms.LinkLabel();
-            this.LINK_Modificar = new System.Windows.Forms.LinkLabel();
-            this.LINK_ConsultarCita = new System.Windows.Forms.LinkLabel();
-            this.LINK_Menu = new System.Windows.Forms.LinkLabel();
-            this.btn_Guardar = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ejercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.citaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearCitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarCitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarCitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.planDeEjerciciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearPlanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarPlanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarPlanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gb_informacionDelMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_informacionDelMaterial
@@ -64,6 +78,16 @@
             this.gb_informacionDelMaterial.TabIndex = 1;
             this.gb_informacionDelMaterial.TabStop = false;
             this.gb_informacionDelMaterial.Text = "Información del Ejercicio";
+            // 
+            // btn_Guardar
+            // 
+            this.btn_Guardar.Location = new System.Drawing.Point(445, 253);
+            this.btn_Guardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Guardar.Name = "btn_Guardar";
+            this.btn_Guardar.Size = new System.Drawing.Size(100, 64);
+            this.btn_Guardar.TabIndex = 13;
+            this.btn_Guardar.Text = "Guardar";
+            this.btn_Guardar.UseVisualStyleBackColor = true;
             // 
             // lbl_imagen
             // 
@@ -138,84 +162,156 @@
             this.LBL_Titulo.AutoSize = true;
             this.LBL_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Titulo.ForeColor = System.Drawing.Color.Maroon;
-            this.LBL_Titulo.Location = new System.Drawing.Point(254, 47);
+            this.LBL_Titulo.Location = new System.Drawing.Point(254, 28);
             this.LBL_Titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Titulo.Name = "LBL_Titulo";
             this.LBL_Titulo.Size = new System.Drawing.Size(178, 42);
             this.LBL_Titulo.TabIndex = 7;
             this.LBL_Titulo.Text = "Ejercicios";
             // 
-            // LINK_Eliminar
+            // menuStrip1
             // 
-            this.LINK_Eliminar.AutoSize = true;
-            this.LINK_Eliminar.Location = new System.Drawing.Point(401, 19);
-            this.LINK_Eliminar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LINK_Eliminar.Name = "LINK_Eliminar";
-            this.LINK_Eliminar.Size = new System.Drawing.Size(115, 17);
-            this.LINK_Eliminar.TabIndex = 22;
-            this.LINK_Eliminar.TabStop = true;
-            this.LINK_Eliminar.Text = "Eliminar Ejercicio";
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clienteToolStripMenuItem,
+            this.ejercicioToolStripMenuItem,
+            this.citaToolStripMenuItem,
+            this.planDeEjerciciosToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(696, 28);
+            this.menuStrip1.TabIndex = 23;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // LINK_Modificar
+            // clienteToolStripMenuItem
             // 
-            this.LINK_Modificar.AutoSize = true;
-            this.LINK_Modificar.Location = new System.Drawing.Point(177, 14);
-            this.LINK_Modificar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LINK_Modificar.Name = "LINK_Modificar";
-            this.LINK_Modificar.Size = new System.Drawing.Size(122, 17);
-            this.LINK_Modificar.TabIndex = 21;
-            this.LINK_Modificar.TabStop = true;
-            this.LINK_Modificar.Text = "Modificar Ejercicio";
+            this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarClienteToolStripMenuItem,
+            this.modificarClienteToolStripMenuItem,
+            this.eliminarClienteToolStripMenuItem});
+            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.clienteToolStripMenuItem.Text = "Cliente";
             // 
-            // LINK_ConsultarCita
+            // agregarClienteToolStripMenuItem
             // 
-            this.LINK_ConsultarCita.AutoSize = true;
-            this.LINK_ConsultarCita.Location = new System.Drawing.Point(22, 14);
-            this.LINK_ConsultarCita.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LINK_ConsultarCita.Name = "LINK_ConsultarCita";
-            this.LINK_ConsultarCita.Size = new System.Drawing.Size(132, 17);
-            this.LINK_ConsultarCita.TabIndex = 20;
-            this.LINK_ConsultarCita.TabStop = true;
-            this.LINK_ConsultarCita.Text = "Consultar Ejercicios";
+            this.agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
+            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
+            this.agregarClienteToolStripMenuItem.Click += new System.EventHandler(this.agregarClienteToolStripMenuItem_Click);
             // 
-            // LINK_Menu
+            // modificarClienteToolStripMenuItem
             // 
-            this.LINK_Menu.AutoSize = true;
-            this.LINK_Menu.LinkColor = System.Drawing.Color.Blue;
-            this.LINK_Menu.Location = new System.Drawing.Point(542, 19);
-            this.LINK_Menu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LINK_Menu.Name = "LINK_Menu";
-            this.LINK_Menu.Size = new System.Drawing.Size(128, 17);
-            this.LINK_Menu.TabIndex = 19;
-            this.LINK_Menu.TabStop = true;
-            this.LINK_Menu.Text = "Ir al Menú Principal";
+            this.modificarClienteToolStripMenuItem.Name = "modificarClienteToolStripMenuItem";
+            this.modificarClienteToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.modificarClienteToolStripMenuItem.Text = "Modificar Cliente";
             // 
-            // btn_Guardar
+            // eliminarClienteToolStripMenuItem
             // 
-            this.btn_Guardar.Location = new System.Drawing.Point(445, 253);
-            this.btn_Guardar.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Guardar.Name = "btn_Guardar";
-            this.btn_Guardar.Size = new System.Drawing.Size(100, 64);
-            this.btn_Guardar.TabIndex = 13;
-            this.btn_Guardar.Text = "Guardar";
-            this.btn_Guardar.UseVisualStyleBackColor = true;
+            this.eliminarClienteToolStripMenuItem.Name = "eliminarClienteToolStripMenuItem";
+            this.eliminarClienteToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.eliminarClienteToolStripMenuItem.Text = "Eliminar Cliente";
+            // 
+            // ejercicioToolStripMenuItem
+            // 
+            this.ejercicioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearEjercicioToolStripMenuItem,
+            this.modificarEjercicioToolStripMenuItem,
+            this.eliminarEjercicioToolStripMenuItem});
+            this.ejercicioToolStripMenuItem.Name = "ejercicioToolStripMenuItem";
+            this.ejercicioToolStripMenuItem.Size = new System.Drawing.Size(154, 24);
+            this.ejercicioToolStripMenuItem.Text = "Plan de Tratamiento";
+            // 
+            // crearEjercicioToolStripMenuItem
+            // 
+            this.crearEjercicioToolStripMenuItem.Name = "crearEjercicioToolStripMenuItem";
+            this.crearEjercicioToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.crearEjercicioToolStripMenuItem.Text = "Crear Plan";
+            this.crearEjercicioToolStripMenuItem.Click += new System.EventHandler(this.crearEjercicioToolStripMenuItem_Click);
+            // 
+            // modificarEjercicioToolStripMenuItem
+            // 
+            this.modificarEjercicioToolStripMenuItem.Name = "modificarEjercicioToolStripMenuItem";
+            this.modificarEjercicioToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.modificarEjercicioToolStripMenuItem.Text = "Modificar Plan";
+            // 
+            // eliminarEjercicioToolStripMenuItem
+            // 
+            this.eliminarEjercicioToolStripMenuItem.Name = "eliminarEjercicioToolStripMenuItem";
+            this.eliminarEjercicioToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.eliminarEjercicioToolStripMenuItem.Text = "Eliminar Plan";
+            // 
+            // citaToolStripMenuItem
+            // 
+            this.citaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearCitaToolStripMenuItem,
+            this.modificarCitaToolStripMenuItem,
+            this.eliminarCitaToolStripMenuItem});
+            this.citaToolStripMenuItem.Name = "citaToolStripMenuItem";
+            this.citaToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
+            this.citaToolStripMenuItem.Text = "Cita";
+            // 
+            // crearCitaToolStripMenuItem
+            // 
+            this.crearCitaToolStripMenuItem.Name = "crearCitaToolStripMenuItem";
+            this.crearCitaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.crearCitaToolStripMenuItem.Text = "Crear Cita";
+            // 
+            // modificarCitaToolStripMenuItem
+            // 
+            this.modificarCitaToolStripMenuItem.Name = "modificarCitaToolStripMenuItem";
+            this.modificarCitaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.modificarCitaToolStripMenuItem.Text = "Modificar Cita";
+            // 
+            // eliminarCitaToolStripMenuItem
+            // 
+            this.eliminarCitaToolStripMenuItem.Name = "eliminarCitaToolStripMenuItem";
+            this.eliminarCitaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.eliminarCitaToolStripMenuItem.Text = "Eliminar Cita";
+            // 
+            // planDeEjerciciosToolStripMenuItem
+            // 
+            this.planDeEjerciciosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearPlanToolStripMenuItem,
+            this.modificarPlanToolStripMenuItem,
+            this.eliminarPlanToolStripMenuItem});
+            this.planDeEjerciciosToolStripMenuItem.Name = "planDeEjerciciosToolStripMenuItem";
+            this.planDeEjerciciosToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.planDeEjerciciosToolStripMenuItem.Text = "Plan de Ejercicios";
+            // 
+            // crearPlanToolStripMenuItem
+            // 
+            this.crearPlanToolStripMenuItem.Name = "crearPlanToolStripMenuItem";
+            this.crearPlanToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.crearPlanToolStripMenuItem.Text = "Crear Plan";
+            // 
+            // modificarPlanToolStripMenuItem
+            // 
+            this.modificarPlanToolStripMenuItem.Name = "modificarPlanToolStripMenuItem";
+            this.modificarPlanToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.modificarPlanToolStripMenuItem.Text = "Modificar Plan";
+            // 
+            // eliminarPlanToolStripMenuItem
+            // 
+            this.eliminarPlanToolStripMenuItem.Name = "eliminarPlanToolStripMenuItem";
+            this.eliminarPlanToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.eliminarPlanToolStripMenuItem.Text = "Eliminar Plan";
             // 
             // AgregarEjercicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 441);
-            this.Controls.Add(this.LINK_Eliminar);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.LBL_Titulo);
-            this.Controls.Add(this.LINK_Modificar);
             this.Controls.Add(this.gb_informacionDelMaterial);
-            this.Controls.Add(this.LINK_ConsultarCita);
-            this.Controls.Add(this.LINK_Menu);
             this.Name = "AgregarEjercicio";
             this.Text = "AgregarEjercicio";
             this.gb_informacionDelMaterial.ResumeLayout(false);
             this.gb_informacionDelMaterial.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,10 +328,23 @@
         private System.Windows.Forms.Label lbl_imagen;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox TXT_Descripcion;
-        private System.Windows.Forms.LinkLabel LINK_Eliminar;
-        private System.Windows.Forms.LinkLabel LINK_Modificar;
-        private System.Windows.Forms.LinkLabel LINK_ConsultarCita;
-        private System.Windows.Forms.LinkLabel LINK_Menu;
         private System.Windows.Forms.Button btn_Guardar;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ejercicioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearEjercicioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarEjercicioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarEjercicioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem citaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearCitaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarCitaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarCitaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem planDeEjerciciosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearPlanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarPlanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarPlanToolStripMenuItem;
     }
 }

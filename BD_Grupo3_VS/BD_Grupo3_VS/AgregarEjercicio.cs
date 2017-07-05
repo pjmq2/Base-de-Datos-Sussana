@@ -46,5 +46,19 @@ namespace BD_Grupo3_VS
                 MessageBox.Show("Please Select a Image to save!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display message to force select a image 
             }
         }
+
+        private void agregarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarPaciente paciente = new AgregarPaciente();
+            paciente.Show();
+            this.Hide();
+        }
+
+        private void crearEjercicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarPlanTratamiento plan = new AgregarPlanTratamiento();
+            plan.Show();
+            this.Hide();
+        }
     }
 }
