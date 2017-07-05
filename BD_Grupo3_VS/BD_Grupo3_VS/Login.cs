@@ -16,5 +16,12 @@ namespace BD_Grupo3_VS
         {
             InitializeComponent();
         }
+
+        private void bAceptar_Click(object sender, EventArgs e)
+        {
+            AgregarEjercicio menu = new AgregarEjercicio();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

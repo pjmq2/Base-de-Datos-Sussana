@@ -40,7 +40,7 @@ namespace BD_Grupo3_VS
 
         public int eliminarMaterial(string nombre)
         {
-            return bd.eliminarMaterial(nombre);
+            return 1;
         }
 
     }
