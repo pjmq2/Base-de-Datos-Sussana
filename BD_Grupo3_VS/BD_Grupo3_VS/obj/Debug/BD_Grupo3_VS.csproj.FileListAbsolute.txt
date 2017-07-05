@@ -35,7 +35,7 @@ C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\
 C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\bin\Debug\BD_Grupo3_VS.exe.config
 C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\bin\Debug\BD_Grupo3_VS.exe
 C:\Users\Daniel\Documents\Visual Studio 2017\Projects\BD_Grupo3_VS\BD_Grupo3_VS\bin\Debug\BD_Grupo3_VS.pdb
-<<<<<<< HEAD
+
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarAntecedentes.resources
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarCita.resources
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarPaciente.resources
@@ -44,8 +44,7 @@ D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarPaciente.resources
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarPlanTratamiento.resources
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.EliminarPaciente.resources
-=======
->>>>>>> 780deaad7e74c2b04785dc3ee512f2ef96e10064
+
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.csprojResolveAssemblyReference.cache
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarAntecedentes.resources
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarCita.resources

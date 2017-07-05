@@ -52,11 +52,23 @@
     <Compile Include="AgregarAntecedentes.Designer.cs">
       <DependentUpon>AgregarAntecedentes.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarCirugias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarCirugias.Designer.cs">
+      <DependentUpon>AgregarCirugias.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarCita.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AgregarCita.Designer.cs">
       <DependentUpon>AgregarCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarDatosClinicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarDatosClinicos.Designer.cs">
+      <DependentUpon>AgregarDatosClinicos.cs</DependentUpon>
     </Compile>
     <Compile Include="AgregarEjercicio.cs">
       <SubType>Form</SubType>
@@ -191,8 +203,14 @@
     <EmbeddedResource Include="AgregarAntecedentes.resx">
       <DependentUpon>AgregarAntecedentes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarCirugias.resx">
+      <DependentUpon>AgregarCirugias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarCita.resx">
       <DependentUpon>AgregarCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarDatosClinicos.resx">
+      <DependentUpon>AgregarDatosClinicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarEjercicio.resx">
       <DependentUpon>AgregarEjercicio.cs</DependentUpon>
