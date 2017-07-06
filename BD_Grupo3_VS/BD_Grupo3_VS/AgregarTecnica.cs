@@ -34,7 +34,7 @@ namespace BD_Grupo3_VS
 
         private void lnk_consultarTecnicas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ConsultarTecnicas consultar = new ConsultarTecnicas();
+            BuscarTecnicas consultar = new BuscarTecnicas();
             consultar.Show();
             this.Hide();
         }
