@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BD_Grupo3_VS
 {
-    public partial class ConsultarTecnicas : Form
+    public partial class VerTecnica : Form
     {
-        public ConsultarTecnicas()
+        public VerTecnica()
         {
             InitializeComponent();
         }

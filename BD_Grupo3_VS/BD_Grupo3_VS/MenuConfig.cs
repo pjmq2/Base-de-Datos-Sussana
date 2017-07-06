@@ -33,7 +33,7 @@ namespace BD_Grupo3_VS
 
         private void BTN_BuscarMaterial_Click(object sender, EventArgs e)
         {
-            ModificarMaterial material = new ModificarMaterial("hola");
+            VerMaterial material = new VerMaterial("hola");
             material.Show();
             this.Hide();
         }

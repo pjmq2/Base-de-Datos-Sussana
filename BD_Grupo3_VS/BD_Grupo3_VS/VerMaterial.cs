@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace BD_Grupo3_VS
 {
-    public partial class ModificarMaterial : Form
+    public partial class VerMaterial : Form
     {
         Material materiales;
         string nombreMaterial;
         bool cambios = false;
 
-        public ModificarMaterial(string nombreNuevo)
+        public VerMaterial(string nombreNuevo)
         {
             nombreMaterial = nombreNuevo;
             materiales = new Material();
