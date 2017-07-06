@@ -33,8 +33,43 @@ namespace BD_Grupo3_VS
 
         private void BTN_BuscarMaterial_Click(object sender, EventArgs e)
         {
-            VerMaterial material = new VerMaterial("hola");
+            BuscarMateriales material = new BuscarMateriales();
             material.Show();
+            this.Hide();
+        }
+
+        private void BTN_CrearTecnica_Click(object sender, EventArgs e)
+        {
+            AgregarTecnica tecnica = new AgregarTecnica();
+            tecnica.Show();
+            this.Hide();
+        }
+
+        private void BTN_BuscarTecnica_Click(object sender, EventArgs e)
+        {
+            BuscarTecnicas tecnica = new BuscarTecnicas();
+            tecnica.Show();
+            this.Hide();
+        }
+
+        private void BTN_CrearMaterial_Click(object sender, EventArgs e)
+        {
+            AgregarMaterial material = new AgregarMaterial();
+            material.Show();
+            this.Hide();
+        }
+
+        private void BTN_CrearAntecediente_Click(object sender, EventArgs e)
+        {
+            AgregarAntecedentes antecedente = new AgregarAntecedentes();
+            antecedente.Show();
+            this.Hide();
+        }
+
+        private void BTN_BuscarAntecediente_Click(object sender, EventArgs e)
+        {
+            ConsultarAntecedentes antecedente = new ConsultarAntecedentes();
+            antecedente.Show();
             this.Hide();
         }
     }

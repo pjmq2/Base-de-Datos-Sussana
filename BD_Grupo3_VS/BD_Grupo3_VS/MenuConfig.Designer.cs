@@ -49,6 +49,7 @@
             this.BTN_CrearTecnica.Text = "Crear Técnica";
             this.BTN_CrearTecnica.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_CrearTecnica.UseVisualStyleBackColor = true;
+            this.BTN_CrearTecnica.Click += new System.EventHandler(this.BTN_CrearTecnica_Click);
             // 
             // BTN_CrearMaterial
             // 
@@ -61,6 +62,7 @@
             this.BTN_CrearMaterial.Text = "Crear Material";
             this.BTN_CrearMaterial.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_CrearMaterial.UseVisualStyleBackColor = true;
+            this.BTN_CrearMaterial.Click += new System.EventHandler(this.BTN_CrearMaterial_Click);
             // 
             // BTN_CrearAntecediente
             // 
@@ -73,6 +75,7 @@
             this.BTN_CrearAntecediente.Text = "Crear Antecediente";
             this.BTN_CrearAntecediente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_CrearAntecediente.UseVisualStyleBackColor = true;
+            this.BTN_CrearAntecediente.Click += new System.EventHandler(this.BTN_CrearAntecediente_Click);
             // 
             // BTN_CrearEjercicio
             // 
@@ -111,6 +114,7 @@
             this.BTN_BuscarAntecediente.Text = "Buscar Antecediente";
             this.BTN_BuscarAntecediente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_BuscarAntecediente.UseVisualStyleBackColor = true;
+            this.BTN_BuscarAntecediente.Click += new System.EventHandler(this.BTN_BuscarAntecediente_Click);
             // 
             // BTN_BuscarMaterial
             // 
@@ -136,6 +140,7 @@
             this.BTN_BuscarTecnica.Text = "Buscar Técnica";
             this.BTN_BuscarTecnica.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_BuscarTecnica.UseVisualStyleBackColor = true;
+            this.BTN_BuscarTecnica.Click += new System.EventHandler(this.BTN_BuscarTecnica_Click);
             // 
             // MenuConfig
             // 

@@ -157,12 +157,6 @@
       <DependentUpon>BuscarTecnicas.cs</DependentUpon>
     </Compile>
     <Compile Include="Ejercicio.cs" />
-    <Compile Include="Eliminar Ejercicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Eliminar Ejercicio.designer.cs">
-      <DependentUpon>Eliminar Ejercicio.cs</DependentUpon>
-    </Compile>
     <Compile Include="EliminarCita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,9 +277,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarTecnicas.resx">
       <DependentUpon>BuscarTecnicas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Eliminar Ejercicio.resx">
-      <DependentUpon>Eliminar Ejercicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarCita.resx">
       <DependentUpon>EliminarCita.cs</DependentUpon>

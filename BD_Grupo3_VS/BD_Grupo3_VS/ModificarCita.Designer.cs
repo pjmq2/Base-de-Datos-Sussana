@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.GB_Modificar = new System.Windows.Forms.GroupBox();
+            this.DTP_FechaAnt = new System.Windows.Forms.DateTimePicker();
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.TXT_Estado = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,13 +55,15 @@
             this.LBL_CedulaEliminar = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.LINK_AgregarCita = new System.Windows.Forms.LinkLabel();
-            this.LINK_Consultar = new System.Windows.Forms.LinkLabel();
-            this.LINK_Eliminar = new System.Windows.Forms.LinkLabel();
-            this.LINK_Menu = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.DTP_FechaAnt = new System.Windows.Forms.DateTimePicker();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.InicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.avanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GB_Modificar.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -68,9 +71,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(367, 22);
+            this.label1.Location = new System.Drawing.Point(480, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 33);
+            this.label1.Size = new System.Drawing.Size(245, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Modificar Cita";
             // 
@@ -100,18 +104,30 @@
             this.GB_Modificar.Controls.Add(this.LBL_CedulaEliminar);
             this.GB_Modificar.Controls.Add(this.label2);
             this.GB_Modificar.Controls.Add(this.splitter1);
-            this.GB_Modificar.Location = new System.Drawing.Point(24, 90);
+            this.GB_Modificar.Location = new System.Drawing.Point(32, 111);
+            this.GB_Modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GB_Modificar.Name = "GB_Modificar";
-            this.GB_Modificar.Size = new System.Drawing.Size(886, 380);
+            this.GB_Modificar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GB_Modificar.Size = new System.Drawing.Size(1181, 468);
             this.GB_Modificar.TabIndex = 1;
             this.GB_Modificar.TabStop = false;
             this.GB_Modificar.Text = "Modificar Cita";
             // 
+            // DTP_FechaAnt
+            // 
+            this.DTP_FechaAnt.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.DTP_FechaAnt.Location = new System.Drawing.Point(27, 284);
+            this.DTP_FechaAnt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DTP_FechaAnt.Name = "DTP_FechaAnt";
+            this.DTP_FechaAnt.Size = new System.Drawing.Size(215, 22);
+            this.DTP_FechaAnt.TabIndex = 24;
+            // 
             // BTN_Modificar
             // 
-            this.BTN_Modificar.Location = new System.Drawing.Point(761, 330);
+            this.BTN_Modificar.Location = new System.Drawing.Point(1015, 406);
+            this.BTN_Modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_Modificar.Name = "BTN_Modificar";
-            this.BTN_Modificar.Size = new System.Drawing.Size(113, 36);
+            this.BTN_Modificar.Size = new System.Drawing.Size(151, 44);
             this.BTN_Modificar.TabIndex = 23;
             this.BTN_Modificar.Text = "Modificar";
             this.BTN_Modificar.UseVisualStyleBackColor = true;
@@ -119,17 +135,19 @@
             // 
             // TXT_Estado
             // 
-            this.TXT_Estado.Location = new System.Drawing.Point(661, 197);
+            this.TXT_Estado.Location = new System.Drawing.Point(881, 242);
+            this.TXT_Estado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TXT_Estado.Name = "TXT_Estado";
-            this.TXT_Estado.Size = new System.Drawing.Size(149, 20);
+            this.TXT_Estado.Size = new System.Drawing.Size(197, 22);
             this.TXT_Estado.TabIndex = 22;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(556, 199);
+            this.label7.Location = new System.Drawing.Point(741, 245);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 13);
+            this.label7.Size = new System.Drawing.Size(115, 17);
             this.label7.TabIndex = 21;
             this.label7.Text = "Estado Paciente:";
             // 
@@ -139,235 +157,250 @@
             this.CB_Lugar.Items.AddRange(new object[] {
             "Consultorio",
             "Domicilio"});
-            this.CB_Lugar.Location = new System.Drawing.Point(634, 135);
+            this.CB_Lugar.Location = new System.Drawing.Point(845, 166);
+            this.CB_Lugar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CB_Lugar.Name = "CB_Lugar";
-            this.CB_Lugar.Size = new System.Drawing.Size(142, 21);
+            this.CB_Lugar.Size = new System.Drawing.Size(188, 24);
             this.CB_Lugar.TabIndex = 20;
             // 
             // LBL_Lugar
             // 
             this.LBL_Lugar.AutoSize = true;
-            this.LBL_Lugar.Location = new System.Drawing.Point(556, 137);
+            this.LBL_Lugar.Location = new System.Drawing.Point(741, 169);
+            this.LBL_Lugar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Lugar.Name = "LBL_Lugar";
-            this.LBL_Lugar.Size = new System.Drawing.Size(37, 13);
+            this.LBL_Lugar.Size = new System.Drawing.Size(49, 17);
             this.LBL_Lugar.TabIndex = 19;
             this.LBL_Lugar.Text = "Lugar:";
             // 
             // TXT_Duracion
             // 
-            this.TXT_Duracion.Location = new System.Drawing.Point(625, 74);
+            this.TXT_Duracion.Location = new System.Drawing.Point(833, 91);
+            this.TXT_Duracion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TXT_Duracion.Name = "TXT_Duracion";
-            this.TXT_Duracion.Size = new System.Drawing.Size(152, 20);
+            this.TXT_Duracion.Size = new System.Drawing.Size(201, 22);
             this.TXT_Duracion.TabIndex = 18;
             // 
             // LBL_Duracion
             // 
             this.LBL_Duracion.AutoSize = true;
-            this.LBL_Duracion.Location = new System.Drawing.Point(556, 77);
+            this.LBL_Duracion.Location = new System.Drawing.Point(741, 95);
+            this.LBL_Duracion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Duracion.Name = "LBL_Duracion";
-            this.LBL_Duracion.Size = new System.Drawing.Size(53, 13);
+            this.LBL_Duracion.Size = new System.Drawing.Size(69, 17);
             this.LBL_Duracion.TabIndex = 17;
             this.LBL_Duracion.Text = "Duración:";
             // 
             // TXT_Descripcion
             // 
-            this.TXT_Descripcion.Location = new System.Drawing.Point(328, 303);
+            this.TXT_Descripcion.Location = new System.Drawing.Point(437, 373);
+            this.TXT_Descripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TXT_Descripcion.Name = "TXT_Descripcion";
-            this.TXT_Descripcion.Size = new System.Drawing.Size(132, 20);
+            this.TXT_Descripcion.Size = new System.Drawing.Size(175, 22);
             this.TXT_Descripcion.TabIndex = 16;
             // 
             // LBL_Descripcion
             // 
             this.LBL_Descripcion.AutoSize = true;
-            this.LBL_Descripcion.Location = new System.Drawing.Point(245, 306);
+            this.LBL_Descripcion.Location = new System.Drawing.Point(327, 377);
+            this.LBL_Descripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Descripcion.Name = "LBL_Descripcion";
-            this.LBL_Descripcion.Size = new System.Drawing.Size(66, 13);
+            this.LBL_Descripcion.Size = new System.Drawing.Size(86, 17);
             this.LBL_Descripcion.TabIndex = 15;
             this.LBL_Descripcion.Text = "Descripción:";
             // 
             // TXT_Precio
             // 
-            this.TXT_Precio.Location = new System.Drawing.Point(301, 248);
+            this.TXT_Precio.Location = new System.Drawing.Point(401, 305);
+            this.TXT_Precio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TXT_Precio.Name = "TXT_Precio";
-            this.TXT_Precio.Size = new System.Drawing.Size(159, 20);
+            this.TXT_Precio.Size = new System.Drawing.Size(211, 22);
             this.TXT_Precio.TabIndex = 14;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(245, 249);
+            this.label6.Location = new System.Drawing.Point(327, 306);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.Size = new System.Drawing.Size(52, 17);
             this.label6.TabIndex = 13;
             this.label6.Text = "Precio:";
             // 
             // dtp_Fecha
             // 
             this.dtp_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtp_Fecha.Location = new System.Drawing.Point(312, 192);
+            this.dtp_Fecha.Location = new System.Drawing.Point(416, 236);
+            this.dtp_Fecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtp_Fecha.Name = "dtp_Fecha";
-            this.dtp_Fecha.Size = new System.Drawing.Size(148, 20);
+            this.dtp_Fecha.Size = new System.Drawing.Size(196, 22);
             this.dtp_Fecha.TabIndex = 12;
             // 
             // LBL_Fecha
             // 
             this.LBL_Fecha.AutoSize = true;
-            this.LBL_Fecha.Location = new System.Drawing.Point(245, 195);
+            this.LBL_Fecha.Location = new System.Drawing.Point(327, 240);
+            this.LBL_Fecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Fecha.Name = "LBL_Fecha";
-            this.LBL_Fecha.Size = new System.Drawing.Size(40, 13);
+            this.LBL_Fecha.Size = new System.Drawing.Size(51, 17);
             this.LBL_Fecha.TabIndex = 11;
             this.LBL_Fecha.Text = "Fecha:";
             // 
             // TXT_Padecimiento
             // 
-            this.TXT_Padecimiento.Location = new System.Drawing.Point(341, 134);
+            this.TXT_Padecimiento.Location = new System.Drawing.Point(455, 165);
+            this.TXT_Padecimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TXT_Padecimiento.Name = "TXT_Padecimiento";
-            this.TXT_Padecimiento.Size = new System.Drawing.Size(138, 20);
+            this.TXT_Padecimiento.Size = new System.Drawing.Size(183, 22);
             this.TXT_Padecimiento.TabIndex = 10;
             // 
             // LBL_Padecimiento
             // 
             this.LBL_Padecimiento.AutoSize = true;
-            this.LBL_Padecimiento.Location = new System.Drawing.Point(245, 140);
+            this.LBL_Padecimiento.Location = new System.Drawing.Point(327, 172);
+            this.LBL_Padecimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Padecimiento.Name = "LBL_Padecimiento";
-            this.LBL_Padecimiento.Size = new System.Drawing.Size(74, 13);
+            this.LBL_Padecimiento.Size = new System.Drawing.Size(97, 17);
             this.LBL_Padecimiento.TabIndex = 9;
             this.LBL_Padecimiento.Text = "Padecimiento:";
             // 
             // TXT_Cedula
             // 
-            this.TXT_Cedula.Location = new System.Drawing.Point(314, 82);
+            this.TXT_Cedula.Location = new System.Drawing.Point(419, 101);
+            this.TXT_Cedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TXT_Cedula.Name = "TXT_Cedula";
-            this.TXT_Cedula.Size = new System.Drawing.Size(147, 20);
+            this.TXT_Cedula.Size = new System.Drawing.Size(195, 22);
             this.TXT_Cedula.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(245, 85);
+            this.label5.Location = new System.Drawing.Point(327, 105);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.Size = new System.Drawing.Size(56, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = "Cédula:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(245, 36);
+            this.label4.Location = new System.Drawing.Point(327, 44);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 13);
+            this.label4.Size = new System.Drawing.Size(155, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Digite los nuevos datos";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 195);
+            this.label3.Location = new System.Drawing.Point(23, 240);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.Size = new System.Drawing.Size(51, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Fecha:";
             // 
             // TXT_CeduModificar
             // 
-            this.TXT_CeduModificar.Location = new System.Drawing.Point(20, 137);
+            this.TXT_CeduModificar.Location = new System.Drawing.Point(27, 169);
+            this.TXT_CeduModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TXT_CeduModificar.Name = "TXT_CeduModificar";
-            this.TXT_CeduModificar.Size = new System.Drawing.Size(162, 20);
+            this.TXT_CeduModificar.Size = new System.Drawing.Size(215, 22);
             this.TXT_CeduModificar.TabIndex = 3;
             // 
             // LBL_CedulaEliminar
             // 
             this.LBL_CedulaEliminar.AutoSize = true;
-            this.LBL_CedulaEliminar.Location = new System.Drawing.Point(17, 109);
+            this.LBL_CedulaEliminar.Location = new System.Drawing.Point(23, 134);
+            this.LBL_CedulaEliminar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_CedulaEliminar.Name = "LBL_CedulaEliminar";
-            this.LBL_CedulaEliminar.Size = new System.Drawing.Size(43, 13);
+            this.LBL_CedulaEliminar.Size = new System.Drawing.Size(56, 17);
             this.LBL_CedulaEliminar.TabIndex = 2;
             this.LBL_CedulaEliminar.Text = "Cédula:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 36);
+            this.label2.Location = new System.Drawing.Point(8, 44);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(205, 26);
+            this.label2.Size = new System.Drawing.Size(271, 34);
             this.label2.TabIndex = 1;
             this.label2.Text = "Digite la cédula del paciente y la fecha de\r\nla cita que desea modificar";
             // 
             // splitter1
             // 
-            this.splitter1.Location = new System.Drawing.Point(3, 16);
+            this.splitter1.Location = new System.Drawing.Point(4, 19);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(223, 361);
+            this.splitter1.Size = new System.Drawing.Size(297, 445);
             this.splitter1.TabIndex = 0;
             this.splitter1.TabStop = false;
             // 
-            // LINK_AgregarCita
+            // menuStrip1
             // 
-            this.LINK_AgregarCita.AutoSize = true;
-            this.LINK_AgregarCita.Location = new System.Drawing.Point(16, 22);
-            this.LINK_AgregarCita.Name = "LINK_AgregarCita";
-            this.LINK_AgregarCita.Size = new System.Drawing.Size(65, 13);
-            this.LINK_AgregarCita.TabIndex = 2;
-            this.LINK_AgregarCita.TabStop = true;
-            this.LINK_AgregarCita.Text = "Agregar Cita";
-            this.LINK_AgregarCita.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_AgregarCita_LinkClicked);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.InicioToolStripMenuItem,
+            this.buscarPacienteToolStripMenuItem,
+            this.crearPacienteToolStripMenuItem,
+            this.avanzadoToolStripMenuItem,
+            this.salirToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1253, 28);
+            this.menuStrip1.TabIndex = 48;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // LINK_Consultar
+            // InicioToolStripMenuItem
             // 
-            this.LINK_Consultar.AutoSize = true;
-            this.LINK_Consultar.Location = new System.Drawing.Point(129, 22);
-            this.LINK_Consultar.Name = "LINK_Consultar";
-            this.LINK_Consultar.Size = new System.Drawing.Size(77, 13);
-            this.LINK_Consultar.TabIndex = 3;
-            this.LINK_Consultar.TabStop = true;
-            this.LINK_Consultar.Text = "Consultar Citas";
-            this.LINK_Consultar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_Consultar_LinkClicked);
+            this.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem";
+            this.InicioToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
+            this.InicioToolStripMenuItem.Text = "Inicio";
             // 
-            // LINK_Eliminar
+            // buscarPacienteToolStripMenuItem
             // 
-            this.LINK_Eliminar.AutoSize = true;
-            this.LINK_Eliminar.Location = new System.Drawing.Point(738, 22);
-            this.LINK_Eliminar.Name = "LINK_Eliminar";
-            this.LINK_Eliminar.Size = new System.Drawing.Size(64, 13);
-            this.LINK_Eliminar.TabIndex = 4;
-            this.LINK_Eliminar.TabStop = true;
-            this.LINK_Eliminar.Text = "Eliminar Cita";
-            this.LINK_Eliminar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_Eliminar_LinkClicked);
+            this.buscarPacienteToolStripMenuItem.Name = "buscarPacienteToolStripMenuItem";
+            this.buscarPacienteToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
+            this.buscarPacienteToolStripMenuItem.Text = "Buscar Paciente";
             // 
-            // LINK_Menu
+            // crearPacienteToolStripMenuItem
             // 
-            this.LINK_Menu.AutoSize = true;
-            this.LINK_Menu.Location = new System.Drawing.Point(831, 22);
-            this.LINK_Menu.Name = "LINK_Menu";
-            this.LINK_Menu.Size = new System.Drawing.Size(97, 13);
-            this.LINK_Menu.TabIndex = 5;
-            this.LINK_Menu.TabStop = true;
-            this.LINK_Menu.Text = "Ir al Menú Principal";
+            this.crearPacienteToolStripMenuItem.Name = "crearPacienteToolStripMenuItem";
+            this.crearPacienteToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
+            this.crearPacienteToolStripMenuItem.Text = "Crear Paciente";
             // 
-            // DTP_FechaAnt
+            // avanzadoToolStripMenuItem
             // 
-            this.DTP_FechaAnt.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.DTP_FechaAnt.Location = new System.Drawing.Point(20, 231);
-            this.DTP_FechaAnt.Name = "DTP_FechaAnt";
-            this.DTP_FechaAnt.Size = new System.Drawing.Size(162, 20);
-            this.DTP_FechaAnt.TabIndex = 24;
+            this.avanzadoToolStripMenuItem.Name = "avanzadoToolStripMenuItem";
+            this.avanzadoToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.avanzadoToolStripMenuItem.Text = "Avanzado";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // ModificarCita
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(940, 498);
-            this.Controls.Add(this.LINK_Menu);
-            this.Controls.Add(this.LINK_Eliminar);
-            this.Controls.Add(this.LINK_Consultar);
-            this.Controls.Add(this.LINK_AgregarCita);
+            this.ClientSize = new System.Drawing.Size(1253, 613);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.GB_Modificar);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ModificarCita";
             this.Text = "ModificarCita";
             this.Load += new System.EventHandler(this.ModificarCita_Load);
             this.GB_Modificar.ResumeLayout(false);
             this.GB_Modificar.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,10 +416,6 @@
         private System.Windows.Forms.Label LBL_CedulaEliminar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.LinkLabel LINK_AgregarCita;
-        private System.Windows.Forms.LinkLabel LINK_Consultar;
-        private System.Windows.Forms.LinkLabel LINK_Eliminar;
-        private System.Windows.Forms.LinkLabel LINK_Menu;
         private System.Windows.Forms.Label LBL_Lugar;
         private System.Windows.Forms.TextBox TXT_Duracion;
         private System.Windows.Forms.Label LBL_Duracion;
@@ -406,5 +435,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox CB_Lugar;
         private System.Windows.Forms.DateTimePicker DTP_FechaAnt;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem InicioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarPacienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearPacienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem avanzadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }
