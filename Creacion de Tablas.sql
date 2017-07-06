@@ -19,7 +19,7 @@ create table PACIENTE(
 	Sexo		char(1)			not null	DEFAULT 'M',
 	Valoracion	varchar(500)	not null,
 	Email		varchar(50),
-	Telefono	int,
+	Telefono	varchar(12),
 	Comentarios	varchar(500),
 	Constraint PKPaciente primary key (Cedula)
 )
