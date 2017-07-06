@@ -93,21 +93,16 @@ C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarAntecedentes.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarCitas.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarEjercicios.resources
-C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarMateriales.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarPaciente.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarPlanEjercicios.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarPlanTratamiento.resources
-C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarTecnicas.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.Eliminar_Ejercicio.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.EliminarCita.resources
-C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.EliminarMateriales.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.EliminarPaciente.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.EliminarTecnicas.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.Login.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.MenuPrincipal.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ModificarCita.resources
-C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ModificarMaterial.resources
-C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ModificarTecnica.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.Properties.Resources.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.csproj.GenerateResource.Cache
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.exe
@@ -126,3 +121,9 @@ C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proye
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.BuscarTecnicas.resources
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.VerMaterial.resources
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.VerTecnica.resources
+C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.BuscarMateriales.resources
+C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.BuscarTecnicas.resources
+C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.MenuConfig.resources
+C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.VerMaterial.resources
+C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.VerPaciente.resources
+C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.VerTecnica.resources
