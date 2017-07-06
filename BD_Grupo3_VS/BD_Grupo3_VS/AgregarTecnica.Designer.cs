@@ -30,8 +30,6 @@
         {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lnk_consultarTecnicas = new System.Windows.Forms.LinkLabel();
-            this.lnk_menuPrincipal = new System.Windows.Forms.LinkLabel();
             this.nud_precio = new System.Windows.Forms.NumericUpDown();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
@@ -45,8 +43,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lnk_consultarTecnicas);
-            this.groupBox1.Controls.Add(this.lnk_menuPrincipal);
             this.groupBox1.Controls.Add(this.nud_precio);
             this.groupBox1.Controls.Add(this.btn_guardar);
             this.groupBox1.Controls.Add(this.txt_descripcion);
@@ -61,28 +57,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información de la técnica";
             // 
-            // lnk_consultarTecnicas
-            // 
-            this.lnk_consultarTecnicas.AutoSize = true;
-            this.lnk_consultarTecnicas.Location = new System.Drawing.Point(200, 45);
-            this.lnk_consultarTecnicas.Name = "lnk_consultarTecnicas";
-            this.lnk_consultarTecnicas.Size = new System.Drawing.Size(94, 13);
-            this.lnk_consultarTecnicas.TabIndex = 20;
-            this.lnk_consultarTecnicas.TabStop = true;
-            this.lnk_consultarTecnicas.Text = "Consultar técnicas";
-            this.lnk_consultarTecnicas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_consultarTecnicas_LinkClicked);
-            // 
-            // lnk_menuPrincipal
-            // 
-            this.lnk_menuPrincipal.AutoSize = true;
-            this.lnk_menuPrincipal.Location = new System.Drawing.Point(175, 16);
-            this.lnk_menuPrincipal.Name = "lnk_menuPrincipal";
-            this.lnk_menuPrincipal.Size = new System.Drawing.Size(119, 13);
-            this.lnk_menuPrincipal.TabIndex = 19;
-            this.lnk_menuPrincipal.TabStop = true;
-            this.lnk_menuPrincipal.Text = "Volver al menú principal";
-            this.lnk_menuPrincipal.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_menuPrincipal_LinkClicked);
-            // 
             // nud_precio
             // 
             this.nud_precio.Increment = new decimal(new int[] {
@@ -90,7 +64,7 @@
             0,
             0,
             0});
-            this.nud_precio.Location = new System.Drawing.Point(120, 102);
+            this.nud_precio.Location = new System.Drawing.Point(110, 56);
             this.nud_precio.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -102,7 +76,7 @@
             // 
             // btn_guardar
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(219, 217);
+            this.btn_guardar.Location = new System.Drawing.Point(209, 213);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(75, 23);
             this.btn_guardar.TabIndex = 6;
@@ -112,15 +86,15 @@
             // 
             // txt_descripcion
             // 
-            this.txt_descripcion.Location = new System.Drawing.Point(120, 128);
+            this.txt_descripcion.Location = new System.Drawing.Point(110, 82);
             this.txt_descripcion.Multiline = true;
             this.txt_descripcion.Name = "txt_descripcion";
-            this.txt_descripcion.Size = new System.Drawing.Size(174, 83);
+            this.txt_descripcion.Size = new System.Drawing.Size(174, 125);
             this.txt_descripcion.TabIndex = 5;
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(120, 76);
+            this.txt_nombre.Location = new System.Drawing.Point(110, 30);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(174, 20);
             this.txt_nombre.TabIndex = 3;
@@ -128,7 +102,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 131);
+            this.label2.Location = new System.Drawing.Point(18, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 2;
@@ -137,7 +111,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 104);
+            this.label3.Location = new System.Drawing.Point(18, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 1;
@@ -146,7 +120,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 79);
+            this.label4.Location = new System.Drawing.Point(18, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 0;
@@ -171,8 +145,6 @@
         #endregion
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.LinkLabel lnk_consultarTecnicas;
-        private System.Windows.Forms.LinkLabel lnk_menuPrincipal;
         private System.Windows.Forms.NumericUpDown nud_precio;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.TextBox txt_descripcion;

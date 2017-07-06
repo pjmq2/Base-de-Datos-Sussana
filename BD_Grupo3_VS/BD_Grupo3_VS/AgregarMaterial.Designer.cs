@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.gb_informacionDelMaterial = new System.Windows.Forms.GroupBox();
-            this.lnk_ConsultarMateriales = new System.Windows.Forms.LinkLabel();
             this.nud_precio = new System.Windows.Forms.NumericUpDown();
-            this.lnk_menuPrincipal = new System.Windows.Forms.LinkLabel();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.lbl_precio = new System.Windows.Forms.Label();
             this.lbl_nombre = new System.Windows.Forms.Label();
@@ -42,9 +40,7 @@
             // 
             // gb_informacionDelMaterial
             // 
-            this.gb_informacionDelMaterial.Controls.Add(this.lnk_ConsultarMateriales);
             this.gb_informacionDelMaterial.Controls.Add(this.nud_precio);
-            this.gb_informacionDelMaterial.Controls.Add(this.lnk_menuPrincipal);
             this.gb_informacionDelMaterial.Controls.Add(this.btn_guardar);
             this.gb_informacionDelMaterial.Controls.Add(this.lbl_precio);
             this.gb_informacionDelMaterial.Controls.Add(this.lbl_nombre);
@@ -56,17 +52,6 @@
             this.gb_informacionDelMaterial.TabStop = false;
             this.gb_informacionDelMaterial.Text = "Información del material";
             // 
-            // lnk_ConsultarMateriales
-            // 
-            this.lnk_ConsultarMateriales.AutoSize = true;
-            this.lnk_ConsultarMateriales.Location = new System.Drawing.Point(190, 39);
-            this.lnk_ConsultarMateriales.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lnk_ConsultarMateriales.Name = "lnk_ConsultarMateriales";
-            this.lnk_ConsultarMateriales.Size = new System.Drawing.Size(101, 13);
-            this.lnk_ConsultarMateriales.TabIndex = 18;
-            this.lnk_ConsultarMateriales.TabStop = true;
-            this.lnk_ConsultarMateriales.Text = "Consultar materiales";
-            // 
             // nud_precio
             // 
             this.nud_precio.Increment = new decimal(new int[] {
@@ -74,7 +59,7 @@
             0,
             0,
             0});
-            this.nud_precio.Location = new System.Drawing.Point(84, 112);
+            this.nud_precio.Location = new System.Drawing.Point(76, 93);
             this.nud_precio.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -84,21 +69,9 @@
             this.nud_precio.Size = new System.Drawing.Size(207, 20);
             this.nud_precio.TabIndex = 6;
             // 
-            // lnk_menuPrincipal
-            // 
-            this.lnk_menuPrincipal.AutoSize = true;
-            this.lnk_menuPrincipal.Location = new System.Drawing.Point(176, 16);
-            this.lnk_menuPrincipal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lnk_menuPrincipal.Name = "lnk_menuPrincipal";
-            this.lnk_menuPrincipal.Size = new System.Drawing.Size(119, 13);
-            this.lnk_menuPrincipal.TabIndex = 17;
-            this.lnk_menuPrincipal.TabStop = true;
-            this.lnk_menuPrincipal.Text = "Volver al menú principal";
-            this.lnk_menuPrincipal.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_menuPrincipal_LinkClicked_1);
-            // 
             // btn_guardar
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(216, 154);
+            this.btn_guardar.Location = new System.Drawing.Point(208, 148);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(75, 23);
             this.btn_guardar.TabIndex = 5;
@@ -108,7 +81,7 @@
             // lbl_precio
             // 
             this.lbl_precio.AutoSize = true;
-            this.lbl_precio.Location = new System.Drawing.Point(21, 114);
+            this.lbl_precio.Location = new System.Drawing.Point(13, 95);
             this.lbl_precio.Name = "lbl_precio";
             this.lbl_precio.Size = new System.Drawing.Size(40, 13);
             this.lbl_precio.TabIndex = 4;
@@ -117,7 +90,7 @@
             // lbl_nombre
             // 
             this.lbl_nombre.AutoSize = true;
-            this.lbl_nombre.Location = new System.Drawing.Point(21, 76);
+            this.lbl_nombre.Location = new System.Drawing.Point(13, 57);
             this.lbl_nombre.Name = "lbl_nombre";
             this.lbl_nombre.Size = new System.Drawing.Size(47, 13);
             this.lbl_nombre.TabIndex = 3;
@@ -125,7 +98,7 @@
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(84, 73);
+            this.txt_nombre.Location = new System.Drawing.Point(76, 54);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(207, 20);
             this.txt_nombre.TabIndex = 1;
@@ -149,9 +122,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gb_informacionDelMaterial;
-        private System.Windows.Forms.LinkLabel lnk_ConsultarMateriales;
         private System.Windows.Forms.NumericUpDown nud_precio;
-        private System.Windows.Forms.LinkLabel lnk_menuPrincipal;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Label lbl_precio;
         private System.Windows.Forms.Label lbl_nombre;

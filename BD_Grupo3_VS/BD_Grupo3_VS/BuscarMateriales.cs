@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace BD_Grupo3_VS
 {
-    public partial class ConsultarMateriales : Form
+    public partial class BuscarMateriales : Form
     {
         Material material;
-        public ConsultarMateriales()
+        public BuscarMateriales()
         {
             InitializeComponent();
             material = new Material();
@@ -26,12 +26,6 @@ namespace BD_Grupo3_VS
             this.Hide();
         }
 
-        private void lnk_eliminarMaterial_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            EliminarMateriales eliminar = new EliminarMateriales();
-            eliminar.Show();
-            this.Hide();
-        }
 
         private void llenarTabla(DataGridView dataGridView, string filtroNombre)
         {
@@ -42,7 +36,7 @@ namespace BD_Grupo3_VS
             dataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
             dataGridView.DataSource = bindingSource;
 
-            for(int i = 0; i < dgv_materiales.ColumnCount; i++)
+            for(int i = 0; i < DGV_Materiales.ColumnCount; i++)
             {
                 dataGridView.Columns[i].Width = 100;
             }
@@ -50,12 +44,12 @@ namespace BD_Grupo3_VS
 
         private void ConsultarMateriales_Load(object sender, EventArgs e)
         {
-            llenarTabla(dgv_materiales, null);
+            this.llenarTabla(DGV_Materiales, null);
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            this.llenarTabla(dgv_materiales, txt_filtro.Text);
+            this.llenarTabla(DGV_Materiales, TXT_Filtro.Text);
         }
     }
 }
