@@ -17,6 +17,15 @@ namespace BD_Grupo3_VS
             bd = new AccesoBaseDatos();
         }
 
+        public int agregarCirugia(string cedula, string cirugia)
+        {
+            String insertar = "INSERT	INTO	CIRUGIAS	(CedPaciente, Cirugia)	" +
+                "VALUES(" + cedula + ",'" + cirugia + "')";
+            return bd.actualizarDatos(insertar);
+
+
+        }
+
         public int agregarAntecedente(string cedula, string nombreA, string descripcion)
         {
             String insertar = "INSERT	INTO	ANT_PAT	(CedPaciente, Nombre, Descripcion)	" +
@@ -27,9 +36,9 @@ namespace BD_Grupo3_VS
         }
 
         public int agregarTipoAntecedente(string nombreA, string tipo)
-        {
-            String insertar = "INSERT	INTO	TIPO_ANT    (Nombre_Ant, Tipo)  " +
-                "VALUES(" + nombreA + ",'" + tipo + "')";
+        {         
+
+            String insertar = "insert into TIPO_ANT    values('" + nombreA + "','" + tipo + "');";
             return bd.actualizarDatos(insertar);
         }
 
@@ -49,7 +58,7 @@ namespace BD_Grupo3_VS
             return bd.actualizarDatos(insertar);
         }
 
-        
+        //obtenemos una lista de nombre de los pacientes
         public SqlDataReader obtenerListaNombresPacientes()
         {
             SqlDataReader datos = null;
@@ -112,7 +121,5 @@ namespace BD_Grupo3_VS
             return bd.actualizarDatos(eliminar);
 
         }
-
-
     }
 }

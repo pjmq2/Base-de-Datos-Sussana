@@ -43,6 +43,8 @@
             this.TXT_FiltroGeneral = new System.Windows.Forms.TextBox();
             this.BTN_Buscar = new System.Windows.Forms.Button();
             this.GB_DatosCirugia = new System.Windows.Forms.GroupBox();
+            this.LBL_Cedula = new System.Windows.Forms.Label();
+            this.TXT_Cedula = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_CedPaciente)).BeginInit();
             this.GB_DatosCirugia.SuspendLayout();
             this.SuspendLayout();
@@ -152,6 +154,7 @@
             this.BTN_AgregarCirugia.TabIndex = 34;
             this.BTN_AgregarCirugia.Text = "Agregar cirugía";
             this.BTN_AgregarCirugia.UseVisualStyleBackColor = true;
+            this.BTN_AgregarCirugia.Click += new System.EventHandler(this.BTN_AgregarCirugia_Click);
             // 
             // LBL_FiltroGeneral
             // 
@@ -181,6 +184,8 @@
             // 
             // GB_DatosCirugia
             // 
+            this.GB_DatosCirugia.Controls.Add(this.TXT_Cedula);
+            this.GB_DatosCirugia.Controls.Add(this.LBL_Cedula);
             this.GB_DatosCirugia.Controls.Add(this.DGV_CedPaciente);
             this.GB_DatosCirugia.Controls.Add(this.BTN_AgregarCirugia);
             this.GB_DatosCirugia.Controls.Add(this.LBL_FiltroGeneral);
@@ -196,6 +201,22 @@
             this.GB_DatosCirugia.TabIndex = 38;
             this.GB_DatosCirugia.TabStop = false;
             this.GB_DatosCirugia.Text = "Datos de la cirugía";
+            // 
+            // LBL_Cedula
+            // 
+            this.LBL_Cedula.AutoSize = true;
+            this.LBL_Cedula.Location = new System.Drawing.Point(359, 59);
+            this.LBL_Cedula.Name = "LBL_Cedula";
+            this.LBL_Cedula.Size = new System.Drawing.Size(43, 13);
+            this.LBL_Cedula.TabIndex = 38;
+            this.LBL_Cedula.Text = "Cédula:";
+            // 
+            // TXT_Cedula
+            // 
+            this.TXT_Cedula.Location = new System.Drawing.Point(463, 52);
+            this.TXT_Cedula.Name = "TXT_Cedula";
+            this.TXT_Cedula.Size = new System.Drawing.Size(121, 20);
+            this.TXT_Cedula.TabIndex = 39;
             // 
             // AgregarCirugias
             // 
@@ -235,5 +256,7 @@
         private System.Windows.Forms.TextBox TXT_FiltroGeneral;
         private System.Windows.Forms.Button BTN_Buscar;
         private System.Windows.Forms.GroupBox GB_DatosCirugia;
+        private System.Windows.Forms.TextBox TXT_Cedula;
+        private System.Windows.Forms.Label LBL_Cedula;
     }
 }

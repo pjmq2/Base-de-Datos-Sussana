@@ -47,7 +47,7 @@ namespace BD_Grupo3_VS
                     }
                     else
                     {
-                        MessageBox.Show("Algo ha fallado.", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(resultado2 + ": Algo ha fallado.", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -60,7 +60,7 @@ namespace BD_Grupo3_VS
                 }
                 else
                 {
-                    MessageBox.Show("Ha ocurrido un error al intentar agregar el antecendente. \n -Recuerde que los campos de Cédula, Nombre y Tipo " +
+                    MessageBox.Show(" Ha ocurrido un error al intentar agregar el antecendente. \n -Recuerde que los campos de Cédula, Nombre y Tipo " +
                         "no pueden estar vacíos.", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
