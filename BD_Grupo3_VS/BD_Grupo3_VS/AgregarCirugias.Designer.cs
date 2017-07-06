@@ -42,7 +42,9 @@
             this.LBL_FiltroGeneral = new System.Windows.Forms.Label();
             this.TXT_FiltroGeneral = new System.Windows.Forms.TextBox();
             this.BTN_Buscar = new System.Windows.Forms.Button();
+            this.GB_DatosCirugia = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_CedPaciente)).BeginInit();
+            this.GB_DatosCirugia.SuspendLayout();
             this.SuspendLayout();
             // 
             // LBL_Cirugías
@@ -100,7 +102,7 @@
             // LBL_Nombre
             // 
             this.LBL_Nombre.AutoSize = true;
-            this.LBL_Nombre.Location = new System.Drawing.Point(20, 112);
+            this.LBL_Nombre.Location = new System.Drawing.Point(21, 59);
             this.LBL_Nombre.Name = "LBL_Nombre";
             this.LBL_Nombre.Size = new System.Drawing.Size(108, 13);
             this.LBL_Nombre.TabIndex = 29;
@@ -110,7 +112,7 @@
             // 
             this.CMB_Nombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CMB_Nombre.FormattingEnabled = true;
-            this.CMB_Nombre.Location = new System.Drawing.Point(151, 109);
+            this.CMB_Nombre.Location = new System.Drawing.Point(158, 51);
             this.CMB_Nombre.Name = "CMB_Nombre";
             this.CMB_Nombre.Size = new System.Drawing.Size(121, 21);
             this.CMB_Nombre.TabIndex = 30;
@@ -118,7 +120,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(345, 162);
+            this.label1.Location = new System.Drawing.Point(359, 120);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 31;
@@ -126,7 +128,7 @@
             // 
             // TXT_Cirugia
             // 
-            this.TXT_Cirugia.Location = new System.Drawing.Point(428, 159);
+            this.TXT_Cirugia.Location = new System.Drawing.Point(463, 120);
             this.TXT_Cirugia.Name = "TXT_Cirugia";
             this.TXT_Cirugia.Size = new System.Drawing.Size(121, 20);
             this.TXT_Cirugia.TabIndex = 32;
@@ -136,7 +138,7 @@
             this.DGV_CedPaciente.AllowUserToAddRows = false;
             this.DGV_CedPaciente.AllowUserToDeleteRows = false;
             this.DGV_CedPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_CedPaciente.Location = new System.Drawing.Point(23, 253);
+            this.DGV_CedPaciente.Location = new System.Drawing.Point(61, 237);
             this.DGV_CedPaciente.Name = "DGV_CedPaciente";
             this.DGV_CedPaciente.ReadOnly = true;
             this.DGV_CedPaciente.Size = new System.Drawing.Size(218, 36);
@@ -144,7 +146,7 @@
             // 
             // BTN_AgregarCirugia
             // 
-            this.BTN_AgregarCirugia.Location = new System.Drawing.Point(449, 210);
+            this.BTN_AgregarCirugia.Location = new System.Drawing.Point(484, 180);
             this.BTN_AgregarCirugia.Name = "BTN_AgregarCirugia";
             this.BTN_AgregarCirugia.Size = new System.Drawing.Size(100, 27);
             this.BTN_AgregarCirugia.TabIndex = 34;
@@ -154,7 +156,7 @@
             // LBL_FiltroGeneral
             // 
             this.LBL_FiltroGeneral.AutoSize = true;
-            this.LBL_FiltroGeneral.Location = new System.Drawing.Point(20, 149);
+            this.LBL_FiltroGeneral.Location = new System.Drawing.Point(26, 120);
             this.LBL_FiltroGeneral.Name = "LBL_FiltroGeneral";
             this.LBL_FiltroGeneral.Size = new System.Drawing.Size(72, 13);
             this.LBL_FiltroGeneral.TabIndex = 35;
@@ -163,34 +165,44 @@
             // TXT_FiltroGeneral
             // 
             this.TXT_FiltroGeneral.BackColor = System.Drawing.SystemColors.Window;
-            this.TXT_FiltroGeneral.Location = new System.Drawing.Point(151, 146);
+            this.TXT_FiltroGeneral.Location = new System.Drawing.Point(158, 120);
             this.TXT_FiltroGeneral.Name = "TXT_FiltroGeneral";
             this.TXT_FiltroGeneral.Size = new System.Drawing.Size(121, 20);
             this.TXT_FiltroGeneral.TabIndex = 36;
             // 
             // BTN_Buscar
             // 
-            this.BTN_Buscar.Location = new System.Drawing.Point(23, 187);
+            this.BTN_Buscar.Location = new System.Drawing.Point(201, 171);
             this.BTN_Buscar.Name = "BTN_Buscar";
             this.BTN_Buscar.Size = new System.Drawing.Size(78, 26);
             this.BTN_Buscar.TabIndex = 37;
             this.BTN_Buscar.Text = "Buscar";
             this.BTN_Buscar.UseVisualStyleBackColor = true;
             // 
+            // GB_DatosCirugia
+            // 
+            this.GB_DatosCirugia.Controls.Add(this.DGV_CedPaciente);
+            this.GB_DatosCirugia.Controls.Add(this.BTN_AgregarCirugia);
+            this.GB_DatosCirugia.Controls.Add(this.LBL_FiltroGeneral);
+            this.GB_DatosCirugia.Controls.Add(this.TXT_Cirugia);
+            this.GB_DatosCirugia.Controls.Add(this.TXT_FiltroGeneral);
+            this.GB_DatosCirugia.Controls.Add(this.label1);
+            this.GB_DatosCirugia.Controls.Add(this.BTN_Buscar);
+            this.GB_DatosCirugia.Controls.Add(this.LBL_Nombre);
+            this.GB_DatosCirugia.Controls.Add(this.CMB_Nombre);
+            this.GB_DatosCirugia.Location = new System.Drawing.Point(30, 94);
+            this.GB_DatosCirugia.Name = "GB_DatosCirugia";
+            this.GB_DatosCirugia.Size = new System.Drawing.Size(601, 290);
+            this.GB_DatosCirugia.TabIndex = 38;
+            this.GB_DatosCirugia.TabStop = false;
+            this.GB_DatosCirugia.Text = "Datos de la cirugía";
+            // 
             // AgregarCirugias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 396);
-            this.Controls.Add(this.BTN_Buscar);
-            this.Controls.Add(this.TXT_FiltroGeneral);
-            this.Controls.Add(this.LBL_FiltroGeneral);
-            this.Controls.Add(this.BTN_AgregarCirugia);
-            this.Controls.Add(this.DGV_CedPaciente);
-            this.Controls.Add(this.TXT_Cirugia);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.CMB_Nombre);
-            this.Controls.Add(this.LBL_Nombre);
+            this.ClientSize = new System.Drawing.Size(657, 406);
+            this.Controls.Add(this.GB_DatosCirugia);
             this.Controls.Add(this.LINK_AgregarPaciente);
             this.Controls.Add(this.LNK_AgregarDatosClinicos);
             this.Controls.Add(this.LINK_ListaPacientes);
@@ -199,6 +211,8 @@
             this.Name = "AgregarCirugias";
             this.Text = "AgregarCirugias";
             ((System.ComponentModel.ISupportInitialize)(this.DGV_CedPaciente)).EndInit();
+            this.GB_DatosCirugia.ResumeLayout(false);
+            this.GB_DatosCirugia.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,5 +234,6 @@
         private System.Windows.Forms.Label LBL_FiltroGeneral;
         private System.Windows.Forms.TextBox TXT_FiltroGeneral;
         private System.Windows.Forms.Button BTN_Buscar;
+        private System.Windows.Forms.GroupBox GB_DatosCirugia;
     }
 }

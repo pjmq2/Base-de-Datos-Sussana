@@ -31,11 +31,11 @@
             this.LBL__EliminarPaciente = new System.Windows.Forms.Label();
             this.LNK_Menu = new System.Windows.Forms.LinkLabel();
             this.LNK_AgregarPaciente = new System.Windows.Forms.LinkLabel();
-            this.LBL_Nombre = new System.Windows.Forms.Label();
-            this.DGV_Paciente = new System.Windows.Forms.DataGridView();
+            this.LBL_Cedula = new System.Windows.Forms.Label();
+            this.DGV_Pacientes = new System.Windows.Forms.DataGridView();
             this.BTN_Eliminar = new System.Windows.Forms.Button();
-            this.TXT_Nombre = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Paciente)).BeginInit();
+            this.TXT_Cedula = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Pacientes)).BeginInit();
             this.SuspendLayout();
             // 
             // LBL__EliminarPaciente
@@ -70,23 +70,23 @@
             this.LNK_AgregarPaciente.TabStop = true;
             this.LNK_AgregarPaciente.Text = "Agregar paciente";
             // 
-            // LBL_Nombre
+            // LBL_Cedula
             // 
-            this.LBL_Nombre.AutoSize = true;
-            this.LBL_Nombre.Location = new System.Drawing.Point(29, 79);
-            this.LBL_Nombre.Name = "LBL_Nombre";
-            this.LBL_Nombre.Size = new System.Drawing.Size(47, 13);
-            this.LBL_Nombre.TabIndex = 26;
-            this.LBL_Nombre.Text = "Nombre:";
+            this.LBL_Cedula.AutoSize = true;
+            this.LBL_Cedula.Location = new System.Drawing.Point(29, 79);
+            this.LBL_Cedula.Name = "LBL_Cedula";
+            this.LBL_Cedula.Size = new System.Drawing.Size(43, 13);
+            this.LBL_Cedula.TabIndex = 26;
+            this.LBL_Cedula.Text = "Cédula:";
             // 
-            // DGV_Paciente
+            // DGV_Pacientes
             // 
-            this.DGV_Paciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Paciente.GridColor = System.Drawing.SystemColors.Control;
-            this.DGV_Paciente.Location = new System.Drawing.Point(32, 110);
-            this.DGV_Paciente.Name = "DGV_Paciente";
-            this.DGV_Paciente.Size = new System.Drawing.Size(633, 325);
-            this.DGV_Paciente.TabIndex = 27;
+            this.DGV_Pacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Pacientes.GridColor = System.Drawing.SystemColors.Control;
+            this.DGV_Pacientes.Location = new System.Drawing.Point(32, 110);
+            this.DGV_Pacientes.Name = "DGV_Pacientes";
+            this.DGV_Pacientes.Size = new System.Drawing.Size(633, 325);
+            this.DGV_Pacientes.TabIndex = 27;
             // 
             // BTN_Eliminar
             // 
@@ -96,29 +96,31 @@
             this.BTN_Eliminar.TabIndex = 28;
             this.BTN_Eliminar.Text = "Eliminar";
             this.BTN_Eliminar.UseVisualStyleBackColor = true;
+            this.BTN_Eliminar.Click += new System.EventHandler(this.BTN_Eliminar_Click);
             // 
-            // TXT_Nombre
+            // TXT_Cedula
             // 
-            this.TXT_Nombre.Location = new System.Drawing.Point(97, 76);
-            this.TXT_Nombre.Name = "TXT_Nombre";
-            this.TXT_Nombre.Size = new System.Drawing.Size(154, 20);
-            this.TXT_Nombre.TabIndex = 29;
+            this.TXT_Cedula.Location = new System.Drawing.Point(97, 76);
+            this.TXT_Cedula.Name = "TXT_Cedula";
+            this.TXT_Cedula.Size = new System.Drawing.Size(154, 20);
+            this.TXT_Cedula.TabIndex = 29;
             // 
             // EliminarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(689, 447);
-            this.Controls.Add(this.TXT_Nombre);
+            this.Controls.Add(this.TXT_Cedula);
             this.Controls.Add(this.BTN_Eliminar);
-            this.Controls.Add(this.DGV_Paciente);
-            this.Controls.Add(this.LBL_Nombre);
+            this.Controls.Add(this.DGV_Pacientes);
+            this.Controls.Add(this.LBL_Cedula);
             this.Controls.Add(this.LNK_AgregarPaciente);
             this.Controls.Add(this.LNK_Menu);
             this.Controls.Add(this.LBL__EliminarPaciente);
             this.Name = "EliminarPaciente";
             this.Text = "EliminarPaciente";
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Paciente)).EndInit();
+            this.Load += new System.EventHandler(this.EliminarPaciente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Pacientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,9 +131,9 @@
         private System.Windows.Forms.Label LBL__EliminarPaciente;
         private System.Windows.Forms.LinkLabel LNK_Menu;
         private System.Windows.Forms.LinkLabel LNK_AgregarPaciente;
-        private System.Windows.Forms.Label LBL_Nombre;
-        private System.Windows.Forms.DataGridView DGV_Paciente;
+        private System.Windows.Forms.Label LBL_Cedula;
+        private System.Windows.Forms.DataGridView DGV_Pacientes;
         private System.Windows.Forms.Button BTN_Eliminar;
-        private System.Windows.Forms.TextBox TXT_Nombre;
+        private System.Windows.Forms.TextBox TXT_Cedula;
     }
 }
