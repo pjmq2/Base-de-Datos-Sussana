@@ -16,14 +16,20 @@ namespace BD_Grupo3_VS
 {
     public partial class AgregarEjercicio : Form
     {
+        Ejercicio ejercicio;
+        byte[] img;
+        bool imagenCargada=false;
+        bool nombreModificado = false;
+
         public AgregarEjercicio()
         {
+            ejercicio = new Ejercicio();
             InitializeComponent();
         }
 
         private void txt_nombre_TextChanged(object sender, EventArgs e)
         {
-
+            nombreModificado = true;
         }
 
         private void btn_LoadAndSave_Click(object sender, EventArgs e)
@@ -33,19 +39,43 @@ namespace BD_Grupo3_VS
             fop.Filter = "[JPG,JPEG]|*.jpg"; //set filter for select only .jpg files
             if (fop.ShowDialog() == DialogResult.OK) //display open file dialog to user and only user select a image enter to if block
             {
+                imagenCargada = true;
                 FileStream FS = new FileStream(@fop.FileName, FileMode.Open, FileAccess.Read); //create a file stream object associate to user selected file 
-                byte[] img = new byte[FS.Length]; //create a byte array with size of user select file stream length
+                img = new byte[FS.Length]; //create a byte array with size of user select file stream length
                 FS.Read(img, 0, Convert.ToInt32(FS.Length));//read user selected file stream in to byte array       
-                /*
-                 * Aqui va la parte de enlazarlo con SQL
-                 */
+                
                 MessageBox.Show("Image Save Successfully!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display save successful message to user
+                var ms = new MemoryStream(img);
+                pictureBox1.Image = Image.FromStream(ms);
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             }
             else
             {
                 MessageBox.Show("Please Select a Image to save!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display message to force select a image 
             }
         }
+        
+        private void btn_Guardar_Click(object sender, EventArgs e)
+        {
+            if (!nombreModificado)
+            {
+                MessageBox.Show("Favor ponerle nombre al Ejercicio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (imagenCargada)
+                {
+                    var ms = new MemoryStream(img);
+                    ejercicio.agregarEjercicio(txt_nombre.Text, TXT_Descripcion.Text, Image.FromStream(ms));
+                }
+                ejercicio.agregarEjercicio(txt_nombre.Text, TXT_Descripcion.Text, null);
+            }
+        }
+
+
+        /*
+               FUNCIONES PARA EL MENU 
+        */
 
         private void crearEjercicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -67,6 +97,5 @@ namespace BD_Grupo3_VS
             paciente.Show();
             this.Hide();
         }
-
     }
 }
