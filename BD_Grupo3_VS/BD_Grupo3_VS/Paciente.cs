@@ -121,5 +121,11 @@ namespace BD_Grupo3_VS
             return bd.actualizarDatos(eliminar);
 
         }
+
+        public string ObtenerNombre()
+        {
+            string nombre = "";
+            return nombre;
+        }
     }
 }
