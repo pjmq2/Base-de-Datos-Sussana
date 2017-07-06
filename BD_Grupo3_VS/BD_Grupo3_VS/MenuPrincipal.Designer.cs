@@ -39,9 +39,9 @@
             // 
             this.GB_Paciente.Controls.Add(this.BTN_PacienteBuscar);
             this.GB_Paciente.Controls.Add(this.BTN_NuevoPaciente);
-            this.GB_Paciente.Location = new System.Drawing.Point(39, 72);
+            this.GB_Paciente.Location = new System.Drawing.Point(38, 50);
             this.GB_Paciente.Name = "GB_Paciente";
-            this.GB_Paciente.Size = new System.Drawing.Size(282, 207);
+            this.GB_Paciente.Size = new System.Drawing.Size(282, 238);
             this.GB_Paciente.TabIndex = 0;
             this.GB_Paciente.TabStop = false;
             this.GB_Paciente.Text = "Paciente";
@@ -51,9 +51,9 @@
             this.BTN_PacienteBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BTN_PacienteBuscar.Image = global::BD_Grupo3_VS.Properties.Resources.Paciente_Modificar;
             this.BTN_PacienteBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_PacienteBuscar.Location = new System.Drawing.Point(152, 44);
+            this.BTN_PacienteBuscar.Location = new System.Drawing.Point(155, 44);
             this.BTN_PacienteBuscar.Name = "BTN_PacienteBuscar";
-            this.BTN_PacienteBuscar.Size = new System.Drawing.Size(98, 138);
+            this.BTN_PacienteBuscar.Size = new System.Drawing.Size(121, 159);
             this.BTN_PacienteBuscar.TabIndex = 1;
             this.BTN_PacienteBuscar.Text = "Buscar Paciente";
             this.BTN_PacienteBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -65,9 +65,9 @@
             this.BTN_NuevoPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BTN_NuevoPaciente.Image = global::BD_Grupo3_VS.Properties.Resources.Paciente_Nuevo;
             this.BTN_NuevoPaciente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_NuevoPaciente.Location = new System.Drawing.Point(25, 44);
+            this.BTN_NuevoPaciente.Location = new System.Drawing.Point(6, 44);
             this.BTN_NuevoPaciente.Name = "BTN_NuevoPaciente";
-            this.BTN_NuevoPaciente.Size = new System.Drawing.Size(98, 138);
+            this.BTN_NuevoPaciente.Size = new System.Drawing.Size(121, 159);
             this.BTN_NuevoPaciente.TabIndex = 0;
             this.BTN_NuevoPaciente.Text = "Nuevo Paciente";
             this.BTN_NuevoPaciente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -76,11 +76,12 @@
             // 
             // BTN_Config
             // 
-            this.BTN_Config.Location = new System.Drawing.Point(56, 294);
+            this.BTN_Config.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Config.Location = new System.Drawing.Point(38, 294);
             this.BTN_Config.Name = "BTN_Config";
-            this.BTN_Config.Size = new System.Drawing.Size(244, 59);
+            this.BTN_Config.Size = new System.Drawing.Size(282, 59);
             this.BTN_Config.TabIndex = 1;
-            this.BTN_Config.Text = "Configuracion";
+            this.BTN_Config.Text = "Avanzado";
             this.BTN_Config.UseVisualStyleBackColor = true;
             this.BTN_Config.Click += new System.EventHandler(this.BTN_Config_Click);
             // 

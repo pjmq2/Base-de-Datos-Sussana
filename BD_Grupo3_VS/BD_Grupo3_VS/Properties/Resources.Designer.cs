@@ -63,6 +63,56 @@ namespace BD_Grupo3_VS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Antecedente_Agregar {
+            get {
+                object obj = ResourceManager.GetObject("Antecedente Agregar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Antecedente_Buscar {
+            get {
+                object obj = ResourceManager.GetObject("Antecedente Buscar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Antecedente_Eliminar {
+            get {
+                object obj = ResourceManager.GetObject("Antecedente Eliminar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Antecedente_Modificar {
+            get {
+                object obj = ResourceManager.GetObject("Antecedente Modificar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cita_Buscar {
+            get {
+                object obj = ResourceManager.GetObject("Cita Buscar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cita_Eliminar {
             get {
                 object obj = ResourceManager.GetObject("Cita Eliminar", resourceCulture);
@@ -86,6 +136,86 @@ namespace BD_Grupo3_VS.Properties {
         internal static System.Drawing.Bitmap Cita_Nueva {
             get {
                 object obj = ResourceManager.GetObject("Cita Nueva", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ejercicio_Agregar {
+            get {
+                object obj = ResourceManager.GetObject("Ejercicio Agregar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ejercicio_Buscar {
+            get {
+                object obj = ResourceManager.GetObject("Ejercicio Buscar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ejercicio_Eliminar {
+            get {
+                object obj = ResourceManager.GetObject("Ejercicio Eliminar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ejercicio_Modificar {
+            get {
+                object obj = ResourceManager.GetObject("Ejercicio Modificar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Material_Agregar {
+            get {
+                object obj = ResourceManager.GetObject("Material Agregar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Material_Buscar {
+            get {
+                object obj = ResourceManager.GetObject("Material Buscar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Material_Eliminar {
+            get {
+                object obj = ResourceManager.GetObject("Material Eliminar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Material_Modificar {
+            get {
+                object obj = ResourceManager.GetObject("Material Modificar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,6 +253,16 @@ namespace BD_Grupo3_VS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Plan_de_Tratamiento_Buscar {
+            get {
+                object obj = ResourceManager.GetObject("Plan de Tratamiento Buscar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Plan_de_Tratamiento_Eliminar {
             get {
                 object obj = ResourceManager.GetObject("Plan de Tratamiento Eliminar", resourceCulture);
@@ -153,6 +293,16 @@ namespace BD_Grupo3_VS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Plan_Ejercicio_Buscar {
+            get {
+                object obj = ResourceManager.GetObject("Plan Ejercicio Buscar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Plan_Ejercicio_Eliminar {
             get {
                 object obj = ResourceManager.GetObject("Plan Ejercicio Eliminar", resourceCulture);
@@ -176,6 +326,46 @@ namespace BD_Grupo3_VS.Properties {
         internal static System.Drawing.Bitmap Plan_Ejercicio_Nuevo {
             get {
                 object obj = ResourceManager.GetObject("Plan Ejercicio Nuevo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tecnica_Buscar {
+            get {
+                object obj = ResourceManager.GetObject("Tecnica Buscar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tecnica_Crear {
+            get {
+                object obj = ResourceManager.GetObject("Tecnica Crear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tecnica_Eliminar {
+            get {
+                object obj = ResourceManager.GetObject("Tecnica Eliminar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tecnica_Modificar {
+            get {
+                object obj = ResourceManager.GetObject("Tecnica Modificar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

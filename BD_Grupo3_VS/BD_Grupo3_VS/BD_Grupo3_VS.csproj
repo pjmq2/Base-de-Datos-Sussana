@@ -311,6 +311,9 @@
     <EmbeddedResource Include="VerMaterial.resx">
       <DependentUpon>VerMaterial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VerPaciente.resx">
+      <DependentUpon>VerPaciente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VerTecnica.resx">
       <DependentUpon>VerTecnica.cs</DependentUpon>
     </EmbeddedResource>
@@ -372,6 +375,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Plan Ejercicio Nuevo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antecedente Agregar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antecedente Buscar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antecedente Eliminar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antecedente Modificar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ejercicio Agregar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ejercicio Buscar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ejercicio Eliminar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ejercicio Modificar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Material Agregar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Material Buscar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Material Eliminar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Material Modificar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tecnica Buscar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tecnica Crear.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tecnica Eliminar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tecnica Modificar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cita Buscar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plan de Tratamiento Buscar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plan Ejercicio Buscar.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
