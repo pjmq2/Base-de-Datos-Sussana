@@ -37,6 +37,7 @@ namespace BD_Grupo3_VS
             int resultado = paciente.agregarPaciente(TXT_Cedula.Text, TXT_Nombre.Text, TXT_Apellido1.Text, TXT_Apellido2.Text,
                 DTP_FechaNac.Value.ToString("yyyyMMdd"), genero, TXT_Valoracion.Text, TXT_Email.Text,  TXT_Telefono.Text, TXT_Comentarios.Text);
 
+            //resultado es 0 cuando se pudo agregar paciente con éxito
             if (resultado == 0)
             {
                 MessageBox.Show("¡El paciente ha sido agregado exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);

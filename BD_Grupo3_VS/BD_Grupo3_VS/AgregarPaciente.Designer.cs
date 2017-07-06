@@ -97,6 +97,7 @@
             this.DTP_FechaNac.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.DTP_FechaNac.Size = new System.Drawing.Size(88, 20);
             this.DTP_FechaNac.TabIndex = 23;
+            this.DTP_FechaNac.Value = new System.DateTime(2017, 7, 5, 0, 0, 0, 0);
             // 
             // BTN_Agregar
             // 
