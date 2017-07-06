@@ -108,7 +108,7 @@
             // 
             // BTN_Buscar
             // 
-            this.BTN_Buscar.Location = new System.Drawing.Point(836, 139);
+            this.BTN_Buscar.Location = new System.Drawing.Point(753, 149);
             this.BTN_Buscar.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Buscar.Name = "BTN_Buscar";
             this.BTN_Buscar.Size = new System.Drawing.Size(124, 37);
