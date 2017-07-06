@@ -82,5 +82,19 @@ namespace BD_Grupo3_VS
         {
             return bd.eliminarEstudiante(nombre);
         }
+
+        /*Método para obtener la descripcion de un ejercicio 
+            Recibe: El nombre de los ejercicios 
+            Modifica: Realiza la selección del ejercicio y carga la descripcion
+            Retorna: La descripcion del Ejercicio
+        */
+        public string obtenerDescripcion(string nombre)
+        {
+            string descripcion="";
+            SqlDataReader datos = null;
+            datos = bd.ejecutarConsulta("Select * from ejercicio where nombre = '" + nombre+ "'");
+            descripcion = datos.GetString(2);
+            return descripcion;
+        }
     }
 }

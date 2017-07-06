@@ -40,15 +40,15 @@
             this.TP_InfoBasica = new System.Windows.Forms.TabPage();
             this.DTP_Paciente = new System.Windows.Forms.DateTimePicker();
             this.LBL_FechaNacimiento = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TXT_Telefono = new System.Windows.Forms.TextBox();
             this.LBL_Telefono = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TXT_Cedula = new System.Windows.Forms.TextBox();
             this.LBL_Cedula = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TXT_Apellido2 = new System.Windows.Forms.TextBox();
             this.LBL_Apellido2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TXT_Apellido1 = new System.Windows.Forms.TextBox();
             this.LBL_Apellido1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TXT_Nombre = new System.Windows.Forms.TextBox();
             this.LBL_Nombre = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.InicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -165,15 +165,15 @@
             // 
             this.TP_InfoBasica.Controls.Add(this.DTP_Paciente);
             this.TP_InfoBasica.Controls.Add(this.LBL_FechaNacimiento);
-            this.TP_InfoBasica.Controls.Add(this.textBox5);
+            this.TP_InfoBasica.Controls.Add(this.TXT_Telefono);
             this.TP_InfoBasica.Controls.Add(this.LBL_Telefono);
-            this.TP_InfoBasica.Controls.Add(this.textBox4);
+            this.TP_InfoBasica.Controls.Add(this.TXT_Cedula);
             this.TP_InfoBasica.Controls.Add(this.LBL_Cedula);
-            this.TP_InfoBasica.Controls.Add(this.textBox3);
+            this.TP_InfoBasica.Controls.Add(this.TXT_Apellido2);
             this.TP_InfoBasica.Controls.Add(this.LBL_Apellido2);
-            this.TP_InfoBasica.Controls.Add(this.textBox1);
+            this.TP_InfoBasica.Controls.Add(this.TXT_Apellido1);
             this.TP_InfoBasica.Controls.Add(this.LBL_Apellido1);
-            this.TP_InfoBasica.Controls.Add(this.textBox2);
+            this.TP_InfoBasica.Controls.Add(this.TXT_Nombre);
             this.TP_InfoBasica.Controls.Add(this.LBL_Nombre);
             this.TP_InfoBasica.Location = new System.Drawing.Point(4, 25);
             this.TP_InfoBasica.Name = "TP_InfoBasica";
@@ -200,12 +200,12 @@
             this.LBL_FechaNacimiento.TabIndex = 18;
             this.LBL_FechaNacimiento.Text = "Fecha Nacimiento:";
             // 
-            // textBox5
+            // TXT_Telefono
             // 
-            this.textBox5.Location = new System.Drawing.Point(103, 197);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(225, 22);
-            this.textBox5.TabIndex = 17;
+            this.TXT_Telefono.Location = new System.Drawing.Point(103, 197);
+            this.TXT_Telefono.Name = "TXT_Telefono";
+            this.TXT_Telefono.Size = new System.Drawing.Size(225, 22);
+            this.TXT_Telefono.TabIndex = 17;
             // 
             // LBL_Telefono
             // 
@@ -216,12 +216,12 @@
             this.LBL_Telefono.TabIndex = 16;
             this.LBL_Telefono.Text = "Telefono:";
             // 
-            // textBox4
+            // TXT_Cedula
             // 
-            this.textBox4.Location = new System.Drawing.Point(103, 151);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(225, 22);
-            this.textBox4.TabIndex = 15;
+            this.TXT_Cedula.Location = new System.Drawing.Point(103, 151);
+            this.TXT_Cedula.Name = "TXT_Cedula";
+            this.TXT_Cedula.Size = new System.Drawing.Size(225, 22);
+            this.TXT_Cedula.TabIndex = 15;
             // 
             // LBL_Cedula
             // 
@@ -232,12 +232,12 @@
             this.LBL_Cedula.TabIndex = 14;
             this.LBL_Cedula.Text = "Cedula:";
             // 
-            // textBox3
+            // TXT_Apellido2
             // 
-            this.textBox3.Location = new System.Drawing.Point(103, 109);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(225, 22);
-            this.textBox3.TabIndex = 13;
+            this.TXT_Apellido2.Location = new System.Drawing.Point(103, 109);
+            this.TXT_Apellido2.Name = "TXT_Apellido2";
+            this.TXT_Apellido2.Size = new System.Drawing.Size(225, 22);
+            this.TXT_Apellido2.TabIndex = 13;
             // 
             // LBL_Apellido2
             // 
@@ -248,12 +248,12 @@
             this.LBL_Apellido2.TabIndex = 12;
             this.LBL_Apellido2.Text = "Apellido 2:";
             // 
-            // textBox1
+            // TXT_Apellido1
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 22);
-            this.textBox1.TabIndex = 11;
+            this.TXT_Apellido1.Location = new System.Drawing.Point(103, 65);
+            this.TXT_Apellido1.Name = "TXT_Apellido1";
+            this.TXT_Apellido1.Size = new System.Drawing.Size(225, 22);
+            this.TXT_Apellido1.TabIndex = 11;
             // 
             // LBL_Apellido1
             // 
@@ -264,12 +264,12 @@
             this.LBL_Apellido1.TabIndex = 10;
             this.LBL_Apellido1.Text = "Apellido 1:";
             // 
-            // textBox2
+            // TXT_Nombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(103, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(225, 22);
-            this.textBox2.TabIndex = 9;
+            this.TXT_Nombre.Location = new System.Drawing.Point(103, 24);
+            this.TXT_Nombre.Name = "TXT_Nombre";
+            this.TXT_Nombre.Size = new System.Drawing.Size(225, 22);
+            this.TXT_Nombre.TabIndex = 9;
             // 
             // LBL_Nombre
             // 
@@ -367,15 +367,15 @@
         private System.Windows.Forms.TabPage TP_InfoBasica;
         private System.Windows.Forms.DateTimePicker DTP_Paciente;
         private System.Windows.Forms.Label LBL_FechaNacimiento;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TXT_Telefono;
         private System.Windows.Forms.Label LBL_Telefono;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TXT_Cedula;
         private System.Windows.Forms.Label LBL_Cedula;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TXT_Apellido2;
         private System.Windows.Forms.Label LBL_Apellido2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TXT_Apellido1;
         private System.Windows.Forms.Label LBL_Apellido1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TXT_Nombre;
         private System.Windows.Forms.Label LBL_Nombre;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem InicioToolStripMenuItem;

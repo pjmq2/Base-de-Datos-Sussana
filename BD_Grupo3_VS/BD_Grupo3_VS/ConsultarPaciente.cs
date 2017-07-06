@@ -90,20 +90,30 @@ namespace BD_Grupo3_VS
             llenarTabla(DGV_Pacientes,CB_Nombre.Text,null);
         }
 
-        private void DGV_Pacientes_CurrentCellChanged_1(object sender, EventArgs e)
+        private void BTN_Modificar_Click(object sender, EventArgs e)
         {
-            string nombre = "";
-            if (DGV_Pacientes.SelectedRows.Count != 0)
+            if (DGV_Pacientes.SelectedRows.Count == 0)
             {
-                //int numero = DGV_Pacientes.CurrentCellAddress.Y;
-                //nombre = DGV_Pacientes[1,2].Value.ToString();
+                /*Mensaje no hay nada seleccionado*/
+            }
+            else
+            {
+                string nombre;
+                string apellido1;
+                string apellido2;
+                string cedula;
                 DataGridViewRow row = DGV_Pacientes.CurrentRow;
-                nombre = row.Cells[0].Value.ToString();
-                MessageBox.Show(nombre,null);
+                cedula = row.Cells[0].Value.ToString();
+                nombre = row.Cells[1].Value.ToString();
+                apellido1 = row.Cells[2].Value.ToString();
+                apellido2 = row.Cells[3].Value.ToString();
+
+                VerPaciente paciente = new VerPaciente(cedula, nombre, apellido1, apellido2);
+                paciente.Show();
+                this.Hide();
             }
             
         }
-
 
         /*             A partir de aqui empiezan los metodos para la cinta del menu  */
         private void InicioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -143,10 +153,8 @@ namespace BD_Grupo3_VS
                 this.Close();
                 //Aun no cierra todo el programa
             }
-        }
+        }/*             Hasta aqui las instrucciones de la cinta del menu  */
 
-        /*             Hasta aqui las instrucciones de la cinta del menu  */
-
-
+        
     }
 }
