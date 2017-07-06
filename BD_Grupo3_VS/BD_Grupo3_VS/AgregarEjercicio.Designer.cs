@@ -227,20 +227,20 @@
             // crearEjercicioToolStripMenuItem
             // 
             this.crearEjercicioToolStripMenuItem.Name = "crearEjercicioToolStripMenuItem";
-            this.crearEjercicioToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.crearEjercicioToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.crearEjercicioToolStripMenuItem.Text = "Crear Plan";
             this.crearEjercicioToolStripMenuItem.Click += new System.EventHandler(this.crearEjercicioToolStripMenuItem_Click);
             // 
             // modificarEjercicioToolStripMenuItem
             // 
             this.modificarEjercicioToolStripMenuItem.Name = "modificarEjercicioToolStripMenuItem";
-            this.modificarEjercicioToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.modificarEjercicioToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.modificarEjercicioToolStripMenuItem.Text = "Modificar Plan";
             // 
             // eliminarEjercicioToolStripMenuItem
             // 
             this.eliminarEjercicioToolStripMenuItem.Name = "eliminarEjercicioToolStripMenuItem";
-            this.eliminarEjercicioToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.eliminarEjercicioToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.eliminarEjercicioToolStripMenuItem.Text = "Eliminar Plan";
             // 
             // citaToolStripMenuItem
@@ -256,19 +256,19 @@
             // crearCitaToolStripMenuItem
             // 
             this.crearCitaToolStripMenuItem.Name = "crearCitaToolStripMenuItem";
-            this.crearCitaToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
+            this.crearCitaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.crearCitaToolStripMenuItem.Text = "Crear Cita";
             // 
             // modificarCitaToolStripMenuItem
             // 
             this.modificarCitaToolStripMenuItem.Name = "modificarCitaToolStripMenuItem";
-            this.modificarCitaToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
+            this.modificarCitaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.modificarCitaToolStripMenuItem.Text = "Modificar Cita";
             // 
             // eliminarCitaToolStripMenuItem
             // 
             this.eliminarCitaToolStripMenuItem.Name = "eliminarCitaToolStripMenuItem";
-            this.eliminarCitaToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
+            this.eliminarCitaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.eliminarCitaToolStripMenuItem.Text = "Eliminar Cita";
             // 
             // planDeEjerciciosToolStripMenuItem
@@ -284,26 +284,27 @@
             // crearPlanToolStripMenuItem
             // 
             this.crearPlanToolStripMenuItem.Name = "crearPlanToolStripMenuItem";
-            this.crearPlanToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.crearPlanToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.crearPlanToolStripMenuItem.Text = "Crear Plan";
             // 
             // modificarPlanToolStripMenuItem
             // 
             this.modificarPlanToolStripMenuItem.Name = "modificarPlanToolStripMenuItem";
-            this.modificarPlanToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.modificarPlanToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.modificarPlanToolStripMenuItem.Text = "Modificar Plan";
             // 
             // eliminarPlanToolStripMenuItem
             // 
             this.eliminarPlanToolStripMenuItem.Name = "eliminarPlanToolStripMenuItem";
-            this.eliminarPlanToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.eliminarPlanToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.eliminarPlanToolStripMenuItem.Text = "Eliminar Plan";
             // 
             // AgregarEjercicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 502);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(696, 512);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.LBL_Titulo);
             this.Controls.Add(this.gb_informacionDelMaterial);

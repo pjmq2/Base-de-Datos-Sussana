@@ -102,6 +102,7 @@
             this.BTN_BuscarMaterial.TabIndex = 5;
             this.BTN_BuscarMaterial.Text = "Buscar Material";
             this.BTN_BuscarMaterial.UseVisualStyleBackColor = true;
+            this.BTN_BuscarMaterial.Click += new System.EventHandler(this.BTN_BuscarMaterial_Click);
             // 
             // BTN_BuscarTecnica
             // 

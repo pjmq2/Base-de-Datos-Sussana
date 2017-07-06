@@ -14,6 +14,7 @@ namespace BD_Grupo3_VS
     {
         Material materiales;
         string nombreMaterial;
+        bool cambios = false;
 
         public ModificarMaterial(string nombreNuevo)
         {
@@ -24,17 +25,26 @@ namespace BD_Grupo3_VS
 
         private void ModificarMaterial_Load(object sender, EventArgs e)
         {
-            LBL_NombreEscogido.Text=nombreMaterial;
+            TXT_Nombre.Text = nombreMaterial;
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void BTN_EliminarMaterial_Click(object sender, EventArgs e)
         {
             materiales.eliminarMaterial(nombreMaterial);
+        }
+
+        private void TXT_Nombre_TextChanged(object sender, EventArgs e)
+        {
+            if (cambios)
+            {
+                TXT_Nombre.BackColor = System.Drawing.Color.LightBlue;
+            }
+            cambios = true;
         }
     }
 }

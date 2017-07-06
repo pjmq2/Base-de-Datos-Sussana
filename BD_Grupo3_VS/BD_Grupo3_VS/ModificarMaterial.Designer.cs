@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.gb_informacionDelMaterial = new System.Windows.Forms.GroupBox();
-            this.LBL_NombreEscogido = new System.Windows.Forms.Label();
+            this.TXT_Nombre = new System.Windows.Forms.TextBox();
+            this.BTN_EliminarMaterial = new System.Windows.Forms.Button();
             this.nud_precio = new System.Windows.Forms.NumericUpDown();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.lbl_precio = new System.Windows.Forms.Label();
             this.lbl_nombre = new System.Windows.Forms.Label();
-            this.BTN_EliminarMaterial = new System.Windows.Forms.Button();
             this.gb_informacionDelMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_precio)).BeginInit();
             this.SuspendLayout();
             // 
             // gb_informacionDelMaterial
             // 
+            this.gb_informacionDelMaterial.Controls.Add(this.TXT_Nombre);
             this.gb_informacionDelMaterial.Controls.Add(this.BTN_EliminarMaterial);
-            this.gb_informacionDelMaterial.Controls.Add(this.LBL_NombreEscogido);
             this.gb_informacionDelMaterial.Controls.Add(this.nud_precio);
             this.gb_informacionDelMaterial.Controls.Add(this.btn_guardar);
             this.gb_informacionDelMaterial.Controls.Add(this.lbl_precio);
@@ -56,16 +56,26 @@
             this.gb_informacionDelMaterial.TabStop = false;
             this.gb_informacionDelMaterial.Text = "Información del material";
             // 
-            // LBL_NombreEscogido
+            // TXT_Nombre
             // 
-            this.LBL_NombreEscogido.AutoSize = true;
-            this.LBL_NombreEscogido.Location = new System.Drawing.Point(140, 43);
-            this.LBL_NombreEscogido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LBL_NombreEscogido.Name = "LBL_NombreEscogido";
-            this.LBL_NombreEscogido.Size = new System.Drawing.Size(62, 17);
-            this.LBL_NombreEscogido.TabIndex = 7;
-            this.LBL_NombreEscogido.Text = "Nombre:";
-            this.LBL_NombreEscogido.TextChanged += new System.EventHandler(this.ModificarMaterial_Load);
+            this.TXT_Nombre.Location = new System.Drawing.Point(161, 43);
+            this.TXT_Nombre.Name = "TXT_Nombre";
+            this.TXT_Nombre.Size = new System.Drawing.Size(172, 22);
+            this.TXT_Nombre.TabIndex = 9;
+            this.TXT_Nombre.TextChanged += new System.EventHandler(this.TXT_Nombre_TextChanged);
+            // 
+            // BTN_EliminarMaterial
+            // 
+            this.BTN_EliminarMaterial.BackColor = System.Drawing.Color.Red;
+            this.BTN_EliminarMaterial.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BTN_EliminarMaterial.Location = new System.Drawing.Point(220, 128);
+            this.BTN_EliminarMaterial.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_EliminarMaterial.Name = "BTN_EliminarMaterial";
+            this.BTN_EliminarMaterial.Size = new System.Drawing.Size(129, 28);
+            this.BTN_EliminarMaterial.TabIndex = 8;
+            this.BTN_EliminarMaterial.Text = "Eliminar Material";
+            this.BTN_EliminarMaterial.UseVisualStyleBackColor = false;
+            this.BTN_EliminarMaterial.Click += new System.EventHandler(this.BTN_EliminarMaterial_Click);
             // 
             // nud_precio
             // 
@@ -116,19 +126,6 @@
             this.lbl_nombre.TabIndex = 3;
             this.lbl_nombre.Text = "Nombre:";
             // 
-            // BTN_EliminarMaterial
-            // 
-            this.BTN_EliminarMaterial.BackColor = System.Drawing.Color.Red;
-            this.BTN_EliminarMaterial.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BTN_EliminarMaterial.Location = new System.Drawing.Point(220, 128);
-            this.BTN_EliminarMaterial.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_EliminarMaterial.Name = "BTN_EliminarMaterial";
-            this.BTN_EliminarMaterial.Size = new System.Drawing.Size(129, 28);
-            this.BTN_EliminarMaterial.TabIndex = 8;
-            this.BTN_EliminarMaterial.Text = "Eliminar Material";
-            this.BTN_EliminarMaterial.UseVisualStyleBackColor = false;
-            this.BTN_EliminarMaterial.Click += new System.EventHandler(this.BTN_EliminarMaterial_Click);
-            // 
             // ModificarMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -154,7 +151,7 @@
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Label lbl_precio;
         private System.Windows.Forms.Label lbl_nombre;
-        private System.Windows.Forms.Label LBL_NombreEscogido;
         private System.Windows.Forms.Button BTN_EliminarMaterial;
+        private System.Windows.Forms.TextBox TXT_Nombre;
     }
 }

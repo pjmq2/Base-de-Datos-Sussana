@@ -30,5 +30,12 @@ namespace BD_Grupo3_VS
             ejercicio.Show();
             this.Hide();
         }
+
+        private void BTN_BuscarMaterial_Click(object sender, EventArgs e)
+        {
+            ModificarMaterial material = new ModificarMaterial("hola");
+            material.Show();
+            this.Hide();
+        }
     }
 }
