@@ -39,7 +39,7 @@
             this.LBL_Telefono = new System.Windows.Forms.Label();
             this.RB_Masculino = new System.Windows.Forms.RadioButton();
             this.RB_Femenino = new System.Windows.Forms.RadioButton();
-            this.TXT_Correo = new System.Windows.Forms.TextBox();
+            this.TXT_Email = new System.Windows.Forms.TextBox();
             this.LBL_Email = new System.Windows.Forms.Label();
             this.LBL_Sexo = new System.Windows.Forms.Label();
             this.LBL_FechaNac = new System.Windows.Forms.Label();
@@ -70,7 +70,7 @@
             this.GB_InfoPaciente.Controls.Add(this.LBL_Telefono);
             this.GB_InfoPaciente.Controls.Add(this.RB_Masculino);
             this.GB_InfoPaciente.Controls.Add(this.RB_Femenino);
-            this.GB_InfoPaciente.Controls.Add(this.TXT_Correo);
+            this.GB_InfoPaciente.Controls.Add(this.TXT_Email);
             this.GB_InfoPaciente.Controls.Add(this.LBL_Email);
             this.GB_InfoPaciente.Controls.Add(this.LBL_Sexo);
             this.GB_InfoPaciente.Controls.Add(this.LBL_FechaNac);
@@ -92,8 +92,9 @@
             // DTP_FechaNac
             // 
             this.DTP_FechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DTP_FechaNac.Location = new System.Drawing.Point(153, 209);
+            this.DTP_FechaNac.Location = new System.Drawing.Point(182, 215);
             this.DTP_FechaNac.Name = "DTP_FechaNac";
+            this.DTP_FechaNac.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.DTP_FechaNac.Size = new System.Drawing.Size(88, 20);
             this.DTP_FechaNac.TabIndex = 23;
             // 
@@ -105,6 +106,7 @@
             this.BTN_Agregar.TabIndex = 22;
             this.BTN_Agregar.Text = "Agregar";
             this.BTN_Agregar.UseVisualStyleBackColor = true;
+            this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
             // 
             // TXT_Valoracion
             // 
@@ -158,7 +160,7 @@
             // 
             this.RB_Masculino.AutoSize = true;
             this.RB_Masculino.Checked = true;
-            this.RB_Masculino.Location = new System.Drawing.Point(87, 246);
+            this.RB_Masculino.Location = new System.Drawing.Point(116, 241);
             this.RB_Masculino.Name = "RB_Masculino";
             this.RB_Masculino.Size = new System.Drawing.Size(73, 17);
             this.RB_Masculino.TabIndex = 14;
@@ -169,19 +171,19 @@
             // RB_Femenino
             // 
             this.RB_Femenino.AutoSize = true;
-            this.RB_Femenino.Location = new System.Drawing.Point(87, 269);
+            this.RB_Femenino.Location = new System.Drawing.Point(118, 264);
             this.RB_Femenino.Name = "RB_Femenino";
             this.RB_Femenino.Size = new System.Drawing.Size(71, 17);
             this.RB_Femenino.TabIndex = 13;
             this.RB_Femenino.Text = "Femenino";
             this.RB_Femenino.UseVisualStyleBackColor = true;
             // 
-            // TXT_Correo
+            // TXT_Email
             // 
-            this.TXT_Correo.Location = new System.Drawing.Point(87, 317);
-            this.TXT_Correo.Name = "TXT_Correo";
-            this.TXT_Correo.Size = new System.Drawing.Size(154, 20);
-            this.TXT_Correo.TabIndex = 12;
+            this.TXT_Email.Location = new System.Drawing.Point(116, 317);
+            this.TXT_Email.Name = "TXT_Email";
+            this.TXT_Email.Size = new System.Drawing.Size(154, 20);
+            this.TXT_Email.TabIndex = 12;
             // 
             // LBL_Email
             // 
@@ -212,14 +214,14 @@
             // 
             // TXT_Apellido2
             // 
-            this.TXT_Apellido2.Location = new System.Drawing.Point(87, 170);
+            this.TXT_Apellido2.Location = new System.Drawing.Point(116, 170);
             this.TXT_Apellido2.Name = "TXT_Apellido2";
             this.TXT_Apellido2.Size = new System.Drawing.Size(154, 20);
             this.TXT_Apellido2.TabIndex = 8;
             // 
             // TXT_Apellido1
             // 
-            this.TXT_Apellido1.Location = new System.Drawing.Point(87, 135);
+            this.TXT_Apellido1.Location = new System.Drawing.Point(116, 135);
             this.TXT_Apellido1.Name = "TXT_Apellido1";
             this.TXT_Apellido1.Size = new System.Drawing.Size(154, 20);
             this.TXT_Apellido1.TabIndex = 7;
@@ -229,22 +231,22 @@
             this.LBL_Apellido2.AutoSize = true;
             this.LBL_Apellido2.Location = new System.Drawing.Point(24, 173);
             this.LBL_Apellido2.Name = "LBL_Apellido2";
-            this.LBL_Apellido2.Size = new System.Drawing.Size(56, 13);
+            this.LBL_Apellido2.Size = new System.Drawing.Size(68, 13);
             this.LBL_Apellido2.TabIndex = 6;
-            this.LBL_Apellido2.Text = "Apellido 2:";
+            this.LBL_Apellido2.Text = "2do Apellido:";
             // 
             // LBL_Apellido1
             // 
             this.LBL_Apellido1.AutoSize = true;
             this.LBL_Apellido1.Location = new System.Drawing.Point(24, 138);
             this.LBL_Apellido1.Name = "LBL_Apellido1";
-            this.LBL_Apellido1.Size = new System.Drawing.Size(56, 13);
+            this.LBL_Apellido1.Size = new System.Drawing.Size(65, 13);
             this.LBL_Apellido1.TabIndex = 5;
-            this.LBL_Apellido1.Text = "Apellido 1:";
+            this.LBL_Apellido1.Text = "1er Apellido:";
             // 
             // TXT_Nombre
             // 
-            this.TXT_Nombre.Location = new System.Drawing.Point(87, 92);
+            this.TXT_Nombre.Location = new System.Drawing.Point(116, 92);
             this.TXT_Nombre.Name = "TXT_Nombre";
             this.TXT_Nombre.Size = new System.Drawing.Size(154, 20);
             this.TXT_Nombre.TabIndex = 4;
@@ -260,7 +262,7 @@
             // 
             // TXT_Cedula
             // 
-            this.TXT_Cedula.Location = new System.Drawing.Point(87, 49);
+            this.TXT_Cedula.Location = new System.Drawing.Point(116, 52);
             this.TXT_Cedula.Name = "TXT_Cedula";
             this.TXT_Cedula.Size = new System.Drawing.Size(154, 20);
             this.TXT_Cedula.TabIndex = 2;
@@ -294,6 +296,7 @@
             this.LINK_ListaPacientes.TabIndex = 5;
             this.LINK_ListaPacientes.TabStop = true;
             this.LINK_ListaPacientes.Text = "Ir a Lista de Pacientes";
+            this.LINK_ListaPacientes.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_ListaPacientes_LinkClicked);
             // 
             // LNK_AgregarCirugias
             // 
@@ -343,7 +346,7 @@
         private System.Windows.Forms.Label LBL_Apellido1;
         private System.Windows.Forms.TextBox TXT_Nombre;
         private System.Windows.Forms.Label LBL_Nombre;
-        private System.Windows.Forms.TextBox TXT_Correo;
+        private System.Windows.Forms.TextBox TXT_Email;
         private System.Windows.Forms.Label LBL_Email;
         private System.Windows.Forms.Label LBL_Sexo;
         private System.Windows.Forms.Label LBL_FechaNac;

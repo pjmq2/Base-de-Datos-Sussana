@@ -17,8 +17,8 @@ namespace BD_Grupo3_VS
             bd = new AccesoBaseDatos();
         }
 
-        public int agregarPaciente(string cedula, string nombre, string ape1, string ape2, int fechanac, char sexo,
-          string valoracion, string email, int telefono, string comentarios)
+        public int agregarPaciente(string cedula, string nombre, string ape1, string ape2, string fechanac, char sexo,
+          string valoracion, string email, string telefono, string comentarios)
         {
             String insertar = "INSERT	INTO	PACIENTE	(Cedula, NombreP, Apellido1, Apellido2, FechaNac, Sexo,	Valoracion, Email, Telefono, Comentarios)	" +
                 "VALUES(" + cedula + ",'" + nombre + "','" + ape1 + "','" + ape2 + "','" + fechanac + "','" + sexo + "','" + valoracion + "','" + email + 

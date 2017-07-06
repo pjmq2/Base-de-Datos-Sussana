@@ -71,6 +71,7 @@
             this.LINK_AgregarPaciente.TabIndex = 9;
             this.LINK_AgregarPaciente.TabStop = true;
             this.LINK_AgregarPaciente.Text = "Agregar Paciente";
+            this.LINK_AgregarPaciente.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_AgregarPaciente_LinkClicked);
             // 
             // LBL_FiltroNombre
             // 
@@ -106,6 +107,7 @@
             this.BTN_Buscar.TabIndex = 15;
             this.BTN_Buscar.Text = "Buscar";
             this.BTN_Buscar.UseVisualStyleBackColor = true;
+            this.BTN_Buscar.Click += new System.EventHandler(this.BTN_Buscar_Click);
             // 
             // DGV_Pacientes
             // 
@@ -149,6 +151,7 @@
             this.Controls.Add(this.LBL_ConsultaDePacientes);
             this.Name = "ConsultarPaciente";
             this.Text = "ConsultarPaciente";
+            this.Load += new System.EventHandler(this.ConsultarPaciente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Pacientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -55,20 +55,12 @@ drop table #temp
 ---
 GO
 CREATE PROCEDURE eliminarPaciente 
-@nombre varchar(20)
+@cedula char(9)
 AS
-select distinct Paciente.Cedula
-into #temp
-from Paciente
-WHERE Paciente.NombreP = @nombre
-delete Paciente
-where Cedula in (select * from #temp)
-drop table #temp
+delete from PACIENTE
+where PACIENTE.Cedula = @cedula
 
 drop procedure eliminarPaciente
-
-SELECT *
-FROM PACIENTE
 ---
 GO
 CREATE PROCEDURE ModificarCita
