@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.GB_Paciente = new System.Windows.Forms.GroupBox();
-            this.BTN_NuevoPaciente = new System.Windows.Forms.Button();
             this.BTN_PacienteBuscar = new System.Windows.Forms.Button();
+            this.BTN_NuevoPaciente = new System.Windows.Forms.Button();
+            this.BTN_Config = new System.Windows.Forms.Button();
             this.GB_Paciente.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,20 +45,6 @@
             this.GB_Paciente.TabIndex = 0;
             this.GB_Paciente.TabStop = false;
             this.GB_Paciente.Text = "Paciente";
-            // 
-            // BTN_NuevoPaciente
-            // 
-            this.BTN_NuevoPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BTN_NuevoPaciente.Image = global::BD_Grupo3_VS.Properties.Resources.Paciente_Nuevo;
-            this.BTN_NuevoPaciente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_NuevoPaciente.Location = new System.Drawing.Point(25, 44);
-            this.BTN_NuevoPaciente.Name = "BTN_NuevoPaciente";
-            this.BTN_NuevoPaciente.Size = new System.Drawing.Size(98, 138);
-            this.BTN_NuevoPaciente.TabIndex = 0;
-            this.BTN_NuevoPaciente.Text = "Nuevo Paciente";
-            this.BTN_NuevoPaciente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BTN_NuevoPaciente.UseVisualStyleBackColor = true;
-            this.BTN_NuevoPaciente.Click += new System.EventHandler(this.BTN_NuevoPaciente_Click);
             // 
             // BTN_PacienteBuscar
             // 
@@ -73,11 +60,36 @@
             this.BTN_PacienteBuscar.UseVisualStyleBackColor = true;
             this.BTN_PacienteBuscar.Click += new System.EventHandler(this.BTN_PacienteBuscar_Click);
             // 
+            // BTN_NuevoPaciente
+            // 
+            this.BTN_NuevoPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BTN_NuevoPaciente.Image = global::BD_Grupo3_VS.Properties.Resources.Paciente_Nuevo;
+            this.BTN_NuevoPaciente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_NuevoPaciente.Location = new System.Drawing.Point(25, 44);
+            this.BTN_NuevoPaciente.Name = "BTN_NuevoPaciente";
+            this.BTN_NuevoPaciente.Size = new System.Drawing.Size(98, 138);
+            this.BTN_NuevoPaciente.TabIndex = 0;
+            this.BTN_NuevoPaciente.Text = "Nuevo Paciente";
+            this.BTN_NuevoPaciente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_NuevoPaciente.UseVisualStyleBackColor = true;
+            this.BTN_NuevoPaciente.Click += new System.EventHandler(this.BTN_NuevoPaciente_Click);
+            // 
+            // BTN_Config
+            // 
+            this.BTN_Config.Location = new System.Drawing.Point(56, 294);
+            this.BTN_Config.Name = "BTN_Config";
+            this.BTN_Config.Size = new System.Drawing.Size(244, 59);
+            this.BTN_Config.TabIndex = 1;
+            this.BTN_Config.Text = "Configuracion";
+            this.BTN_Config.UseVisualStyleBackColor = true;
+            this.BTN_Config.Click += new System.EventHandler(this.BTN_Config_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(385, 398);
+            this.Controls.Add(this.BTN_Config);
             this.Controls.Add(this.GB_Paciente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -93,5 +105,6 @@
         private System.Windows.Forms.GroupBox GB_Paciente;
         private System.Windows.Forms.Button BTN_NuevoPaciente;
         private System.Windows.Forms.Button BTN_PacienteBuscar;
+        private System.Windows.Forms.Button BTN_Config;
     }
 }

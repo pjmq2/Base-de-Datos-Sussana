@@ -28,5 +28,12 @@ namespace BD_Grupo3_VS
         {
             /*Modificar Paciente*/
         }
+
+        private void BTN_Config_Click(object sender, EventArgs e)
+        {
+            MenuConfig menu = new MenuConfig();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

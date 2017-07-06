@@ -74,20 +74,21 @@
             this.gb_informacionDelMaterial.Margin = new System.Windows.Forms.Padding(4);
             this.gb_informacionDelMaterial.Name = "gb_informacionDelMaterial";
             this.gb_informacionDelMaterial.Padding = new System.Windows.Forms.Padding(4);
-            this.gb_informacionDelMaterial.Size = new System.Drawing.Size(567, 335);
+            this.gb_informacionDelMaterial.Size = new System.Drawing.Size(567, 409);
             this.gb_informacionDelMaterial.TabIndex = 1;
             this.gb_informacionDelMaterial.TabStop = false;
             this.gb_informacionDelMaterial.Text = "Información del Ejercicio";
             // 
             // btn_Guardar
             // 
-            this.btn_Guardar.Location = new System.Drawing.Point(445, 253);
+            this.btn_Guardar.Location = new System.Drawing.Point(417, 296);
             this.btn_Guardar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Guardar.Name = "btn_Guardar";
             this.btn_Guardar.Size = new System.Drawing.Size(100, 64);
             this.btn_Guardar.TabIndex = 13;
             this.btn_Guardar.Text = "Guardar";
             this.btn_Guardar.UseVisualStyleBackColor = true;
+            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
             // lbl_imagen
             // 
@@ -104,7 +105,7 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(162, 216);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(222, 65);
+            this.pictureBox1.Size = new System.Drawing.Size(222, 144);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
@@ -119,7 +120,7 @@
             // 
             // btn_LoadAndSave
             // 
-            this.btn_LoadAndSave.Location = new System.Drawing.Point(162, 288);
+            this.btn_LoadAndSave.Location = new System.Drawing.Point(162, 367);
             this.btn_LoadAndSave.Margin = new System.Windows.Forms.Padding(4);
             this.btn_LoadAndSave.Name = "btn_LoadAndSave";
             this.btn_LoadAndSave.Size = new System.Drawing.Size(222, 29);
@@ -136,7 +137,7 @@
             this.lbl_descripcion.Name = "lbl_descripcion";
             this.lbl_descripcion.Size = new System.Drawing.Size(86, 17);
             this.lbl_descripcion.TabIndex = 4;
-            this.lbl_descripcion.Text = "Descripcion:";
+            this.lbl_descripcion.Text = "Descripción:";
             // 
             // lbl_nombre
             // 
@@ -162,7 +163,7 @@
             this.LBL_Titulo.AutoSize = true;
             this.LBL_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Titulo.ForeColor = System.Drawing.Color.Maroon;
-            this.LBL_Titulo.Location = new System.Drawing.Point(254, 28);
+            this.LBL_Titulo.Location = new System.Drawing.Point(254, 47);
             this.LBL_Titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Titulo.Name = "LBL_Titulo";
             this.LBL_Titulo.Size = new System.Drawing.Size(178, 42);
@@ -226,20 +227,20 @@
             // crearEjercicioToolStripMenuItem
             // 
             this.crearEjercicioToolStripMenuItem.Name = "crearEjercicioToolStripMenuItem";
-            this.crearEjercicioToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.crearEjercicioToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.crearEjercicioToolStripMenuItem.Text = "Crear Plan";
             this.crearEjercicioToolStripMenuItem.Click += new System.EventHandler(this.crearEjercicioToolStripMenuItem_Click);
             // 
             // modificarEjercicioToolStripMenuItem
             // 
             this.modificarEjercicioToolStripMenuItem.Name = "modificarEjercicioToolStripMenuItem";
-            this.modificarEjercicioToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.modificarEjercicioToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.modificarEjercicioToolStripMenuItem.Text = "Modificar Plan";
             // 
             // eliminarEjercicioToolStripMenuItem
             // 
             this.eliminarEjercicioToolStripMenuItem.Name = "eliminarEjercicioToolStripMenuItem";
-            this.eliminarEjercicioToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.eliminarEjercicioToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.eliminarEjercicioToolStripMenuItem.Text = "Eliminar Plan";
             // 
             // citaToolStripMenuItem
@@ -302,7 +303,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 441);
+            this.ClientSize = new System.Drawing.Size(696, 502);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.LBL_Titulo);
             this.Controls.Add(this.gb_informacionDelMaterial);
