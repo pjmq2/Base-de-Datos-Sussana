@@ -16,9 +16,9 @@ namespace BD_Grupo3_VS
         string nombreMaterial;
         bool cambios = false;
 
-        public VerMaterial(string nombreNuevo)
+        public VerMaterial(string nombre)
         {
-            nombreMaterial = nombreNuevo;
+            nombreMaterial = nombre;
             materiales = new Material();
             InitializeComponent();
         }
