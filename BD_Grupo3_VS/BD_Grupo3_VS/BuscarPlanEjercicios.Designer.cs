@@ -40,7 +40,6 @@
             this.crearPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CB_Cedula = new System.Windows.Forms.ComboBox();
             this.CB_Padecimiento = new System.Windows.Forms.ComboBox();
             this.CB_Nivel = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -51,20 +50,20 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 228);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 242);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(629, 287);
+            this.dataGridView1.Size = new System.Drawing.Size(629, 273);
             this.dataGridView1.TabIndex = 44;
             // 
             // BTN_Buscar
             // 
             this.BTN_Buscar.Image = global::BD_Grupo3_VS.Properties.Resources.Plan_Ejercicio_Buscar;
             this.BTN_Buscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_Buscar.Location = new System.Drawing.Point(416, 102);
+            this.BTN_Buscar.Location = new System.Drawing.Point(416, 99);
             this.BTN_Buscar.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Buscar.Name = "BTN_Buscar";
-            this.BTN_Buscar.Size = new System.Drawing.Size(92, 118);
+            this.BTN_Buscar.Size = new System.Drawing.Size(92, 121);
             this.BTN_Buscar.TabIndex = 43;
             this.BTN_Buscar.Text = "Buscar Plan";
             this.BTN_Buscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -73,7 +72,7 @@
             // LBL_Padecimiento
             // 
             this.LBL_Padecimiento.AutoSize = true;
-            this.LBL_Padecimiento.Location = new System.Drawing.Point(26, 153);
+            this.LBL_Padecimiento.Location = new System.Drawing.Point(26, 164);
             this.LBL_Padecimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Padecimiento.Name = "LBL_Padecimiento";
             this.LBL_Padecimiento.Size = new System.Drawing.Size(97, 17);
@@ -83,12 +82,12 @@
             // LBL_Cedula
             // 
             this.LBL_Cedula.AutoSize = true;
-            this.LBL_Cedula.Location = new System.Drawing.Point(26, 115);
+            this.LBL_Cedula.Location = new System.Drawing.Point(26, 102);
             this.LBL_Cedula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Cedula.Name = "LBL_Cedula";
-            this.LBL_Cedula.Size = new System.Drawing.Size(56, 17);
+            this.LBL_Cedula.Size = new System.Drawing.Size(115, 17);
             this.LBL_Cedula.TabIndex = 39;
-            this.LBL_Cedula.Text = "Cédula:";
+            this.LBL_Cedula.Text = "Cédula Paciente:";
             // 
             // LBL_ConsultaPlanEjercicios
             // 
@@ -105,7 +104,7 @@
             // LBL_Nivel
             // 
             this.LBL_Nivel.AutoSize = true;
-            this.LBL_Nivel.Location = new System.Drawing.Point(26, 193);
+            this.LBL_Nivel.Location = new System.Drawing.Point(26, 200);
             this.LBL_Nivel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Nivel.Name = "LBL_Nivel";
             this.LBL_Nivel.Size = new System.Drawing.Size(43, 17);
@@ -162,18 +161,10 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // CB_Cedula
-            // 
-            this.CB_Cedula.FormattingEnabled = true;
-            this.CB_Cedula.Location = new System.Drawing.Point(127, 112);
-            this.CB_Cedula.Name = "CB_Cedula";
-            this.CB_Cedula.Size = new System.Drawing.Size(269, 24);
-            this.CB_Cedula.TabIndex = 48;
-            // 
             // CB_Padecimiento
             // 
             this.CB_Padecimiento.FormattingEnabled = true;
-            this.CB_Padecimiento.Location = new System.Drawing.Point(127, 150);
+            this.CB_Padecimiento.Location = new System.Drawing.Point(127, 157);
             this.CB_Padecimiento.Name = "CB_Padecimiento";
             this.CB_Padecimiento.Size = new System.Drawing.Size(269, 24);
             this.CB_Padecimiento.TabIndex = 49;
@@ -181,7 +172,7 @@
             // CB_Nivel
             // 
             this.CB_Nivel.FormattingEnabled = true;
-            this.CB_Nivel.Location = new System.Drawing.Point(127, 190);
+            this.CB_Nivel.Location = new System.Drawing.Point(127, 193);
             this.CB_Nivel.Name = "CB_Nivel";
             this.CB_Nivel.Size = new System.Drawing.Size(269, 24);
             this.CB_Nivel.TabIndex = 50;
@@ -190,14 +181,15 @@
             // 
             this.button1.Image = global::BD_Grupo3_VS.Properties.Resources.Plan_Ejercicio_Modificar;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(516, 103);
+            this.button1.Location = new System.Drawing.Point(516, 99);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 117);
+            this.button1.Size = new System.Drawing.Size(107, 121);
             this.button1.TabIndex = 51;
             this.button1.Text = "Modificar Plan";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BuscarPlanEjercicios
             // 
@@ -207,7 +199,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.CB_Nivel);
             this.Controls.Add(this.CB_Padecimiento);
-            this.Controls.Add(this.CB_Cedula);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.LBL_Nivel);
             this.Controls.Add(this.dataGridView1);
@@ -239,7 +230,6 @@
         private System.Windows.Forms.ToolStripMenuItem crearPacienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem avanzadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.ComboBox CB_Cedula;
         private System.Windows.Forms.ComboBox CB_Padecimiento;
         private System.Windows.Forms.ComboBox CB_Nivel;
         private System.Windows.Forms.Button button1;

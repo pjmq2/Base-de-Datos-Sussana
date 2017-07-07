@@ -24,7 +24,7 @@ namespace BD_Grupo3_VS
         */
         public int agregarPlanEjercicio(string Cedula, string Padecimiento, string Nivel, string Objetivos)
         {
-            String insertar = "Insert into Plan_Ejercicios (CedPaciente, Pad_Actual, Nivel, Objetivos) VALUES (" + Cedula + "," + Padecimiento + "," + Nivel + "," + Objetivos + ")";
+            String insertar = "Insert into Plan_Ejercicios (CedPaciente, Pad_Actual, Nivel, Objetivos) VALUES ('" + Cedula + "','" + Padecimiento + "','" + Nivel + "','" + Objetivos + "')";
             return bd.actualizarDatos(insertar);
         }
 

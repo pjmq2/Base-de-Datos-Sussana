@@ -12,8 +12,10 @@ namespace BD_Grupo3_VS
 {
     public partial class BuscarPlanEjercicios : Form
     {
-        public BuscarPlanEjercicios()
+        string cedula;
+        public BuscarPlanEjercicios(string cedulaNueva)
         {
+            cedula = cedulaNueva;
             InitializeComponent();
         }
 
@@ -59,5 +61,10 @@ namespace BD_Grupo3_VS
         }
         /*             Hasta aqui las instrucciones de la cinta del menu  */
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
