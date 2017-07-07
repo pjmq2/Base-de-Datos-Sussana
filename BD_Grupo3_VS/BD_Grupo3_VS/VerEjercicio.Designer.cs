@@ -86,6 +86,7 @@
             this.menuAvanzadoToolStripMenuItem.Name = "menuAvanzadoToolStripMenuItem";
             this.menuAvanzadoToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
             this.menuAvanzadoToolStripMenuItem.Text = "Menu Avanzado";
+            this.menuAvanzadoToolStripMenuItem.Click += new System.EventHandler(this.menuAvanzadoToolStripMenuItem_Click);
             // 
             // tecnicaToolStripMenuItem
             // 

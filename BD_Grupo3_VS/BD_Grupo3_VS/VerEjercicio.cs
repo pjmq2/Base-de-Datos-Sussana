@@ -19,17 +19,17 @@ namespace BD_Grupo3_VS
         Image imagen;
         byte[] img;
 
-        public VerEjercicio(string nombreNuevo, string descripcionNuevo)
+        public VerEjercicio(string nombreNuevo, string descripcionNuevo, bool hayImagen)
         {
             InitializeComponent();
             ejercicio = new Ejercicio();
             nombre = nombreNuevo;
             descripcion = descripcionNuevo;
-            imagen = ejercicio.obtenerImagen(nombre);
             TXT_Nombre.Text = nombre;
             TXT_Descripcion.Text = descripcion;
-            if (imagen != null)
+            if (hayImagen)
             {
+                imagen = ejercicio.obtenerImagen(nombre);
                 PB_Imagen.Image = imagen;
                 PB_Imagen.SizeMode = PictureBoxSizeMode.StretchImage;
             }
@@ -67,6 +67,13 @@ namespace BD_Grupo3_VS
             int result = ejercicio.eliminarejercicio(nombre);
             MessageBox.Show("¡El ejercicio ha sido agregado exitosamente! " + result, "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
             MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void menuAvanzadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenuConfig menu = new MenuConfig();
             menu.Show();
             this.Hide();
         }

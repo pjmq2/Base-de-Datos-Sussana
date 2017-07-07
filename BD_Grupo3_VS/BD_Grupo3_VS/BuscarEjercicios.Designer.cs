@@ -128,6 +128,7 @@
             this.menuAvanzadoToolStripMenuItem.Name = "menuAvanzadoToolStripMenuItem";
             this.menuAvanzadoToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
             this.menuAvanzadoToolStripMenuItem.Text = "Menu Avanzado";
+            this.menuAvanzadoToolStripMenuItem.Click += new System.EventHandler(this.menuAvanzadoToolStripMenuItem_Click_1);
             // 
             // tecnicaToolStripMenuItem
             // 
@@ -265,7 +266,7 @@
             this.DGV_Ejercicios.Size = new System.Drawing.Size(623, 298);
             this.DGV_Ejercicios.TabIndex = 39;
             // 
-            // ConsultarEjercicios
+            // BuscarEjercicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -279,7 +280,7 @@
             this.Controls.Add(this.BTN_Buscar);
             this.Controls.Add(this.LBL_Nombre);
             this.Controls.Add(this.LBL_ConsultaDeEjercicios);
-            this.Name = "ConsultarEjercicios";
+            this.Name = "BuscarEjercicios";
             this.Text = "ConsultarEjercicios";
             this.Load += new System.EventHandler(this.ConsultarEjercicios_Load);
             this.menuStrip1.ResumeLayout(false);
