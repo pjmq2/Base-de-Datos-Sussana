@@ -85,47 +85,39 @@ namespace BD_Grupo3_VS
 
         private void BTN_Buscar_Click_1(object sender, EventArgs e)
         {
-            if (DGV_Ejercicios.SelectedRows.Count == 0)
-            {
-                /*Mensaje no hay nada seleccionado*/
-            }
-            else
-            {
-                string nombre;
-                string descripcion;
-                DataGridViewRow row = DGV_Ejercicios.CurrentRow;
-                nombre = row.Cells[0].Value.ToString();
-                descripcion = row.Cells[1].Value.ToString();
-
-                VerEjercicio paciente = new VerEjercicio(nombre, descripcion);
-                paciente.Show();
-                this.Hide();
-            }
+            
         }
 
         private void BTN_Modificar_Click(object sender, EventArgs e)
         {
-            
+
             if (DGV_Ejercicios.SelectedRows.Count == 0)
             {
                 /*Mensaje no hay nada seleccionado*/
             }
             else
             {
+                VerEjercicio ejercicio;
                 string nombre = "";
                 string descripcion = null;
                 DataGridViewRow row = DGV_Ejercicios.CurrentRow;
                 nombre = row.Cells[0].Value.ToString();
                 descripcion = row.Cells[1].Value.ToString();
-
-                VerEjercicio ejercicio = new VerEjercicio(nombre, descripcion);
+                if (row.Cells[2].Value.ToString() == "")
+                {
+                    ejercicio = new VerEjercicio(nombre, descripcion, false);
+                }
+                else
+                {
+                    ejercicio = new VerEjercicio(nombre, descripcion, true);
+                }
                 ejercicio.Show();
                 this.Hide();
             }
-            
+
         }
 
-        /*             A partir de aqui empiezan los metodos para la cinta del menu  */
+        /* A partir de aqui empiezan los metodos para la cinta del menu  */
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
@@ -136,19 +128,12 @@ namespace BD_Grupo3_VS
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            DialogResult resultado = MessageBox.Show("Seguro que desea Salir ?", "Cerrar la aplicacion", botones);
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicacion", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                //Aun no cierra todo el programa
+                Application.Exit();
             }
-        }
-
-        private void menuAvanzadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuConfig menu = new MenuConfig();
-            menu.Show();
-            this.Hide();
         }
 
         private void crearTecnicaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -206,7 +191,6 @@ namespace BD_Grupo3_VS
             ejercicio.Show();
             this.Hide();
         }
-        
-        /*             Hasta aqui las instrucciones de la cinta del menu  */
+        /*  Hasta aqui las instrucciones de la cinta del menu   */
     }
 }

@@ -43,6 +43,7 @@
             this.avanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BTN_Modificar = new System.Windows.Forms.Button();
+            this.BTN_Eliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -114,11 +115,11 @@
             // 
             // BTN_Buscar
             // 
-            this.BTN_Buscar.Location = new System.Drawing.Point(536, 113);
+            this.BTN_Buscar.Image = global::BD_Grupo3_VS.Properties.Resources.Cita_Buscar;
+            this.BTN_Buscar.Location = new System.Drawing.Point(536, 65);
             this.BTN_Buscar.Name = "BTN_Buscar";
-            this.BTN_Buscar.Size = new System.Drawing.Size(118, 31);
+            this.BTN_Buscar.Size = new System.Drawing.Size(89, 79);
             this.BTN_Buscar.TabIndex = 11;
-            this.BTN_Buscar.Text = "Buscar";
             this.BTN_Buscar.UseVisualStyleBackColor = true;
             this.BTN_Buscar.Click += new System.EventHandler(this.BTN_Buscar_Click);
             // 
@@ -175,19 +176,30 @@
             // 
             // BTN_Modificar
             // 
-            this.BTN_Modificar.Location = new System.Drawing.Point(674, 113);
+            this.BTN_Modificar.Image = global::BD_Grupo3_VS.Properties.Resources.Cita_Modificar;
+            this.BTN_Modificar.Location = new System.Drawing.Point(631, 65);
             this.BTN_Modificar.Name = "BTN_Modificar";
-            this.BTN_Modificar.Size = new System.Drawing.Size(118, 31);
+            this.BTN_Modificar.Size = new System.Drawing.Size(89, 79);
             this.BTN_Modificar.TabIndex = 24;
-            this.BTN_Modificar.Text = "Modificar";
             this.BTN_Modificar.UseVisualStyleBackColor = true;
             this.BTN_Modificar.Click += new System.EventHandler(this.BTN_Modificar_Click);
+            // 
+            // BTN_Eliminar
+            // 
+            this.BTN_Eliminar.Image = global::BD_Grupo3_VS.Properties.Resources.Cita_Eliminar;
+            this.BTN_Eliminar.Location = new System.Drawing.Point(731, 65);
+            this.BTN_Eliminar.Name = "BTN_Eliminar";
+            this.BTN_Eliminar.Size = new System.Drawing.Size(89, 79);
+            this.BTN_Eliminar.TabIndex = 25;
+            this.BTN_Eliminar.UseVisualStyleBackColor = true;
+            this.BTN_Eliminar.Click += new System.EventHandler(this.BTN_Eliminar_Click);
             // 
             // ConsultarCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 460);
+            this.Controls.Add(this.BTN_Eliminar);
             this.Controls.Add(this.BTN_Modificar);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.BTN_Buscar);
@@ -198,6 +210,7 @@
             this.Controls.Add(this.LBL_Cedula);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LBL_Titulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ConsultarCitas";
             this.Text = "ConsultarCitas";
             this.Load += new System.EventHandler(this.ConsultarCitas_Load);
@@ -226,5 +239,6 @@
         private System.Windows.Forms.ToolStripMenuItem avanzadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Button BTN_Modificar;
+        private System.Windows.Forms.Button BTN_Eliminar;
     }
 }

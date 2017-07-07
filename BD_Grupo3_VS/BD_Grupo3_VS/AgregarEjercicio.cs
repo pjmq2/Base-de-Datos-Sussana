@@ -62,7 +62,10 @@ namespace BD_Grupo3_VS
             else
             {
                 int result = ejercicio.agregarEjercicio(txt_nombre.Text, TXT_Descripcion.Text, img);
-                ejercicio.insertarImagen(txt_nombre.Text, img);
+                if (pictureBox1.Image != null)
+                {
+                    ejercicio.insertarImagen(txt_nombre.Text, img);
+                }
                 if (result == 0)
                 {
                     MessageBox.Show("¡El ejercicio ha sido agregada correctamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -88,9 +91,7 @@ namespace BD_Grupo3_VS
                 }
             }
         }
-
-
-        /*             A partir de aqui empiezan los metodos para la cinta del menu             */
+        /* A partir de aqui empiezan los metodos para la cinta del menu  */
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
@@ -101,11 +102,11 @@ namespace BD_Grupo3_VS
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            DialogResult resultado = MessageBox.Show("Seguro que desea Salir ?", "Cerrar la aplicacion", botones);
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicacion", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                //Aun no cierra todo el programa
+                Application.Exit();
             }
         }
 
@@ -171,6 +172,6 @@ namespace BD_Grupo3_VS
             ejercicio.Show();
             this.Hide();
         }
-        /*             Hasta aqui las instrucciones de la cinta del menu  */
+        /*  Hasta aqui las instrucciones de la cinta del menu   */
     }
 }
