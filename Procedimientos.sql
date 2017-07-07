@@ -66,9 +66,10 @@ drop procedure eliminarPaciente
 GO
 CREATE PROCEDURE ModificarCita
 @cedula char(9),@padecimiento varchar(50),@fecha varchar(18), @precio int, @descripcion varchar(500), @duracion decimal(4,2),
-@lugar varchar(50), @estado varchar(50)
+@lugar varchar(50), @estado varchar(50), @cedulaCambiar char(9), @padecimientoCambiar varchar(50), @fechaCambiar varchar(18)
 AS
 UPDATE CITA
 SET CedPaciente = @cedula, Padec_Act = @padecimiento, Fecha = @fecha, Precio = @precio, Descripcion = @descripcion,
 Duracion = @duracion, Lugar = @lugar, Estado_Paciente = @estado
+where CedPaciente = @cedulaCambiar and Padec_Act = @padecimientoCambiar and Fecha = @fechaCambiar
 
