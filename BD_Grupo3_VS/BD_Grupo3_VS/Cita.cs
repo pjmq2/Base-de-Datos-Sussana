@@ -36,17 +36,17 @@ namespace BD_Grupo3_VS
                 }
                 if(cedula != null && fecha == null)
                 {
-                    tabla = bd.ejecutarConsultaTabla("SELECT C.CedPaciente,NombreP,Apellido1,Apellido2,C.Fecha,Precio,Descripcion,Duracion,Lugar,Estado_Paciente " +
+                    tabla = bd.ejecutarConsultaTabla("SELECT C.CedPaciente,NombreP,Apellido1,Apellido2,C.Padec_Act,C.Fecha,Precio,Descripcion,Duracion,Lugar,Estado_Paciente " +
                         "FROM CITA C JOIN PLAN_TRATAMIENTO P ON P.CedPaciente = C.CedPaciente join Paciente A ON A.Cedula = P.CedPaciente WHERE C.CedPaciente LIKE'%" + cedula + "%'");
                 }
                 if(cedula == null && fecha != null)
                 {
-                    tabla = bd.ejecutarConsultaTabla("SELECT C.CedPaciente,A.NombreP,A.Apellido1,A.Apellido2,C.Fecha,C.Precio,C.Descripcion,C.Duracion,C.Lugar,C.Estado_Paciente " +
+                    tabla = bd.ejecutarConsultaTabla("SELECT C.CedPaciente,A.NombreP,A.Apellido1,A.Apellido2,C.Padec_Act,C.Fecha,C.Precio,C.Descripcion,C.Duracion,C.Lugar,C.Estado_Paciente " +
                         "FROM CITA C JOIN PLAN_TRATAMIENTO P ON P.CedPaciente = C.CedPaciente join Paciente A ON A.Cedula = P.CedPaciente WHERE C.Fecha LIKE '%" + fecha + "%'");
                 }
                 if(cedula != null && fecha != null)
                 {
-                    tabla = bd.ejecutarConsultaTabla("SELECT C.CedPaciente,A.NombreP,A.Apellido1,A.Apellido2,C.Fecha,C.Precio,C.Descripcion,C.Duracion,C.Lugar,C.Estado_Paciente " +
+                    tabla = bd.ejecutarConsultaTabla("SELECT C.CedPaciente,A.NombreP,A.Apellido1,A.Apellido2,C.Padec_Act,C.Fecha,C.Precio,C.Descripcion,C.Duracion,C.Lugar,C.Estado_Paciente " +
                         "FROM CITA C JOIN PLAN_TRATAMIENTO P ON P.CedPaciente = C.CedPaciente join Paciente A ON A.Cedula = P.CedPaciente WHERE C.Fecha LIKE '%" + fecha + "%' OR C.CedPaciente LIKE '%" + cedula + "%'");
                 }
             }catch(SqlException ex)
@@ -61,11 +61,11 @@ namespace BD_Grupo3_VS
             return bd.actualizarDatos(eliminar);
         }
 
-        public int modificarCita(string CedAnterior, string cedula, string padecimiento, string fechaHora, int precio, string descripcion,
-            decimal duracion, string lugar, string estado, string fechaCambiar)
+        public int modificarCita(string cedula, string padecimiento, string fechaHora, int precio, string descripcion,
+            decimal duracion, string lugar, string estado)
         {
-            String modificar = "EXEC ModificarCita @ceduCambiar = '" + CedAnterior + "', @cedula = '" + cedula + "', @padecimiento = '" + padecimiento + "', @fecha = '" + fechaHora + "', @precio" +
-                " = '" + precio + "', @descripcion = '" + descripcion + "', @duracion = '" + duracion + "', @lugar = '" + lugar + "', @estado = '" + estado + "', @fechaCambiar = '" + fechaCambiar + "'";
+            String modificar = "EXEC ModificarCita  @cedula = '" + cedula + "', @padecimiento = '" + padecimiento + "', @fecha = '" + fechaHora + "', @precio" +
+                " = '" + precio + "', @descripcion = '" + descripcion + "', @duracion = '" + duracion + "', @lugar = '" + lugar + "', @estado = '" + estado + "'";
             return bd.actualizarDatos(modificar);
         }
     }

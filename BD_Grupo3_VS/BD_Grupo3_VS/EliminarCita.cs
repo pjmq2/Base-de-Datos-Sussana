@@ -60,11 +60,5 @@ namespace BD_Grupo3_VS
             this.Hide();
         }
 
-        private void LBL_Modificar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ModificarCita modi = new ModificarCita();
-            modi.Show();
-            this.Hide();
-        }
     }
 }

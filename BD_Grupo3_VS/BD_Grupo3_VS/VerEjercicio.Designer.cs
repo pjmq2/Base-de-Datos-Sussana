@@ -1,6 +1,6 @@
 ﻿namespace BD_Grupo3_VS
 {
-    partial class ConsultarEjercicios
+    partial class VerEjercicio
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LBL_ConsultaDeEjercicios = new System.Windows.Forms.Label();
-            this.LBL_Nombre = new System.Windows.Forms.Label();
-            this.BTN_Buscar = new System.Windows.Forms.Button();
-            this.DGV_Ejercicios = new System.Windows.Forms.DataGridView();
-            this.CMB_FiltroNombre = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAvanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,75 +44,19 @@
             this.crearEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LBL_Filtro = new System.Windows.Forms.Label();
-            this.BTN_Modificar = new System.Windows.Forms.Button();
-            this.TXT_Filtro = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Ejercicios)).BeginInit();
+            this.gb_informacionDelMaterial = new System.Windows.Forms.GroupBox();
+            this.TXT_Nombre = new System.Windows.Forms.TextBox();
+            this.BTN_EliminarMaterial = new System.Windows.Forms.Button();
+            this.BTN_Guardar = new System.Windows.Forms.Button();
+            this.LBL_Descripcion = new System.Windows.Forms.Label();
+            this.LBL_Nombre = new System.Windows.Forms.Label();
+            this.TXT_Descripcion = new System.Windows.Forms.TextBox();
+            this.PB_Imagen = new System.Windows.Forms.PictureBox();
+            this.btn_LoadAndSave = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            this.gb_informacionDelMaterial.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Imagen)).BeginInit();
             this.SuspendLayout();
-            // 
-            // LBL_ConsultaDeEjercicios
-            // 
-            this.LBL_ConsultaDeEjercicios.AutoSize = true;
-            this.LBL_ConsultaDeEjercicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_ConsultaDeEjercicios.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.LBL_ConsultaDeEjercicios.Location = new System.Drawing.Point(128, 48);
-            this.LBL_ConsultaDeEjercicios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LBL_ConsultaDeEjercicios.Name = "LBL_ConsultaDeEjercicios";
-            this.LBL_ConsultaDeEjercicios.Size = new System.Drawing.Size(388, 42);
-            this.LBL_ConsultaDeEjercicios.TabIndex = 4;
-            this.LBL_ConsultaDeEjercicios.Text = "Consulta de Ejercicios";
-            // 
-            // LBL_Nombre
-            // 
-            this.LBL_Nombre.AutoSize = true;
-            this.LBL_Nombre.Location = new System.Drawing.Point(25, 119);
-            this.LBL_Nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LBL_Nombre.Name = "LBL_Nombre";
-            this.LBL_Nombre.Size = new System.Drawing.Size(58, 17);
-            this.LBL_Nombre.TabIndex = 28;
-            this.LBL_Nombre.Text = "Nombre";
-            // 
-            // BTN_Buscar
-            // 
-            this.BTN_Buscar.Image = global::BD_Grupo3_VS.Properties.Resources.Ejercicio_Buscar;
-            this.BTN_Buscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_Buscar.Location = new System.Drawing.Point(431, 106);
-            this.BTN_Buscar.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_Buscar.Name = "BTN_Buscar";
-            this.BTN_Buscar.Size = new System.Drawing.Size(105, 92);
-            this.BTN_Buscar.TabIndex = 32;
-            this.BTN_Buscar.Text = "Buscar";
-            this.BTN_Buscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BTN_Buscar.UseVisualStyleBackColor = true;
-            this.BTN_Buscar.Click += new System.EventHandler(this.BTN_Buscar_Click_1);
-            // 
-            // DGV_Ejercicios
-            // 
-            this.DGV_Ejercicios.AllowUserToAddRows = false;
-            this.DGV_Ejercicios.AllowUserToDeleteRows = false;
-            this.DGV_Ejercicios.AllowUserToResizeColumns = false;
-            this.DGV_Ejercicios.AllowUserToResizeRows = false;
-            this.DGV_Ejercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Ejercicios.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.DGV_Ejercicios.Enabled = false;
-            this.DGV_Ejercicios.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.DGV_Ejercicios.Location = new System.Drawing.Point(29, 206);
-            this.DGV_Ejercicios.Margin = new System.Windows.Forms.Padding(4);
-            this.DGV_Ejercicios.MultiSelect = false;
-            this.DGV_Ejercicios.Name = "DGV_Ejercicios";
-            this.DGV_Ejercicios.ReadOnly = true;
-            this.DGV_Ejercicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Ejercicios.Size = new System.Drawing.Size(629, 308);
-            this.DGV_Ejercicios.TabIndex = 33;
-            // 
-            // CMB_FiltroNombre
-            // 
-            this.CMB_FiltroNombre.FormattingEnabled = true;
-            this.CMB_FiltroNombre.Location = new System.Drawing.Point(89, 116);
-            this.CMB_FiltroNombre.Name = "CMB_FiltroNombre";
-            this.CMB_FiltroNombre.Size = new System.Drawing.Size(324, 24);
-            this.CMB_FiltroNombre.TabIndex = 34;
             // 
             // menuStrip1
             // 
@@ -132,8 +71,8 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(679, 28);
-            this.menuStrip1.TabIndex = 35;
+            this.menuStrip1.Size = new System.Drawing.Size(660, 28);
+            this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // menuPrincipalToolStripMenuItem
@@ -237,60 +176,118 @@
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
             this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // LBL_Filtro
+            // gb_informacionDelMaterial
             // 
-            this.LBL_Filtro.AutoSize = true;
-            this.LBL_Filtro.Location = new System.Drawing.Point(25, 167);
-            this.LBL_Filtro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LBL_Filtro.Name = "LBL_Filtro";
-            this.LBL_Filtro.Size = new System.Drawing.Size(39, 17);
-            this.LBL_Filtro.TabIndex = 36;
-            this.LBL_Filtro.Text = "Filtro";
+            this.gb_informacionDelMaterial.Controls.Add(this.btn_LoadAndSave);
+            this.gb_informacionDelMaterial.Controls.Add(this.PB_Imagen);
+            this.gb_informacionDelMaterial.Controls.Add(this.TXT_Descripcion);
+            this.gb_informacionDelMaterial.Controls.Add(this.TXT_Nombre);
+            this.gb_informacionDelMaterial.Controls.Add(this.BTN_EliminarMaterial);
+            this.gb_informacionDelMaterial.Controls.Add(this.BTN_Guardar);
+            this.gb_informacionDelMaterial.Controls.Add(this.LBL_Descripcion);
+            this.gb_informacionDelMaterial.Controls.Add(this.LBL_Nombre);
+            this.gb_informacionDelMaterial.Location = new System.Drawing.Point(13, 57);
+            this.gb_informacionDelMaterial.Margin = new System.Windows.Forms.Padding(4);
+            this.gb_informacionDelMaterial.Name = "gb_informacionDelMaterial";
+            this.gb_informacionDelMaterial.Padding = new System.Windows.Forms.Padding(4);
+            this.gb_informacionDelMaterial.Size = new System.Drawing.Size(634, 243);
+            this.gb_informacionDelMaterial.TabIndex = 5;
+            this.gb_informacionDelMaterial.TabStop = false;
+            this.gb_informacionDelMaterial.Text = "Información del ejercicio";
             // 
-            // BTN_Modificar
+            // TXT_Nombre
             // 
-            this.BTN_Modificar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.BTN_Modificar.Image = global::BD_Grupo3_VS.Properties.Resources.Ejercicio_Modificar;
-            this.BTN_Modificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_Modificar.Location = new System.Drawing.Point(544, 106);
-            this.BTN_Modificar.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_Modificar.Name = "BTN_Modificar";
-            this.BTN_Modificar.Size = new System.Drawing.Size(105, 92);
-            this.BTN_Modificar.TabIndex = 37;
-            this.BTN_Modificar.Text = "Ver/Modificar";
-            this.BTN_Modificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BTN_Modificar.UseVisualStyleBackColor = true;
-            this.BTN_Modificar.Click += new System.EventHandler(this.BTN_Modificar_Click);
+            this.TXT_Nombre.Location = new System.Drawing.Point(151, 43);
+            this.TXT_Nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TXT_Nombre.Name = "TXT_Nombre";
+            this.TXT_Nombre.Size = new System.Drawing.Size(187, 22);
+            this.TXT_Nombre.TabIndex = 9;
             // 
-            // TXT_Filtro
+            // BTN_EliminarMaterial
             // 
-            this.TXT_Filtro.Location = new System.Drawing.Point(89, 164);
-            this.TXT_Filtro.Name = "TXT_Filtro";
-            this.TXT_Filtro.Size = new System.Drawing.Size(324, 22);
-            this.TXT_Filtro.TabIndex = 38;
+            this.BTN_EliminarMaterial.BackColor = System.Drawing.Color.Red;
+            this.BTN_EliminarMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_EliminarMaterial.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.BTN_EliminarMaterial.Location = new System.Drawing.Point(469, 197);
+            this.BTN_EliminarMaterial.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_EliminarMaterial.Name = "BTN_EliminarMaterial";
+            this.BTN_EliminarMaterial.Size = new System.Drawing.Size(129, 28);
+            this.BTN_EliminarMaterial.TabIndex = 8;
+            this.BTN_EliminarMaterial.Text = "Eliminar material";
+            this.BTN_EliminarMaterial.UseVisualStyleBackColor = false;
             // 
-            // ConsultarEjercicios
+            // BTN_Guardar
+            // 
+            this.BTN_Guardar.Location = new System.Drawing.Point(79, 197);
+            this.BTN_Guardar.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Guardar.Name = "BTN_Guardar";
+            this.BTN_Guardar.Size = new System.Drawing.Size(104, 28);
+            this.BTN_Guardar.TabIndex = 5;
+            this.BTN_Guardar.Text = "Guardar";
+            this.BTN_Guardar.UseVisualStyleBackColor = true;
+            // 
+            // LBL_Descripcion
+            // 
+            this.LBL_Descripcion.AutoSize = true;
+            this.LBL_Descripcion.Location = new System.Drawing.Point(57, 79);
+            this.LBL_Descripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_Descripcion.Name = "LBL_Descripcion";
+            this.LBL_Descripcion.Size = new System.Drawing.Size(86, 17);
+            this.LBL_Descripcion.TabIndex = 4;
+            this.LBL_Descripcion.Text = "Descripcion:";
+            // 
+            // LBL_Nombre
+            // 
+            this.LBL_Nombre.AutoSize = true;
+            this.LBL_Nombre.Location = new System.Drawing.Point(57, 43);
+            this.LBL_Nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_Nombre.Name = "LBL_Nombre";
+            this.LBL_Nombre.Size = new System.Drawing.Size(62, 17);
+            this.LBL_Nombre.TabIndex = 3;
+            this.LBL_Nombre.Text = "Nombre:";
+            // 
+            // TXT_Descripcion
+            // 
+            this.TXT_Descripcion.Location = new System.Drawing.Point(155, 86);
+            this.TXT_Descripcion.Multiline = true;
+            this.TXT_Descripcion.Name = "TXT_Descripcion";
+            this.TXT_Descripcion.Size = new System.Drawing.Size(182, 94);
+            this.TXT_Descripcion.TabIndex = 10;
+            // 
+            // PB_Imagen
+            // 
+            this.PB_Imagen.Location = new System.Drawing.Point(376, 36);
+            this.PB_Imagen.Name = "PB_Imagen";
+            this.PB_Imagen.Size = new System.Drawing.Size(222, 144);
+            this.PB_Imagen.TabIndex = 12;
+            this.PB_Imagen.TabStop = false;
+            // 
+            // btn_LoadAndSave
+            // 
+            this.btn_LoadAndSave.Location = new System.Drawing.Point(231, 197);
+            this.btn_LoadAndSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_LoadAndSave.Name = "btn_LoadAndSave";
+            this.btn_LoadAndSave.Size = new System.Drawing.Size(206, 29);
+            this.btn_LoadAndSave.TabIndex = 13;
+            this.btn_LoadAndSave.Text = "Buscar y Guardar Imagen";
+            this.btn_LoadAndSave.UseVisualStyleBackColor = true;
+            this.btn_LoadAndSave.Click += new System.EventHandler(this.btn_LoadAndSave_Click);
+            // 
+            // VerEjercicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 515);
-            this.Controls.Add(this.TXT_Filtro);
-            this.Controls.Add(this.BTN_Modificar);
-            this.Controls.Add(this.LBL_Filtro);
+            this.ClientSize = new System.Drawing.Size(660, 320);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.CMB_FiltroNombre);
-            this.Controls.Add(this.DGV_Ejercicios);
-            this.Controls.Add(this.BTN_Buscar);
-            this.Controls.Add(this.LBL_Nombre);
-            this.Controls.Add(this.LBL_ConsultaDeEjercicios);
-            this.Name = "ConsultarEjercicios";
-            this.Text = "ConsultarEjercicios";
-            this.Load += new System.EventHandler(this.ConsultarEjercicios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Ejercicios)).EndInit();
+            this.Controls.Add(this.gb_informacionDelMaterial);
+            this.Name = "VerEjercicio";
+            this.Text = "VerEjercicio";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.gb_informacionDelMaterial.ResumeLayout(false);
+            this.gb_informacionDelMaterial.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Imagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,11 +295,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label LBL_ConsultaDeEjercicios;
-        private System.Windows.Forms.Label LBL_Nombre;
-        private System.Windows.Forms.Button BTN_Buscar;
-        private System.Windows.Forms.DataGridView DGV_Ejercicios;
-        private System.Windows.Forms.ComboBox CMB_FiltroNombre;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuPrincipalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuAvanzadoToolStripMenuItem;
@@ -319,8 +311,14 @@
         private System.Windows.Forms.ToolStripMenuItem crearEjercicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarEjercicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.Label LBL_Filtro;
-        private System.Windows.Forms.Button BTN_Modificar;
-        private System.Windows.Forms.TextBox TXT_Filtro;
+        private System.Windows.Forms.GroupBox gb_informacionDelMaterial;
+        private System.Windows.Forms.TextBox TXT_Nombre;
+        private System.Windows.Forms.Button BTN_EliminarMaterial;
+        private System.Windows.Forms.Button BTN_Guardar;
+        private System.Windows.Forms.Label LBL_Descripcion;
+        private System.Windows.Forms.Label LBL_Nombre;
+        private System.Windows.Forms.TextBox TXT_Descripcion;
+        private System.Windows.Forms.PictureBox PB_Imagen;
+        private System.Windows.Forms.Button btn_LoadAndSave;
     }
 }

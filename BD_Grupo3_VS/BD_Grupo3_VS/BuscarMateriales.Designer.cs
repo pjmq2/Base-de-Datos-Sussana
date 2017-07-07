@@ -48,7 +48,10 @@
             this.crearEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CB_Nombre = new System.Windows.Forms.ComboBox();
+            this.TXT_Filtro = new System.Windows.Forms.TextBox();
+            this.LBL_Filtro = new System.Windows.Forms.Label();
+            this.BTN_VerModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Materiales)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -59,19 +62,19 @@
             this.DGV_Materiales.AllowUserToDeleteRows = false;
             this.DGV_Materiales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Materiales.GridColor = System.Drawing.SystemColors.Control;
-            this.DGV_Materiales.Location = new System.Drawing.Point(12, 85);
+            this.DGV_Materiales.Location = new System.Drawing.Point(12, 119);
             this.DGV_Materiales.MultiSelect = false;
             this.DGV_Materiales.Name = "DGV_Materiales";
             this.DGV_Materiales.ReadOnly = true;
             this.DGV_Materiales.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.DGV_Materiales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Materiales.Size = new System.Drawing.Size(660, 364);
+            this.DGV_Materiales.Size = new System.Drawing.Size(510, 280);
             this.DGV_Materiales.TabIndex = 0;
             // 
             // LBL_Nombre
             // 
             this.LBL_Nombre.AutoSize = true;
-            this.LBL_Nombre.Location = new System.Drawing.Point(12, 61);
+            this.LBL_Nombre.Location = new System.Drawing.Point(12, 68);
             this.LBL_Nombre.Name = "LBL_Nombre";
             this.LBL_Nombre.Size = new System.Drawing.Size(47, 13);
             this.LBL_Nombre.TabIndex = 1;
@@ -79,9 +82,9 @@
             // 
             // BTN_Buscar
             // 
-            this.BTN_Buscar.Location = new System.Drawing.Point(321, 56);
+            this.BTN_Buscar.Location = new System.Drawing.Point(271, 90);
             this.BTN_Buscar.Name = "BTN_Buscar";
-            this.BTN_Buscar.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Buscar.Size = new System.Drawing.Size(90, 23);
             this.BTN_Buscar.TabIndex = 3;
             this.BTN_Buscar.Text = "Buscar";
             this.BTN_Buscar.UseVisualStyleBackColor = true;
@@ -92,8 +95,8 @@
             this.LBL_ConsultaDeMateriales.AutoSize = true;
             this.LBL_ConsultaDeMateriales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LBL_ConsultaDeMateriales.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_ConsultaDeMateriales.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LBL_ConsultaDeMateriales.Location = new System.Drawing.Point(10, 23);
+            this.LBL_ConsultaDeMateriales.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.LBL_ConsultaDeMateriales.Location = new System.Drawing.Point(12, 24);
             this.LBL_ConsultaDeMateriales.Name = "LBL_ConsultaDeMateriales";
             this.LBL_ConsultaDeMateriales.Size = new System.Drawing.Size(231, 31);
             this.LBL_ConsultaDeMateriales.TabIndex = 6;
@@ -113,7 +116,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(684, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(534, 24);
             this.menuStrip1.TabIndex = 38;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -121,13 +124,15 @@
             // 
             this.menuPrincipalToolStripMenuItem.Name = "menuPrincipalToolStripMenuItem";
             this.menuPrincipalToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
-            this.menuPrincipalToolStripMenuItem.Text = "Menu Principal";
+            this.menuPrincipalToolStripMenuItem.Text = "Menú principal";
+            this.menuPrincipalToolStripMenuItem.Click += new System.EventHandler(this.menuPrincipalToolStripMenuItem_Click);
             // 
             // menuAvanzadoToolStripMenuItem
             // 
             this.menuAvanzadoToolStripMenuItem.Name = "menuAvanzadoToolStripMenuItem";
-            this.menuAvanzadoToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
-            this.menuAvanzadoToolStripMenuItem.Text = "Menu Avanzado";
+            this.menuAvanzadoToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
+            this.menuAvanzadoToolStripMenuItem.Text = "Menú avanzado";
+            this.menuAvanzadoToolStripMenuItem.Click += new System.EventHandler(this.menuAvanzadoToolStripMenuItem_Click);
             // 
             // tecnicaToolStripMenuItem
             // 
@@ -136,19 +141,21 @@
             this.buscarTecnicaToolStripMenuItem});
             this.tecnicaToolStripMenuItem.Name = "tecnicaToolStripMenuItem";
             this.tecnicaToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.tecnicaToolStripMenuItem.Text = "Tecnica";
+            this.tecnicaToolStripMenuItem.Text = "Técnica";
             // 
             // crearTecnicaToolStripMenuItem
             // 
             this.crearTecnicaToolStripMenuItem.Name = "crearTecnicaToolStripMenuItem";
             this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.crearTecnicaToolStripMenuItem.Text = "Crear Tecnica";
+            this.crearTecnicaToolStripMenuItem.Text = "Crear técnica";
+            this.crearTecnicaToolStripMenuItem.Click += new System.EventHandler(this.crearTecnicaToolStripMenuItem_Click);
             // 
             // buscarTecnicaToolStripMenuItem
             // 
             this.buscarTecnicaToolStripMenuItem.Name = "buscarTecnicaToolStripMenuItem";
             this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.buscarTecnicaToolStripMenuItem.Text = "Buscar Tecnica";
+            this.buscarTecnicaToolStripMenuItem.Text = "Buscar técnica";
+            this.buscarTecnicaToolStripMenuItem.Click += new System.EventHandler(this.buscarTecnicaToolStripMenuItem_Click);
             // 
             // antecedenteToolStripMenuItem
             // 
@@ -162,14 +169,16 @@
             // crearAntecedenteToolStripMenuItem
             // 
             this.crearAntecedenteToolStripMenuItem.Name = "crearAntecedenteToolStripMenuItem";
-            this.crearAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
-            this.crearAntecedenteToolStripMenuItem.Text = "Crear Antecedente";
+            this.crearAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.crearAntecedenteToolStripMenuItem.Text = "Crear antecedente";
+            this.crearAntecedenteToolStripMenuItem.Click += new System.EventHandler(this.crearAntecedenteToolStripMenuItem_Click);
             // 
             // buscarAntecedenteToolStripMenuItem
             // 
             this.buscarAntecedenteToolStripMenuItem.Name = "buscarAntecedenteToolStripMenuItem";
-            this.buscarAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
-            this.buscarAntecedenteToolStripMenuItem.Text = "Buscar Antecedente";
+            this.buscarAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.buscarAntecedenteToolStripMenuItem.Text = "Buscar antecedente";
+            this.buscarAntecedenteToolStripMenuItem.Click += new System.EventHandler(this.buscarAntecedenteToolStripMenuItem_Click);
             // 
             // materialToolStripMenuItem
             // 
@@ -184,13 +193,15 @@
             // 
             this.crearMaterialToolStripMenuItem.Name = "crearMaterialToolStripMenuItem";
             this.crearMaterialToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.crearMaterialToolStripMenuItem.Text = "Crear Material ";
+            this.crearMaterialToolStripMenuItem.Text = "Crear material ";
+            this.crearMaterialToolStripMenuItem.Click += new System.EventHandler(this.crearMaterialToolStripMenuItem_Click);
             // 
             // buscarMaterialToolStripMenuItem
             // 
             this.buscarMaterialToolStripMenuItem.Name = "buscarMaterialToolStripMenuItem";
             this.buscarMaterialToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.buscarMaterialToolStripMenuItem.Text = "Buscar Material";
+            this.buscarMaterialToolStripMenuItem.Text = "Buscar material";
+            this.buscarMaterialToolStripMenuItem.Click += new System.EventHandler(this.buscarMaterialToolStripMenuItem_Click);
             // 
             // ejercicioToolStripMenuItem
             // 
@@ -205,35 +216,65 @@
             // 
             this.crearEjercicioToolStripMenuItem.Name = "crearEjercicioToolStripMenuItem";
             this.crearEjercicioToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.crearEjercicioToolStripMenuItem.Text = "Crear Ejercicio";
+            this.crearEjercicioToolStripMenuItem.Text = "Crear ejercicio";
+            this.crearEjercicioToolStripMenuItem.Click += new System.EventHandler(this.crearEjercicioToolStripMenuItem_Click);
             // 
             // buscarEjercicioToolStripMenuItem
             // 
             this.buscarEjercicioToolStripMenuItem.Name = "buscarEjercicioToolStripMenuItem";
             this.buscarEjercicioToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.buscarEjercicioToolStripMenuItem.Text = "Buscar Ejercicio";
+            this.buscarEjercicioToolStripMenuItem.Text = "Buscar ejercicio";
+            this.buscarEjercicioToolStripMenuItem.Click += new System.EventHandler(this.buscarEjercicioToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
-            // 
+            //
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // comboBox1
+            // CB_Nombre
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(65, 58);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(250, 21);
-            this.comboBox1.TabIndex = 39;
+            this.CB_Nombre.FormattingEnabled = true;
+            this.CB_Nombre.Location = new System.Drawing.Point(65, 65);
+            this.CB_Nombre.Name = "CB_Nombre";
+            this.CB_Nombre.Size = new System.Drawing.Size(200, 21);
+            this.CB_Nombre.TabIndex = 39;
+            // 
+            // TXT_Filtro
+            // 
+            this.TXT_Filtro.Location = new System.Drawing.Point(89, 92);
+            this.TXT_Filtro.Name = "TXT_Filtro";
+            this.TXT_Filtro.Size = new System.Drawing.Size(176, 20);
+            this.TXT_Filtro.TabIndex = 40;
+            // 
+            // LBL_Filtro
+            // 
+            this.LBL_Filtro.AutoSize = true;
+            this.LBL_Filtro.Location = new System.Drawing.Point(13, 95);
+            this.LBL_Filtro.Name = "LBL_Filtro";
+            this.LBL_Filtro.Size = new System.Drawing.Size(70, 13);
+            this.LBL_Filtro.TabIndex = 41;
+            this.LBL_Filtro.Text = "Filtro general:";
+            // 
+            // BTN_VerModificar
+            // 
+            this.BTN_VerModificar.Location = new System.Drawing.Point(402, 90);
+            this.BTN_VerModificar.Name = "BTN_VerModificar";
+            this.BTN_VerModificar.Size = new System.Drawing.Size(120, 23);
+            this.BTN_VerModificar.TabIndex = 42;
+            this.BTN_VerModificar.Text = "Ver/Modificar";
+            this.BTN_VerModificar.UseVisualStyleBackColor = true;
             // 
             // BuscarMateriales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 461);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(534, 411);
+            this.Controls.Add(this.BTN_VerModificar);
+            this.Controls.Add(this.LBL_Filtro);
+            this.Controls.Add(this.TXT_Filtro);
+            this.Controls.Add(this.CB_Nombre);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.LBL_ConsultaDeMateriales);
             this.Controls.Add(this.BTN_Buscar);
@@ -241,7 +282,7 @@
             this.Controls.Add(this.DGV_Materiales);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "BuscarMateriales";
-            this.Text = "Materiales";
+            this.Text = "Buscar materiales";
             this.Load += new System.EventHandler(this.ConsultarMateriales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Materiales)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -273,6 +314,9 @@
         private System.Windows.Forms.ToolStripMenuItem crearEjercicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarEjercicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CB_Nombre;
+        private System.Windows.Forms.TextBox TXT_Filtro;
+        private System.Windows.Forms.Label LBL_Filtro;
+        private System.Windows.Forms.Button BTN_VerModificar;
     }
 }

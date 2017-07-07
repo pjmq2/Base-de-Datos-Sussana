@@ -26,9 +26,10 @@ END
 GO
 CREATE PROCEDURE consultaTodasCitas
 AS
-SELECT C.CedPaciente,A.NombreP,A.Apellido1,A.Apellido2,C.Fecha,C.Precio,C.Descripcion,C.Duracion,C.Lugar,C.Estado_Paciente
+SELECT C.CedPaciente,A.NombreP,A.Apellido1,A.Apellido2,C.Padec_Act, C.Fecha,C.Precio,C.Descripcion,C.Duracion,C.Lugar,C.Estado_Paciente
 FROM CITA C JOIN PLAN_TRATAMIENTO P ON P.CedPaciente = C.CedPaciente and P.Pad_Actual = C.Padec_Act join Paciente A ON A.Cedula = P.CedPaciente
 
+drop procedure consultaTodasCitas
 ---
 GO
 CREATE PROCEDURE eliminarCita
@@ -65,9 +66,9 @@ drop procedure eliminarPaciente
 GO
 CREATE PROCEDURE ModificarCita
 @cedula char(9),@padecimiento varchar(50),@fecha varchar(18), @precio int, @descripcion varchar(500), @duracion decimal(4,2),
-@lugar varchar(50), @estado varchar(50),@ceduCambiar char(9), @fechaCambiar varchar(18)
+@lugar varchar(50), @estado varchar(50)
 AS
 UPDATE CITA
 SET CedPaciente = @cedula, Padec_Act = @padecimiento, Fecha = @fecha, Precio = @precio, Descripcion = @descripcion,
 Duracion = @duracion, Lugar = @lugar, Estado_Paciente = @estado
-WHERE CedPaciente = @ceduCambiar and Fecha = @fechaCambiar
+

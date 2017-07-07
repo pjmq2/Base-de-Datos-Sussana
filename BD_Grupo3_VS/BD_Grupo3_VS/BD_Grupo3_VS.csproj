@@ -194,6 +194,12 @@
     <Compile Include="ModificarCita.Designer.cs">
       <DependentUpon>ModificarCita.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerEjercicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerEjercicio.Designer.cs">
+      <DependentUpon>VerEjercicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarCita.resx">
       <DependentUpon>ModificarCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerEjercicio.resx">
+      <DependentUpon>VerEjercicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerMaterial.resx">
       <DependentUpon>VerMaterial.cs</DependentUpon>

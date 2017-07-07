@@ -24,9 +24,9 @@ namespace BD_Grupo3_VS
             Modifica: inserta en la base de datos el nuevo ejercicio
             Retorna: el tipo de error que generó la inserción o cero si la inserción fue exitosa
         */
-        public int agregarEjercicio(string nombre, string descripcion, Image imagen)
+        public int agregarEjercicio(string nombre, string descripcion, byte[] imagen)
         {
-            String insertar = "Insert into Ejercicio (Nombre, Descripcion, Imagen) VALUES ("+nombre+","+descripcion+","+imagen+")";
+            string insertar = "Insert into Ejercicio (Nombre, Descripcion, Imagen) VALUES ('"+nombre+"','"+descripcion+"',null)";
             return bd.actualizarDatos(insertar);
         }
 
@@ -52,18 +52,26 @@ namespace BD_Grupo3_VS
             Modifica: Realiza la selección de los ejercicios y los carga en un dataTable
             Retorna: el dataTable con los datos
         */
-        public DataTable obtenerEjercicios(string filtroNombre)
+        public DataTable obtenerEjercicios(string filtroNombre, string filtro1)
         {
             DataTable tabla = null;
             try
             {
-                if (filtroNombre==null)
+                if (filtroNombre==null && filtro1==null)
                 {
                     tabla = bd.ejecutarConsultaTabla("Select * from ejercicio");
                 }
-                else if (filtroNombre != null)
+                else if (filtroNombre != null && filtro1==null)
                 {
                     tabla = bd.ejecutarConsultaTabla("Select * from ejercicio where nombre = '" + filtroNombre+ "'");
+                }
+                else if (filtroNombre == null && filtro1 != null)
+                {
+                    tabla = bd.ejecutarConsultaTabla("Select * from ejercicio where nombre like '%" + filtro1 + "%' OR descripcion like '%" + filtro1 + "%' ");
+                }
+                else if (filtroNombre != null && filtro1 != null)
+                {
+                    tabla = bd.ejecutarConsultaTabla("Select * from ejercicio where  nombre = '" + filtroNombre + "' OR nombre like '%" + filtro1 + "%' OR descripcion like '%" + filtro1 + "%' ");
                 }
             }
             catch (SqlException ex)
@@ -95,6 +103,18 @@ namespace BD_Grupo3_VS
             datos = bd.ejecutarConsulta("Select * from ejercicio where nombre = '" + nombre+ "'");
             descripcion = datos.GetString(2);
             return descripcion;
+        }
+
+        public Image obtenerImagen(string nombre)
+        {
+            Image imagen=null;
+            imagen = bd.recuperarImagen(nombre);
+            return imagen;
+        }
+
+        public void insertarImagen(string nombre, byte[] imagen)
+        {
+            bd.subirImagen(nombre, imagen);
         }
     }
 }

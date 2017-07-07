@@ -13,10 +13,18 @@ namespace BD_Grupo3_VS
     public partial class ModificarCita : Form
     {
         Cita cita;
-        public ModificarCita()
+        public ModificarCita(string cedulaC,string padecimientoC, string precioC, string descripC, string duracionC, string lugarC, string estadoC)
         {
             InitializeComponent();
             cita = new Cita();
+            TXT_Cedula.Text = cedulaC;
+            TXT_Padecimiento.Text = padecimientoC;
+            TXT_Precio.Text = precioC;
+            TXT_Descripcion.Text = descripC;
+            TXT_Duracion.Text = duracionC;
+            CB_Lugar.Text = lugarC;
+            TXT_Estado.Text = estadoC;
+
         }
 
         private void LINK_AgregarCita_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -45,8 +53,8 @@ namespace BD_Grupo3_VS
         {
             int precio = Convert.ToInt32(TXT_Precio.Text);
             decimal duracion = Convert.ToDecimal(TXT_Duracion.Text);
-            int result = cita.modificarCita(TXT_CeduModificar.Text, TXT_Cedula.Text, TXT_Padecimiento.Text, dtp_Fecha.Value.ToString("dd/MM/yyyy HH:mm"),
-                precio, TXT_Descripcion.Text, duracion, CB_Lugar.Text, TXT_Estado.Text,DTP_FechaAnt.Value.ToString("dd/MM/yyyy HH:mm"));
+            int result = cita.modificarCita(TXT_Cedula.Text, TXT_Padecimiento.Text, dtp_Fecha.Value.ToString("dd/MM/yyyy HH:mm"),
+                precio, TXT_Descripcion.Text, duracion, CB_Lugar.Text, TXT_Estado.Text);
             if(result == 0)
             {
                 MessageBox.Show("¡La cita se ha modificado con éxito!", "Results", MessageBoxButtons.OK, MessageBoxIcon.None);

@@ -12,12 +12,29 @@ namespace BD_Grupo3_VS
 {
     public partial class BuscarTecnicas : Form
     {
+        Tecnica tecnica;
+
         public BuscarTecnicas()
         {
             InitializeComponent();
         }
 
-        /*             A partir de aqui empiezan los metodos para la cinta del menu  */
+        private void BuscarTecnicas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_Buscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_VerModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /*  A partir de aqui empiezan los metodos para la cinta del menu */
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
@@ -98,6 +115,6 @@ namespace BD_Grupo3_VS
             ejercicio.Show();
             this.Hide();
         }
-        /*             Hasta aqui las instrucciones de la cinta del menu  */
+        /*  Hasta aqui las instrucciones de la cinta del menu   */
     }
 }
