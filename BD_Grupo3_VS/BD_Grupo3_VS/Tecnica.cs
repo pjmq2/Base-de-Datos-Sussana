@@ -19,15 +19,41 @@ namespace BD_Grupo3_VS
         public int agregarTecnica(string nombre, int precio, string descripcion)
         {
             String insertar = "INSERT into Tecnica (Nombre, Precio, Descripcion)" +
-                 " VALUES ('" + nombre + "," + precio + ",'" + descripcion + "' )";
+                 " VALUES ('" + nombre + "'," + precio + ",'" + descripcion + "')";
             return bd.actualizarDatos(insertar);
         }
 
-        public DataTable consultarTecnicas()
+        public int actualizarTecnica(string nombre)
+        {
+            return 1;
+        }
+
+        public DataTable consultarTecnicas(string filtroNombre)
         {
             DataTable tabla = null;
 
+            if (filtroNombre == null)
+            {
+                bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Tecnica");
+            }
+            else
+            {
+                bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Material WHERE Nombre LIKE '%" + filtroNombre + "%' OR DESCRIPCION LIKE '%" + filtroNombre + "%'");
+            }
+
             return tabla;
+        }
+
+        public int agregarRequerimientoDeMaterial(string nombreTecnica, string nombreMaterial, int cantidad)
+        {
+            String insertar = "INSERT into Requiere_De (Nombre_Tec, Nombre_Mat, Cantidad)" +
+                 " VALUES ('" + nombreTecnica + "','" + nombreMaterial + "'," + cantidad + ")";
+            return bd.actualizarDatos(insertar);
+        }
+
+        public int eliminarRequerimientoDeMaterial()
+        {
+            return 0;
         }
     }
 }

@@ -19,8 +19,8 @@ namespace BD_Grupo3_VS
         public VerMaterial(string nombre)
         {
             nombreMaterial = nombre;
-            materiales = new Material();
             InitializeComponent();
+            materiales = new Material();
         }
 
         private void ModificarMaterial_Load(object sender, EventArgs e)
@@ -28,9 +28,13 @@ namespace BD_Grupo3_VS
             TXT_Nombre.Text = nombreMaterial;
         }
 
-        private void btn_guardar_Click(object sender, EventArgs e)
+        private void BTN_Guardar_Click(object sender, EventArgs e)
         {
-            
+            //Falta código principal
+            nombreMaterial = TXT_Nombre.Text;
+            TXT_Nombre.BackColor = System.Drawing.SystemColors.Window;
+            NUD_Precio.BackColor = System.Drawing.SystemColors.Window;
+            TXT_Nombre.Clear();
         }
 
         private void BTN_EliminarMaterial_Click(object sender, EventArgs e)
@@ -47,6 +51,14 @@ namespace BD_Grupo3_VS
             cambios = true;
         }
 
+        private void NUD_Precio_TextChanged(object sender, EventArgs e)
+        {
+            if (cambios)
+            {
+                NUD_Precio.BackColor = System.Drawing.Color.LightBlue;
+            }
+        }
+
         /* A partir de aqui empiezan los metodos para la cinta del menu  */
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -58,7 +70,7 @@ namespace BD_Grupo3_VS
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicacion", botones);
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicación", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();

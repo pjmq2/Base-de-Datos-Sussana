@@ -38,6 +38,11 @@ namespace BD_Grupo3_VS
             return tabla;
         }
 
+        public int actualizarMaterial(string nombre)
+        {
+            return 1;
+        }
+
         public int eliminarMaterial(string nombre)
         {
             return 1;

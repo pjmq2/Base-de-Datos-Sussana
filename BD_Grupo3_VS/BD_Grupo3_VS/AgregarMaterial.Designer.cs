@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gb_informacionDelMaterial = new System.Windows.Forms.GroupBox();
-            this.nud_precio = new System.Windows.Forms.NumericUpDown();
-            this.btn_guardar = new System.Windows.Forms.Button();
-            this.lbl_precio = new System.Windows.Forms.Label();
-            this.lbl_nombre = new System.Windows.Forms.Label();
-            this.txt_nombre = new System.Windows.Forms.TextBox();
+            this.GB_InformacionMaterial = new System.Windows.Forms.GroupBox();
+            this.NUD_Precio = new System.Windows.Forms.NumericUpDown();
+            this.BTN_Guardar = new System.Windows.Forms.Button();
+            this.LBL_Precio = new System.Windows.Forms.Label();
+            this.LBL_Nombre = new System.Windows.Forms.Label();
+            this.TXT_Nombre = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAvanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,82 +50,76 @@
             this.crearEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gb_informacionDelMaterial.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_precio)).BeginInit();
+            this.GB_InformacionMaterial.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_Precio)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gb_informacionDelMaterial
+            // GB_InformacionMaterial
             // 
-            this.gb_informacionDelMaterial.Controls.Add(this.nud_precio);
-            this.gb_informacionDelMaterial.Controls.Add(this.btn_guardar);
-            this.gb_informacionDelMaterial.Controls.Add(this.lbl_precio);
-            this.gb_informacionDelMaterial.Controls.Add(this.lbl_nombre);
-            this.gb_informacionDelMaterial.Controls.Add(this.txt_nombre);
-            this.gb_informacionDelMaterial.Location = new System.Drawing.Point(56, 37);
-            this.gb_informacionDelMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gb_informacionDelMaterial.Name = "gb_informacionDelMaterial";
-            this.gb_informacionDelMaterial.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gb_informacionDelMaterial.Size = new System.Drawing.Size(400, 246);
-            this.gb_informacionDelMaterial.TabIndex = 1;
-            this.gb_informacionDelMaterial.TabStop = false;
-            this.gb_informacionDelMaterial.Text = "Información del material";
+            this.GB_InformacionMaterial.Controls.Add(this.NUD_Precio);
+            this.GB_InformacionMaterial.Controls.Add(this.BTN_Guardar);
+            this.GB_InformacionMaterial.Controls.Add(this.LBL_Precio);
+            this.GB_InformacionMaterial.Controls.Add(this.LBL_Nombre);
+            this.GB_InformacionMaterial.Controls.Add(this.TXT_Nombre);
+            this.GB_InformacionMaterial.Location = new System.Drawing.Point(66, 40);
+            this.GB_InformacionMaterial.Name = "GB_InformacionMaterial";
+            this.GB_InformacionMaterial.Size = new System.Drawing.Size(383, 200);
+            this.GB_InformacionMaterial.TabIndex = 1;
+            this.GB_InformacionMaterial.TabStop = false;
+            this.GB_InformacionMaterial.Text = "Información del material";
             // 
-            // nud_precio
+            // NUD_Precio
             // 
-            this.nud_precio.Increment = new decimal(new int[] {
+            this.NUD_Precio.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.nud_precio.Location = new System.Drawing.Point(101, 114);
-            this.nud_precio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.nud_precio.Maximum = new decimal(new int[] {
+            this.NUD_Precio.Location = new System.Drawing.Point(110, 91);
+            this.NUD_Precio.Maximum = new decimal(new int[] {
             9999999,
             0,
             0,
             0});
-            this.nud_precio.Name = "nud_precio";
-            this.nud_precio.Size = new System.Drawing.Size(276, 22);
-            this.nud_precio.TabIndex = 6;
+            this.NUD_Precio.Name = "NUD_Precio";
+            this.NUD_Precio.Size = new System.Drawing.Size(211, 20);
+            this.NUD_Precio.TabIndex = 6;
             // 
-            // btn_guardar
+            // BTN_Guardar
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(277, 182);
-            this.btn_guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(100, 28);
-            this.btn_guardar.TabIndex = 5;
-            this.btn_guardar.Text = "Guardar";
-            this.btn_guardar.UseVisualStyleBackColor = true;
+            this.BTN_Guardar.Location = new System.Drawing.Point(155, 152);
+            this.BTN_Guardar.Name = "BTN_Guardar";
+            this.BTN_Guardar.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Guardar.TabIndex = 5;
+            this.BTN_Guardar.Text = "Guardar";
+            this.BTN_Guardar.UseVisualStyleBackColor = true;
+            this.BTN_Guardar.Click += new System.EventHandler(this.BTN_Guardar_Click);
             // 
-            // lbl_precio
+            // LBL_Precio
             // 
-            this.lbl_precio.AutoSize = true;
-            this.lbl_precio.Location = new System.Drawing.Point(17, 117);
-            this.lbl_precio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_precio.Name = "lbl_precio";
-            this.lbl_precio.Size = new System.Drawing.Size(52, 17);
-            this.lbl_precio.TabIndex = 4;
-            this.lbl_precio.Text = "Precio:";
+            this.LBL_Precio.AutoSize = true;
+            this.LBL_Precio.Location = new System.Drawing.Point(47, 93);
+            this.LBL_Precio.Name = "LBL_Precio";
+            this.LBL_Precio.Size = new System.Drawing.Size(40, 13);
+            this.LBL_Precio.TabIndex = 4;
+            this.LBL_Precio.Text = "Precio:";
             // 
-            // lbl_nombre
+            // LBL_Nombre
             // 
-            this.lbl_nombre.AutoSize = true;
-            this.lbl_nombre.Location = new System.Drawing.Point(17, 70);
-            this.lbl_nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_nombre.Name = "lbl_nombre";
-            this.lbl_nombre.Size = new System.Drawing.Size(62, 17);
-            this.lbl_nombre.TabIndex = 3;
-            this.lbl_nombre.Text = "Nombre:";
+            this.LBL_Nombre.AutoSize = true;
+            this.LBL_Nombre.Location = new System.Drawing.Point(47, 55);
+            this.LBL_Nombre.Name = "LBL_Nombre";
+            this.LBL_Nombre.Size = new System.Drawing.Size(47, 13);
+            this.LBL_Nombre.TabIndex = 3;
+            this.LBL_Nombre.Text = "Nombre:";
             // 
-            // txt_nombre
+            // TXT_Nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(101, 66);
-            this.txt_nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(275, 22);
-            this.txt_nombre.TabIndex = 1;
+            this.TXT_Nombre.Location = new System.Drawing.Point(110, 52);
+            this.TXT_Nombre.Name = "TXT_Nombre";
+            this.TXT_Nombre.Size = new System.Drawing.Size(211, 20);
+            this.TXT_Nombre.TabIndex = 1;
             // 
             // menuStrip1
             // 
@@ -140,21 +134,24 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(652, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(524, 24);
             this.menuStrip1.TabIndex = 40;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // menuPrincipalToolStripMenuItem
             // 
             this.menuPrincipalToolStripMenuItem.Name = "menuPrincipalToolStripMenuItem";
-            this.menuPrincipalToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
-            this.menuPrincipalToolStripMenuItem.Text = "Menu Principal";
+            this.menuPrincipalToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.menuPrincipalToolStripMenuItem.Text = "Menú principal";
+            this.menuPrincipalToolStripMenuItem.Click += new System.EventHandler(this.menuPrincipalToolStripMenuItem_Click);
             // 
             // menuAvanzadoToolStripMenuItem
             // 
             this.menuAvanzadoToolStripMenuItem.Name = "menuAvanzadoToolStripMenuItem";
-            this.menuAvanzadoToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
-            this.menuAvanzadoToolStripMenuItem.Text = "Menu Avanzado";
+            this.menuAvanzadoToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
+            this.menuAvanzadoToolStripMenuItem.Text = "Menú avanzado";
+            this.menuAvanzadoToolStripMenuItem.Click += new System.EventHandler(this.menuAvanzadoToolStripMenuItem_Click);
             // 
             // tecnicaToolStripMenuItem
             // 
@@ -162,20 +159,22 @@
             this.crearTecnicaToolStripMenuItem,
             this.buscarTecnicaToolStripMenuItem});
             this.tecnicaToolStripMenuItem.Name = "tecnicaToolStripMenuItem";
-            this.tecnicaToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
-            this.tecnicaToolStripMenuItem.Text = "Tecnica";
+            this.tecnicaToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.tecnicaToolStripMenuItem.Text = "Técnica";
             // 
             // crearTecnicaToolStripMenuItem
             // 
             this.crearTecnicaToolStripMenuItem.Name = "crearTecnicaToolStripMenuItem";
-            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.crearTecnicaToolStripMenuItem.Text = "Crear Tecnica";
+            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.crearTecnicaToolStripMenuItem.Text = "Crear técnica";
+            this.crearTecnicaToolStripMenuItem.Click += new System.EventHandler(this.crearTecnicaToolStripMenuItem_Click);
             // 
             // buscarTecnicaToolStripMenuItem
             // 
             this.buscarTecnicaToolStripMenuItem.Name = "buscarTecnicaToolStripMenuItem";
-            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.buscarTecnicaToolStripMenuItem.Text = "Buscar Tecnica";
+            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.buscarTecnicaToolStripMenuItem.Text = "Buscar técnica";
+            this.buscarTecnicaToolStripMenuItem.Click += new System.EventHandler(this.buscarTecnicaToolStripMenuItem_Click);
             // 
             // antecedenteToolStripMenuItem
             // 
@@ -183,20 +182,22 @@
             this.crearAntecedenteToolStripMenuItem,
             this.buscarAntecedenteToolStripMenuItem});
             this.antecedenteToolStripMenuItem.Name = "antecedenteToolStripMenuItem";
-            this.antecedenteToolStripMenuItem.Size = new System.Drawing.Size(105, 24);
+            this.antecedenteToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.antecedenteToolStripMenuItem.Text = "Antecedente";
             // 
             // crearAntecedenteToolStripMenuItem
             // 
             this.crearAntecedenteToolStripMenuItem.Name = "crearAntecedenteToolStripMenuItem";
-            this.crearAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
-            this.crearAntecedenteToolStripMenuItem.Text = "Crear Antecedente";
+            this.crearAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.crearAntecedenteToolStripMenuItem.Text = "Crear antecedente";
+            this.crearAntecedenteToolStripMenuItem.Click += new System.EventHandler(this.crearAntecedenteToolStripMenuItem_Click);
             // 
             // buscarAntecedenteToolStripMenuItem
             // 
             this.buscarAntecedenteToolStripMenuItem.Name = "buscarAntecedenteToolStripMenuItem";
-            this.buscarAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
-            this.buscarAntecedenteToolStripMenuItem.Text = "Buscar Antecedente";
+            this.buscarAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.buscarAntecedenteToolStripMenuItem.Text = "Buscar antecedente";
+            this.buscarAntecedenteToolStripMenuItem.Click += new System.EventHandler(this.buscarAntecedenteToolStripMenuItem_Click);
             // 
             // materialToolStripMenuItem
             // 
@@ -204,20 +205,22 @@
             this.crearMaterialToolStripMenuItem,
             this.buscarMaterialToolStripMenuItem});
             this.materialToolStripMenuItem.Name = "materialToolStripMenuItem";
-            this.materialToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.materialToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.materialToolStripMenuItem.Text = "Material";
             // 
             // crearMaterialToolStripMenuItem
             // 
             this.crearMaterialToolStripMenuItem.Name = "crearMaterialToolStripMenuItem";
-            this.crearMaterialToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
-            this.crearMaterialToolStripMenuItem.Text = "Crear Material ";
+            this.crearMaterialToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.crearMaterialToolStripMenuItem.Text = "Crear material ";
+            this.crearMaterialToolStripMenuItem.Click += new System.EventHandler(this.crearMaterialToolStripMenuItem_Click);
             // 
             // buscarMaterialToolStripMenuItem
             // 
             this.buscarMaterialToolStripMenuItem.Name = "buscarMaterialToolStripMenuItem";
-            this.buscarMaterialToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
-            this.buscarMaterialToolStripMenuItem.Text = "Buscar Material";
+            this.buscarMaterialToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.buscarMaterialToolStripMenuItem.Text = "Buscar material";
+            this.buscarMaterialToolStripMenuItem.Click += new System.EventHandler(this.buscarMaterialToolStripMenuItem_Click);
             // 
             // ejercicioToolStripMenuItem
             // 
@@ -225,42 +228,43 @@
             this.crearEjercicioToolStripMenuItem,
             this.buscarEjercicioToolStripMenuItem});
             this.ejercicioToolStripMenuItem.Name = "ejercicioToolStripMenuItem";
-            this.ejercicioToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.ejercicioToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.ejercicioToolStripMenuItem.Text = "Ejercicio";
             // 
             // crearEjercicioToolStripMenuItem
             // 
             this.crearEjercicioToolStripMenuItem.Name = "crearEjercicioToolStripMenuItem";
-            this.crearEjercicioToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
-            this.crearEjercicioToolStripMenuItem.Text = "Crear Ejercicio";
+            this.crearEjercicioToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.crearEjercicioToolStripMenuItem.Text = "Crear ejercicio";
+            this.crearEjercicioToolStripMenuItem.Click += new System.EventHandler(this.crearEjercicioToolStripMenuItem_Click);
             // 
             // buscarEjercicioToolStripMenuItem
             // 
             this.buscarEjercicioToolStripMenuItem.Name = "buscarEjercicioToolStripMenuItem";
-            this.buscarEjercicioToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
-            this.buscarEjercicioToolStripMenuItem.Text = "Buscar Ejercicio";
+            this.buscarEjercicioToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.buscarEjercicioToolStripMenuItem.Text = "Buscar ejercicio";
+            this.buscarEjercicioToolStripMenuItem.Click += new System.EventHandler(this.buscarEjercicioToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // AgregarMaterial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 321);
+            this.ClientSize = new System.Drawing.Size(524, 261);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.gb_informacionDelMaterial);
+            this.Controls.Add(this.GB_InformacionMaterial);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AgregarMaterial";
             this.Text = "Agregar material";
-            this.gb_informacionDelMaterial.ResumeLayout(false);
-            this.gb_informacionDelMaterial.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_precio)).EndInit();
+            this.GB_InformacionMaterial.ResumeLayout(false);
+            this.GB_InformacionMaterial.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_Precio)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -270,12 +274,12 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gb_informacionDelMaterial;
-        private System.Windows.Forms.NumericUpDown nud_precio;
-        private System.Windows.Forms.Button btn_guardar;
-        private System.Windows.Forms.Label lbl_precio;
-        private System.Windows.Forms.Label lbl_nombre;
-        private System.Windows.Forms.TextBox txt_nombre;
+        private System.Windows.Forms.GroupBox GB_InformacionMaterial;
+        private System.Windows.Forms.NumericUpDown NUD_Precio;
+        private System.Windows.Forms.Button BTN_Guardar;
+        private System.Windows.Forms.Label LBL_Precio;
+        private System.Windows.Forms.Label LBL_Nombre;
+        private System.Windows.Forms.TextBox TXT_Nombre;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuPrincipalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuAvanzadoToolStripMenuItem;

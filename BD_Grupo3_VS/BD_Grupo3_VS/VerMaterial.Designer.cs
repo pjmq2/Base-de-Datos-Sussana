@@ -31,7 +31,7 @@
             this.gb_informacionDelMaterial = new System.Windows.Forms.GroupBox();
             this.TXT_Nombre = new System.Windows.Forms.TextBox();
             this.BTN_EliminarMaterial = new System.Windows.Forms.Button();
-            this.nud_precio = new System.Windows.Forms.NumericUpDown();
+            this.NUD_Precio = new System.Windows.Forms.NumericUpDown();
             this.BTN_Guardar = new System.Windows.Forms.Button();
             this.lbl_precio = new System.Windows.Forms.Label();
             this.lbl_nombre = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.buscarEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gb_informacionDelMaterial.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_precio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_Precio)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +60,7 @@
             // 
             this.gb_informacionDelMaterial.Controls.Add(this.TXT_Nombre);
             this.gb_informacionDelMaterial.Controls.Add(this.BTN_EliminarMaterial);
-            this.gb_informacionDelMaterial.Controls.Add(this.nud_precio);
+            this.gb_informacionDelMaterial.Controls.Add(this.NUD_Precio);
             this.gb_informacionDelMaterial.Controls.Add(this.BTN_Guardar);
             this.gb_informacionDelMaterial.Controls.Add(this.lbl_precio);
             this.gb_informacionDelMaterial.Controls.Add(this.lbl_nombre);
@@ -73,7 +73,7 @@
             // 
             // TXT_Nombre
             // 
-            this.TXT_Nombre.Location = new System.Drawing.Point(138, 36);
+            this.TXT_Nombre.Location = new System.Drawing.Point(130, 41);
             this.TXT_Nombre.Margin = new System.Windows.Forms.Padding(2);
             this.TXT_Nombre.Name = "TXT_Nombre";
             this.TXT_Nombre.Size = new System.Drawing.Size(214, 20);
@@ -85,7 +85,7 @@
             this.BTN_EliminarMaterial.BackColor = System.Drawing.Color.Red;
             this.BTN_EliminarMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_EliminarMaterial.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.BTN_EliminarMaterial.Location = new System.Drawing.Point(255, 117);
+            this.BTN_EliminarMaterial.Location = new System.Drawing.Point(130, 116);
             this.BTN_EliminarMaterial.Name = "BTN_EliminarMaterial";
             this.BTN_EliminarMaterial.Size = new System.Drawing.Size(97, 23);
             this.BTN_EliminarMaterial.TabIndex = 8;
@@ -93,37 +93,37 @@
             this.BTN_EliminarMaterial.UseVisualStyleBackColor = false;
             this.BTN_EliminarMaterial.Click += new System.EventHandler(this.BTN_EliminarMaterial_Click);
             // 
-            // nud_precio
+            // NUD_Precio
             // 
-            this.nud_precio.Increment = new decimal(new int[] {
+            this.NUD_Precio.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.nud_precio.Location = new System.Drawing.Point(138, 67);
-            this.nud_precio.Maximum = new decimal(new int[] {
+            this.NUD_Precio.Location = new System.Drawing.Point(130, 72);
+            this.NUD_Precio.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.nud_precio.Name = "nud_precio";
-            this.nud_precio.Size = new System.Drawing.Size(214, 20);
-            this.nud_precio.TabIndex = 6;
+            this.NUD_Precio.Name = "NUD_Precio";
+            this.NUD_Precio.Size = new System.Drawing.Size(214, 20);
+            this.NUD_Precio.TabIndex = 6;
             // 
             // BTN_Guardar
             // 
-            this.BTN_Guardar.Location = new System.Drawing.Point(63, 117);
+            this.BTN_Guardar.Location = new System.Drawing.Point(266, 116);
             this.BTN_Guardar.Name = "BTN_Guardar";
             this.BTN_Guardar.Size = new System.Drawing.Size(78, 23);
             this.BTN_Guardar.TabIndex = 5;
             this.BTN_Guardar.Text = "Guardar";
             this.BTN_Guardar.UseVisualStyleBackColor = true;
-            this.BTN_Guardar.Click += new System.EventHandler(this.btn_guardar_Click);
+            this.BTN_Guardar.Click += new System.EventHandler(this.BTN_Guardar_Click);
             // 
             // lbl_precio
             // 
             this.lbl_precio.AutoSize = true;
-            this.lbl_precio.Location = new System.Drawing.Point(60, 69);
+            this.lbl_precio.Location = new System.Drawing.Point(52, 74);
             this.lbl_precio.Name = "lbl_precio";
             this.lbl_precio.Size = new System.Drawing.Size(40, 13);
             this.lbl_precio.TabIndex = 4;
@@ -132,7 +132,7 @@
             // lbl_nombre
             // 
             this.lbl_nombre.AutoSize = true;
-            this.lbl_nombre.Location = new System.Drawing.Point(60, 36);
+            this.lbl_nombre.Location = new System.Drawing.Point(52, 41);
             this.lbl_nombre.Name = "lbl_nombre";
             this.lbl_nombre.Size = new System.Drawing.Size(47, 13);
             this.lbl_nombre.TabIndex = 3;
@@ -182,14 +182,14 @@
             // crearTecnicaToolStripMenuItem
             // 
             this.crearTecnicaToolStripMenuItem.Name = "crearTecnicaToolStripMenuItem";
-            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.crearTecnicaToolStripMenuItem.Text = "Crear técnica";
             this.crearTecnicaToolStripMenuItem.Click += new System.EventHandler(this.crearTecnicaToolStripMenuItem_Click);
             // 
             // buscarTecnicaToolStripMenuItem
             // 
             this.buscarTecnicaToolStripMenuItem.Name = "buscarTecnicaToolStripMenuItem";
-            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.buscarTecnicaToolStripMenuItem.Text = "Buscar técnica";
             this.buscarTecnicaToolStripMenuItem.Click += new System.EventHandler(this.buscarTecnicaToolStripMenuItem_Click);
             // 
@@ -282,7 +282,7 @@
             this.Load += new System.EventHandler(this.ModificarMaterial_Load);
             this.gb_informacionDelMaterial.ResumeLayout(false);
             this.gb_informacionDelMaterial.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_precio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_Precio)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -293,7 +293,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gb_informacionDelMaterial;
-        private System.Windows.Forms.NumericUpDown nud_precio;
+        private System.Windows.Forms.NumericUpDown NUD_Precio;
         private System.Windows.Forms.Button BTN_Guardar;
         private System.Windows.Forms.Label lbl_precio;
         private System.Windows.Forms.Label lbl_nombre;

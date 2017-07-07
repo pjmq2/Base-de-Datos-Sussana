@@ -31,16 +31,17 @@
             this.gb_informacionDeLaTecnica = new System.Windows.Forms.GroupBox();
             this.BTN_EliminarMaterial = new System.Windows.Forms.Button();
             this.NUD_Precio = new System.Windows.Forms.NumericUpDown();
-            this.BTN_Guardar = new System.Windows.Forms.Button();
             this.TXT_Descripcion = new System.Windows.Forms.TextBox();
             this.TXT_Nombre = new System.Windows.Forms.TextBox();
             this.lbl_descripcion = new System.Windows.Forms.Label();
             this.lbl_precio = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.BTN_Guardar = new System.Windows.Forms.Button();
             this.GB_EliminarMateriales = new System.Windows.Forms.GroupBox();
             this.CB_MaterialesRequeridos = new System.Windows.Forms.ComboBox();
             this.BTN_EliminarRequisito = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.GB_AddMaterialRequerido = new System.Windows.Forms.GroupBox();
+            this.NUD_Cantidad = new System.Windows.Forms.NumericUpDown();
             this.BTN_AñadirRequisito = new System.Windows.Forms.Button();
             this.CB_NuevoMaterialRequerido = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -62,7 +63,8 @@
             this.gb_informacionDeLaTecnica.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Precio)).BeginInit();
             this.GB_EliminarMateriales.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.GB_AddMaterialRequerido.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_Cantidad)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,13 +72,12 @@
             // 
             this.gb_informacionDeLaTecnica.Controls.Add(this.BTN_EliminarMaterial);
             this.gb_informacionDeLaTecnica.Controls.Add(this.NUD_Precio);
-            this.gb_informacionDeLaTecnica.Controls.Add(this.BTN_Guardar);
             this.gb_informacionDeLaTecnica.Controls.Add(this.TXT_Descripcion);
             this.gb_informacionDeLaTecnica.Controls.Add(this.TXT_Nombre);
             this.gb_informacionDeLaTecnica.Controls.Add(this.lbl_descripcion);
             this.gb_informacionDeLaTecnica.Controls.Add(this.lbl_precio);
             this.gb_informacionDeLaTecnica.Controls.Add(this.label1);
-            this.gb_informacionDeLaTecnica.Location = new System.Drawing.Point(12, 27);
+            this.gb_informacionDeLaTecnica.Location = new System.Drawing.Point(12, 38);
             this.gb_informacionDeLaTecnica.Name = "gb_informacionDeLaTecnica";
             this.gb_informacionDeLaTecnica.Size = new System.Drawing.Size(300, 200);
             this.gb_informacionDeLaTecnica.TabIndex = 1;
@@ -88,12 +89,13 @@
             this.BTN_EliminarMaterial.BackColor = System.Drawing.Color.Red;
             this.BTN_EliminarMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_EliminarMaterial.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.BTN_EliminarMaterial.Location = new System.Drawing.Point(178, 171);
+            this.BTN_EliminarMaterial.Location = new System.Drawing.Point(197, 171);
             this.BTN_EliminarMaterial.Name = "BTN_EliminarMaterial";
             this.BTN_EliminarMaterial.Size = new System.Drawing.Size(97, 23);
             this.BTN_EliminarMaterial.TabIndex = 9;
             this.BTN_EliminarMaterial.Text = "Eliminar material";
             this.BTN_EliminarMaterial.UseVisualStyleBackColor = false;
+            this.BTN_EliminarMaterial.Click += new System.EventHandler(this.BTN_EliminarMaterial_Click);
             // 
             // NUD_Precio
             // 
@@ -102,46 +104,38 @@
             0,
             0,
             0});
-            this.NUD_Precio.Location = new System.Drawing.Point(94, 56);
+            this.NUD_Precio.Location = new System.Drawing.Point(84, 56);
             this.NUD_Precio.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.NUD_Precio.Name = "NUD_Precio";
-            this.NUD_Precio.Size = new System.Drawing.Size(181, 20);
+            this.NUD_Precio.Size = new System.Drawing.Size(210, 20);
             this.NUD_Precio.TabIndex = 7;
-            // 
-            // BTN_Guardar
-            // 
-            this.BTN_Guardar.Location = new System.Drawing.Point(25, 171);
-            this.BTN_Guardar.Name = "BTN_Guardar";
-            this.BTN_Guardar.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Guardar.TabIndex = 6;
-            this.BTN_Guardar.Text = "Guardar";
-            this.BTN_Guardar.UseVisualStyleBackColor = true;
             // 
             // TXT_Descripcion
             // 
-            this.TXT_Descripcion.Location = new System.Drawing.Point(94, 82);
+            this.TXT_Descripcion.Location = new System.Drawing.Point(84, 82);
             this.TXT_Descripcion.Multiline = true;
             this.TXT_Descripcion.Name = "TXT_Descripcion";
-            this.TXT_Descripcion.Size = new System.Drawing.Size(181, 83);
+            this.TXT_Descripcion.Size = new System.Drawing.Size(210, 83);
             this.TXT_Descripcion.TabIndex = 5;
             this.TXT_Descripcion.TextChanged += new System.EventHandler(this.TXT_Descripcion_TextChanged);
             // 
             // TXT_Nombre
             // 
-            this.TXT_Nombre.Location = new System.Drawing.Point(94, 29);
+            this.TXT_Nombre.BackColor = System.Drawing.SystemColors.Window;
+            this.TXT_Nombre.Location = new System.Drawing.Point(84, 29);
             this.TXT_Nombre.Name = "TXT_Nombre";
-            this.TXT_Nombre.Size = new System.Drawing.Size(181, 20);
+            this.TXT_Nombre.Size = new System.Drawing.Size(210, 20);
             this.TXT_Nombre.TabIndex = 3;
             this.TXT_Nombre.TextChanged += new System.EventHandler(this.TXT_Nombre_TextChanged);
             // 
             // lbl_descripcion
             // 
             this.lbl_descripcion.AutoSize = true;
-            this.lbl_descripcion.Location = new System.Drawing.Point(22, 85);
+            this.lbl_descripcion.Location = new System.Drawing.Point(6, 85);
             this.lbl_descripcion.Name = "lbl_descripcion";
             this.lbl_descripcion.Size = new System.Drawing.Size(66, 13);
             this.lbl_descripcion.TabIndex = 2;
@@ -150,7 +144,7 @@
             // lbl_precio
             // 
             this.lbl_precio.AutoSize = true;
-            this.lbl_precio.Location = new System.Drawing.Point(22, 58);
+            this.lbl_precio.Location = new System.Drawing.Point(6, 58);
             this.lbl_precio.Name = "lbl_precio";
             this.lbl_precio.Size = new System.Drawing.Size(40, 13);
             this.lbl_precio.TabIndex = 1;
@@ -159,17 +153,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 32);
+            this.label1.Location = new System.Drawing.Point(6, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
+            // BTN_Guardar
+            // 
+            this.BTN_Guardar.Location = new System.Drawing.Point(497, 248);
+            this.BTN_Guardar.Name = "BTN_Guardar";
+            this.BTN_Guardar.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Guardar.TabIndex = 6;
+            this.BTN_Guardar.Text = "Guardar";
+            this.BTN_Guardar.UseVisualStyleBackColor = true;
+            this.BTN_Guardar.Click += new System.EventHandler(this.BTN_Guardar_Click);
+            // 
             // GB_EliminarMateriales
             // 
             this.GB_EliminarMateriales.Controls.Add(this.CB_MaterialesRequeridos);
             this.GB_EliminarMateriales.Controls.Add(this.BTN_EliminarRequisito);
-            this.GB_EliminarMateriales.Location = new System.Drawing.Point(318, 27);
+            this.GB_EliminarMateriales.Location = new System.Drawing.Point(318, 38);
             this.GB_EliminarMateriales.Name = "GB_EliminarMateriales";
             this.GB_EliminarMateriales.Size = new System.Drawing.Size(254, 95);
             this.GB_EliminarMateriales.TabIndex = 2;
@@ -190,32 +194,42 @@
             this.BTN_EliminarRequisito.BackColor = System.Drawing.Color.Red;
             this.BTN_EliminarRequisito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_EliminarRequisito.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.BTN_EliminarRequisito.Location = new System.Drawing.Point(6, 56);
+            this.BTN_EliminarRequisito.Location = new System.Drawing.Point(6, 60);
             this.BTN_EliminarRequisito.Name = "BTN_EliminarRequisito";
             this.BTN_EliminarRequisito.Size = new System.Drawing.Size(98, 23);
             this.BTN_EliminarRequisito.TabIndex = 3;
             this.BTN_EliminarRequisito.Text = "Eliminar requisito";
             this.BTN_EliminarRequisito.UseVisualStyleBackColor = false;
+            this.BTN_EliminarRequisito.Click += new System.EventHandler(this.BTN_EliminarRequisito_Click);
             // 
-            // groupBox2
+            // GB_AddMaterialRequerido
             // 
-            this.groupBox2.Controls.Add(this.BTN_AñadirRequisito);
-            this.groupBox2.Controls.Add(this.CB_NuevoMaterialRequerido);
-            this.groupBox2.Location = new System.Drawing.Point(318, 132);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(254, 95);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Añadir material requerido";
+            this.GB_AddMaterialRequerido.Controls.Add(this.NUD_Cantidad);
+            this.GB_AddMaterialRequerido.Controls.Add(this.BTN_AñadirRequisito);
+            this.GB_AddMaterialRequerido.Controls.Add(this.CB_NuevoMaterialRequerido);
+            this.GB_AddMaterialRequerido.Location = new System.Drawing.Point(318, 143);
+            this.GB_AddMaterialRequerido.Name = "GB_AddMaterialRequerido";
+            this.GB_AddMaterialRequerido.Size = new System.Drawing.Size(254, 95);
+            this.GB_AddMaterialRequerido.TabIndex = 0;
+            this.GB_AddMaterialRequerido.TabStop = false;
+            this.GB_AddMaterialRequerido.Text = "Añadir material requerido";
+            // 
+            // NUD_Cantidad
+            // 
+            this.NUD_Cantidad.Location = new System.Drawing.Point(208, 31);
+            this.NUD_Cantidad.Name = "NUD_Cantidad";
+            this.NUD_Cantidad.Size = new System.Drawing.Size(40, 20);
+            this.NUD_Cantidad.TabIndex = 5;
             // 
             // BTN_AñadirRequisito
             // 
-            this.BTN_AñadirRequisito.Location = new System.Drawing.Point(6, 57);
+            this.BTN_AñadirRequisito.Location = new System.Drawing.Point(6, 60);
             this.BTN_AñadirRequisito.Name = "BTN_AñadirRequisito";
             this.BTN_AñadirRequisito.Size = new System.Drawing.Size(98, 23);
             this.BTN_AñadirRequisito.TabIndex = 4;
             this.BTN_AñadirRequisito.Text = "Añadir requisito";
             this.BTN_AñadirRequisito.UseVisualStyleBackColor = true;
+            this.BTN_AñadirRequisito.Click += new System.EventHandler(this.BTN_AñadirRequisito_Click);
             // 
             // CB_NuevoMaterialRequerido
             // 
@@ -223,7 +237,7 @@
             this.CB_NuevoMaterialRequerido.FormattingEnabled = true;
             this.CB_NuevoMaterialRequerido.Location = new System.Drawing.Point(6, 30);
             this.CB_NuevoMaterialRequerido.Name = "CB_NuevoMaterialRequerido";
-            this.CB_NuevoMaterialRequerido.Size = new System.Drawing.Size(242, 21);
+            this.CB_NuevoMaterialRequerido.Size = new System.Drawing.Size(196, 21);
             this.CB_NuevoMaterialRequerido.TabIndex = 0;
             // 
             // menuStrip1
@@ -270,14 +284,14 @@
             // crearTecnicaToolStripMenuItem
             // 
             this.crearTecnicaToolStripMenuItem.Name = "crearTecnicaToolStripMenuItem";
-            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.crearTecnicaToolStripMenuItem.Text = "Crear técnica";
             this.crearTecnicaToolStripMenuItem.Click += new System.EventHandler(this.crearTecnicaToolStripMenuItem_Click);
             // 
             // buscarTecnicaToolStripMenuItem
             // 
             this.buscarTecnicaToolStripMenuItem.Name = "buscarTecnicaToolStripMenuItem";
-            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.buscarTecnicaToolStripMenuItem.Text = "Buscar técnica";
             this.buscarTecnicaToolStripMenuItem.Click += new System.EventHandler(this.buscarTecnicaToolStripMenuItem_Click);
             // 
@@ -361,9 +375,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 261);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(584, 283);
+            this.Controls.Add(this.GB_AddMaterialRequerido);
             this.Controls.Add(this.GB_EliminarMateriales);
+            this.Controls.Add(this.BTN_Guardar);
             this.Controls.Add(this.gb_informacionDeLaTecnica);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -375,7 +390,8 @@
             this.gb_informacionDeLaTecnica.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Precio)).EndInit();
             this.GB_EliminarMateriales.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
+            this.GB_AddMaterialRequerido.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_Cantidad)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -397,7 +413,7 @@
         private System.Windows.Forms.GroupBox GB_EliminarMateriales;
         private System.Windows.Forms.ComboBox CB_MaterialesRequeridos;
         private System.Windows.Forms.Button BTN_EliminarRequisito;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox GB_AddMaterialRequerido;
         private System.Windows.Forms.Button BTN_AñadirRequisito;
         private System.Windows.Forms.ComboBox CB_NuevoMaterialRequerido;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -416,5 +432,6 @@
         private System.Windows.Forms.ToolStripMenuItem crearEjercicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarEjercicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown NUD_Cantidad;
     }
 }

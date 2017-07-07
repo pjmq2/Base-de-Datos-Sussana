@@ -19,14 +19,6 @@ namespace BD_Grupo3_VS
             material = new Material();
         }
 
-        private void lnk_menuPrincipal_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
-            this.Hide();
-        }
-
-
         private void llenarTabla(DataGridView dataGridView, string filtroNombre)
         {
             DataTable tabla = material.consultarMateriales(filtroNombre);
@@ -42,9 +34,16 @@ namespace BD_Grupo3_VS
             }
         }
 
+        //Verificar parámetros
+        private void llenarComboBox()
+        {
+
+        }
+
         private void ConsultarMateriales_Load(object sender, EventArgs e)
         {
             this.llenarTabla(DGV_Materiales, null);
+            this.llenarComboBox();
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
@@ -52,7 +51,12 @@ namespace BD_Grupo3_VS
             this.llenarTabla(DGV_Materiales, TXT_Filtro.Text);
         }
 
-        /*             A partir de aqui empiezan los metodos para la cinta del menu  */
+        private void BTN_VerModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /*  A partir de aqui empiezan los metodos para la cinta del menu    */
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
@@ -63,11 +67,11 @@ namespace BD_Grupo3_VS
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            DialogResult resultado = MessageBox.Show("Seguro que desea Salir ?", "Cerrar la aplicacion", botones);
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicación", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                //Aun no cierra todo el programa
+                Application.Exit();
             }
         }
 
@@ -133,6 +137,6 @@ namespace BD_Grupo3_VS
             ejercicio.Show();
             this.Hide();
         }
-        /*             Hasta aqui las instrucciones de la cinta del menu  */
+        /*  Hasta aqui las instrucciones de la cinta del menu   */
     }
 }

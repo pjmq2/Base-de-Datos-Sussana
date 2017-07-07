@@ -21,17 +21,17 @@ namespace BD_Grupo3_VS
             material = new Material();
         }
 
-        private void btn_guardar_Click(object sender, EventArgs e)
+        private void BTN_Guardar_Click(object sender, EventArgs e)
         {
-            int result = material.agregarMaterial(txt_nombre.Text, (int)nud_precio.Value);
+            int result = material.agregarMaterial(TXT_Nombre.Text, (int)NUD_Precio.Value);
             if(result == 0)
             {
-                MessageBox.Show("El material ha sido agregado exitosamente",
+                MessageBox.Show("El material ha sido agregado exitosamente.",
                     "Resultado",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.None);
-                txt_nombre.Clear();
-                nud_precio.Value = 0;
+                TXT_Nombre.Clear();
+                NUD_Precio.Value = 0;
             } else if(result == 2627)
             {
                 MessageBox.Show("Ya existe dicho material en el sistema.",
@@ -41,26 +41,7 @@ namespace BD_Grupo3_VS
             }
         }
 
-        private void lnk_menuPrincipal_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void lnk_agregarMaterial_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            AgregarMaterial agregarMaterial = new AgregarMaterial();
-            agregarMaterial.Show();
-            this.Hide();
-        }
-
-        private void lnk_menuPrincipal_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
-            this.Hide();
-        }
-
-        /*             A partir de aqui empiezan los metodos para la cinta del menu  */
+        /*  A partir de aqui empiezan los metodos para la cinta del menu    */
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
@@ -75,7 +56,7 @@ namespace BD_Grupo3_VS
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                //Aun no cierra todo el programa
+                Application.Exit();
             }
         }
 
@@ -141,6 +122,6 @@ namespace BD_Grupo3_VS
             ejercicio.Show();
             this.Hide();
         }
-        /*             Hasta aqui las instrucciones de la cinta del menu  */
+        /*  Hasta aqui las instrucciones de la cinta del menu   */
     }
 }
