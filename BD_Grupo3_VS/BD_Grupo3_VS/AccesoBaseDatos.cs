@@ -41,7 +41,7 @@ namespace BD_Grupo3_VS
                 cmd.Parameters.Add("@name", SqlDbType.VarChar).Value = nombre;//add parameter to the command object and set value to that parameter
                 cmd.Parameters.Add("@img", SqlDbType.Image).Value = img;//add parameter to the command object and set value to that parameter
                 cmd.ExecuteNonQuery();//execute command
-                MessageBox.Show("Image Save Successfully!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display save successful message to user
+                MessageBox.Show("Image guardada exitosamente!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display save successful message to user
             }
             catch (Exception ex)//catch if any error occur
             {
@@ -58,7 +58,6 @@ namespace BD_Grupo3_VS
         {
             Image imagen = null;
             SqlConnection sqlConnection = new SqlConnection(conexion);
-
             SqlCommand cmd = new SqlCommand("ReadImage", sqlConnection);//create a SQL command object by passing name of the stored procedure and database connection 
             cmd.CommandType = CommandType.StoredProcedure; //set command object command type to stored procedure type
             cmd.Parameters.Add("@name", SqlDbType.VarChar).Value = nombre;//add parameter to the command object and set value to that parameter
@@ -84,8 +83,66 @@ namespace BD_Grupo3_VS
                 if (sqlConnection.State == ConnectionState.Open)//check whether connection to database is open or not
                     sqlConnection.Close();//if connection is open then only close the connection
             }
-
             return imagen;
+        }
+
+        public void subirArchivo(string cedula, string dato, byte[] archivo)
+        {
+            SqlConnection sqlConnection = new SqlConnection(conexion);
+            try
+            {
+                if (sqlConnection.State == ConnectionState.Closed)//check whether connection to database is close or not
+                    sqlConnection.Open();//if connection is close then only open the connection
+                SqlCommand cmd = new SqlCommand("SaveFile", sqlConnection);//create a SQL command object by passing name of the stored procedure and database connection 
+                cmd.CommandType = CommandType.StoredProcedure; //set command object command type to stored procedure type
+                cmd.Parameters.Add("@cedula", SqlDbType.VarChar).Value = cedula;//add parameter to the command object and set value to that parameter
+                cmd.Parameters.Add("@Dato", SqlDbType.VarChar).Value = dato;//add parameter to the command object and set value to that parameter
+                cmd.Parameters.Add("@archivo", SqlDbType.VarBinary).Value = archivo;//add parameter to the command object and set value to that parameter
+                cmd.ExecuteNonQuery();//execute command
+                MessageBox.Show("Archivo guardado exitosamente!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display save successful message to user
+            }
+            catch (Exception ex)//catch if any error occur
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);//display error message with exception 
+            }
+            finally
+            {
+                if (sqlConnection.State == ConnectionState.Open)//check whether connection to database is open or not
+                    sqlConnection.Close();//if connection is open then only close the connection
+            }
+
+        }
+
+        public byte[] recuperarArchivo(string cedula, string dato)
+        {
+            byte[] archivo = null;
+            SqlConnection sqlConnection = new SqlConnection(conexion);
+            SqlCommand cmd = new SqlCommand("ReadFile", sqlConnection);//create a SQL command object by passing name of the stored procedure and database connection 
+            cmd.CommandType = CommandType.StoredProcedure; //set command object command type to stored procedure type
+            cmd.Parameters.Add("@cedula", SqlDbType.VarChar).Value = cedula;//add parameter to the command object and set value to that parameter
+            cmd.Parameters.Add("@Dato", SqlDbType.VarChar).Value = dato;//add parameter to the command object and set value to that parameter
+            SqlDataAdapter adp = new SqlDataAdapter(cmd);//create SQL data adapter with command object
+            DataTable dt = new DataTable();//create a data table to hold result of the command
+            try
+            {
+                if (sqlConnection.State == ConnectionState.Closed)//check whether connection to database is close or not
+                    sqlConnection.Open();//if connection is close then only open the connection
+                adp.Fill(dt);//data table fill with data by calling the fill method of data adapter object
+                if (dt.Rows.Count > 0)//check whether data table contain any row or not
+                {
+                    archivo=(byte[])dt.Rows[0]["Imagen"];//create memory stream by passing byte array of the file
+                }
+            }
+            catch (Exception ex)//catch if any error occur
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);//display error message with exception 
+            }
+            finally
+            {
+                if (sqlConnection.State == ConnectionState.Open)//check whether connection to database is open or not
+                    sqlConnection.Close();//if connection is open then only close the connection
+            }
+            return archivo;
         }
 
         /**
