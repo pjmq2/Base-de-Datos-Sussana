@@ -143,10 +143,10 @@ namespace BD_Grupo3_VS
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                //Aun no cierra todo el programa
+                Application.Exit();
             }
-        }/*             Hasta aqui las instrucciones de la cinta del menu  */
+        }
 
-        
+        /*             Hasta aqui las instrucciones de la cinta del menu  */       
     }
 }

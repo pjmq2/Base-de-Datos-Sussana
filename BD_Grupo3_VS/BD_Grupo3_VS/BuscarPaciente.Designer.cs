@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LBL_ConsultaDePacientes = new System.Windows.Forms.Label();
+            this.LBL_BuscarPacientes = new System.Windows.Forms.Label();
             this.LBL_FiltroNombre = new System.Windows.Forms.Label();
             this.LBL_FiltroGeneral = new System.Windows.Forms.Label();
             this.TXT_FiltroGeneral = new System.Windows.Forms.TextBox();
@@ -47,16 +47,16 @@
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // LBL_ConsultaDePacientes
+            // LBL_BuscarPacientes
             // 
-            this.LBL_ConsultaDePacientes.AutoSize = true;
-            this.LBL_ConsultaDePacientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_ConsultaDePacientes.ForeColor = System.Drawing.Color.Maroon;
-            this.LBL_ConsultaDePacientes.Location = new System.Drawing.Point(21, 33);
-            this.LBL_ConsultaDePacientes.Name = "LBL_ConsultaDePacientes";
-            this.LBL_ConsultaDePacientes.Size = new System.Drawing.Size(306, 33);
-            this.LBL_ConsultaDePacientes.TabIndex = 3;
-            this.LBL_ConsultaDePacientes.Text = "Consulta de Pacientes";
+            this.LBL_BuscarPacientes.AutoSize = true;
+            this.LBL_BuscarPacientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_BuscarPacientes.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.LBL_BuscarPacientes.Location = new System.Drawing.Point(21, 33);
+            this.LBL_BuscarPacientes.Name = "LBL_BuscarPacientes";
+            this.LBL_BuscarPacientes.Size = new System.Drawing.Size(242, 33);
+            this.LBL_BuscarPacientes.TabIndex = 3;
+            this.LBL_BuscarPacientes.Text = "Buscar Pacientes";
             // 
             // LBL_FiltroNombre
             // 
@@ -121,7 +121,7 @@
             // 
             this.CB_Nombre.FormattingEnabled = true;
             this.CB_Nombre.Location = new System.Drawing.Point(106, 119);
-            this.CB_Nombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CB_Nombre.Margin = new System.Windows.Forms.Padding(2);
             this.CB_Nombre.Name = "CB_Nombre";
             this.CB_Nombre.Size = new System.Drawing.Size(147, 21);
             this.CB_Nombre.TabIndex = 19;
@@ -139,7 +139,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(723, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(709, 24);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -188,11 +188,11 @@
             this.BTN_Modificar.UseVisualStyleBackColor = true;
             this.BTN_Modificar.Click += new System.EventHandler(this.BTN_Modificar_Click);
             // 
-            // ConsultarPaciente
+            // BuscarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 515);
+            this.ClientSize = new System.Drawing.Size(709, 515);
             this.Controls.Add(this.BTN_Modificar);
             this.Controls.Add(this.CB_Nombre);
             this.Controls.Add(this.label1);
@@ -201,11 +201,11 @@
             this.Controls.Add(this.TXT_FiltroGeneral);
             this.Controls.Add(this.LBL_FiltroGeneral);
             this.Controls.Add(this.LBL_FiltroNombre);
-            this.Controls.Add(this.LBL_ConsultaDePacientes);
+            this.Controls.Add(this.LBL_BuscarPacientes);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "ConsultarPaciente";
-            this.Text = "ConsultarPaciente";
+            this.Name = "BuscarPaciente";
+            this.Text = "BuscarPaciente";
             this.Load += new System.EventHandler(this.ConsultarPaciente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Pacientes)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -217,7 +217,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label LBL_ConsultaDePacientes;
+        private System.Windows.Forms.Label LBL_BuscarPacientes;
         private System.Windows.Forms.Label LBL_FiltroNombre;
         private System.Windows.Forms.Label LBL_FiltroGeneral;
         private System.Windows.Forms.TextBox TXT_FiltroGeneral;

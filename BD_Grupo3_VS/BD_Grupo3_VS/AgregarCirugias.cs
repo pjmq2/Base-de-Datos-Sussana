@@ -42,35 +42,7 @@ namespace BD_Grupo3_VS
             }
         }
 
-        /*             A partir de aqui empiezan los metodos para la cinta del menu  */
-        private void InicioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
-            this.Hide();
-        }
-
-        private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BuscarPaciente paciente = new BuscarPaciente();
-            paciente.Show();
-            this.Hide();
-        }
-
-        private void crearPacienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AgregarPaciente paciente = new AgregarPaciente();
-            paciente.Show();
-            this.Hide();
-        }
-
-        private void avanzadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuConfig menu = new MenuConfig();
-            menu.Show();
-            this.Hide();
-        }
-
+        /*             A partir de aqui empiezan los metodos para la cinta del menu  */                  
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
@@ -78,10 +50,37 @@ namespace BD_Grupo3_VS
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                //Aun no cierra todo el programa
+                Application.Exit();
             }
         }
 
+        private void InicioToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void avanzadoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MenuConfig menu = new MenuConfig();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void buscarPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            BuscarPaciente paciente = new BuscarPaciente();
+            paciente.Show();
+            this.Hide();
+        }
+
+        private void crearPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            AgregarPaciente paciente = new AgregarPaciente();
+            paciente.Show();
+            this.Hide();
+        }
         /*             Hasta aqui las instrucciones de la cinta del menu  */
     }
 }

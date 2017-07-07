@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BTN_BuscarPlanEjercicios = new System.Windows.Forms.Button();
-            this.BTN_CrearPlanEjercicios = new System.Windows.Forms.Button();
-            this.BTN_ModificarPlanTratamiento = new System.Windows.Forms.Button();
-            this.BTN_CrearPlanTratamiento = new System.Windows.Forms.Button();
-            this.BTN_CitaBuscar = new System.Windows.Forms.Button();
-            this.BTN_CitaNueva = new System.Windows.Forms.Button();
             this.LBL_Paciente = new System.Windows.Forms.Label();
             this.BG_Paciente = new System.Windows.Forms.GroupBox();
             this.TabPaciente = new System.Windows.Forms.TabControl();
@@ -65,6 +59,7 @@
             this.TP_Cirugias = new System.Windows.Forms.TabPage();
             this.DGV_Cirugias = new System.Windows.Forms.DataGridView();
             this.TP_Ante = new System.Windows.Forms.TabPage();
+            this.LBL_Antecedentes = new System.Windows.Forms.Label();
             this.DGV_Ante = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.InicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,6 +67,12 @@
             this.crearPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BTN_BuscarPlanEjercicios = new System.Windows.Forms.Button();
+            this.BTN_CrearPlanEjercicios = new System.Windows.Forms.Button();
+            this.BTN_ModificarPlanTratamiento = new System.Windows.Forms.Button();
+            this.BTN_CrearPlanTratamiento = new System.Windows.Forms.Button();
+            this.BTN_CitaBuscar = new System.Windows.Forms.Button();
+            this.BTN_CitaNueva = new System.Windows.Forms.Button();
             this.TabPaciente.SuspendLayout();
             this.TP_InfoBasica.SuspendLayout();
             this.TP_DatoClinicos.SuspendLayout();
@@ -82,89 +83,11 @@
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // BTN_BuscarPlanEjercicios
-            // 
-            this.BTN_BuscarPlanEjercicios.Image = global::BD_Grupo3_VS.Properties.Resources.Plan_Ejercicio_Buscar;
-            this.BTN_BuscarPlanEjercicios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_BuscarPlanEjercicios.Location = new System.Drawing.Point(458, 453);
-            this.BTN_BuscarPlanEjercicios.Margin = new System.Windows.Forms.Padding(2);
-            this.BTN_BuscarPlanEjercicios.Name = "BTN_BuscarPlanEjercicios";
-            this.BTN_BuscarPlanEjercicios.Size = new System.Drawing.Size(86, 95);
-            this.BTN_BuscarPlanEjercicios.TabIndex = 5;
-            this.BTN_BuscarPlanEjercicios.Text = "Buscar Plan Ejercicios";
-            this.BTN_BuscarPlanEjercicios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BTN_BuscarPlanEjercicios.UseVisualStyleBackColor = true;
-            // 
-            // BTN_CrearPlanEjercicios
-            // 
-            this.BTN_CrearPlanEjercicios.Image = global::BD_Grupo3_VS.Properties.Resources.Plan_Ejercicio_Nuevo;
-            this.BTN_CrearPlanEjercicios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_CrearPlanEjercicios.Location = new System.Drawing.Point(368, 453);
-            this.BTN_CrearPlanEjercicios.Margin = new System.Windows.Forms.Padding(2);
-            this.BTN_CrearPlanEjercicios.Name = "BTN_CrearPlanEjercicios";
-            this.BTN_CrearPlanEjercicios.Size = new System.Drawing.Size(86, 95);
-            this.BTN_CrearPlanEjercicios.TabIndex = 4;
-            this.BTN_CrearPlanEjercicios.Text = "Crear Plan Ejercicios";
-            this.BTN_CrearPlanEjercicios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BTN_CrearPlanEjercicios.UseVisualStyleBackColor = true;
-            // 
-            // BTN_ModificarPlanTratamiento
-            // 
-            this.BTN_ModificarPlanTratamiento.Image = global::BD_Grupo3_VS.Properties.Resources.Plan_de_Tratamiento_Buscar;
-            this.BTN_ModificarPlanTratamiento.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_ModificarPlanTratamiento.Location = new System.Drawing.Point(280, 453);
-            this.BTN_ModificarPlanTratamiento.Margin = new System.Windows.Forms.Padding(2);
-            this.BTN_ModificarPlanTratamiento.Name = "BTN_ModificarPlanTratamiento";
-            this.BTN_ModificarPlanTratamiento.Size = new System.Drawing.Size(86, 95);
-            this.BTN_ModificarPlanTratamiento.TabIndex = 3;
-            this.BTN_ModificarPlanTratamiento.Text = "Modificar Plan Tratamiento";
-            this.BTN_ModificarPlanTratamiento.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BTN_ModificarPlanTratamiento.UseVisualStyleBackColor = true;
-            // 
-            // BTN_CrearPlanTratamiento
-            // 
-            this.BTN_CrearPlanTratamiento.Image = global::BD_Grupo3_VS.Properties.Resources.Plan_de_Tratamiento_Nuevo;
-            this.BTN_CrearPlanTratamiento.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_CrearPlanTratamiento.Location = new System.Drawing.Point(190, 453);
-            this.BTN_CrearPlanTratamiento.Margin = new System.Windows.Forms.Padding(2);
-            this.BTN_CrearPlanTratamiento.Name = "BTN_CrearPlanTratamiento";
-            this.BTN_CrearPlanTratamiento.Size = new System.Drawing.Size(86, 95);
-            this.BTN_CrearPlanTratamiento.TabIndex = 2;
-            this.BTN_CrearPlanTratamiento.Text = "Crear Plan Tratamiento";
-            this.BTN_CrearPlanTratamiento.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BTN_CrearPlanTratamiento.UseVisualStyleBackColor = true;
-            // 
-            // BTN_CitaBuscar
-            // 
-            this.BTN_CitaBuscar.Image = global::BD_Grupo3_VS.Properties.Resources.Cita_Buscar;
-            this.BTN_CitaBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_CitaBuscar.Location = new System.Drawing.Point(100, 453);
-            this.BTN_CitaBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.BTN_CitaBuscar.Name = "BTN_CitaBuscar";
-            this.BTN_CitaBuscar.Size = new System.Drawing.Size(86, 95);
-            this.BTN_CitaBuscar.TabIndex = 1;
-            this.BTN_CitaBuscar.Text = "Buscar Cita";
-            this.BTN_CitaBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BTN_CitaBuscar.UseVisualStyleBackColor = true;
-            // 
-            // BTN_CitaNueva
-            // 
-            this.BTN_CitaNueva.Image = global::BD_Grupo3_VS.Properties.Resources.Cita_Nueva;
-            this.BTN_CitaNueva.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_CitaNueva.Location = new System.Drawing.Point(12, 453);
-            this.BTN_CitaNueva.Margin = new System.Windows.Forms.Padding(2);
-            this.BTN_CitaNueva.Name = "BTN_CitaNueva";
-            this.BTN_CitaNueva.Size = new System.Drawing.Size(86, 95);
-            this.BTN_CitaNueva.TabIndex = 0;
-            this.BTN_CitaNueva.Text = "Crear Cita";
-            this.BTN_CitaNueva.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BTN_CitaNueva.UseVisualStyleBackColor = true;
-            // 
             // LBL_Paciente
             // 
             this.LBL_Paciente.AutoSize = true;
             this.LBL_Paciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Paciente.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.LBL_Paciente.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.LBL_Paciente.Location = new System.Drawing.Point(210, 28);
             this.LBL_Paciente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LBL_Paciente.Name = "LBL_Paciente";
@@ -483,6 +406,7 @@
             // 
             // TP_Ante
             // 
+            this.TP_Ante.Controls.Add(this.LBL_Antecedentes);
             this.TP_Ante.Controls.Add(this.DGV_Ante);
             this.TP_Ante.Location = new System.Drawing.Point(4, 22);
             this.TP_Ante.Name = "TP_Ante";
@@ -492,11 +416,24 @@
             this.TP_Ante.Text = "Antecedentes";
             this.TP_Ante.UseVisualStyleBackColor = true;
             // 
+            // LBL_Antecedentes
+            // 
+            this.LBL_Antecedentes.AutoSize = true;
+            this.LBL_Antecedentes.Location = new System.Drawing.Point(48, 22);
+            this.LBL_Antecedentes.Name = "LBL_Antecedentes";
+            this.LBL_Antecedentes.Size = new System.Drawing.Size(182, 13);
+            this.LBL_Antecedentes.TabIndex = 28;
+            this.LBL_Antecedentes.Text = "Antecedentes asociados al paciente:";
+            // 
             // DGV_Ante
             // 
+            this.DGV_Ante.AllowUserToAddRows = false;
+            this.DGV_Ante.AllowUserToDeleteRows = false;
             this.DGV_Ante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Ante.Location = new System.Drawing.Point(51, 51);
+            this.DGV_Ante.MultiSelect = false;
             this.DGV_Ante.Name = "DGV_Ante";
+            this.DGV_Ante.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Ante.Size = new System.Drawing.Size(426, 254);
             this.DGV_Ante.TabIndex = 1;
             // 
@@ -528,12 +465,14 @@
             this.buscarPacienteToolStripMenuItem.Name = "buscarPacienteToolStripMenuItem";
             this.buscarPacienteToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.buscarPacienteToolStripMenuItem.Text = "Buscar Paciente";
+            this.buscarPacienteToolStripMenuItem.Click += new System.EventHandler(this.buscarPacienteToolStripMenuItem_Click_1);
             // 
             // crearPacienteToolStripMenuItem
             // 
             this.crearPacienteToolStripMenuItem.Name = "crearPacienteToolStripMenuItem";
             this.crearPacienteToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.crearPacienteToolStripMenuItem.Text = "Crear Paciente";
+            this.crearPacienteToolStripMenuItem.Click += new System.EventHandler(this.crearPacienteToolStripMenuItem_Click_1);
             // 
             // avanzadoToolStripMenuItem
             // 
@@ -548,6 +487,84 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // BTN_BuscarPlanEjercicios
+            // 
+            this.BTN_BuscarPlanEjercicios.Image = global::BD_Grupo3_VS.Properties.Resources.Plan_Ejercicio_Buscar;
+            this.BTN_BuscarPlanEjercicios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_BuscarPlanEjercicios.Location = new System.Drawing.Point(458, 453);
+            this.BTN_BuscarPlanEjercicios.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_BuscarPlanEjercicios.Name = "BTN_BuscarPlanEjercicios";
+            this.BTN_BuscarPlanEjercicios.Size = new System.Drawing.Size(86, 95);
+            this.BTN_BuscarPlanEjercicios.TabIndex = 5;
+            this.BTN_BuscarPlanEjercicios.Text = "Buscar Plan Ejercicios";
+            this.BTN_BuscarPlanEjercicios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_BuscarPlanEjercicios.UseVisualStyleBackColor = true;
+            // 
+            // BTN_CrearPlanEjercicios
+            // 
+            this.BTN_CrearPlanEjercicios.Image = global::BD_Grupo3_VS.Properties.Resources.Plan_Ejercicio_Nuevo;
+            this.BTN_CrearPlanEjercicios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_CrearPlanEjercicios.Location = new System.Drawing.Point(368, 453);
+            this.BTN_CrearPlanEjercicios.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_CrearPlanEjercicios.Name = "BTN_CrearPlanEjercicios";
+            this.BTN_CrearPlanEjercicios.Size = new System.Drawing.Size(86, 95);
+            this.BTN_CrearPlanEjercicios.TabIndex = 4;
+            this.BTN_CrearPlanEjercicios.Text = "Crear Plan Ejercicios";
+            this.BTN_CrearPlanEjercicios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_CrearPlanEjercicios.UseVisualStyleBackColor = true;
+            // 
+            // BTN_ModificarPlanTratamiento
+            // 
+            this.BTN_ModificarPlanTratamiento.Image = global::BD_Grupo3_VS.Properties.Resources.Plan_de_Tratamiento_Buscar;
+            this.BTN_ModificarPlanTratamiento.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_ModificarPlanTratamiento.Location = new System.Drawing.Point(280, 453);
+            this.BTN_ModificarPlanTratamiento.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_ModificarPlanTratamiento.Name = "BTN_ModificarPlanTratamiento";
+            this.BTN_ModificarPlanTratamiento.Size = new System.Drawing.Size(86, 95);
+            this.BTN_ModificarPlanTratamiento.TabIndex = 3;
+            this.BTN_ModificarPlanTratamiento.Text = "Modificar Plan Tratamiento";
+            this.BTN_ModificarPlanTratamiento.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_ModificarPlanTratamiento.UseVisualStyleBackColor = true;
+            // 
+            // BTN_CrearPlanTratamiento
+            // 
+            this.BTN_CrearPlanTratamiento.Image = global::BD_Grupo3_VS.Properties.Resources.Plan_de_Tratamiento_Nuevo;
+            this.BTN_CrearPlanTratamiento.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_CrearPlanTratamiento.Location = new System.Drawing.Point(190, 453);
+            this.BTN_CrearPlanTratamiento.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_CrearPlanTratamiento.Name = "BTN_CrearPlanTratamiento";
+            this.BTN_CrearPlanTratamiento.Size = new System.Drawing.Size(86, 95);
+            this.BTN_CrearPlanTratamiento.TabIndex = 2;
+            this.BTN_CrearPlanTratamiento.Text = "Crear Plan Tratamiento";
+            this.BTN_CrearPlanTratamiento.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_CrearPlanTratamiento.UseVisualStyleBackColor = true;
+            // 
+            // BTN_CitaBuscar
+            // 
+            this.BTN_CitaBuscar.Image = global::BD_Grupo3_VS.Properties.Resources.Cita_Buscar;
+            this.BTN_CitaBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_CitaBuscar.Location = new System.Drawing.Point(100, 453);
+            this.BTN_CitaBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_CitaBuscar.Name = "BTN_CitaBuscar";
+            this.BTN_CitaBuscar.Size = new System.Drawing.Size(86, 95);
+            this.BTN_CitaBuscar.TabIndex = 1;
+            this.BTN_CitaBuscar.Text = "Buscar Cita";
+            this.BTN_CitaBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_CitaBuscar.UseVisualStyleBackColor = true;
+            // 
+            // BTN_CitaNueva
+            // 
+            this.BTN_CitaNueva.Image = global::BD_Grupo3_VS.Properties.Resources.Cita_Nueva;
+            this.BTN_CitaNueva.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_CitaNueva.Location = new System.Drawing.Point(12, 453);
+            this.BTN_CitaNueva.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_CitaNueva.Name = "BTN_CitaNueva";
+            this.BTN_CitaNueva.Size = new System.Drawing.Size(86, 95);
+            this.BTN_CitaNueva.TabIndex = 0;
+            this.BTN_CitaNueva.Text = "Crear Cita";
+            this.BTN_CitaNueva.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_CitaNueva.UseVisualStyleBackColor = true;
             // 
             // VerPaciente
             // 
@@ -576,6 +593,7 @@
             this.TP_Cirugias.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Cirugias)).EndInit();
             this.TP_Ante.ResumeLayout(false);
+            this.TP_Ante.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Ante)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -630,5 +648,6 @@
         private System.Windows.Forms.TabPage TP_Ante;
         private System.Windows.Forms.DataGridView DGV_Cirugias;
         private System.Windows.Forms.DataGridView DGV_Ante;
+        private System.Windows.Forms.Label LBL_Antecedentes;
     }
 }

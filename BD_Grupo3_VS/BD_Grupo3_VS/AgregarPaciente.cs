@@ -66,32 +66,11 @@ namespace BD_Grupo3_VS
             }
         }
 
-        private void LINK_ListaPacientes_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            BuscarPaciente listaP = new BuscarPaciente();
-            listaP.Show();
-            this.Hide();
-        }
-
         /*             A partir de aqui empiezan los metodos para la cinta del menu  */
-        private void InicioToolStripMenuItem_Click(object sender, EventArgs e)
+        private void InicioToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
             menu.Show();
-            this.Hide();
-        }
-
-        private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BuscarPaciente paciente = new BuscarPaciente();
-            paciente.Show();
-            this.Hide();
-        }
-
-        private void crearPacienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AgregarPaciente paciente = new AgregarPaciente();
-            paciente.Show();
             this.Hide();
         }
 
@@ -105,12 +84,19 @@ namespace BD_Grupo3_VS
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            DialogResult resultado = MessageBox.Show("Seguro que desea Salir ?", "Cerrar la aplicacion", botones);
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicacion", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                //Aun no cierra todo el programa
+                Application.Exit();
             }
+        }
+
+        private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuscarPaciente paciente = new BuscarPaciente();
+            paciente.Show();
+            this.Hide();
         }
 
         /*             Hasta aqui las instrucciones de la cinta del menu  */

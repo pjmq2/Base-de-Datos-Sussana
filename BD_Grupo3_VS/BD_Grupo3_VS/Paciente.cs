@@ -17,6 +17,60 @@ namespace BD_Grupo3_VS
             bd = new AccesoBaseDatos();
         }
 
+        public int modificarCedula(string cedula, string cedulaNuevo)
+        {
+            string modificacion = "update PACIENTE set Cedula = '" + cedulaNuevo + "' where Cedula = '" + cedula + "'";
+            return bd.actualizarDatos(modificacion);
+        }
+
+        public int modificarNombre(string cedula, string nombreNuevo)
+        {
+            string modificacion = "update PACIENTE set NombreP = '" + nombreNuevo + "' where Cedula = '" + cedula + "'";
+            return bd.actualizarDatos(modificacion);
+        }
+
+        public int modificarApellido1(string cedula, string ape1Nuevo)
+        {
+            string modificacion = "update PACIENTE set Apellido1 = '" + ape1Nuevo + "' where Cedula = '" + cedula + "'";
+            return bd.actualizarDatos(modificacion);
+        }
+
+        public int modificarApellido2(string cedula, string ape2Nuevo)
+        {
+            string modificacion = "update PACIENTE set Apellido2 = '" + ape2Nuevo + "' where Cedula = '" + cedula + "'";
+            return bd.actualizarDatos(modificacion);
+        }
+
+        public int modificarEmail(string cedula, string emailNuevo)
+        {
+            string modificacion = "update PACIENTE set Email = '" + emailNuevo + "' where Cedula = '" + cedula + "'";
+            return bd.actualizarDatos(modificacion);
+        }
+
+        public int modificarTelefono(string cedula, string telefonoNuevo)
+        {
+            string modificacion = "update PACIENTE set Telefono = '" + telefonoNuevo + "' where Cedula = '" + cedula + "'";
+            return bd.actualizarDatos(modificacion);
+        }
+
+        public int modificarFechaNac(string cedula, string fechaNuevo)
+        {
+            string modificacion = "update PACIENTE set FechaNac = '" + fechaNuevo + "' where Cedula = '" + cedula + "'";
+            return bd.actualizarDatos(modificacion);
+        }
+
+        public int modificarValoracion(string cedula, string valoracionNuevo)
+        {
+            string modificacion = "update PACIENTE set Valoracion = '" + valoracionNuevo + "' where Cedula = '" + cedula + "'";
+            return bd.actualizarDatos(modificacion);
+        }
+
+        public int modificarComentarios(string cedula, string comentariosNuevo)
+        {
+            string modificacion = "update PACIENTE set Comentarios = '" + comentariosNuevo + "' where Cedula = '" + cedula + "'";
+            return bd.actualizarDatos(modificacion);
+        }
+
         public SqlDataReader obtenerComentarios(string cedula)
         {
             SqlDataReader datos = null;

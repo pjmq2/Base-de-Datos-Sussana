@@ -121,6 +121,34 @@ namespace BD_Grupo3_VS
             this.Hide();
         }
 
+        private void crearMaterialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarMaterial material = new AgregarMaterial();
+            material.Show();
+            this.Hide();
+        }
+
+        private void buscarMaterialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuscarMateriales material = new BuscarMateriales();
+            material.Show();
+            this.Hide();
+        }
+
+        private void crearEjercicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarEjercicio ejercicio = new AgregarEjercicio();
+            ejercicio.Show();
+            this.Hide();
+        }
+
+        private void buscarEjercicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuscarEjercicios ejercicio = new BuscarEjercicios();
+            ejercicio.Show();
+            this.Hide();
+        }
+
         /*             Hasta aqui las instrucciones de la cinta del menu  */
     }
 }
