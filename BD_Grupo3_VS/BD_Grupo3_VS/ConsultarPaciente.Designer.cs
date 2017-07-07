@@ -42,6 +42,7 @@
             this.crearPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BTN_Modificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Pacientes)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +72,7 @@
             // LBL_FiltroGeneral
             // 
             this.LBL_FiltroGeneral.AutoSize = true;
-            this.LBL_FiltroGeneral.Location = new System.Drawing.Point(376, 146);
+            this.LBL_FiltroGeneral.Location = new System.Drawing.Point(356, 146);
             this.LBL_FiltroGeneral.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_FiltroGeneral.Name = "LBL_FiltroGeneral";
             this.LBL_FiltroGeneral.Size = new System.Drawing.Size(98, 17);
@@ -81,7 +82,7 @@
             // TXT_FiltroGeneral
             // 
             this.TXT_FiltroGeneral.BackColor = System.Drawing.SystemColors.Window;
-            this.TXT_FiltroGeneral.Location = new System.Drawing.Point(503, 146);
+            this.TXT_FiltroGeneral.Location = new System.Drawing.Point(462, 146);
             this.TXT_FiltroGeneral.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_FiltroGeneral.Name = "TXT_FiltroGeneral";
             this.TXT_FiltroGeneral.Size = new System.Drawing.Size(193, 22);
@@ -89,7 +90,7 @@
             // 
             // BTN_Buscar
             // 
-            this.BTN_Buscar.Location = new System.Drawing.Point(721, 139);
+            this.BTN_Buscar.Location = new System.Drawing.Point(690, 139);
             this.BTN_Buscar.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Buscar.Name = "BTN_Buscar";
             this.BTN_Buscar.Size = new System.Drawing.Size(124, 37);
@@ -111,7 +112,6 @@
             this.DGV_Pacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Pacientes.Size = new System.Drawing.Size(895, 395);
             this.DGV_Pacientes.TabIndex = 16;
-            this.DGV_Pacientes.CurrentCellChanged += new System.EventHandler(this.DGV_Pacientes_CurrentCellChanged_1);
             // 
             // label1
             // 
@@ -182,11 +182,23 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // BTN_Modificar
+            // 
+            this.BTN_Modificar.Location = new System.Drawing.Point(822, 139);
+            this.BTN_Modificar.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Modificar.Name = "BTN_Modificar";
+            this.BTN_Modificar.Size = new System.Drawing.Size(124, 37);
+            this.BTN_Modificar.TabIndex = 21;
+            this.BTN_Modificar.Text = "Modificar";
+            this.BTN_Modificar.UseVisualStyleBackColor = true;
+            this.BTN_Modificar.Click += new System.EventHandler(this.BTN_Modificar_Click);
+            // 
             // ConsultarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(964, 634);
+            this.Controls.Add(this.BTN_Modificar);
             this.Controls.Add(this.CB_Nombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DGV_Pacientes);
@@ -225,5 +237,6 @@
         private System.Windows.Forms.ToolStripMenuItem crearPacienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem avanzadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.Button BTN_Modificar;
     }
 }

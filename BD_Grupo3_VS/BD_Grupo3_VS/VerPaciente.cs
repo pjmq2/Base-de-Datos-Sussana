@@ -12,9 +12,21 @@ namespace BD_Grupo3_VS
 {
     public partial class VerPaciente : Form
     {
-        public VerPaciente()
+        string nombre;
+        string apellido1;
+        string apellido2;
+        string cedula;
+        public VerPaciente(string cedulaNueva, string nombreNuevo, string apellido1Nuevo, string apellido2Nuevo)
         {
             InitializeComponent();
+            nombre = nombreNuevo;
+            apellido1 = apellido1Nuevo;
+            apellido2 = apellido2Nuevo;
+            cedula = cedulaNueva;
+            TXT_Nombre.Text = nombre;
+            TXT_Apellido1.Text = apellido1;
+            TXT_Apellido2.Text = apellido2;
+            TXT_Cedula.Text = cedula;
         }
 
         private void Inicio()
