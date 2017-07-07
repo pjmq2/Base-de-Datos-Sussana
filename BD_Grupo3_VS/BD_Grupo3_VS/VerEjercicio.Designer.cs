@@ -71,7 +71,7 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(660, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(673, 28);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -101,14 +101,14 @@
             // crearTecnicaToolStripMenuItem
             // 
             this.crearTecnicaToolStripMenuItem.Name = "crearTecnicaToolStripMenuItem";
-            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.crearTecnicaToolStripMenuItem.Text = "Crear Técnica";
             this.crearTecnicaToolStripMenuItem.Click += new System.EventHandler(this.crearTecnicaToolStripMenuItem_Click);
             // 
             // buscarTecnicaToolStripMenuItem
             // 
             this.buscarTecnicaToolStripMenuItem.Name = "buscarTecnicaToolStripMenuItem";
-            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.buscarTecnicaToolStripMenuItem.Text = "Buscar Técnica";
             this.buscarTecnicaToolStripMenuItem.Click += new System.EventHandler(this.buscarTecnicaToolStripMenuItem_Click);
             // 
@@ -202,7 +202,7 @@
             this.gb_informacionDelMaterial.Margin = new System.Windows.Forms.Padding(4);
             this.gb_informacionDelMaterial.Name = "gb_informacionDelMaterial";
             this.gb_informacionDelMaterial.Padding = new System.Windows.Forms.Padding(4);
-            this.gb_informacionDelMaterial.Size = new System.Drawing.Size(634, 243);
+            this.gb_informacionDelMaterial.Size = new System.Drawing.Size(647, 243);
             this.gb_informacionDelMaterial.TabIndex = 5;
             this.gb_informacionDelMaterial.TabStop = false;
             this.gb_informacionDelMaterial.Text = "Información del ejercicio";
@@ -220,7 +220,7 @@
             // 
             // PB_Imagen
             // 
-            this.PB_Imagen.Location = new System.Drawing.Point(376, 36);
+            this.PB_Imagen.Location = new System.Drawing.Point(405, 36);
             this.PB_Imagen.Name = "PB_Imagen";
             this.PB_Imagen.Size = new System.Drawing.Size(222, 144);
             this.PB_Imagen.TabIndex = 12;
@@ -251,7 +251,7 @@
             this.BTN_EliminarMaterial.BackColor = System.Drawing.Color.Red;
             this.BTN_EliminarMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_EliminarMaterial.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.BTN_EliminarMaterial.Location = new System.Drawing.Point(469, 197);
+            this.BTN_EliminarMaterial.Location = new System.Drawing.Point(498, 197);
             this.BTN_EliminarMaterial.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_EliminarMaterial.Name = "BTN_EliminarMaterial";
             this.BTN_EliminarMaterial.Size = new System.Drawing.Size(129, 28);
@@ -295,7 +295,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 320);
+            this.ClientSize = new System.Drawing.Size(673, 320);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.gb_informacionDelMaterial);
             this.Name = "VerEjercicio";

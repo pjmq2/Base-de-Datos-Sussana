@@ -20,6 +20,12 @@ namespace BD_Grupo3_VS
             InitializeComponent();
         }
 
+        private void BTN_Agregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #region Menu
         /*             A partir de aqui empiezan los metodos para la cinta del menu  */
         private void InicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -56,10 +62,12 @@ namespace BD_Grupo3_VS
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                Application.Exit()
+                Application.Exit();
             }
         }
 
         /*             Hasta aqui las instrucciones de la cinta del menu  */
+        #endregion
+
     }
 }

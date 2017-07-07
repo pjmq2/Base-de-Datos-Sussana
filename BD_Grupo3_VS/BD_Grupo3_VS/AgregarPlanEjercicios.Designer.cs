@@ -87,6 +87,7 @@
             this.BTN_Agregar.TabIndex = 16;
             this.BTN_Agregar.Text = "Agregar";
             this.BTN_Agregar.UseVisualStyleBackColor = true;
+            this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
             // 
             // LBL_Objetivos
             // 

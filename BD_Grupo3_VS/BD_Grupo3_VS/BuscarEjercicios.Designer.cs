@@ -82,7 +82,7 @@
             // 
             this.BTN_Buscar.Image = global::BD_Grupo3_VS.Properties.Resources.Ejercicio_Buscar;
             this.BTN_Buscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_Buscar.Location = new System.Drawing.Point(431, 106);
+            this.BTN_Buscar.Location = new System.Drawing.Point(463, 107);
             this.BTN_Buscar.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Buscar.Name = "BTN_Buscar";
             this.BTN_Buscar.Size = new System.Drawing.Size(105, 92);
@@ -90,15 +90,16 @@
             this.BTN_Buscar.Text = "Buscar";
             this.BTN_Buscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Buscar.UseVisualStyleBackColor = true;
-            this.BTN_Buscar.Click += new System.EventHandler(this.BTN_Buscar_Click_1);
+            this.BTN_Buscar.Click += new System.EventHandler(this.BTN_Buscar_Click);
             // 
             // CMB_FiltroNombre
             // 
             this.CMB_FiltroNombre.FormattingEnabled = true;
             this.CMB_FiltroNombre.Location = new System.Drawing.Point(89, 116);
             this.CMB_FiltroNombre.Name = "CMB_FiltroNombre";
-            this.CMB_FiltroNombre.Size = new System.Drawing.Size(324, 24);
+            this.CMB_FiltroNombre.Size = new System.Drawing.Size(367, 24);
             this.CMB_FiltroNombre.TabIndex = 34;
+            this.CMB_FiltroNombre.SelectedIndexChanged += new System.EventHandler(this.CMB_FiltroNombre_SelectedIndexChanged);
             // 
             // LBL_Filtro
             // 
@@ -115,7 +116,7 @@
             this.BTN_Modificar.Cursor = System.Windows.Forms.Cursors.Default;
             this.BTN_Modificar.Image = global::BD_Grupo3_VS.Properties.Resources.Ejercicio_Modificar;
             this.BTN_Modificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_Modificar.Location = new System.Drawing.Point(544, 106);
+            this.BTN_Modificar.Location = new System.Drawing.Point(576, 107);
             this.BTN_Modificar.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Modificar.Name = "BTN_Modificar";
             this.BTN_Modificar.Size = new System.Drawing.Size(105, 92);
@@ -129,7 +130,7 @@
             // 
             this.TXT_Filtro.Location = new System.Drawing.Point(89, 164);
             this.TXT_Filtro.Name = "TXT_Filtro";
-            this.TXT_Filtro.Size = new System.Drawing.Size(324, 22);
+            this.TXT_Filtro.Size = new System.Drawing.Size(367, 22);
             this.TXT_Filtro.TabIndex = 38;
             // 
             // DGV_Ejercicios
@@ -142,7 +143,7 @@
             this.DGV_Ejercicios.ReadOnly = true;
             this.DGV_Ejercicios.RowTemplate.Height = 24;
             this.DGV_Ejercicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Ejercicios.Size = new System.Drawing.Size(623, 298);
+            this.DGV_Ejercicios.Size = new System.Drawing.Size(657, 298);
             this.DGV_Ejercicios.TabIndex = 39;
             // 
             // menuStrip1
@@ -158,7 +159,7 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(679, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(694, 28);
             this.menuStrip1.TabIndex = 40;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -167,12 +168,14 @@
             this.menuPrincipalToolStripMenuItem.Name = "menuPrincipalToolStripMenuItem";
             this.menuPrincipalToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
             this.menuPrincipalToolStripMenuItem.Text = "Menu Principal";
+            this.menuPrincipalToolStripMenuItem.Click += new System.EventHandler(this.menuPrincipalToolStripMenuItem_Click);
             // 
             // menuAvanzadoToolStripMenuItem
             // 
             this.menuAvanzadoToolStripMenuItem.Name = "menuAvanzadoToolStripMenuItem";
             this.menuAvanzadoToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
             this.menuAvanzadoToolStripMenuItem.Text = "Menu Avanzado";
+            this.menuAvanzadoToolStripMenuItem.Click += new System.EventHandler(this.menuAvanzadoToolStripMenuItem_Click);
             // 
             // tecnicaToolStripMenuItem
             // 
@@ -186,13 +189,14 @@
             // crearTecnicaToolStripMenuItem
             // 
             this.crearTecnicaToolStripMenuItem.Name = "crearTecnicaToolStripMenuItem";
-            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.crearTecnicaToolStripMenuItem.Text = "Crear Técnica";
+            this.crearTecnicaToolStripMenuItem.Click += new System.EventHandler(this.crearTecnicaToolStripMenuItem_Click);
             // 
             // buscarTecnicaToolStripMenuItem
             // 
             this.buscarTecnicaToolStripMenuItem.Name = "buscarTecnicaToolStripMenuItem";
-            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.buscarTecnicaToolStripMenuItem.Text = "Buscar Técnica";
             this.buscarTecnicaToolStripMenuItem.Click += new System.EventHandler(this.buscarTecnicaToolStripMenuItem_Click);
             // 
@@ -270,12 +274,13 @@
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // BuscarEjercicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 515);
+            this.ClientSize = new System.Drawing.Size(694, 515);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.DGV_Ejercicios);
             this.Controls.Add(this.TXT_Filtro);

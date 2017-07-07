@@ -7,6 +7,7 @@ using System.IO;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace BD_Grupo3_VS
 { 

@@ -17,7 +17,7 @@ namespace BD_Grupo3_VS
             InitializeComponent();
         }
 
-
+        #region Menu
         /*             A partir de aqui empiezan los metodos para la cinta del menu  */
         private void InicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -58,5 +58,6 @@ namespace BD_Grupo3_VS
             }
         }
         /*             Hasta aqui las instrucciones de la cinta del menu  */
+        #endregion
     }
 }
