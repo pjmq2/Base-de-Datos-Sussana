@@ -13,6 +13,7 @@ namespace BD_Grupo3_VS
     public partial class ConsultarCitas : Form
     {
         Cita cita;
+        
         public ConsultarCitas()
         {
             InitializeComponent();
@@ -54,6 +55,8 @@ namespace BD_Grupo3_VS
             {
                 llenaTabla(dgv1, null, null);
             }
+            TXT_Cedula.Clear();
+
         }
 
         private void LINK_Agregar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -70,42 +73,13 @@ namespace BD_Grupo3_VS
             this.Hide();
         }
 
-        private void LINK_Modificar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ModificarCita mc = new ModificarCita();
-            mc.Show();
-            this.Hide();
-        }
+    
 
         /*             A partir de aqui empiezan los metodos para la cinta del menu  */
-        private void InicioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
-            this.Hide();
-        }
 
-        private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ConsultarPaciente paciente = new ConsultarPaciente();
-            paciente.Show();
-            this.Hide();
-        }
+   
 
-        private void crearPacienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AgregarPaciente paciente = new AgregarPaciente();
-            paciente.Show();
-            this.Hide();
-        }
-
-        private void avanzadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuConfig menu = new MenuConfig();
-            menu.Show();
-            this.Hide();
-        }
-
+ 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
@@ -113,8 +87,57 @@ namespace BD_Grupo3_VS
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                //Aun no cierra todo el programa
+                Application.Exit();
+              
             }
+        }
+
+        private void InicioToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void buscarPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ConsultarPaciente paciente = new ConsultarPaciente();
+            paciente.Show();
+            this.Hide();
+        }
+
+        private void crearPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            AgregarPaciente paciente = new AgregarPaciente();
+            paciente.Show();
+            this.Hide();
+        }
+
+        private void avanzadoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MenuConfig menu = new MenuConfig();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void BTN_Modificar_Click(object sender, EventArgs e)
+        {
+            string cedulaC, padecimientoC, precioC, descripC, duracionC, lugarC, estadoC; 
+
+
+
+            DataGridViewRow row = dgv1.CurrentRow;
+            cedulaC = row.Cells[0].Value.ToString();
+            padecimientoC = row.Cells[4].Value.ToString();
+            precioC = row.Cells[6].Value.ToString();
+            descripC = row.Cells[7].Value.ToString();
+            duracionC = row.Cells[8].Value.ToString();
+            lugarC = row.Cells[9].Value.ToString();
+            estadoC = row.Cells[10].Value.ToString();
+            ModificarCita mc = new ModificarCita(cedulaC,padecimientoC,precioC,descripC,duracionC,lugarC,estadoC);
+            mc.Show();
+            this.Hide();
+            
         }
 
         /*             Hasta aqui las instrucciones de la cinta del menu  */

@@ -28,10 +28,11 @@ namespace BD_Grupo3_VS
         {
             int precioAg = Convert.ToInt32(TXT_Precio.Text);
             decimal duracionAg = Convert.ToDecimal(TXT_Duracion.Text);
+     
 
             int result = cita.agregarCita(TXT_Cedula.Text, TXT_Padecimiento.Text, dateTimePicker1.Value.ToString("dd/MM/yyyy HH:mm"), precioAg, TXT_Descripcion.Text,
              duracionAg, CB_Lugar.Text,TXT_Estado.Text);
-
+            
             if (result == 0)
             {
                 MessageBox.Show("¡La cita ha sido agregada correctamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -78,41 +79,12 @@ namespace BD_Grupo3_VS
         }
 
 
-        private void LINK_Modificar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ModificarCita mc = new ModificarCita();
-            mc.Show();
-            this.Hide();
-        }
+
 
         /*             A partir de aqui empiezan los metodos para la cinta del menu  */
-        private void InicioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
-            this.Hide();
-        }
+       
 
-        private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ConsultarPaciente paciente = new ConsultarPaciente();
-            paciente.Show();
-            this.Hide();
-        }
-
-        private void crearPacienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AgregarPaciente paciente = new AgregarPaciente();
-            paciente.Show();
-            this.Hide();
-        }
-
-        private void avanzadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuConfig menu = new MenuConfig();
-            menu.Show();
-            this.Hide();
-        }
+      
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -121,8 +93,36 @@ namespace BD_Grupo3_VS
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                //Aun no cierra todo el programa
+                Application.Exit();
             }
+        }
+
+        private void buscarPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ConsultarPaciente paciente = new ConsultarPaciente();
+            paciente.Show();
+            this.Hide();
+        }
+
+        private void InicioToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void crearPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            AgregarPaciente paciente = new AgregarPaciente();
+            paciente.Show();
+            this.Hide();
+        }
+
+        private void avanzadoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MenuConfig menu = new MenuConfig();
+            menu.Show();
+            this.Hide();
         }
 
         /*             Hasta aqui las instrucciones de la cinta del menu  */
