@@ -18,7 +18,6 @@ namespace BD_Grupo3_VS
     {
         Ejercicio ejercicio;
         byte[] img;
-        bool imagenCargada=false;
         bool nombreModificado = false;
 
         public AgregarEjercicio()
@@ -39,7 +38,6 @@ namespace BD_Grupo3_VS
             fop.Filter = "[JPG,JPEG]|*.jpg"; //set filter for select only .jpg files
             if (fop.ShowDialog() == DialogResult.OK) //display open file dialog to user and only user select a image enter to if block
             {
-                imagenCargada = true;
                 FileStream FS = new FileStream(@fop.FileName, FileMode.Open, FileAccess.Read); //create a file stream object associate to user selected file 
                 img = new byte[FS.Length]; //create a byte array with size of user select file stream length
                 FS.Read(img, 0, Convert.ToInt32(FS.Length));//read user selected file stream in to byte array       
@@ -63,17 +61,36 @@ namespace BD_Grupo3_VS
             }
             else
             {
-                if (imagenCargada)
+                int result = ejercicio.agregarEjercicio(txt_nombre.Text, TXT_Descripcion.Text, img);
+                ejercicio.insertarImagen(txt_nombre.Text, img);
+                if (result == 0)
                 {
-                    var ms = new MemoryStream(img);
-                    ejercicio.agregarEjercicio(txt_nombre.Text, TXT_Descripcion.Text, Image.FromStream(ms));
+                    MessageBox.Show("¡El ejercicio ha sido agregada correctamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    txt_nombre.Clear();
+                    TXT_Descripcion.Clear();
+                    if (pictureBox1.Image!=null)
+                    {
+                        pictureBox1.Image.Dispose();
+                    }
+                    img = null;
                 }
-                ejercicio.agregarEjercicio(txt_nombre.Text, TXT_Descripcion.Text, null);
+                else
+                {
+                    if (result == 2627)
+                    {
+                        MessageBox.Show("Ya existe un ejercicio con ese nombre", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error al intentar agregar el ejercicio \n \n error: " + result, "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
 
 
-        /*             A partir de aqui empiezan los metodos para la cinta del menu  */
+        /*             A partir de aqui empiezan los metodos para la cinta del menu             */
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
