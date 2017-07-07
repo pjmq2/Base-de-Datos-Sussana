@@ -14,10 +14,11 @@ namespace BD_Grupo3_VS
     {
         Cita cita;
         
-        public ConsultarCitas()
+        public ConsultarCitas(string ceduBusq)
         {
             InitializeComponent();
             cita = new Cita();
+            TXT_Cedula.Text = ceduBusq;
         }
 
         private void ConsultarCitas_Load(object sender, EventArgs e)
@@ -61,7 +62,7 @@ namespace BD_Grupo3_VS
 
         private void LINK_Agregar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AgregarCita agrega = new AgregarCita();
+            AgregarCita agrega = new AgregarCita("");
             agrega.Show();
             this.Hide();
         }
