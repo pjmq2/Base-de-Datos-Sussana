@@ -42,6 +42,7 @@
             this.crearPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BTN_Modificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -51,74 +52,71 @@
             this.LBL_Titulo.AutoSize = true;
             this.LBL_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Titulo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.LBL_Titulo.Location = new System.Drawing.Point(412, 28);
-            this.LBL_Titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_Titulo.Location = new System.Drawing.Point(309, 23);
             this.LBL_Titulo.Name = "LBL_Titulo";
-            this.LBL_Titulo.Size = new System.Drawing.Size(273, 42);
+            this.LBL_Titulo.Size = new System.Drawing.Size(215, 33);
             this.LBL_Titulo.TabIndex = 0;
             this.LBL_Titulo.Text = "Consultar Citas";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(76, 92);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(57, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(508, 17);
+            this.label1.Size = new System.Drawing.Size(380, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Puede realizar la consulta por cédula o por día, o por la combinación de ambas";
             // 
             // LBL_Cedula
             // 
             this.LBL_Cedula.AutoSize = true;
-            this.LBL_Cedula.Location = new System.Drawing.Point(76, 150);
-            this.LBL_Cedula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_Cedula.Location = new System.Drawing.Point(57, 122);
             this.LBL_Cedula.Name = "LBL_Cedula";
-            this.LBL_Cedula.Size = new System.Drawing.Size(56, 17);
+            this.LBL_Cedula.Size = new System.Drawing.Size(43, 13);
             this.LBL_Cedula.TabIndex = 3;
             this.LBL_Cedula.Text = "Cédula:";
             // 
             // TXT_Cedula
             // 
-            this.TXT_Cedula.Location = new System.Drawing.Point(163, 148);
-            this.TXT_Cedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_Cedula.Location = new System.Drawing.Point(106, 119);
             this.TXT_Cedula.Name = "TXT_Cedula";
-            this.TXT_Cedula.Size = new System.Drawing.Size(204, 22);
+            this.TXT_Cedula.Size = new System.Drawing.Size(154, 20);
             this.TXT_Cedula.TabIndex = 7;
             // 
             // LBL_Fecha
             // 
             this.LBL_Fecha.AutoSize = true;
-            this.LBL_Fecha.Location = new System.Drawing.Point(453, 150);
-            this.LBL_Fecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_Fecha.Location = new System.Drawing.Point(279, 122);
             this.LBL_Fecha.Name = "LBL_Fecha";
-            this.LBL_Fecha.Size = new System.Drawing.Size(167, 17);
+            this.LBL_Fecha.Size = new System.Drawing.Size(40, 13);
             this.LBL_Fecha.TabIndex = 8;
-            this.LBL_Fecha.Text = "Fecha (Día, Mes u Hora):";
+            this.LBL_Fecha.Text = "Fecha:";
             // 
             // TXT_Fecha
             // 
-            this.TXT_Fecha.Location = new System.Drawing.Point(647, 146);
-            this.TXT_Fecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_Fecha.Location = new System.Drawing.Point(343, 119);
             this.TXT_Fecha.Name = "TXT_Fecha";
-            this.TXT_Fecha.Size = new System.Drawing.Size(204, 22);
+            this.TXT_Fecha.Size = new System.Drawing.Size(154, 20);
             this.TXT_Fecha.TabIndex = 9;
             // 
             // dgv1
             // 
+            this.dgv1.AllowUserToAddRows = false;
+            this.dgv1.AllowUserToDeleteRows = false;
             this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv1.Location = new System.Drawing.Point(80, 191);
-            this.dgv1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv1.Location = new System.Drawing.Point(60, 155);
+            this.dgv1.MultiSelect = false;
             this.dgv1.Name = "dgv1";
-            this.dgv1.Size = new System.Drawing.Size(980, 361);
+            this.dgv1.ReadOnly = true;
+            this.dgv1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv1.Size = new System.Drawing.Size(735, 293);
             this.dgv1.TabIndex = 10;
             // 
             // BTN_Buscar
             // 
-            this.BTN_Buscar.Location = new System.Drawing.Point(903, 134);
-            this.BTN_Buscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_Buscar.Location = new System.Drawing.Point(536, 113);
             this.BTN_Buscar.Name = "BTN_Buscar";
-            this.BTN_Buscar.Size = new System.Drawing.Size(157, 38);
+            this.BTN_Buscar.Size = new System.Drawing.Size(118, 31);
             this.BTN_Buscar.TabIndex = 11;
             this.BTN_Buscar.Text = "Buscar";
             this.BTN_Buscar.UseVisualStyleBackColor = true;
@@ -135,46 +133,62 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1128, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(846, 24);
             this.menuStrip1.TabIndex = 23;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // InicioToolStripMenuItem
             // 
             this.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem";
-            this.InicioToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
+            this.InicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.InicioToolStripMenuItem.Text = "Inicio";
+            this.InicioToolStripMenuItem.Click += new System.EventHandler(this.InicioToolStripMenuItem_Click_1);
             // 
             // buscarPacienteToolStripMenuItem
             // 
             this.buscarPacienteToolStripMenuItem.Name = "buscarPacienteToolStripMenuItem";
-            this.buscarPacienteToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
+            this.buscarPacienteToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.buscarPacienteToolStripMenuItem.Text = "Buscar Paciente";
+            this.buscarPacienteToolStripMenuItem.Click += new System.EventHandler(this.buscarPacienteToolStripMenuItem_Click_1);
             // 
             // crearPacienteToolStripMenuItem
             // 
             this.crearPacienteToolStripMenuItem.Name = "crearPacienteToolStripMenuItem";
-            this.crearPacienteToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
+            this.crearPacienteToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.crearPacienteToolStripMenuItem.Text = "Crear Paciente";
+            this.crearPacienteToolStripMenuItem.Click += new System.EventHandler(this.crearPacienteToolStripMenuItem_Click_1);
             // 
             // avanzadoToolStripMenuItem
             // 
             this.avanzadoToolStripMenuItem.Name = "avanzadoToolStripMenuItem";
-            this.avanzadoToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.avanzadoToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.avanzadoToolStripMenuItem.Text = "Avanzado";
+            this.avanzadoToolStripMenuItem.Click += new System.EventHandler(this.avanzadoToolStripMenuItem_Click_1);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // BTN_Modificar
+            // 
+            this.BTN_Modificar.Location = new System.Drawing.Point(674, 113);
+            this.BTN_Modificar.Name = "BTN_Modificar";
+            this.BTN_Modificar.Size = new System.Drawing.Size(118, 31);
+            this.BTN_Modificar.TabIndex = 24;
+            this.BTN_Modificar.Text = "Modificar";
+            this.BTN_Modificar.UseVisualStyleBackColor = true;
+            this.BTN_Modificar.Click += new System.EventHandler(this.BTN_Modificar_Click);
+            // 
             // ConsultarCitas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1128, 566);
+            this.ClientSize = new System.Drawing.Size(846, 460);
+            this.Controls.Add(this.BTN_Modificar);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.BTN_Buscar);
             this.Controls.Add(this.dgv1);
@@ -184,7 +198,6 @@
             this.Controls.Add(this.LBL_Cedula);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LBL_Titulo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ConsultarCitas";
             this.Text = "ConsultarCitas";
             this.Load += new System.EventHandler(this.ConsultarCitas_Load);
@@ -212,5 +225,6 @@
         private System.Windows.Forms.ToolStripMenuItem crearPacienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem avanzadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.Button BTN_Modificar;
     }
 }

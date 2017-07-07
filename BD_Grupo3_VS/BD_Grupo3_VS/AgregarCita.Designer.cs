@@ -64,10 +64,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(448, 68);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(336, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 42);
+            this.label1.Size = new System.Drawing.Size(67, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cita";
             // 
@@ -90,11 +89,9 @@
             this.GB_AgregarCita.Controls.Add(this.TXT_Cedula);
             this.GB_AgregarCita.Controls.Add(this.LBL_Padecimiento);
             this.GB_AgregarCita.Controls.Add(this.LBL_Cedula);
-            this.GB_AgregarCita.Location = new System.Drawing.Point(35, 124);
-            this.GB_AgregarCita.Margin = new System.Windows.Forms.Padding(4);
+            this.GB_AgregarCita.Location = new System.Drawing.Point(26, 101);
             this.GB_AgregarCita.Name = "GB_AgregarCita";
-            this.GB_AgregarCita.Padding = new System.Windows.Forms.Padding(4);
-            this.GB_AgregarCita.Size = new System.Drawing.Size(953, 418);
+            this.GB_AgregarCita.Size = new System.Drawing.Size(715, 340);
             this.GB_AgregarCita.TabIndex = 5;
             this.GB_AgregarCita.TabStop = false;
             this.GB_AgregarCita.Text = "Agregar una Cita";
@@ -105,19 +102,17 @@
             this.CB_Lugar.Items.AddRange(new object[] {
             "Consultorio",
             "Domicilio"});
-            this.CB_Lugar.Location = new System.Drawing.Point(740, 212);
-            this.CB_Lugar.Margin = new System.Windows.Forms.Padding(4);
+            this.CB_Lugar.Location = new System.Drawing.Point(555, 172);
             this.CB_Lugar.Name = "CB_Lugar";
-            this.CB_Lugar.Size = new System.Drawing.Size(188, 24);
+            this.CB_Lugar.Size = new System.Drawing.Size(142, 21);
             this.CB_Lugar.TabIndex = 17;
             this.CB_Lugar.SelectedIndexChanged += new System.EventHandler(this.CB_Lugar_SelectedIndexChanged);
             // 
             // BTN_Agregar
             // 
-            this.BTN_Agregar.Location = new System.Drawing.Point(797, 351);
-            this.BTN_Agregar.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Agregar.Location = new System.Drawing.Point(598, 285);
             this.BTN_Agregar.Name = "BTN_Agregar";
-            this.BTN_Agregar.Size = new System.Drawing.Size(132, 48);
+            this.BTN_Agregar.Size = new System.Drawing.Size(99, 39);
             this.BTN_Agregar.TabIndex = 16;
             this.BTN_Agregar.Text = "Agregar";
             this.BTN_Agregar.UseVisualStyleBackColor = true;
@@ -125,142 +120,127 @@
             // 
             // TXT_Estado
             // 
-            this.TXT_Estado.Location = new System.Drawing.Point(740, 134);
-            this.TXT_Estado.Margin = new System.Windows.Forms.Padding(4);
+            this.TXT_Estado.Location = new System.Drawing.Point(555, 109);
             this.TXT_Estado.Name = "TXT_Estado";
-            this.TXT_Estado.Size = new System.Drawing.Size(188, 22);
+            this.TXT_Estado.Size = new System.Drawing.Size(142, 20);
             this.TXT_Estado.TabIndex = 15;
             // 
             // LBL_Estado
             // 
             this.LBL_Estado.AutoSize = true;
-            this.LBL_Estado.Location = new System.Drawing.Point(591, 134);
-            this.LBL_Estado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_Estado.Location = new System.Drawing.Point(443, 109);
             this.LBL_Estado.Name = "LBL_Estado";
-            this.LBL_Estado.Size = new System.Drawing.Size(138, 17);
+            this.LBL_Estado.Size = new System.Drawing.Size(105, 13);
             this.LBL_Estado.TabIndex = 14;
             this.LBL_Estado.Text = "Estado del Paciente:";
             // 
             // LBL_Lugar
             // 
             this.LBL_Lugar.AutoSize = true;
-            this.LBL_Lugar.Location = new System.Drawing.Point(591, 208);
-            this.LBL_Lugar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_Lugar.Location = new System.Drawing.Point(443, 169);
             this.LBL_Lugar.Name = "LBL_Lugar";
-            this.LBL_Lugar.Size = new System.Drawing.Size(49, 17);
+            this.LBL_Lugar.Size = new System.Drawing.Size(37, 13);
             this.LBL_Lugar.TabIndex = 12;
             this.LBL_Lugar.Text = "Lugar:";
             // 
             // TXT_Duracion
             // 
-            this.TXT_Duracion.Location = new System.Drawing.Point(740, 57);
-            this.TXT_Duracion.Margin = new System.Windows.Forms.Padding(4);
+            this.TXT_Duracion.Location = new System.Drawing.Point(555, 46);
             this.TXT_Duracion.Name = "TXT_Duracion";
-            this.TXT_Duracion.Size = new System.Drawing.Size(188, 22);
+            this.TXT_Duracion.Size = new System.Drawing.Size(142, 20);
             this.TXT_Duracion.TabIndex = 11;
             this.toolTip1.SetToolTip(this.TXT_Duracion, "Digite la duración de la cita en horas");
             // 
             // LBL_Duracion
             // 
             this.LBL_Duracion.AutoSize = true;
-            this.LBL_Duracion.Location = new System.Drawing.Point(591, 59);
-            this.LBL_Duracion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_Duracion.Location = new System.Drawing.Point(443, 48);
             this.LBL_Duracion.Name = "LBL_Duracion";
-            this.LBL_Duracion.Size = new System.Drawing.Size(125, 17);
+            this.LBL_Duracion.Size = new System.Drawing.Size(93, 13);
             this.LBL_Duracion.TabIndex = 10;
             this.LBL_Duracion.Text = "Duración (Horas): ";
             // 
             // TXT_Descripcion
             // 
-            this.TXT_Descripcion.Location = new System.Drawing.Point(152, 363);
-            this.TXT_Descripcion.Margin = new System.Windows.Forms.Padding(4);
+            this.TXT_Descripcion.Location = new System.Drawing.Point(114, 295);
             this.TXT_Descripcion.Name = "TXT_Descripcion";
-            this.TXT_Descripcion.Size = new System.Drawing.Size(188, 22);
+            this.TXT_Descripcion.Size = new System.Drawing.Size(142, 20);
             this.TXT_Descripcion.TabIndex = 9;
             // 
             // LBL_Descripcion
             // 
             this.LBL_Descripcion.AutoSize = true;
-            this.LBL_Descripcion.Location = new System.Drawing.Point(13, 367);
-            this.LBL_Descripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_Descripcion.Location = new System.Drawing.Point(10, 298);
             this.LBL_Descripcion.Name = "LBL_Descripcion";
-            this.LBL_Descripcion.Size = new System.Drawing.Size(86, 17);
+            this.LBL_Descripcion.Size = new System.Drawing.Size(66, 13);
             this.LBL_Descripcion.TabIndex = 8;
             this.LBL_Descripcion.Text = "Descripción:";
             // 
             // TXT_Precio
             // 
-            this.TXT_Precio.Location = new System.Drawing.Point(152, 284);
-            this.TXT_Precio.Margin = new System.Windows.Forms.Padding(4);
+            this.TXT_Precio.Location = new System.Drawing.Point(114, 231);
             this.TXT_Precio.Name = "TXT_Precio";
-            this.TXT_Precio.Size = new System.Drawing.Size(188, 22);
+            this.TXT_Precio.Size = new System.Drawing.Size(142, 20);
             this.TXT_Precio.TabIndex = 7;
             this.toolTip1.SetToolTip(this.TXT_Precio, "Digite el precio a cobrar");
             // 
             // LBL_Precio
             // 
             this.LBL_Precio.AutoSize = true;
-            this.LBL_Precio.Location = new System.Drawing.Point(16, 284);
-            this.LBL_Precio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_Precio.Location = new System.Drawing.Point(12, 231);
             this.LBL_Precio.Name = "LBL_Precio";
-            this.LBL_Precio.Size = new System.Drawing.Size(52, 17);
+            this.LBL_Precio.Size = new System.Drawing.Size(40, 13);
             this.LBL_Precio.TabIndex = 6;
             this.LBL_Precio.Text = "Precio:";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(152, 208);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker1.Location = new System.Drawing.Point(114, 169);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(188, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(142, 20);
             this.dateTimePicker1.TabIndex = 5;
             // 
             // LBL_FechaHora
             // 
             this.LBL_FechaHora.AutoSize = true;
-            this.LBL_FechaHora.Location = new System.Drawing.Point(16, 208);
-            this.LBL_FechaHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_FechaHora.Location = new System.Drawing.Point(12, 169);
             this.LBL_FechaHora.Name = "LBL_FechaHora";
-            this.LBL_FechaHora.Size = new System.Drawing.Size(97, 17);
+            this.LBL_FechaHora.Size = new System.Drawing.Size(74, 13);
             this.LBL_FechaHora.TabIndex = 4;
             this.LBL_FechaHora.Text = "Fecha y Hora:";
             // 
             // TXT_Padecimiento
             // 
-            this.TXT_Padecimiento.Location = new System.Drawing.Point(152, 134);
-            this.TXT_Padecimiento.Margin = new System.Windows.Forms.Padding(4);
+            this.TXT_Padecimiento.Location = new System.Drawing.Point(114, 109);
             this.TXT_Padecimiento.Name = "TXT_Padecimiento";
-            this.TXT_Padecimiento.Size = new System.Drawing.Size(188, 22);
+            this.TXT_Padecimiento.Size = new System.Drawing.Size(142, 20);
             this.TXT_Padecimiento.TabIndex = 3;
             this.toolTip1.SetToolTip(this.TXT_Padecimiento, "Digite el padecimiento actual del paciente");
             // 
             // TXT_Cedula
             // 
-            this.TXT_Cedula.Location = new System.Drawing.Point(152, 59);
-            this.TXT_Cedula.Margin = new System.Windows.Forms.Padding(4);
+            this.TXT_Cedula.Location = new System.Drawing.Point(114, 48);
             this.TXT_Cedula.Name = "TXT_Cedula";
-            this.TXT_Cedula.Size = new System.Drawing.Size(188, 22);
+            this.TXT_Cedula.Size = new System.Drawing.Size(142, 20);
             this.TXT_Cedula.TabIndex = 2;
             this.toolTip1.SetToolTip(this.TXT_Cedula, "Digite el número de cédula del paciente");
             // 
             // LBL_Padecimiento
             // 
             this.LBL_Padecimiento.AutoSize = true;
-            this.LBL_Padecimiento.Location = new System.Drawing.Point(16, 134);
-            this.LBL_Padecimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_Padecimiento.Location = new System.Drawing.Point(12, 109);
             this.LBL_Padecimiento.Name = "LBL_Padecimiento";
-            this.LBL_Padecimiento.Size = new System.Drawing.Size(97, 17);
+            this.LBL_Padecimiento.Size = new System.Drawing.Size(74, 13);
             this.LBL_Padecimiento.TabIndex = 1;
             this.LBL_Padecimiento.Text = "Padecimiento:";
             // 
             // LBL_Cedula
             // 
             this.LBL_Cedula.AutoSize = true;
-            this.LBL_Cedula.Location = new System.Drawing.Point(16, 59);
-            this.LBL_Cedula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_Cedula.Location = new System.Drawing.Point(12, 48);
             this.LBL_Cedula.Name = "LBL_Cedula";
-            this.LBL_Cedula.Size = new System.Drawing.Size(56, 17);
+            this.LBL_Cedula.Size = new System.Drawing.Size(43, 13);
             this.LBL_Cedula.TabIndex = 0;
             this.LBL_Cedula.Text = "Cédula:";
             // 
@@ -275,51 +255,55 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1036, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(777, 24);
             this.menuStrip1.TabIndex = 23;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // InicioToolStripMenuItem
             // 
             this.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem";
-            this.InicioToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
+            this.InicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.InicioToolStripMenuItem.Text = "Inicio";
+            this.InicioToolStripMenuItem.Click += new System.EventHandler(this.InicioToolStripMenuItem_Click_1);
             // 
             // buscarPacienteToolStripMenuItem
             // 
             this.buscarPacienteToolStripMenuItem.Name = "buscarPacienteToolStripMenuItem";
-            this.buscarPacienteToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
+            this.buscarPacienteToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.buscarPacienteToolStripMenuItem.Text = "Buscar Paciente";
+            this.buscarPacienteToolStripMenuItem.Click += new System.EventHandler(this.buscarPacienteToolStripMenuItem_Click_1);
             // 
             // crearPacienteToolStripMenuItem
             // 
             this.crearPacienteToolStripMenuItem.Name = "crearPacienteToolStripMenuItem";
-            this.crearPacienteToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
+            this.crearPacienteToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.crearPacienteToolStripMenuItem.Text = "Crear Paciente";
+            this.crearPacienteToolStripMenuItem.Click += new System.EventHandler(this.crearPacienteToolStripMenuItem_Click_1);
             // 
             // avanzadoToolStripMenuItem
             // 
             this.avanzadoToolStripMenuItem.Name = "avanzadoToolStripMenuItem";
-            this.avanzadoToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.avanzadoToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.avanzadoToolStripMenuItem.Text = "Avanzado";
+            this.avanzadoToolStripMenuItem.Click += new System.EventHandler(this.avanzadoToolStripMenuItem_Click_1);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // AgregarCita
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 581);
+            this.ClientSize = new System.Drawing.Size(777, 472);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.GB_AgregarCita);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AgregarCita";
             this.Text = "AgregarCita";
             this.Load += new System.EventHandler(this.AgregarCita_Load);
