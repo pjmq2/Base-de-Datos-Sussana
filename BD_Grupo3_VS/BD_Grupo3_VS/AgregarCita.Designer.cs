@@ -55,6 +55,9 @@
             this.crearPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BTN_Lista = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.GB_AgregarCita.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +75,9 @@
             // 
             // GB_AgregarCita
             // 
+            this.GB_AgregarCita.Controls.Add(this.label3);
+            this.GB_AgregarCita.Controls.Add(this.label2);
+            this.GB_AgregarCita.Controls.Add(this.BTN_Lista);
             this.GB_AgregarCita.Controls.Add(this.CB_Lugar);
             this.GB_AgregarCita.Controls.Add(this.BTN_Agregar);
             this.GB_AgregarCita.Controls.Add(this.TXT_Estado);
@@ -110,11 +116,11 @@
             // 
             // BTN_Agregar
             // 
-            this.BTN_Agregar.Location = new System.Drawing.Point(598, 285);
+            this.BTN_Agregar.Image = global::BD_Grupo3_VS.Properties.Resources.Cita_Nueva;
+            this.BTN_Agregar.Location = new System.Drawing.Point(512, 223);
             this.BTN_Agregar.Name = "BTN_Agregar";
-            this.BTN_Agregar.Size = new System.Drawing.Size(99, 39);
+            this.BTN_Agregar.Size = new System.Drawing.Size(80, 92);
             this.BTN_Agregar.TabIndex = 16;
-            this.BTN_Agregar.Text = "Agregar";
             this.BTN_Agregar.UseVisualStyleBackColor = true;
             this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
             // 
@@ -295,6 +301,35 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // BTN_Lista
+            // 
+            this.BTN_Lista.Image = global::BD_Grupo3_VS.Properties.Resources.Cita_Buscar;
+            this.BTN_Lista.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_Lista.Location = new System.Drawing.Point(617, 223);
+            this.BTN_Lista.Name = "BTN_Lista";
+            this.BTN_Lista.Size = new System.Drawing.Size(80, 92);
+            this.BTN_Lista.TabIndex = 18;
+            this.BTN_Lista.UseVisualStyleBackColor = true;
+            this.BTN_Lista.Click += new System.EventHandler(this.BTN_Lista_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(518, 318);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Agregar Cita";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(627, 318);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Lista de Citas";
+            // 
             // AgregarCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,5 +379,8 @@
         private System.Windows.Forms.ToolStripMenuItem crearPacienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem avanzadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.Button BTN_Lista;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
