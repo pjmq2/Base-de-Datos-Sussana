@@ -109,6 +109,7 @@ create table HA_TENIDO(
 create table DATOS_CLINICOS(
 	CedPaciente	char(9)			not null,
 	Dato		varchar(500)	not null,
+	Archivo		varbinary(MAX),
 	Constraint PKDatos_Clinicos primary key (CedPaciente, Dato),
 	Constraint FKDCaPaciente foreign key (CedPaciente) references PACIENTE(Cedula)
 		on delete no action
