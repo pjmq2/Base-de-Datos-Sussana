@@ -18,7 +18,7 @@ namespace BD_Grupo3_VS
 
         public int agregarTecnica(string nombre, int precio, string descripcion)
         {
-            String insertar = "INSERT into Tecnica (Nombre, Precio, Descripcion)" +
+            String insertar = "INSERT into Tecnicas (Nombre, Precio, Descripcion)" +
                  " VALUES ('" + nombre + "'," + precio + ",'" + descripcion + "')";
             return bd.actualizarDatos(insertar);
         }
@@ -34,11 +34,11 @@ namespace BD_Grupo3_VS
 
             if (filtroNombre == null)
             {
-                bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Tecnica");
+                bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Tecnicas");
             }
             else
             {
-                bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Material WHERE Nombre LIKE '%" + filtroNombre + "%' OR DESCRIPCION LIKE '%" + filtroNombre + "%'");
+                bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Tecnicas WHERE Nombre LIKE '%" + filtroNombre + "%' OR DESCRIPCION LIKE '%" + filtroNombre + "%'");
             }
 
             return tabla;
