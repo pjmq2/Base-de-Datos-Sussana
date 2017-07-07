@@ -120,11 +120,11 @@
     <Compile Include="ConsultarCitas.Designer.cs">
       <DependentUpon>ConsultarCitas.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConsultarEjercicios.cs">
+    <Compile Include="BuscarEjercicios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultarEjercicios.Designer.cs">
-      <DependentUpon>ConsultarEjercicios.cs</DependentUpon>
+    <Compile Include="BuscarEjercicios.Designer.cs">
+      <DependentUpon>BuscarEjercicios.cs</DependentUpon>
     </Compile>
     <Compile Include="BuscarMateriales.cs">
       <SubType>Form</SubType>
@@ -260,8 +260,8 @@
     <EmbeddedResource Include="ConsultarCitas.resx">
       <DependentUpon>ConsultarCitas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConsultarEjercicios.resx">
-      <DependentUpon>ConsultarEjercicios.cs</DependentUpon>
+    <EmbeddedResource Include="BuscarEjercicios.resx">
+      <DependentUpon>BuscarEjercicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarMateriales.resx">
       <DependentUpon>BuscarMateriales.cs</DependentUpon>

@@ -45,14 +45,14 @@
             this.buscarEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gb_informacionDelMaterial = new System.Windows.Forms.GroupBox();
+            this.btn_LoadAndSave = new System.Windows.Forms.Button();
+            this.PB_Imagen = new System.Windows.Forms.PictureBox();
+            this.TXT_Descripcion = new System.Windows.Forms.TextBox();
             this.TXT_Nombre = new System.Windows.Forms.TextBox();
             this.BTN_EliminarMaterial = new System.Windows.Forms.Button();
             this.BTN_Guardar = new System.Windows.Forms.Button();
             this.LBL_Descripcion = new System.Windows.Forms.Label();
             this.LBL_Nombre = new System.Windows.Forms.Label();
-            this.TXT_Descripcion = new System.Windows.Forms.TextBox();
-            this.PB_Imagen = new System.Windows.Forms.PictureBox();
-            this.btn_LoadAndSave = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.gb_informacionDelMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Imagen)).BeginInit();
@@ -196,6 +196,33 @@
             this.gb_informacionDelMaterial.TabStop = false;
             this.gb_informacionDelMaterial.Text = "Información del ejercicio";
             // 
+            // btn_LoadAndSave
+            // 
+            this.btn_LoadAndSave.Location = new System.Drawing.Point(231, 197);
+            this.btn_LoadAndSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_LoadAndSave.Name = "btn_LoadAndSave";
+            this.btn_LoadAndSave.Size = new System.Drawing.Size(206, 29);
+            this.btn_LoadAndSave.TabIndex = 13;
+            this.btn_LoadAndSave.Text = "Buscar y Guardar Imagen";
+            this.btn_LoadAndSave.UseVisualStyleBackColor = true;
+            this.btn_LoadAndSave.Click += new System.EventHandler(this.btn_LoadAndSave_Click);
+            // 
+            // PB_Imagen
+            // 
+            this.PB_Imagen.Location = new System.Drawing.Point(376, 36);
+            this.PB_Imagen.Name = "PB_Imagen";
+            this.PB_Imagen.Size = new System.Drawing.Size(222, 144);
+            this.PB_Imagen.TabIndex = 12;
+            this.PB_Imagen.TabStop = false;
+            // 
+            // TXT_Descripcion
+            // 
+            this.TXT_Descripcion.Location = new System.Drawing.Point(155, 86);
+            this.TXT_Descripcion.Multiline = true;
+            this.TXT_Descripcion.Name = "TXT_Descripcion";
+            this.TXT_Descripcion.Size = new System.Drawing.Size(182, 94);
+            this.TXT_Descripcion.TabIndex = 10;
+            // 
             // TXT_Nombre
             // 
             this.TXT_Nombre.Location = new System.Drawing.Point(151, 43);
@@ -216,6 +243,7 @@
             this.BTN_EliminarMaterial.TabIndex = 8;
             this.BTN_EliminarMaterial.Text = "Eliminar material";
             this.BTN_EliminarMaterial.UseVisualStyleBackColor = false;
+            this.BTN_EliminarMaterial.Click += new System.EventHandler(this.BTN_EliminarMaterial_Click);
             // 
             // BTN_Guardar
             // 
@@ -246,33 +274,6 @@
             this.LBL_Nombre.Size = new System.Drawing.Size(62, 17);
             this.LBL_Nombre.TabIndex = 3;
             this.LBL_Nombre.Text = "Nombre:";
-            // 
-            // TXT_Descripcion
-            // 
-            this.TXT_Descripcion.Location = new System.Drawing.Point(155, 86);
-            this.TXT_Descripcion.Multiline = true;
-            this.TXT_Descripcion.Name = "TXT_Descripcion";
-            this.TXT_Descripcion.Size = new System.Drawing.Size(182, 94);
-            this.TXT_Descripcion.TabIndex = 10;
-            // 
-            // PB_Imagen
-            // 
-            this.PB_Imagen.Location = new System.Drawing.Point(376, 36);
-            this.PB_Imagen.Name = "PB_Imagen";
-            this.PB_Imagen.Size = new System.Drawing.Size(222, 144);
-            this.PB_Imagen.TabIndex = 12;
-            this.PB_Imagen.TabStop = false;
-            // 
-            // btn_LoadAndSave
-            // 
-            this.btn_LoadAndSave.Location = new System.Drawing.Point(231, 197);
-            this.btn_LoadAndSave.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_LoadAndSave.Name = "btn_LoadAndSave";
-            this.btn_LoadAndSave.Size = new System.Drawing.Size(206, 29);
-            this.btn_LoadAndSave.TabIndex = 13;
-            this.btn_LoadAndSave.Text = "Buscar y Guardar Imagen";
-            this.btn_LoadAndSave.UseVisualStyleBackColor = true;
-            this.btn_LoadAndSave.Click += new System.EventHandler(this.btn_LoadAndSave_Click);
             // 
             // VerEjercicio
             // 

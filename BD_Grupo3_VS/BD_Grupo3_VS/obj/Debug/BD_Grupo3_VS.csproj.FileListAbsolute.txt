@@ -49,7 +49,6 @@ C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proye
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarAntecedentes.resources
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarPaciente.resources
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarPlanTratamiento.resources
-C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.EliminarPaciente.resources
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.EliminarTecnicas.resources
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.Login.resources
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.Properties.Resources.resources
@@ -61,7 +60,6 @@ D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarEjercicios.resources
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarPlanEjercicios.resources
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarPlanEjercicios.resources
-C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarEjercicios.resources
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarPlanEjercicios.resources
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarCirugias.resources
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarDatosClinicos.resources
@@ -128,3 +126,4 @@ C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.VerTecnica.resources
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.VerPaciente.resources
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.VerEjercicio.resources
+C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.BuscarEjercicios.resources

@@ -1,6 +1,6 @@
 ﻿namespace BD_Grupo3_VS
 {
-    partial class ConsultarEjercicios
+    partial class BuscarEjercicios
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,6 @@
             this.LBL_ConsultaDeEjercicios = new System.Windows.Forms.Label();
             this.LBL_Nombre = new System.Windows.Forms.Label();
             this.BTN_Buscar = new System.Windows.Forms.Button();
-            this.DGV_Ejercicios = new System.Windows.Forms.DataGridView();
             this.CMB_FiltroNombre = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,8 +51,9 @@
             this.LBL_Filtro = new System.Windows.Forms.Label();
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.TXT_Filtro = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Ejercicios)).BeginInit();
+            this.DGV_Ejercicios = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Ejercicios)).BeginInit();
             this.SuspendLayout();
             // 
             // LBL_ConsultaDeEjercicios
@@ -91,25 +91,6 @@
             this.BTN_Buscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Buscar.UseVisualStyleBackColor = true;
             this.BTN_Buscar.Click += new System.EventHandler(this.BTN_Buscar_Click_1);
-            // 
-            // DGV_Ejercicios
-            // 
-            this.DGV_Ejercicios.AllowUserToAddRows = false;
-            this.DGV_Ejercicios.AllowUserToDeleteRows = false;
-            this.DGV_Ejercicios.AllowUserToResizeColumns = false;
-            this.DGV_Ejercicios.AllowUserToResizeRows = false;
-            this.DGV_Ejercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Ejercicios.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.DGV_Ejercicios.Enabled = false;
-            this.DGV_Ejercicios.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.DGV_Ejercicios.Location = new System.Drawing.Point(29, 206);
-            this.DGV_Ejercicios.Margin = new System.Windows.Forms.Padding(4);
-            this.DGV_Ejercicios.MultiSelect = false;
-            this.DGV_Ejercicios.Name = "DGV_Ejercicios";
-            this.DGV_Ejercicios.ReadOnly = true;
-            this.DGV_Ejercicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Ejercicios.Size = new System.Drawing.Size(629, 308);
-            this.DGV_Ejercicios.TabIndex = 33;
             // 
             // CMB_FiltroNombre
             // 
@@ -271,26 +252,39 @@
             this.TXT_Filtro.Size = new System.Drawing.Size(324, 22);
             this.TXT_Filtro.TabIndex = 38;
             // 
+            // DGV_Ejercicios
+            // 
+            this.DGV_Ejercicios.AllowUserToAddRows = false;
+            this.DGV_Ejercicios.AllowUserToDeleteRows = false;
+            this.DGV_Ejercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Ejercicios.Location = new System.Drawing.Point(25, 206);
+            this.DGV_Ejercicios.Name = "DGV_Ejercicios";
+            this.DGV_Ejercicios.ReadOnly = true;
+            this.DGV_Ejercicios.RowTemplate.Height = 24;
+            this.DGV_Ejercicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Ejercicios.Size = new System.Drawing.Size(623, 298);
+            this.DGV_Ejercicios.TabIndex = 39;
+            // 
             // ConsultarEjercicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 515);
+            this.Controls.Add(this.DGV_Ejercicios);
             this.Controls.Add(this.TXT_Filtro);
             this.Controls.Add(this.BTN_Modificar);
             this.Controls.Add(this.LBL_Filtro);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.CMB_FiltroNombre);
-            this.Controls.Add(this.DGV_Ejercicios);
             this.Controls.Add(this.BTN_Buscar);
             this.Controls.Add(this.LBL_Nombre);
             this.Controls.Add(this.LBL_ConsultaDeEjercicios);
             this.Name = "ConsultarEjercicios";
             this.Text = "ConsultarEjercicios";
             this.Load += new System.EventHandler(this.ConsultarEjercicios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Ejercicios)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Ejercicios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,7 +295,6 @@
         private System.Windows.Forms.Label LBL_ConsultaDeEjercicios;
         private System.Windows.Forms.Label LBL_Nombre;
         private System.Windows.Forms.Button BTN_Buscar;
-        private System.Windows.Forms.DataGridView DGV_Ejercicios;
         private System.Windows.Forms.ComboBox CMB_FiltroNombre;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuPrincipalToolStripMenuItem;
@@ -322,5 +315,6 @@
         private System.Windows.Forms.Label LBL_Filtro;
         private System.Windows.Forms.Button BTN_Modificar;
         private System.Windows.Forms.TextBox TXT_Filtro;
+        private System.Windows.Forms.DataGridView DGV_Ejercicios;
     }
 }

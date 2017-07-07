@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace BD_Grupo3_VS
 {
-    public partial class ConsultarEjercicios : Form
+    public partial class BuscarEjercicios : Form
     {
         Ejercicio ejercicio;
-        public ConsultarEjercicios()
+        public BuscarEjercicios()
         {
             ejercicio = new Ejercicio();
             InitializeComponent();
@@ -105,12 +105,24 @@ namespace BD_Grupo3_VS
 
         private void BTN_Modificar_Click(object sender, EventArgs e)
         {
-            string nombre ="";
-            string descripcion = null;
+            
+            if (DGV_Ejercicios.SelectedRows.Count == 0)
+            {
+                /*Mensaje no hay nada seleccionado*/
+            }
+            else
+            {
+                string nombre = "";
+                string descripcion = null;
+                DataGridViewRow row = DGV_Ejercicios.CurrentRow;
+                nombre = row.Cells[0].Value.ToString();
+                descripcion = row.Cells[1].Value.ToString();
 
-            VerEjercicio ejercicio = new VerEjercicio(nombre, descripcion);
-            ejercicio.Show();
-            this.Hide();
+                VerEjercicio ejercicio = new VerEjercicio(nombre, descripcion);
+                ejercicio.Show();
+                this.Hide();
+            }
+            
         }
 
         /*             A partir de aqui empiezan los metodos para la cinta del menu  */
@@ -190,7 +202,7 @@ namespace BD_Grupo3_VS
 
         private void buscarEjercicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultarEjercicios ejercicio = new ConsultarEjercicios();
+            BuscarEjercicios ejercicio = new BuscarEjercicios();
             ejercicio.Show();
             this.Hide();
         }

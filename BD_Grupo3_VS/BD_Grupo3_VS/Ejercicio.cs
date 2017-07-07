@@ -88,7 +88,8 @@ namespace BD_Grupo3_VS
         */
         public int eliminarejercicio(string nombre)
         {
-            return bd.eliminarEstudiante(nombre);
+            string mensaje= "delete from ejercicio where nombre = '" + nombre + "'";
+            return bd.eliminar(mensaje);
         }
 
         /*Método para obtener la descripcion de un ejercicio 

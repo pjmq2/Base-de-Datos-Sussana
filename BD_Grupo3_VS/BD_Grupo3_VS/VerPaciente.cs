@@ -112,7 +112,7 @@ namespace BD_Grupo3_VS
 
         private void BTN_Eliminar_Click(object sender, EventArgs e)
         {
-            paciente.eliminarPaciente(TXT_Cedula.Text);
+            paciente.eliminarPaciente(cedula);
             MessageBox.Show("¡El paciente ha sido agregado exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
             MenuPrincipal menu = new MenuPrincipal();
             menu.Show();

@@ -24,18 +24,15 @@ namespace BD_Grupo3_VS
             InitializeComponent();
             ejercicio = new Ejercicio();
             nombre = nombreNuevo;
+            descripcion = descripcionNuevo;
+            imagen = ejercicio.obtenerImagen(nombre);
             TXT_Nombre.Text = nombre;
-        }
-
-        private void cargarAtributos()
-        {
-
-            descripcion = ejercicio.obtenerDescripcion(nombre);
-            imagen = ejercicio.obtenerImagen(nombre) ;
-
             TXT_Descripcion.Text = descripcion;
-            PB_Imagen.Image = imagen;
-            PB_Imagen.SizeMode = PictureBoxSizeMode.StretchImage;
+            if (imagen != null)
+            {
+                PB_Imagen.Image = imagen;
+                PB_Imagen.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
         }
 
         private void btn_LoadAndSave_Click(object sender, EventArgs e)
@@ -63,6 +60,15 @@ namespace BD_Grupo3_VS
             {
                 MessageBox.Show("Please Select a Image to save!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display message to force select a image 
             }
+        }
+
+        private void BTN_EliminarMaterial_Click(object sender, EventArgs e)
+        {
+            int result = ejercicio.eliminarejercicio(nombre);
+            MessageBox.Show("¡El ejercicio ha sido agregado exitosamente! " + result, "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
         }
     }
 }
