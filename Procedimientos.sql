@@ -65,11 +65,22 @@ drop procedure eliminarPaciente
 ---
 GO
 CREATE PROCEDURE ModificarCita
-@cedula char(9),@padecimiento varchar(50),@fecha varchar(18), @precio int, @descripcion varchar(500), @duracion decimal(4,2),
+@cedula char(9),@padecimiento varchar(50),@fecha varchar(18), @precio int, @descripcion varchar(500), @duracion varchar(10),
 @lugar varchar(50), @estado varchar(50), @cedulaCambiar char(9), @padecimientoCambiar varchar(50), @fechaCambiar varchar(18)
 AS
+DECLARE @nuevaDuracion decimal(4,2)
+SET @nuevaDuracion = [dbo].convierteDecimal(@duracion)
 UPDATE CITA
 SET CedPaciente = @cedula, Padec_Act = @padecimiento, Fecha = @fecha, Precio = @precio, Descripcion = @descripcion,
-Duracion = @duracion, Lugar = @lugar, Estado_Paciente = @estado
+Duracion = @nuevaDuracion, Lugar = @lugar, Estado_Paciente = @estado
 where CedPaciente = @cedulaCambiar and Padec_Act = @padecimientoCambiar and Fecha = @fechaCambiar
 
+CREATE FUNCTION convierteDecimal(
+@valor varchar(10))
+RETURNS decimal(4,2)
+AS
+BEGIN
+DECLARE @retorno decimal(4,2)
+SET @retorno = CONVERT(decimal(4,2),replace(@valor,',','.'))
+RETURN @retorno
+END
