@@ -60,14 +60,6 @@ namespace BD_Grupo3_VS
             llenarCombobox(CB_Nombre);
         }
 
-        private void LINK_AgregarPaciente_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            AgregarPaciente agregarP = new AgregarPaciente();
-            agregarP.Show();
-            this.Hide();
-
-        }
-
         private void llenarCombobox(ComboBox combobox)
         {
             SqlDataReader datos = paciente.obtenerListaNombresPacientes();

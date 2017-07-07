@@ -76,13 +76,9 @@ create table CITA(
 
 --Tabla Antecedentes Patologicos
 create table ANT_PAT(
-	Nombre		varchar(50)	not null,
-	CedPaciente	char(9)		not null,
-	Descripcion	varchar(500)
+	Nombre		varchar(50)	not null
 	Constraint PKAnt_Pat primary key (Nombre),
-	Constraint FKAPaPaciente foreign key (CedPaciente) references PACIENTE(Cedula)
-		on delete cascade
-		on update cascade
+	
 )
 
 --Tabla Tipo de Antecedentes Patologicos
@@ -91,6 +87,20 @@ create table TIPO_ANT(
 	Tipo			varchar(50)	not null,
 	Constraint PKTipo_Ant primary key (Nombre_Ant, Tipo),
 	Constraint FKTAaAnt_Pat foreign key (Nombre_Ant) references ANT_PAT(Nombre)
+		on delete no action
+		on update no action
+)
+
+--Tabla de la relación M a N entre Antecedentes y Paciente
+create table HA_TENIDO(
+	CedulaPac char(9) not null,
+	Nombre_A varchar(50) not null,
+	Descripcion varchar(500),
+	Constraint PKTHa_Tenido primary key (CedulaPac, Nombre_A),
+	Constraint FKTHTaAnt_Pat foreign key (Nombre_A) references ANT_PAT(Nombre)
+		on delete cascade
+		on update cascade,
+	Constraint FKTHTaPAC foreign key (CedulaPac) references PACIENTE(Cedula)
 		on delete no action
 		on update no action
 )

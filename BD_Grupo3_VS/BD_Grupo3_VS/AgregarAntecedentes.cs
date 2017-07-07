@@ -12,16 +12,18 @@ namespace BD_Grupo3_VS
 {
     public partial class AgregarAntecedentes : Form
     {
+        
         Paciente paciente;
         public AgregarAntecedentes()
         {
             InitializeComponent();
             paciente = new Paciente();
+            
         }
 
         private void BTN_Agregar_Click(object sender, EventArgs e)
         {
-            int resultado = paciente.agregarAntecedente(TXT_Cedula.Text, TXT_NombreAnte.Text, TXT_Descripcion.Text);
+            int resultado = paciente.agregarAntecedente(TXT_NombreAnte.Text);
 
             //resultado es 0 cuando se pudo agregar un antecedente al paciente con éxito
             if (resultado == 0)
@@ -33,10 +35,8 @@ namespace BD_Grupo3_VS
                 //resultado es 0 cuando se pudo agregar un antecedente al paciente con éxito
                 if (resultado2 == 0)
                 {
-                    MessageBox.Show("¡El tipo de antecedente ha sido agregado exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
-                    TXT_Cedula.Clear();
+                    MessageBox.Show("¡El tipo de antecedente ha sido agregado exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);                   
                     TXT_NombreAnte.Clear();
-                    TXT_Descripcion.Clear();
                     TXT_TipoAnt.Clear();
                 }
                 else
@@ -60,7 +60,7 @@ namespace BD_Grupo3_VS
                 }
                 else
                 {
-                    MessageBox.Show(" Ha ocurrido un error al intentar agregar el antecendente. \n -Recuerde que los campos de Cédula, Nombre y Tipo " +
+                    MessageBox.Show(" Ha ocurrido un error al intentar agregar el antecendente. \n -Recuerde que los Nombre y Tipo " +
                         "no pueden estar vacíos.", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
