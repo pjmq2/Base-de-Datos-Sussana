@@ -156,6 +156,7 @@
     <Compile Include="BuscarTecnicas.Designer.cs">
       <DependentUpon>BuscarTecnicas.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatosClinicos.cs" />
     <Compile Include="Ejercicio.cs" />
     <Compile Include="EliminarTecnicas.cs">
       <SubType>Form</SubType>
