@@ -1,6 +1,6 @@
 ﻿namespace BD_Grupo3_VS
 {
-    partial class ConsultarAntecedentes
+    partial class BuscarAntecedentes
     {
         /// <summary>
         /// Required designer variable.
@@ -57,39 +57,35 @@
             // 
             this.LBL_ConsultaAntecedentes.AutoSize = true;
             this.LBL_ConsultaAntecedentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_ConsultaAntecedentes.ForeColor = System.Drawing.Color.Maroon;
-            this.LBL_ConsultaAntecedentes.Location = new System.Drawing.Point(29, 33);
-            this.LBL_ConsultaAntecedentes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_ConsultaAntecedentes.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.LBL_ConsultaAntecedentes.Location = new System.Drawing.Point(22, 40);
             this.LBL_ConsultaAntecedentes.Name = "LBL_ConsultaAntecedentes";
-            this.LBL_ConsultaAntecedentes.Size = new System.Drawing.Size(458, 42);
+            this.LBL_ConsultaAntecedentes.Size = new System.Drawing.Size(291, 33);
             this.LBL_ConsultaAntecedentes.TabIndex = 3;
-            this.LBL_ConsultaAntecedentes.Text = "Consulta de Antecedentes";
+            this.LBL_ConsultaAntecedentes.Text = "Buscar Antecedentes";
             // 
             // LBL_Cedula
             // 
             this.LBL_Cedula.AutoSize = true;
-            this.LBL_Cedula.Location = new System.Drawing.Point(65, 122);
-            this.LBL_Cedula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_Cedula.Location = new System.Drawing.Point(49, 99);
             this.LBL_Cedula.Name = "LBL_Cedula";
-            this.LBL_Cedula.Size = new System.Drawing.Size(56, 17);
+            this.LBL_Cedula.Size = new System.Drawing.Size(43, 13);
             this.LBL_Cedula.TabIndex = 18;
             this.LBL_Cedula.Text = "Cédula:";
             // 
             // TXT_Cedula
             // 
             this.TXT_Cedula.BackColor = System.Drawing.SystemColors.Window;
-            this.TXT_Cedula.Location = new System.Drawing.Point(177, 118);
-            this.TXT_Cedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_Cedula.Location = new System.Drawing.Point(133, 96);
             this.TXT_Cedula.Name = "TXT_Cedula";
-            this.TXT_Cedula.Size = new System.Drawing.Size(193, 22);
+            this.TXT_Cedula.Size = new System.Drawing.Size(146, 20);
             this.TXT_Cedula.TabIndex = 19;
             // 
             // BTN_Buscar
             // 
-            this.BTN_Buscar.Location = new System.Drawing.Point(657, 105);
-            this.BTN_Buscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_Buscar.Location = new System.Drawing.Point(493, 85);
             this.BTN_Buscar.Name = "BTN_Buscar";
-            this.BTN_Buscar.Size = new System.Drawing.Size(141, 38);
+            this.BTN_Buscar.Size = new System.Drawing.Size(106, 31);
             this.BTN_Buscar.TabIndex = 20;
             this.BTN_Buscar.Text = "Buscar";
             this.BTN_Buscar.UseVisualStyleBackColor = true;
@@ -98,10 +94,9 @@
             // 
             this.DGV_Antecedentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Antecedentes.GridColor = System.Drawing.SystemColors.Control;
-            this.DGV_Antecedentes.Location = new System.Drawing.Point(69, 169);
-            this.DGV_Antecedentes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGV_Antecedentes.Location = new System.Drawing.Point(52, 137);
             this.DGV_Antecedentes.Name = "DGV_Antecedentes";
-            this.DGV_Antecedentes.Size = new System.Drawing.Size(727, 302);
+            this.DGV_Antecedentes.Size = new System.Drawing.Size(545, 245);
             this.DGV_Antecedentes.TabIndex = 21;
             // 
             // menuStrip1
@@ -117,21 +112,24 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(832, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(624, 24);
             this.menuStrip1.TabIndex = 36;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // menuPrincipalToolStripMenuItem
             // 
             this.menuPrincipalToolStripMenuItem.Name = "menuPrincipalToolStripMenuItem";
-            this.menuPrincipalToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
+            this.menuPrincipalToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
             this.menuPrincipalToolStripMenuItem.Text = "Menu Principal";
+            this.menuPrincipalToolStripMenuItem.Click += new System.EventHandler(this.menuPrincipalToolStripMenuItem_Click_1);
             // 
             // menuAvanzadoToolStripMenuItem
             // 
             this.menuAvanzadoToolStripMenuItem.Name = "menuAvanzadoToolStripMenuItem";
-            this.menuAvanzadoToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
+            this.menuAvanzadoToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
             this.menuAvanzadoToolStripMenuItem.Text = "Menu Avanzado";
+            this.menuAvanzadoToolStripMenuItem.Click += new System.EventHandler(this.menuAvanzadoToolStripMenuItem_Click);
             // 
             // tecnicaToolStripMenuItem
             // 
@@ -139,20 +137,22 @@
             this.crearTecnicaToolStripMenuItem,
             this.buscarTecnicaToolStripMenuItem});
             this.tecnicaToolStripMenuItem.Name = "tecnicaToolStripMenuItem";
-            this.tecnicaToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.tecnicaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.tecnicaToolStripMenuItem.Text = "Tecnica";
             // 
             // crearTecnicaToolStripMenuItem
             // 
             this.crearTecnicaToolStripMenuItem.Name = "crearTecnicaToolStripMenuItem";
-            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.crearTecnicaToolStripMenuItem.Text = "Crear Tecnica";
+            this.crearTecnicaToolStripMenuItem.Click += new System.EventHandler(this.crearTecnicaToolStripMenuItem_Click);
             // 
             // buscarTecnicaToolStripMenuItem
             // 
             this.buscarTecnicaToolStripMenuItem.Name = "buscarTecnicaToolStripMenuItem";
-            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.buscarTecnicaToolStripMenuItem.Text = "Buscar Tecnica";
+            this.buscarTecnicaToolStripMenuItem.Click += new System.EventHandler(this.buscarTecnicaToolStripMenuItem_Click);
             // 
             // antecedenteToolStripMenuItem
             // 
@@ -160,19 +160,20 @@
             this.crearAntecedenteToolStripMenuItem,
             this.buscarAntecedenteToolStripMenuItem});
             this.antecedenteToolStripMenuItem.Name = "antecedenteToolStripMenuItem";
-            this.antecedenteToolStripMenuItem.Size = new System.Drawing.Size(105, 24);
+            this.antecedenteToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.antecedenteToolStripMenuItem.Text = "Antecedente";
             // 
             // crearAntecedenteToolStripMenuItem
             // 
             this.crearAntecedenteToolStripMenuItem.Name = "crearAntecedenteToolStripMenuItem";
-            this.crearAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.crearAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.crearAntecedenteToolStripMenuItem.Text = "Crear Antecedente";
+            this.crearAntecedenteToolStripMenuItem.Click += new System.EventHandler(this.crearAntecedenteToolStripMenuItem_Click);
             // 
             // buscarAntecedenteToolStripMenuItem
             // 
             this.buscarAntecedenteToolStripMenuItem.Name = "buscarAntecedenteToolStripMenuItem";
-            this.buscarAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.buscarAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.buscarAntecedenteToolStripMenuItem.Text = "Buscar Antecedente";
             // 
             // materialToolStripMenuItem
@@ -181,20 +182,22 @@
             this.crearMaterialToolStripMenuItem,
             this.buscarMaterialToolStripMenuItem});
             this.materialToolStripMenuItem.Name = "materialToolStripMenuItem";
-            this.materialToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.materialToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.materialToolStripMenuItem.Text = "Material";
             // 
             // crearMaterialToolStripMenuItem
             // 
             this.crearMaterialToolStripMenuItem.Name = "crearMaterialToolStripMenuItem";
-            this.crearMaterialToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
+            this.crearMaterialToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.crearMaterialToolStripMenuItem.Text = "Crear Material ";
+            this.crearMaterialToolStripMenuItem.Click += new System.EventHandler(this.crearMaterialToolStripMenuItem_Click);
             // 
             // buscarMaterialToolStripMenuItem
             // 
             this.buscarMaterialToolStripMenuItem.Name = "buscarMaterialToolStripMenuItem";
-            this.buscarMaterialToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
+            this.buscarMaterialToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.buscarMaterialToolStripMenuItem.Text = "Buscar Material";
+            this.buscarMaterialToolStripMenuItem.Click += new System.EventHandler(this.buscarMaterialToolStripMenuItem_Click);
             // 
             // ejercicioToolStripMenuItem
             // 
@@ -202,42 +205,43 @@
             this.crearEjercicioToolStripMenuItem,
             this.buscarEjercicioToolStripMenuItem});
             this.ejercicioToolStripMenuItem.Name = "ejercicioToolStripMenuItem";
-            this.ejercicioToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.ejercicioToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.ejercicioToolStripMenuItem.Text = "Ejercicio";
             // 
             // crearEjercicioToolStripMenuItem
             // 
             this.crearEjercicioToolStripMenuItem.Name = "crearEjercicioToolStripMenuItem";
-            this.crearEjercicioToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.crearEjercicioToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.crearEjercicioToolStripMenuItem.Text = "Crear Ejercicio";
+            this.crearEjercicioToolStripMenuItem.Click += new System.EventHandler(this.crearEjercicioToolStripMenuItem_Click);
             // 
             // buscarEjercicioToolStripMenuItem
             // 
             this.buscarEjercicioToolStripMenuItem.Name = "buscarEjercicioToolStripMenuItem";
-            this.buscarEjercicioToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.buscarEjercicioToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.buscarEjercicioToolStripMenuItem.Text = "Buscar Ejercicio";
+            this.buscarEjercicioToolStripMenuItem.Click += new System.EventHandler(this.buscarEjercicioToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // ConsultarAntecedentes
+            // BuscarAntecedentes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 485);
+            this.ClientSize = new System.Drawing.Size(624, 394);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.DGV_Antecedentes);
             this.Controls.Add(this.BTN_Buscar);
             this.Controls.Add(this.TXT_Cedula);
             this.Controls.Add(this.LBL_Cedula);
             this.Controls.Add(this.LBL_ConsultaAntecedentes);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "ConsultarAntecedentes";
-            this.Text = "ConsultarAntecedentes";
+            this.Name = "BuscarAntecedentes";
+            this.Text = "BuscarAntecedentes";
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Antecedentes)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

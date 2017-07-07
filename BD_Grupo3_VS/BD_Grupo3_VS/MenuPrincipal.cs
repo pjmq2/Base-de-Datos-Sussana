@@ -26,7 +26,7 @@ namespace BD_Grupo3_VS
 
         private void BTN_PacienteBuscar_Click(object sender, EventArgs e)
         {
-            ConsultarPaciente paciente = new ConsultarPaciente();
+            BuscarPaciente paciente = new BuscarPaciente();
             paciente.Show();
             this.Hide();
         }

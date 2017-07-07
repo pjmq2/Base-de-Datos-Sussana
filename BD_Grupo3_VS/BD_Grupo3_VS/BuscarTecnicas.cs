@@ -17,11 +17,34 @@ namespace BD_Grupo3_VS
         public BuscarTecnicas()
         {
             InitializeComponent();
+            tecnica = new Tecnica();
+        }
+
+        private void llenarTabla(DataGridView dataGridView, string filtroNombre)
+        {
+            DataTable tabla = tecnica.consultarTecnicas(filtroNombre);
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = tabla;
+
+            dataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+            dataGridView.DataSource = bindingSource;
+
+            for (int i = 0; i < DGV_Tecnicas.ColumnCount; i++)
+            {
+                dataGridView.Columns[i].Width = 100;
+            }
+        }
+
+        //Verificar parámetros
+        private void llenarComboBox()
+        {
+
         }
 
         private void BuscarTecnicas_Load(object sender, EventArgs e)
         {
-
+            this.llenarTabla(DGV_Tecnicas, null);
+            this.llenarComboBox();
         }
 
         private void BTN_Buscar_Click(object sender, EventArgs e)
@@ -45,11 +68,11 @@ namespace BD_Grupo3_VS
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            DialogResult resultado = MessageBox.Show("Seguro que desea Salir ?", "Cerrar la aplicacion", botones);
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicación", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                //Aun no cierra todo el programa
+                Application.Exit();
             }
         }
 
@@ -83,7 +106,7 @@ namespace BD_Grupo3_VS
 
         private void buscarAntecedenteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultarAntecedentes antecedente = new ConsultarAntecedentes();
+            BuscarAntecedentes antecedente = new BuscarAntecedentes();
             antecedente.Show();
             this.Hide();
         }

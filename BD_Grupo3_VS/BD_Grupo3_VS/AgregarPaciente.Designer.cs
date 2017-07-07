@@ -96,10 +96,10 @@
             // DTP_FechaNac
             // 
             this.DTP_FechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DTP_FechaNac.Location = new System.Drawing.Point(182, 215);
+            this.DTP_FechaNac.Location = new System.Drawing.Point(145, 209);
             this.DTP_FechaNac.Name = "DTP_FechaNac";
             this.DTP_FechaNac.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.DTP_FechaNac.Size = new System.Drawing.Size(88, 20);
+            this.DTP_FechaNac.Size = new System.Drawing.Size(125, 20);
             this.DTP_FechaNac.TabIndex = 23;
             this.DTP_FechaNac.Value = new System.DateTime(2017, 7, 5, 0, 0, 0, 0);
             // 
@@ -167,7 +167,7 @@
             // 
             this.RB_Masculino.AutoSize = true;
             this.RB_Masculino.Checked = true;
-            this.RB_Masculino.Location = new System.Drawing.Point(116, 241);
+            this.RB_Masculino.Location = new System.Drawing.Point(118, 255);
             this.RB_Masculino.Name = "RB_Masculino";
             this.RB_Masculino.Size = new System.Drawing.Size(73, 17);
             this.RB_Masculino.TabIndex = 14;
@@ -178,7 +178,7 @@
             // RB_Femenino
             // 
             this.RB_Femenino.AutoSize = true;
-            this.RB_Femenino.Location = new System.Drawing.Point(118, 264);
+            this.RB_Femenino.Location = new System.Drawing.Point(118, 278);
             this.RB_Femenino.Name = "RB_Femenino";
             this.RB_Femenino.Size = new System.Drawing.Size(71, 17);
             this.RB_Femenino.TabIndex = 13;
@@ -204,7 +204,7 @@
             // LBL_Sexo
             // 
             this.LBL_Sexo.AutoSize = true;
-            this.LBL_Sexo.Location = new System.Drawing.Point(25, 250);
+            this.LBL_Sexo.Location = new System.Drawing.Point(26, 264);
             this.LBL_Sexo.Name = "LBL_Sexo";
             this.LBL_Sexo.Size = new System.Drawing.Size(34, 13);
             this.LBL_Sexo.TabIndex = 10;
@@ -287,7 +287,7 @@
             // 
             this.LBL_Titulo.AutoSize = true;
             this.LBL_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Titulo.ForeColor = System.Drawing.Color.Maroon;
+            this.LBL_Titulo.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.LBL_Titulo.Location = new System.Drawing.Point(329, 28);
             this.LBL_Titulo.Name = "LBL_Titulo";
             this.LBL_Titulo.Size = new System.Drawing.Size(128, 33);
@@ -315,12 +315,14 @@
             this.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem";
             this.InicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.InicioToolStripMenuItem.Text = "Inicio";
+            this.InicioToolStripMenuItem.Click += new System.EventHandler(this.InicioToolStripMenuItem_Click_1);
             // 
             // buscarPacienteToolStripMenuItem
             // 
             this.buscarPacienteToolStripMenuItem.Name = "buscarPacienteToolStripMenuItem";
             this.buscarPacienteToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.buscarPacienteToolStripMenuItem.Text = "Buscar Paciente";
+            this.buscarPacienteToolStripMenuItem.Click += new System.EventHandler(this.buscarPacienteToolStripMenuItem_Click);
             // 
             // crearPacienteToolStripMenuItem
             // 
@@ -333,6 +335,7 @@
             this.avanzadoToolStripMenuItem.Name = "avanzadoToolStripMenuItem";
             this.avanzadoToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.avanzadoToolStripMenuItem.Text = "Avanzado";
+            this.avanzadoToolStripMenuItem.Click += new System.EventHandler(this.avanzadoToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 

@@ -66,13 +66,7 @@ namespace BD_Grupo3_VS
             this.Hide();
         }
 
-        private void LINK_Eliminar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            EliminarCita elimina = new EliminarCita();
-            elimina.Show();
-            this.Hide();
-        }
-
+       
     
 
         /*             A partir de aqui empiezan los metodos para la cinta del menu  */
@@ -101,7 +95,7 @@ namespace BD_Grupo3_VS
 
         private void buscarPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            ConsultarPaciente paciente = new ConsultarPaciente();
+            BuscarPaciente paciente = new BuscarPaciente();
             paciente.Show();
             this.Hide();
         }
@@ -122,22 +116,51 @@ namespace BD_Grupo3_VS
 
         private void BTN_Modificar_Click(object sender, EventArgs e)
         {
-            string cedulaC, padecimientoC, precioC, descripC, duracionC, lugarC, estadoC; 
+            string cedulaC, padecimientoC, precioC, descripC, duracionC, lugarC, estadoC,fechaC; 
 
 
 
             DataGridViewRow row = dgv1.CurrentRow;
             cedulaC = row.Cells[0].Value.ToString();
             padecimientoC = row.Cells[4].Value.ToString();
+            fechaC = row.Cells[5].Value.ToString();
             precioC = row.Cells[6].Value.ToString();
             descripC = row.Cells[7].Value.ToString();
             duracionC = row.Cells[8].Value.ToString();
             lugarC = row.Cells[9].Value.ToString();
             estadoC = row.Cells[10].Value.ToString();
-            ModificarCita mc = new ModificarCita(cedulaC,padecimientoC,precioC,descripC,duracionC,lugarC,estadoC);
+            ModificarCita mc = new ModificarCita(cedulaC,padecimientoC,precioC,descripC,duracionC,lugarC,estadoC,fechaC);
             mc.Show();
             this.Hide();
             
+        }
+
+        private void BTN_Eliminar_Click(object sender, EventArgs e)
+        {
+            int result;
+            string cedulaEliminar, fechaEliminar;
+            DataGridViewRow re = dgv1.CurrentRow;
+            cedulaEliminar = re.Cells[0].Value.ToString();
+            fechaEliminar = re.Cells[5].Value.ToString();
+            result = cita.eliminarCita(cedulaEliminar, fechaEliminar);
+            if(result == 0)
+            {
+                MessageBox.Show("¡Se ha eliminado la cita!", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.None);
+                llenaTabla(dgv1, null, null);
+            }
+            else
+            {
+                if(result == 1)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error eliminando la cita", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
+            }
+
         }
 
         /*             Hasta aqui las instrucciones de la cinta del menu  */

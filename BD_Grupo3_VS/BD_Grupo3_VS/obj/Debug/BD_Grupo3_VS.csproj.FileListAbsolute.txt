@@ -87,15 +87,8 @@ C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarPlanEjercicios.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarPlanTratamiento.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarTecnica.resources
-C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarAntecedentes.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarCitas.resources
-C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarEjercicios.resources
-C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarPaciente.resources
-C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarPlanEjercicios.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarPlanTratamiento.resources
-C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.Eliminar_Ejercicio.resources
-C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.EliminarCita.resources
-C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.EliminarPaciente.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.EliminarTecnicas.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.Login.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.MenuPrincipal.resources
@@ -126,4 +119,13 @@ C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.VerPaciente.resources
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.VerEjercicio.resources
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.BuscarEjercicios.resources
+<<<<<<< HEAD
 C:\Users\pjmq2\Documents\MEGAsync\UCR\Informatica\CI-1312 Bases de Datos 1\Proyecto\Proyecto Parte 2\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.BuscarPlanEjercicios.resources
+=======
+C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.BuscarEjercicios.resources
+C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.VerEjercicio.resources
+C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.BuscarPlanEjercicios.resources
+C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.BuscarPaciente.resources
+C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.BuscarAntecedentes.resources
+C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.VerAntecedente.resources
+>>>>>>> cde44914056590106fcd714c4774ebf238854340

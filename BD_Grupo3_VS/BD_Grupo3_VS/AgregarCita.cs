@@ -71,13 +71,7 @@ namespace BD_Grupo3_VS
             this.Hide();
         }
 
-        private void LINK_Eliminar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            EliminarCita elimina = new EliminarCita();
-            elimina.Show();
-            this.Hide();
-        }
-
+      
 
 
 
@@ -99,7 +93,7 @@ namespace BD_Grupo3_VS
 
         private void buscarPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            ConsultarPaciente paciente = new ConsultarPaciente();
+            BuscarPaciente paciente = new BuscarPaciente();
             paciente.Show();
             this.Hide();
         }
@@ -122,6 +116,13 @@ namespace BD_Grupo3_VS
         {
             MenuConfig menu = new MenuConfig();
             menu.Show();
+            this.Hide();
+        }
+
+        private void BTN_Lista_Click(object sender, EventArgs e)
+        {
+            ConsultarCitas cc = new ConsultarCitas();
+            cc.Show();
             this.Hide();
         }
 

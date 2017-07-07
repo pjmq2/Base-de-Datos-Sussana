@@ -20,26 +20,12 @@ namespace BD_Grupo3_VS
             tecnica = new Tecnica();
         }
 
-        private void btn_guardar_Click(object sender, EventArgs e)
+        private void BTN_Guardar_Click(object sender, EventArgs e)
         {
-            int result = tecnica.agregarTecnica(txt_nombre.Text, (int)nud_precio.Value, txt_descripcion.Text);
+            int result = tecnica.agregarTecnica(TXT_Nombre.Text, (int)NUD_Precio.Value, TXT_Descripcion.Text);
         }
 
-        private void lnk_menuPrincipal_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
-            this.Hide();
-        }
-
-        private void lnk_consultarTecnicas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            BuscarTecnicas consultar = new BuscarTecnicas();
-            consultar.Show();
-            this.Hide();
-        }
-
-        /*             A partir de aqui empiezan los metodos para la cinta del menu  */
+        /*  A partir de aqui empiezan los metodos para la cinta del menu    */
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
@@ -88,7 +74,7 @@ namespace BD_Grupo3_VS
 
         private void buscarAntecedenteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultarAntecedentes antecedente = new ConsultarAntecedentes();
+            BuscarAntecedentes antecedente = new BuscarAntecedentes();
             antecedente.Show();
             this.Hide();
         }
@@ -120,6 +106,6 @@ namespace BD_Grupo3_VS
             ejercicio.Show();
             this.Hide();
         }
-        /*             Hasta aqui las instrucciones de la cinta del menu  */
+        /*  Hasta aqui las instrucciones de la cinta del menu   */
     }
 }

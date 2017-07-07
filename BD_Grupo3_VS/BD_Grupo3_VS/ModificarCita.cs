@@ -13,7 +13,7 @@ namespace BD_Grupo3_VS
     public partial class ModificarCita : Form
     {
         Cita cita;
-        public ModificarCita(string cedulaC,string padecimientoC, string precioC, string descripC, string duracionC, string lugarC, string estadoC)
+        public ModificarCita(string cedulaC,string padecimientoC, string precioC, string descripC, string duracionC, string lugarC, string estadoC, string fechaC)
         {
             InitializeComponent();
             cita = new Cita();
@@ -24,33 +24,18 @@ namespace BD_Grupo3_VS
             TXT_Duracion.Text = duracionC;
             CB_Lugar.Text = lugarC;
             TXT_Estado.Text = estadoC;
+            dtp_Fecha.Text = fechaC;
 
         }
 
-        private void LINK_AgregarCita_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            AgregarCita a = new AgregarCita();
-            a.Show();
-            this.Hide();
-        }
 
-        private void LINK_Consultar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ConsultarCitas c = new ConsultarCitas();
-            c.Show();
-            this.Hide();
-         
-        }
+    
 
-        private void LINK_Eliminar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            EliminarCita ec = new EliminarCita();
-            ec.Show();
-            this.Hide();
-        }
+       
 
         private void BTN_Modificar_Click(object sender, EventArgs e)
         {
+            ConsultarCitas cc = new ConsultarCitas();
             int precio = Convert.ToInt32(TXT_Precio.Text);
             decimal duracion = Convert.ToDecimal(TXT_Duracion.Text);
             int result = cita.modificarCita(TXT_Cedula.Text, TXT_Padecimiento.Text, dtp_Fecha.Value.ToString("dd/MM/yyyy HH:mm"),
@@ -58,7 +43,8 @@ namespace BD_Grupo3_VS
             if(result == 0)
             {
                 MessageBox.Show("¡La cita se ha modificado con éxito!", "Results", MessageBoxButtons.OK, MessageBoxIcon.None);
-
+                cc.Show();
+                this.Hide();
             }
             else
             {
@@ -72,33 +58,10 @@ namespace BD_Grupo3_VS
         }
 
         /*             A partir de aqui empiezan los metodos para la cinta del menu  */
-        private void InicioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
-            this.Hide();
-        }
 
-        private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ConsultarPaciente paciente = new ConsultarPaciente();
-            paciente.Show();
-            this.Hide();
-        }
 
-        private void crearPacienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AgregarPaciente paciente = new AgregarPaciente();
-            paciente.Show();
-            this.Hide();
-        }
+      
 
-        private void avanzadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuConfig menu = new MenuConfig();
-            menu.Show();
-            this.Hide();
-        }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -107,8 +70,36 @@ namespace BD_Grupo3_VS
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                //Aun no cierra todo el programa
+                Application.Exit();
             }
+        }
+
+        private void InicioToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void buscarPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            BuscarPaciente paciente = new BuscarPaciente();
+            paciente.Show();
+            this.Hide();
+        }
+
+        private void crearPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            AgregarPaciente paciente = new AgregarPaciente();
+            paciente.Show();
+            this.Hide();
+        }
+
+        private void avanzadoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MenuConfig menu = new MenuConfig();
+            menu.Show();
+            this.Hide();
         }
 
         /*             Hasta aqui las instrucciones de la cinta del menu  */
