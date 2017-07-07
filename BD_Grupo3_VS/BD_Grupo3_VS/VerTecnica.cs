@@ -22,8 +22,50 @@ namespace BD_Grupo3_VS
             InitializeComponent();
         }
 
+        private void llenarMaterialesRequeridos()
+        {
 
-        /*             A partir de aqui empiezan los metodos para la cinta del menu  */
+        }
+
+        private void llenarMateriales()
+        {
+
+        }
+
+        private void VerTecnica_Load(object sender, EventArgs e)
+        {
+            this.TXT_Nombre.Text = nombreTecnica;
+            this.llenarMaterialesRequeridos();
+            this.llenarMateriales();
+        }
+
+        private void TXT_Nombre_TextChanged(object sender, EventArgs e)
+        {
+            if (cambios)
+            {
+                TXT_Nombre.BackColor = System.Drawing.Color.LightBlue;
+            }
+            cambios = true;
+        }
+
+        private void NUD_Precio_TextChanged(object sender, EventArgs e)
+        {
+            if (cambios)
+            {
+                NUD_Precio.BackColor = System.Drawing.Color.LightBlue;
+            }
+        }
+
+        private void TXT_Descripcion_TextChanged(object sender, EventArgs e)
+        {
+            if (cambios)
+            {
+                TXT_Descripcion.BackColor = System.Drawing.Color.LightBlue;
+            }
+        }
+
+
+        /*  A partir de aqui empiezan los metodos para la cinta del menu    */
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
@@ -38,7 +80,7 @@ namespace BD_Grupo3_VS
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                //Aun no cierra todo el programa
+                Application.Exit();
             }
         }
 
@@ -103,11 +145,6 @@ namespace BD_Grupo3_VS
             ConsultarEjercicios ejercicio = new ConsultarEjercicios();
             ejercicio.Show();
             this.Hide();
-        }
-
-        private void VerTecnica_Load(object sender, EventArgs e)
-        {
-            this.TXT_Nombre.Text = nombreTecnica;
         }
         /*             Hasta aqui las instrucciones de la cinta del menu  */
 

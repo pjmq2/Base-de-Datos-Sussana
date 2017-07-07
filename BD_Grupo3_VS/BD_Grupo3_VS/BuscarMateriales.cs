@@ -42,6 +42,11 @@ namespace BD_Grupo3_VS
             }
         }
 
+        private void llenarComboBox()
+        {
+
+        }
+
         private void ConsultarMateriales_Load(object sender, EventArgs e)
         {
             this.llenarTabla(DGV_Materiales, null);

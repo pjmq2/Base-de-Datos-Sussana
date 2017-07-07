@@ -64,7 +64,7 @@
             this.gb_informacionDelMaterial.Controls.Add(this.BTN_Guardar);
             this.gb_informacionDelMaterial.Controls.Add(this.lbl_precio);
             this.gb_informacionDelMaterial.Controls.Add(this.lbl_nombre);
-            this.gb_informacionDelMaterial.Location = new System.Drawing.Point(57, 27);
+            this.gb_informacionDelMaterial.Location = new System.Drawing.Point(57, 30);
             this.gb_informacionDelMaterial.Name = "gb_informacionDelMaterial";
             this.gb_informacionDelMaterial.Size = new System.Drawing.Size(402, 149);
             this.gb_informacionDelMaterial.TabIndex = 1;
@@ -74,7 +74,7 @@
             // TXT_Nombre
             // 
             this.TXT_Nombre.Location = new System.Drawing.Point(138, 33);
-            this.TXT_Nombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXT_Nombre.Margin = new System.Windows.Forms.Padding(2);
             this.TXT_Nombre.Name = "TXT_Nombre";
             this.TXT_Nombre.Size = new System.Drawing.Size(214, 20);
             this.TXT_Nombre.TabIndex = 9;
@@ -181,13 +181,13 @@
             // 
             this.crearTecnicaToolStripMenuItem.Name = "crearTecnicaToolStripMenuItem";
             this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.crearTecnicaToolStripMenuItem.Text = "Crear Tecnica";
+            this.crearTecnicaToolStripMenuItem.Text = "Crear técnica";
             // 
             // buscarTecnicaToolStripMenuItem
             // 
             this.buscarTecnicaToolStripMenuItem.Name = "buscarTecnicaToolStripMenuItem";
             this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.buscarTecnicaToolStripMenuItem.Text = "Buscar Tecnica";
+            this.buscarTecnicaToolStripMenuItem.Text = "Buscar técnica";
             // 
             // antecedenteToolStripMenuItem
             // 
@@ -201,14 +201,14 @@
             // crearAntecedenteToolStripMenuItem
             // 
             this.crearAntecedenteToolStripMenuItem.Name = "crearAntecedenteToolStripMenuItem";
-            this.crearAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
-            this.crearAntecedenteToolStripMenuItem.Text = "Crear Antecedente";
+            this.crearAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.crearAntecedenteToolStripMenuItem.Text = "Crear antecedente";
             // 
             // buscarAntecedenteToolStripMenuItem
             // 
             this.buscarAntecedenteToolStripMenuItem.Name = "buscarAntecedenteToolStripMenuItem";
-            this.buscarAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
-            this.buscarAntecedenteToolStripMenuItem.Text = "Buscar Antecedente";
+            this.buscarAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.buscarAntecedenteToolStripMenuItem.Text = "Buscar antecedente";
             // 
             // materialToolStripMenuItem
             // 
@@ -223,13 +223,13 @@
             // 
             this.crearMaterialToolStripMenuItem.Name = "crearMaterialToolStripMenuItem";
             this.crearMaterialToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.crearMaterialToolStripMenuItem.Text = "Crear Material ";
+            this.crearMaterialToolStripMenuItem.Text = "Crear material ";
             // 
             // buscarMaterialToolStripMenuItem
             // 
             this.buscarMaterialToolStripMenuItem.Name = "buscarMaterialToolStripMenuItem";
             this.buscarMaterialToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.buscarMaterialToolStripMenuItem.Text = "Buscar Material";
+            this.buscarMaterialToolStripMenuItem.Text = "Buscar material";
             // 
             // ejercicioToolStripMenuItem
             // 

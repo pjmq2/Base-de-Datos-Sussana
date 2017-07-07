@@ -128,6 +128,7 @@
             this.TXT_Descripcion.Name = "TXT_Descripcion";
             this.TXT_Descripcion.Size = new System.Drawing.Size(181, 83);
             this.TXT_Descripcion.TabIndex = 5;
+            this.TXT_Descripcion.TextChanged += new System.EventHandler(this.TXT_Descripcion_TextChanged);
             // 
             // TXT_Nombre
             // 
@@ -135,6 +136,7 @@
             this.TXT_Nombre.Name = "TXT_Nombre";
             this.TXT_Nombre.Size = new System.Drawing.Size(181, 20);
             this.TXT_Nombre.TabIndex = 3;
+            this.TXT_Nombre.TextChanged += new System.EventHandler(this.TXT_Nombre_TextChanged);
             // 
             // lbl_descripcion
             // 
@@ -176,6 +178,7 @@
             // 
             // CB_MaterialesRequeridos
             // 
+            this.CB_MaterialesRequeridos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CB_MaterialesRequeridos.FormattingEnabled = true;
             this.CB_MaterialesRequeridos.Location = new System.Drawing.Point(6, 29);
             this.CB_MaterialesRequeridos.Name = "CB_MaterialesRequeridos";
@@ -216,6 +219,7 @@
             // 
             // CB_NuevoMaterialRequerido
             // 
+            this.CB_NuevoMaterialRequerido.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CB_NuevoMaterialRequerido.FormattingEnabled = true;
             this.CB_NuevoMaterialRequerido.Location = new System.Drawing.Point(6, 30);
             this.CB_NuevoMaterialRequerido.Name = "CB_NuevoMaterialRequerido";

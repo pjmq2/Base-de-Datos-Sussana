@@ -17,7 +17,17 @@ namespace BD_Grupo3_VS
             InitializeComponent();
         }
 
-        /*             A partir de aqui empiezan los metodos para la cinta del menu  */
+        private void BuscarTecnicas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_Buscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /*  A partir de aqui empiezan los metodos para la cinta del menu */
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
@@ -28,11 +38,11 @@ namespace BD_Grupo3_VS
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            DialogResult resultado = MessageBox.Show("Seguro que desea Salir ?", "Cerrar la aplicacion", botones);
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicacion", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                //Aun no cierra todo el programa
+                Application.Exit();
             }
         }
 
@@ -98,6 +108,6 @@ namespace BD_Grupo3_VS
             ejercicio.Show();
             this.Hide();
         }
-        /*             Hasta aqui las instrucciones de la cinta del menu  */
+        /*  Hasta aqui las instrucciones de la cinta del menu   */
     }
 }
