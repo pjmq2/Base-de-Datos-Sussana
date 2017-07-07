@@ -68,7 +68,7 @@ namespace BD_Grupo3_VS
 
         private void BTN_BuscarAntecediente_Click(object sender, EventArgs e)
         {
-            ConsultarAntecedentes antecedente = new ConsultarAntecedentes();
+            BuscarAntecedentes antecedente = new BuscarAntecedentes();
             antecedente.Show();
             this.Hide();
         }

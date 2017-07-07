@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BD_Grupo3_VS
 {
-    public partial class ConsultarAntecedentes : Form
+    public partial class BuscarAntecedentes : Form
     {
-        public ConsultarAntecedentes()
+        public BuscarAntecedentes()
         {
             InitializeComponent();
         }
@@ -66,7 +66,7 @@ namespace BD_Grupo3_VS
 
         private void buscarAntecedenteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultarAntecedentes antecedente = new ConsultarAntecedentes();
+            BuscarAntecedentes antecedente = new BuscarAntecedentes();
             antecedente.Show();
             this.Hide();
         }

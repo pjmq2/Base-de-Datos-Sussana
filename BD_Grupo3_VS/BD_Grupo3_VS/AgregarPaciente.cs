@@ -68,7 +68,7 @@ namespace BD_Grupo3_VS
 
         private void LINK_ListaPacientes_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ConsultarPaciente listaP = new ConsultarPaciente();
+            BuscarPaciente listaP = new BuscarPaciente();
             listaP.Show();
             this.Hide();
         }
@@ -83,7 +83,7 @@ namespace BD_Grupo3_VS
 
         private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultarPaciente paciente = new ConsultarPaciente();
+            BuscarPaciente paciente = new BuscarPaciente();
             paciente.Show();
             this.Hide();
         }

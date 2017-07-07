@@ -77,17 +77,9 @@ namespace BD_Grupo3_VS
 
         }
 
-        /*             A partir de aqui empiezan los metodos para la cinta del menu  */
-        private void InicioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
-            this.Hide();
-        }
-
         private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultarPaciente paciente = new ConsultarPaciente();
+            BuscarPaciente paciente = new BuscarPaciente();
             paciente.Show();
             this.Hide();
         }
@@ -99,12 +91,6 @@ namespace BD_Grupo3_VS
             this.Hide();
         }
 
-        private void avanzadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuConfig menu = new MenuConfig();
-            menu.Show();
-            this.Hide();
-        }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -220,6 +206,21 @@ namespace BD_Grupo3_VS
                 TXT_Comentarios.BackColor = System.Drawing.Color.LightBlue;
             }
                 cambios10 = true;           
+        }
+
+        /*             A partir de aqui empiezan los metodos para la cinta del menu  */
+        private void InicioToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void avanzadoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MenuConfig menu = new MenuConfig();
+            menu.Show();
+            this.Hide();
         }
     }
 }

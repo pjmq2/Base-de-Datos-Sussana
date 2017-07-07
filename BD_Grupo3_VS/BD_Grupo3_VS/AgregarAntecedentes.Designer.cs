@@ -36,10 +36,20 @@
             this.LBL_TipoAnt = new System.Windows.Forms.Label();
             this.BTN_Agregar = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.InicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.avanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAvanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tecnicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearTecnicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarTecnicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.antecedenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearAntecedenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarAntecedenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.materialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearMaterialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarMaterialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ejercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GB_InfoAntecedente.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -116,41 +126,121 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.InicioToolStripMenuItem,
-            this.buscarPacienteToolStripMenuItem,
-            this.crearPacienteToolStripMenuItem,
-            this.avanzadoToolStripMenuItem,
+            this.menuPrincipalToolStripMenuItem,
+            this.menuAvanzadoToolStripMenuItem,
+            this.tecnicaToolStripMenuItem,
+            this.antecedenteToolStripMenuItem,
+            this.materialToolStripMenuItem,
+            this.ejercicioToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(430, 24);
-            this.menuStrip1.TabIndex = 23;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(533, 24);
+            this.menuStrip1.TabIndex = 24;
+            this.menuStrip1.Text = "menuStrip2";
             // 
-            // InicioToolStripMenuItem
+            // menuPrincipalToolStripMenuItem
             // 
-            this.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem";
-            this.InicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.InicioToolStripMenuItem.Text = "Inicio";
+            this.menuPrincipalToolStripMenuItem.Name = "menuPrincipalToolStripMenuItem";
+            this.menuPrincipalToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.menuPrincipalToolStripMenuItem.Text = "Menu Principal";
+            this.menuPrincipalToolStripMenuItem.Click += new System.EventHandler(this.menuPrincipalToolStripMenuItem_Click);
             // 
-            // buscarPacienteToolStripMenuItem
+            // menuAvanzadoToolStripMenuItem
             // 
-            this.buscarPacienteToolStripMenuItem.Name = "buscarPacienteToolStripMenuItem";
-            this.buscarPacienteToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
-            this.buscarPacienteToolStripMenuItem.Text = "Buscar Paciente";
+            this.menuAvanzadoToolStripMenuItem.Name = "menuAvanzadoToolStripMenuItem";
+            this.menuAvanzadoToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
+            this.menuAvanzadoToolStripMenuItem.Text = "Menu Avanzado";
+            this.menuAvanzadoToolStripMenuItem.Click += new System.EventHandler(this.menuAvanzadoToolStripMenuItem_Click);
             // 
-            // crearPacienteToolStripMenuItem
+            // tecnicaToolStripMenuItem
             // 
-            this.crearPacienteToolStripMenuItem.Name = "crearPacienteToolStripMenuItem";
-            this.crearPacienteToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
-            this.crearPacienteToolStripMenuItem.Text = "Crear Paciente";
+            this.tecnicaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearTecnicaToolStripMenuItem,
+            this.buscarTecnicaToolStripMenuItem});
+            this.tecnicaToolStripMenuItem.Name = "tecnicaToolStripMenuItem";
+            this.tecnicaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.tecnicaToolStripMenuItem.Text = "Técnica";
             // 
-            // avanzadoToolStripMenuItem
+            // crearTecnicaToolStripMenuItem
             // 
-            this.avanzadoToolStripMenuItem.Name = "avanzadoToolStripMenuItem";
-            this.avanzadoToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.avanzadoToolStripMenuItem.Text = "Avanzado";
+            this.crearTecnicaToolStripMenuItem.Name = "crearTecnicaToolStripMenuItem";
+            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.crearTecnicaToolStripMenuItem.Text = "Crear Técnica";
+            this.crearTecnicaToolStripMenuItem.Click += new System.EventHandler(this.crearTecnicaToolStripMenuItem_Click);
+            // 
+            // buscarTecnicaToolStripMenuItem
+            // 
+            this.buscarTecnicaToolStripMenuItem.Name = "buscarTecnicaToolStripMenuItem";
+            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.buscarTecnicaToolStripMenuItem.Text = "Buscar Técnica";
+            this.buscarTecnicaToolStripMenuItem.Click += new System.EventHandler(this.buscarTecnicaToolStripMenuItem_Click);
+            // 
+            // antecedenteToolStripMenuItem
+            // 
+            this.antecedenteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearAntecedenteToolStripMenuItem,
+            this.buscarAntecedenteToolStripMenuItem});
+            this.antecedenteToolStripMenuItem.Name = "antecedenteToolStripMenuItem";
+            this.antecedenteToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.antecedenteToolStripMenuItem.Text = "Antecedente";
+            // 
+            // crearAntecedenteToolStripMenuItem
+            // 
+            this.crearAntecedenteToolStripMenuItem.Name = "crearAntecedenteToolStripMenuItem";
+            this.crearAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.crearAntecedenteToolStripMenuItem.Text = "Crear Antecedente";
+            this.crearAntecedenteToolStripMenuItem.Click += new System.EventHandler(this.crearAntecedenteToolStripMenuItem_Click);
+            // 
+            // buscarAntecedenteToolStripMenuItem
+            // 
+            this.buscarAntecedenteToolStripMenuItem.Name = "buscarAntecedenteToolStripMenuItem";
+            this.buscarAntecedenteToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.buscarAntecedenteToolStripMenuItem.Text = "Buscar Antecedente";
+            this.buscarAntecedenteToolStripMenuItem.Click += new System.EventHandler(this.buscarAntecedenteToolStripMenuItem_Click);
+            // 
+            // materialToolStripMenuItem
+            // 
+            this.materialToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearMaterialToolStripMenuItem,
+            this.buscarMaterialToolStripMenuItem});
+            this.materialToolStripMenuItem.Name = "materialToolStripMenuItem";
+            this.materialToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.materialToolStripMenuItem.Text = "Material";
+            // 
+            // crearMaterialToolStripMenuItem
+            // 
+            this.crearMaterialToolStripMenuItem.Name = "crearMaterialToolStripMenuItem";
+            this.crearMaterialToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.crearMaterialToolStripMenuItem.Text = "Crear Material ";
+            // 
+            // buscarMaterialToolStripMenuItem
+            // 
+            this.buscarMaterialToolStripMenuItem.Name = "buscarMaterialToolStripMenuItem";
+            this.buscarMaterialToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.buscarMaterialToolStripMenuItem.Text = "Buscar Material";
+            // 
+            // ejercicioToolStripMenuItem
+            // 
+            this.ejercicioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearEjercicioToolStripMenuItem,
+            this.buscarEjercicioToolStripMenuItem});
+            this.ejercicioToolStripMenuItem.Name = "ejercicioToolStripMenuItem";
+            this.ejercicioToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.ejercicioToolStripMenuItem.Text = "Ejercicio";
+            // 
+            // crearEjercicioToolStripMenuItem
+            // 
+            this.crearEjercicioToolStripMenuItem.Name = "crearEjercicioToolStripMenuItem";
+            this.crearEjercicioToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.crearEjercicioToolStripMenuItem.Text = "Crear Ejercicio";
+            // 
+            // buscarEjercicioToolStripMenuItem
+            // 
+            this.buscarEjercicioToolStripMenuItem.Name = "buscarEjercicioToolStripMenuItem";
+            this.buscarEjercicioToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.buscarEjercicioToolStripMenuItem.Text = "Buscar Ejercicio";
             // 
             // salirToolStripMenuItem
             // 
@@ -163,7 +253,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 314);
+            this.ClientSize = new System.Drawing.Size(533, 314);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.GB_InfoAntecedente);
             this.Controls.Add(this.LBL_Titulo);
@@ -188,10 +278,20 @@
         private System.Windows.Forms.TextBox TXT_TipoAnt;
         private System.Windows.Forms.Label LBL_TipoAnt;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem InicioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buscarPacienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem crearPacienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem avanzadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuPrincipalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuAvanzadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tecnicaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearTecnicaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarTecnicaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem antecedenteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearAntecedenteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarAntecedenteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem materialToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearMaterialToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarMaterialToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ejercicioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearEjercicioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarEjercicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }

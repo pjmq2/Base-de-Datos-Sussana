@@ -1,6 +1,6 @@
 ﻿namespace BD_Grupo3_VS
 {
-    partial class ConsultarPaciente
+    partial class BuscarPaciente
     {
         /// <summary>
         /// Required designer variable.

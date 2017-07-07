@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace BD_Grupo3_VS
 {
-    public partial class ConsultarPaciente : Form
+    public partial class BuscarPaciente : Form
     {
         Paciente paciente;
-        public ConsultarPaciente()
+        public BuscarPaciente()
         {
             InitializeComponent();
             paciente = new Paciente();
@@ -117,7 +117,7 @@ namespace BD_Grupo3_VS
 
         private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultarPaciente paciente = new ConsultarPaciente();
+            BuscarPaciente paciente = new BuscarPaciente();
             paciente.Show();
             this.Hide();
         }

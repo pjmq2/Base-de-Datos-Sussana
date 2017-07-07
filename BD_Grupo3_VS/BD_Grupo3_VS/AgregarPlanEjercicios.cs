@@ -30,7 +30,7 @@ namespace BD_Grupo3_VS
 
         private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultarPaciente paciente = new ConsultarPaciente();
+            BuscarPaciente paciente = new BuscarPaciente();
             paciente.Show();
             this.Hide();
         }
@@ -56,7 +56,7 @@ namespace BD_Grupo3_VS
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                Application.Exit()
+                Application.Exit();
             }
         }
 

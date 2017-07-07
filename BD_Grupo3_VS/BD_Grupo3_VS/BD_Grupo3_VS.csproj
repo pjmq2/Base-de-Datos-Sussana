@@ -108,11 +108,11 @@
     </Compile>
     <Compile Include="Antecedentes.cs" />
     <Compile Include="Cita.cs" />
-    <Compile Include="ConsultarAntecedente.cs">
+    <Compile Include="BuscarAntecedente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultarAntecedente.Designer.cs">
-      <DependentUpon>ConsultarAntecedente.cs</DependentUpon>
+    <Compile Include="BuscarAntecedente.Designer.cs">
+      <DependentUpon>BuscarAntecedente.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultarCitas.cs">
       <SubType>Form</SubType>
@@ -132,11 +132,11 @@
     <Compile Include="BuscarMateriales.Designer.cs">
       <DependentUpon>BuscarMateriales.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConsultarPaciente.cs">
+    <Compile Include="BuscarPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultarPaciente.Designer.cs">
-      <DependentUpon>ConsultarPaciente.cs</DependentUpon>
+    <Compile Include="BuscarPaciente.Designer.cs">
+      <DependentUpon>BuscarPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="BuscarPlanEjercicios.cs">
       <SubType>Form</SubType>
@@ -157,12 +157,6 @@
       <DependentUpon>BuscarTecnicas.cs</DependentUpon>
     </Compile>
     <Compile Include="Ejercicio.cs" />
-    <Compile Include="EliminarCita.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarCita.Designer.cs">
-      <DependentUpon>EliminarCita.cs</DependentUpon>
-    </Compile>
     <Compile Include="EliminarTecnicas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,8 +248,8 @@
     <EmbeddedResource Include="AgregarTecnica.resx">
       <DependentUpon>AgregarTecnica.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConsultarAntecedente.resx">
-      <DependentUpon>ConsultarAntecedente.cs</DependentUpon>
+    <EmbeddedResource Include="BuscarAntecedente.resx">
+      <DependentUpon>BuscarAntecedente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarCitas.resx">
       <DependentUpon>ConsultarCitas.cs</DependentUpon>
@@ -266,8 +260,8 @@
     <EmbeddedResource Include="BuscarMateriales.resx">
       <DependentUpon>BuscarMateriales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConsultarPaciente.resx">
-      <DependentUpon>ConsultarPaciente.cs</DependentUpon>
+    <EmbeddedResource Include="BuscarPaciente.resx">
+      <DependentUpon>BuscarPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarPlanEjercicios.resx">
       <DependentUpon>BuscarPlanEjercicios.cs</DependentUpon>
@@ -277,9 +271,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarTecnicas.resx">
       <DependentUpon>BuscarTecnicas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarCita.resx">
-      <DependentUpon>EliminarCita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarTecnicas.resx">
       <DependentUpon>EliminarTecnicas.cs</DependentUpon>
