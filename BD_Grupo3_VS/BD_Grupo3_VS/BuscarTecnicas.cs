@@ -12,6 +12,8 @@ namespace BD_Grupo3_VS
 {
     public partial class BuscarTecnicas : Form
     {
+        Tecnica tecnica;
+
         public BuscarTecnicas()
         {
             InitializeComponent();
@@ -27,6 +29,11 @@ namespace BD_Grupo3_VS
 
         }
 
+        private void BTN_VerModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         /*  A partir de aqui empiezan los metodos para la cinta del menu */
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -38,11 +45,11 @@ namespace BD_Grupo3_VS
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicacion", botones);
+            DialogResult resultado = MessageBox.Show("Seguro que desea Salir ?", "Cerrar la aplicacion", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                Application.Exit();
+                //Aun no cierra todo el programa
             }
         }
 
