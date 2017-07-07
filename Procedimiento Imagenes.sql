@@ -9,10 +9,14 @@ GO
 
 SET QUOTED_IDENTIFIER ON
 GO
-
-create proc [dbo].[SaveImage] @img image as
-INSERT INTO EJERCICIO(Imagen)
-VALUES (@img)
+create proc [dbo].[SaveImage] 
+@name varchar(50),
+@img image as
+update EJERCICIO
+set Imagen = @img
+where nombre like @name
 GO
 
-
+create proc [dbo].[ReadImage] @name varchar(50) as
+SELECT Imagen FROM EJERCICIO
+WHERE nombre=@name

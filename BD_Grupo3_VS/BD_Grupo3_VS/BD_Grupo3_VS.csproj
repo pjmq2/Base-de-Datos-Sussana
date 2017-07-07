@@ -120,11 +120,11 @@
     <Compile Include="ConsultarCitas.Designer.cs">
       <DependentUpon>ConsultarCitas.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConsultarEjercicios.cs">
+    <Compile Include="BuscarEjercicios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultarEjercicios.Designer.cs">
-      <DependentUpon>ConsultarEjercicios.cs</DependentUpon>
+    <Compile Include="BuscarEjercicios.Designer.cs">
+      <DependentUpon>BuscarEjercicios.cs</DependentUpon>
     </Compile>
     <Compile Include="BuscarMateriales.cs">
       <SubType>Form</SubType>
@@ -138,11 +138,11 @@
     <Compile Include="ConsultarPaciente.Designer.cs">
       <DependentUpon>ConsultarPaciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConsultarPlanEjercicios.cs">
+    <Compile Include="BuscarPlanEjercicios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultarPlanEjercicios.Designer.cs">
-      <DependentUpon>ConsultarPlanEjercicios.cs</DependentUpon>
+    <Compile Include="BuscarPlanEjercicios.Designer.cs">
+      <DependentUpon>BuscarPlanEjercicios.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultarPlanTratamiento.cs">
       <SubType>Form</SubType>
@@ -260,8 +260,8 @@
     <EmbeddedResource Include="ConsultarCitas.resx">
       <DependentUpon>ConsultarCitas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConsultarEjercicios.resx">
-      <DependentUpon>ConsultarEjercicios.cs</DependentUpon>
+    <EmbeddedResource Include="BuscarEjercicios.resx">
+      <DependentUpon>BuscarEjercicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarMateriales.resx">
       <DependentUpon>BuscarMateriales.cs</DependentUpon>
@@ -269,8 +269,8 @@
     <EmbeddedResource Include="ConsultarPaciente.resx">
       <DependentUpon>ConsultarPaciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConsultarPlanEjercicios.resx">
-      <DependentUpon>ConsultarPlanEjercicios.cs</DependentUpon>
+    <EmbeddedResource Include="BuscarPlanEjercicios.resx">
+      <DependentUpon>BuscarPlanEjercicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarPlanTratamiento.resx">
       <DependentUpon>ConsultarPlanTratamiento.cs</DependentUpon>

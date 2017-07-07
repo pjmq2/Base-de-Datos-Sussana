@@ -118,7 +118,7 @@ namespace BD_Grupo3_VS
 
         private void buscarEjercicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultarEjercicios ejercicio = new ConsultarEjercicios();
+            BuscarEjercicios ejercicio = new BuscarEjercicios();
             ejercicio.Show();
             this.Hide();
         }

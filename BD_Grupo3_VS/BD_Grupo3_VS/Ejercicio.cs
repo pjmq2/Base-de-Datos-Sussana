@@ -88,7 +88,8 @@ namespace BD_Grupo3_VS
         */
         public int eliminarejercicio(string nombre)
         {
-            return bd.eliminarEstudiante(nombre);
+            string mensaje= "delete from ejercicio where nombre = '" + nombre + "'";
+            return bd.eliminar(mensaje);
         }
 
         /*Método para obtener la descripcion de un ejercicio 
@@ -112,9 +113,21 @@ namespace BD_Grupo3_VS
             return imagen;
         }
 
+        public int modificarDescripcion(string nombre, string descripcion)
+        {
+            string consulta = "update ejercicio set descripcion = '"+descripcion+"' where nombre = '"+nombre+"'";
+            return bd.actualizarDatos(consulta);
+        }
+
         public void insertarImagen(string nombre, byte[] imagen)
         {
             bd.subirImagen(nombre, imagen);
+        }
+
+        public int modificarNombre(string nombre, string nombreNuevo)
+        {
+            string modificacion = "update Ejercicio set nombre = '" + nombreNuevo + "' where nombre = '" + nombre + "'";
+            return bd.actualizarDatos(modificacion);
         }
     }
 }

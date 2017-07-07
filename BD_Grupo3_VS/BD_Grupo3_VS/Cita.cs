@@ -5,6 +5,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace BD_Grupo3_VS
 {
@@ -57,8 +60,14 @@ namespace BD_Grupo3_VS
         }
         public int eliminarCita(string cedula, string fecha)
         {
-            String eliminar = "EXEC eliminarCita '" + cedula + "', '" + fecha + "'";
-            return bd.actualizarDatos(eliminar);
+            DialogResult dr;
+            dr = MessageBox.Show("¿Está seguro de borrar esta cita?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(dr == System.Windows.Forms.DialogResult.Yes)
+            {
+                String eliminar = "EXEC eliminarCita '" + cedula + "', '" + fecha + "'";
+                return bd.actualizarDatos(eliminar);
+            }
+            return 1;
         }
 
         public int modificarCita(string cedula, string padecimiento, string fechaHora, int precio, string descripcion,
