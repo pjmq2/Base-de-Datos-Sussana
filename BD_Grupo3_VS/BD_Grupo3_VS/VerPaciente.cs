@@ -17,6 +17,14 @@ namespace BD_Grupo3_VS
         Paciente paciente;
         bool cambios1 = false;
         bool cambios2 = false;
+        bool cambios3 = false;
+        bool cambios4 = false;
+        bool cambios5 = false;
+        bool cambios6 = false;
+        bool cambios7 = false;
+        bool cambios8 = false;
+        bool cambios9 = false;
+        bool cambios10 = false;
         string nombre;
         string apellido1;
         string apellido2;
@@ -143,82 +151,75 @@ namespace BD_Grupo3_VS
         }
 
         private void TXT_Apellido2_TextChanged(object sender, EventArgs e)
-        {
-            cambios1 = false;
-            if (cambios1)
+        {           
+            if (cambios3)
             {
                 TXT_Apellido2.BackColor = System.Drawing.Color.LightBlue;
             }
-            cambios1 = true;
+            cambios3 = true;
         }
 
         private void TXT_Cedula_TextChanged(object sender, EventArgs e)
         {
-            cambios2 = false;
-            if (cambios2)
+            if (cambios4)
             {
                 TXT_Cedula.BackColor = System.Drawing.Color.LightBlue;
             }
-            cambios2 = true;
+            cambios4 = true;
         }
 
         private void TXT_Sexo_TextChanged(object sender, EventArgs e)
         {
-            cambios1 = false;
-            if (cambios1)
+            if (cambios5)
             {
                 TXT_Sexo.BackColor = System.Drawing.Color.LightBlue;
             }
-            cambios1 = true;
+            cambios5 = true;
         }
 
         private void TXT_Telefono_TextChanged(object sender, EventArgs e)
         {
-            cambios2 = false;
-            if (cambios2)
+            if (cambios6)
             {
                 TXT_Telefono.BackColor = System.Drawing.Color.LightBlue;
             }
-            cambios2 = true;
+            cambios6 = true;
         }
 
         private void TXT_Email_TextChanged(object sender, EventArgs e)
         {
-            cambios1 = false;
-            if (cambios1)
+            if (cambios7)
             {
                 TXT_Email.BackColor = System.Drawing.Color.LightBlue;
             }
-            cambios1 = true;
+            cambios7 = true;
         }
 
         private void DTP_FechaNac_ValueChanged(object sender, EventArgs e)
         {
-            cambios2 = false;
-            if (cambios2)
+            if (cambios8)
             {
                 DTP_FechaNac.CalendarForeColor = System.Drawing.Color.LightBlue;
             }
-            cambios2 = true;
+            cambios8 = true;
         }
 
         private void TXT_Valoracion_TextChanged(object sender, EventArgs e)
         {
-            cambios1 = false;
-            if (cambios1)
+            if (cambios9)
             {
                 TXT_Valoracion.BackColor = System.Drawing.Color.LightBlue;
             }
-            cambios1 = true;
+            cambios9 = true;
         }
 
         private void TXT_Comentarios_TextChanged(object sender, EventArgs e)
         {
-            cambios2 = false;
-            if (cambios2)
+            if (cambios10)
             {
                 TXT_Comentarios.BackColor = System.Drawing.Color.LightBlue;
             }
+                cambios10 = true;           
         }
     }
 }
