@@ -88,7 +88,6 @@ C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarPlanEjercicios.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarPlanTratamiento.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.AgregarTecnica.resources
-C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarAntecedentes.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarCitas.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.ConsultarPlanTratamiento.resources
 C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.EliminarTecnicas.resources
