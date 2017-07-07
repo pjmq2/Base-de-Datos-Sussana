@@ -32,6 +32,10 @@
             this.LBL_Nombre = new System.Windows.Forms.Label();
             this.BTN_Buscar = new System.Windows.Forms.Button();
             this.CMB_FiltroNombre = new System.Windows.Forms.ComboBox();
+            this.LBL_Filtro = new System.Windows.Forms.Label();
+            this.BTN_Modificar = new System.Windows.Forms.Button();
+            this.TXT_Filtro = new System.Windows.Forms.TextBox();
+            this.DGV_Ejercicios = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAvanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,12 +52,8 @@
             this.crearEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LBL_Filtro = new System.Windows.Forms.Label();
-            this.BTN_Modificar = new System.Windows.Forms.Button();
-            this.TXT_Filtro = new System.Windows.Forms.TextBox();
-            this.DGV_Ejercicios = new System.Windows.Forms.DataGridView();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Ejercicios)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LBL_ConsultaDeEjercicios
@@ -100,6 +100,51 @@
             this.CMB_FiltroNombre.Size = new System.Drawing.Size(324, 24);
             this.CMB_FiltroNombre.TabIndex = 34;
             // 
+            // LBL_Filtro
+            // 
+            this.LBL_Filtro.AutoSize = true;
+            this.LBL_Filtro.Location = new System.Drawing.Point(25, 167);
+            this.LBL_Filtro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_Filtro.Name = "LBL_Filtro";
+            this.LBL_Filtro.Size = new System.Drawing.Size(39, 17);
+            this.LBL_Filtro.TabIndex = 36;
+            this.LBL_Filtro.Text = "Filtro";
+            // 
+            // BTN_Modificar
+            // 
+            this.BTN_Modificar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BTN_Modificar.Image = global::BD_Grupo3_VS.Properties.Resources.Ejercicio_Modificar;
+            this.BTN_Modificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_Modificar.Location = new System.Drawing.Point(544, 106);
+            this.BTN_Modificar.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Modificar.Name = "BTN_Modificar";
+            this.BTN_Modificar.Size = new System.Drawing.Size(105, 92);
+            this.BTN_Modificar.TabIndex = 37;
+            this.BTN_Modificar.Text = "Ver/Modificar";
+            this.BTN_Modificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_Modificar.UseVisualStyleBackColor = true;
+            this.BTN_Modificar.Click += new System.EventHandler(this.BTN_Modificar_Click);
+            // 
+            // TXT_Filtro
+            // 
+            this.TXT_Filtro.Location = new System.Drawing.Point(89, 164);
+            this.TXT_Filtro.Name = "TXT_Filtro";
+            this.TXT_Filtro.Size = new System.Drawing.Size(324, 22);
+            this.TXT_Filtro.TabIndex = 38;
+            // 
+            // DGV_Ejercicios
+            // 
+            this.DGV_Ejercicios.AllowUserToAddRows = false;
+            this.DGV_Ejercicios.AllowUserToDeleteRows = false;
+            this.DGV_Ejercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Ejercicios.Location = new System.Drawing.Point(25, 206);
+            this.DGV_Ejercicios.Name = "DGV_Ejercicios";
+            this.DGV_Ejercicios.ReadOnly = true;
+            this.DGV_Ejercicios.RowTemplate.Height = 24;
+            this.DGV_Ejercicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Ejercicios.Size = new System.Drawing.Size(623, 298);
+            this.DGV_Ejercicios.TabIndex = 39;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -114,7 +159,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(679, 28);
-            this.menuStrip1.TabIndex = 35;
+            this.menuStrip1.TabIndex = 40;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // menuPrincipalToolStripMenuItem
@@ -128,7 +173,6 @@
             this.menuAvanzadoToolStripMenuItem.Name = "menuAvanzadoToolStripMenuItem";
             this.menuAvanzadoToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
             this.menuAvanzadoToolStripMenuItem.Text = "Menu Avanzado";
-            this.menuAvanzadoToolStripMenuItem.Click += new System.EventHandler(this.menuAvanzadoToolStripMenuItem_Click_1);
             // 
             // tecnicaToolStripMenuItem
             // 
@@ -137,19 +181,19 @@
             this.buscarTecnicaToolStripMenuItem});
             this.tecnicaToolStripMenuItem.Name = "tecnicaToolStripMenuItem";
             this.tecnicaToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
-            this.tecnicaToolStripMenuItem.Text = "Tecnica";
+            this.tecnicaToolStripMenuItem.Text = "Técnica";
             // 
             // crearTecnicaToolStripMenuItem
             // 
             this.crearTecnicaToolStripMenuItem.Name = "crearTecnicaToolStripMenuItem";
             this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.crearTecnicaToolStripMenuItem.Text = "Crear Tecnica";
+            this.crearTecnicaToolStripMenuItem.Text = "Crear Técnica";
             // 
             // buscarTecnicaToolStripMenuItem
             // 
             this.buscarTecnicaToolStripMenuItem.Name = "buscarTecnicaToolStripMenuItem";
             this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.buscarTecnicaToolStripMenuItem.Text = "Buscar Tecnica";
+            this.buscarTecnicaToolStripMenuItem.Text = "Buscar Técnica";
             // 
             // antecedenteToolStripMenuItem
             // 
@@ -219,63 +263,17 @@
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
             this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // LBL_Filtro
-            // 
-            this.LBL_Filtro.AutoSize = true;
-            this.LBL_Filtro.Location = new System.Drawing.Point(25, 167);
-            this.LBL_Filtro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LBL_Filtro.Name = "LBL_Filtro";
-            this.LBL_Filtro.Size = new System.Drawing.Size(39, 17);
-            this.LBL_Filtro.TabIndex = 36;
-            this.LBL_Filtro.Text = "Filtro";
-            // 
-            // BTN_Modificar
-            // 
-            this.BTN_Modificar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.BTN_Modificar.Image = global::BD_Grupo3_VS.Properties.Resources.Ejercicio_Modificar;
-            this.BTN_Modificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_Modificar.Location = new System.Drawing.Point(544, 106);
-            this.BTN_Modificar.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_Modificar.Name = "BTN_Modificar";
-            this.BTN_Modificar.Size = new System.Drawing.Size(105, 92);
-            this.BTN_Modificar.TabIndex = 37;
-            this.BTN_Modificar.Text = "Ver/Modificar";
-            this.BTN_Modificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BTN_Modificar.UseVisualStyleBackColor = true;
-            this.BTN_Modificar.Click += new System.EventHandler(this.BTN_Modificar_Click);
-            // 
-            // TXT_Filtro
-            // 
-            this.TXT_Filtro.Location = new System.Drawing.Point(89, 164);
-            this.TXT_Filtro.Name = "TXT_Filtro";
-            this.TXT_Filtro.Size = new System.Drawing.Size(324, 22);
-            this.TXT_Filtro.TabIndex = 38;
-            // 
-            // DGV_Ejercicios
-            // 
-            this.DGV_Ejercicios.AllowUserToAddRows = false;
-            this.DGV_Ejercicios.AllowUserToDeleteRows = false;
-            this.DGV_Ejercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Ejercicios.Location = new System.Drawing.Point(25, 206);
-            this.DGV_Ejercicios.Name = "DGV_Ejercicios";
-            this.DGV_Ejercicios.ReadOnly = true;
-            this.DGV_Ejercicios.RowTemplate.Height = 24;
-            this.DGV_Ejercicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Ejercicios.Size = new System.Drawing.Size(623, 298);
-            this.DGV_Ejercicios.TabIndex = 39;
             // 
             // BuscarEjercicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 515);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.DGV_Ejercicios);
             this.Controls.Add(this.TXT_Filtro);
             this.Controls.Add(this.BTN_Modificar);
             this.Controls.Add(this.LBL_Filtro);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.CMB_FiltroNombre);
             this.Controls.Add(this.BTN_Buscar);
             this.Controls.Add(this.LBL_Nombre);
@@ -283,9 +281,9 @@
             this.Name = "BuscarEjercicios";
             this.Text = "ConsultarEjercicios";
             this.Load += new System.EventHandler(this.ConsultarEjercicios_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Ejercicios)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Ejercicios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,6 +295,10 @@
         private System.Windows.Forms.Label LBL_Nombre;
         private System.Windows.Forms.Button BTN_Buscar;
         private System.Windows.Forms.ComboBox CMB_FiltroNombre;
+        private System.Windows.Forms.Label LBL_Filtro;
+        private System.Windows.Forms.Button BTN_Modificar;
+        private System.Windows.Forms.TextBox TXT_Filtro;
+        private System.Windows.Forms.DataGridView DGV_Ejercicios;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuPrincipalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuAvanzadoToolStripMenuItem;
@@ -313,9 +315,5 @@
         private System.Windows.Forms.ToolStripMenuItem crearEjercicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarEjercicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.Label LBL_Filtro;
-        private System.Windows.Forms.Button BTN_Modificar;
-        private System.Windows.Forms.TextBox TXT_Filtro;
-        private System.Windows.Forms.DataGridView DGV_Ejercicios;
     }
 }

@@ -62,7 +62,10 @@ namespace BD_Grupo3_VS
             else
             {
                 int result = ejercicio.agregarEjercicio(txt_nombre.Text, TXT_Descripcion.Text, img);
-                ejercicio.insertarImagen(txt_nombre.Text, img);
+                if (pictureBox1.Image != null)
+                {
+                    ejercicio.insertarImagen(txt_nombre.Text, img);
+                }
                 if (result == 0)
                 {
                     MessageBox.Show("¡El ejercicio ha sido agregada correctamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -109,7 +112,7 @@ namespace BD_Grupo3_VS
             }
         }
 
-        private void menuAvanzadoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void menuAvanzadoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             MenuConfig menu = new MenuConfig();
             menu.Show();
