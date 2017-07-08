@@ -47,6 +47,7 @@ namespace BD_Grupo3_VS
             TXT_Apellido2.Text = apellido2;
             TXT_Cedula.Text = cedula;
             datosClinicos = new DatosClinicos(cedula);
+            archivosTemp = new List<string>();
         }
 
         private void VerPaciente_Load(object sender, EventArgs e)
