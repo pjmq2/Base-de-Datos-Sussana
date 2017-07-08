@@ -55,6 +55,7 @@
             this.TXT_Nombre = new System.Windows.Forms.TextBox();
             this.LBL_Nombre = new System.Windows.Forms.Label();
             this.TP_DatoClinicos = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.CB_DatoClinico = new System.Windows.Forms.ComboBox();
             this.LBL_NombreCambiante = new System.Windows.Forms.Label();
@@ -76,6 +77,8 @@
             this.BTN_CitaBuscar = new System.Windows.Forms.Button();
             this.BTN_CitaNueva = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.BTN_Buscar = new System.Windows.Forms.Button();
+            this.BTN_GuardaDatosClinicos = new System.Windows.Forms.Button();
             this.TabPaciente.SuspendLayout();
             this.TP_InfoBasica.SuspendLayout();
             this.TP_DatoClinicos.SuspendLayout();
@@ -361,6 +364,9 @@
             // 
             // TP_DatoClinicos
             // 
+            this.TP_DatoClinicos.Controls.Add(this.BTN_GuardaDatosClinicos);
+            this.TP_DatoClinicos.Controls.Add(this.BTN_Buscar);
+            this.TP_DatoClinicos.Controls.Add(this.button1);
             this.TP_DatoClinicos.Controls.Add(this.label3);
             this.TP_DatoClinicos.Controls.Add(this.CB_DatoClinico);
             this.TP_DatoClinicos.Controls.Add(this.LBL_NombreCambiante);
@@ -373,10 +379,20 @@
             this.TP_DatoClinicos.Text = "Datos Clínicos";
             this.TP_DatoClinicos.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(506, 62);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 70);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Descargar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 62);
+            this.label3.Location = new System.Drawing.Point(33, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 17);
             this.label3.TabIndex = 29;
@@ -385,7 +401,7 @@
             // CB_DatoClinico
             // 
             this.CB_DatoClinico.FormattingEnabled = true;
-            this.CB_DatoClinico.Location = new System.Drawing.Point(158, 62);
+            this.CB_DatoClinico.Location = new System.Drawing.Point(174, 89);
             this.CB_DatoClinico.Name = "CB_DatoClinico";
             this.CB_DatoClinico.Size = new System.Drawing.Size(257, 24);
             this.CB_DatoClinico.TabIndex = 28;
@@ -393,7 +409,7 @@
             // LBL_NombreCambiante
             // 
             this.LBL_NombreCambiante.AutoSize = true;
-            this.LBL_NombreCambiante.Location = new System.Drawing.Point(17, 26);
+            this.LBL_NombreCambiante.Location = new System.Drawing.Point(33, 39);
             this.LBL_NombreCambiante.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_NombreCambiante.Name = "LBL_NombreCambiante";
             this.LBL_NombreCambiante.Size = new System.Drawing.Size(303, 17);
@@ -586,6 +602,26 @@
             this.BTN_CitaNueva.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_CitaNueva.UseVisualStyleBackColor = true;
             // 
+            // BTN_Buscar
+            // 
+            this.BTN_Buscar.Location = new System.Drawing.Point(174, 154);
+            this.BTN_Buscar.Name = "BTN_Buscar";
+            this.BTN_Buscar.Size = new System.Drawing.Size(149, 70);
+            this.BTN_Buscar.TabIndex = 31;
+            this.BTN_Buscar.Text = "Buscar y Cargar";
+            this.BTN_Buscar.UseVisualStyleBackColor = true;
+            this.BTN_Buscar.Click += new System.EventHandler(this.BTN_Buscar_Click);
+            // 
+            // BTN_GuardaDatosClinicos
+            // 
+            this.BTN_GuardaDatosClinicos.Location = new System.Drawing.Point(359, 155);
+            this.BTN_GuardaDatosClinicos.Name = "BTN_GuardaDatosClinicos";
+            this.BTN_GuardaDatosClinicos.Size = new System.Drawing.Size(169, 68);
+            this.BTN_GuardaDatosClinicos.TabIndex = 32;
+            this.BTN_GuardaDatosClinicos.Text = "Guardar";
+            this.BTN_GuardaDatosClinicos.UseVisualStyleBackColor = true;
+            this.BTN_GuardaDatosClinicos.Click += new System.EventHandler(this.BTN_GuardaDatosClinicos_Click);
+            // 
             // VerPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -672,5 +708,8 @@
         private System.Windows.Forms.ComboBox CB_DatoClinico;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BTN_GuardaDatosClinicos;
+        private System.Windows.Forms.Button BTN_Buscar;
     }
 }

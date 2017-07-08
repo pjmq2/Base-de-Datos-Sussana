@@ -40,7 +40,7 @@ namespace BD_Grupo3_VS
             SqlDataReader datos = null;
             try
             {
-                datos = bd.ejecutarConsulta("Select distinct Dato from DATOS_CLINICOS");
+                datos = bd.ejecutarConsulta("Select distinct Dato from DATOS_CLINICOS where CedPaciente ='"+cedula+"'");
             }
             catch (SqlException ex)
             { }
@@ -53,55 +53,23 @@ namespace BD_Grupo3_VS
             Modifica: Llama al método que elimina el Dato Clinico mediante el nombre
             Retorna: el tipo de error que generó el eliminar o cero si el eliminar fue exitoso
         */
-        public int eliminarejercicio(string nombre)
+        public int eliminarDato(string cedula, string dato)
         {
-            string mensaje = "delete from ejercicio where nombre = '" + nombre + "'";
+            string mensaje = "delete from DATOS_CLINICOS where CedPaciente = '" + cedula + "' AND Dato = '" +dato+ "'";
             return bd.eliminar(mensaje);
         }
 
-        /*Método para obtener la descripcion de un Dato Clinico 
-            Recibe: El nombre de los Dato Clinicos 
-            Modifica: Realiza la selección del Dato Clinico y carga la descripcion
-            Retorna: La descripcion del Dato Clinico
-        */
-        public string obtenerDescripcion(string nombre)
-        {
-            string descripcion = "";
-            SqlDataReader datos = null;
-            datos = bd.ejecutarConsulta("Select * from ejercicio where nombre = '" + nombre + "'");
-            descripcion = datos.GetString(2);
-            return descripcion;
-        }
-        /*
-        public Image obtenerImagen(string nombre)
-        {
-            Image imagen = null;
-            imagen = bd.recuperarImagen(nombre);
-            return imagen;
-        }
-
-        public int modificarDescripcion(string nombre, string descripcion)
-        {
-            string consulta = "update ejercicio set descripcion = '" + descripcion + "' where nombre = '" + nombre + "'";
-            return bd.actualizarDatos(consulta);
-        }
-
-        public byte[] obtenerArchivo(string cedula, string dato)
+        public byte[] obtenerArchivo(string dato)
         {
             byte[] archivo=bd.recuperarArchivo(cedula, dato);
             return archivo;
         }
 
-        public void insertarImagen(string nombre, byte[] imagen)
+        public void insertarArchivo(string dato, byte[] archivo)
         {
-            bd.subirImagen(nombre, imagen);
-        }
+            bd.subirArchivo(cedula, dato, archivo);
 
-        public int modificarNombre(string nombre, string nombreNuevo)
-        {
-            string modificacion = "update Ejercicio set nombre = '" + nombreNuevo + "' where nombre = '" + nombre + "'";
-            return bd.actualizarDatos(modificacion);
         }
-        */
+        
     }
 }

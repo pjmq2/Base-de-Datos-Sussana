@@ -130,7 +130,7 @@ namespace BD_Grupo3_VS
                 adp.Fill(dt);//data table fill with data by calling the fill method of data adapter object
                 if (dt.Rows.Count > 0)//check whether data table contain any row or not
                 {
-                    archivo=(byte[])dt.Rows[0]["Imagen"];//create memory stream by passing byte array of the file
+                    archivo=(byte[])dt.Rows[0]["Archivo"];//create memory stream by passing byte array of the file
                 }
             }
             catch (Exception ex)//catch if any error occur

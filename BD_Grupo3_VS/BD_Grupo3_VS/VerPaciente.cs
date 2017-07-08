@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace BD_Grupo3_VS
 {
     public partial class VerPaciente : Form
     {
         Paciente paciente;
+        DatosClinicos datosClinicos;
         bool cambiosNombre = false;
         bool cambiosApellido1 = false;
         bool cambiosApellido2 = false;
@@ -28,6 +30,8 @@ namespace BD_Grupo3_VS
         string apellido1;
         string apellido2;
         string cedula;
+        byte[] archivo;
+
         public VerPaciente(string cedulaNueva, string nombreNuevo, string apellido1Nuevo, string apellido2Nuevo)
         {
             InitializeComponent();
@@ -40,6 +44,7 @@ namespace BD_Grupo3_VS
             TXT_Apellido1.Text = apellido1;
             TXT_Apellido2.Text = apellido2;
             TXT_Cedula.Text = cedula;
+            datosClinicos = new DatosClinicos(cedula);
         }
 
         private void VerPaciente_Load(object sender, EventArgs e)
@@ -69,14 +74,9 @@ namespace BD_Grupo3_VS
             DTP_FechaNac.Value = dato.GetDateTime(0);
 
             LBL_NombreCambiante.Text = "Nombre del Paciente: "+nombre +" "+ apellido1 + " " + apellido2;
-
+            llenarComboBoxDatos(CB_DatoClinico);
         }
-
-
-        private void Inicio()
-        {
-
-        }    
+  
 
         private void BTN_Eliminar_Click(object sender, EventArgs e)
         {
@@ -185,8 +185,8 @@ namespace BD_Grupo3_VS
                 
             }
         }
-    
 
+        #region cambio color de fondo
         private void TXT_Nombre_TextChanged(object sender, EventArgs e)
         {
             if (cambiosNombre)
@@ -278,7 +278,95 @@ namespace BD_Grupo3_VS
             }
                 cambiosComentarios = true;           
         }
+#endregion
 
+        private void llenarComboBoxDatos(ComboBox combo)
+        {
+            SqlDataReader datos = datosClinicos.obtenerLista();
+            if (datos != null)
+            {
+                while (datos.Read())
+                {
+                    combo.Items.Add(datos.GetValue(0));
+                }
+            }
+            else
+            {
+                combo.Items.Clear();
+            }
+            combo.SelectedItem = 0;
+        }
+
+        private void BTN_Buscar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fop = new OpenFileDialog(); //create object of open file dialog
+            fop.InitialDirectory = @"C:\"; //set Initial directory
+            fop.Filter = "[PDF]|*.pdf"; //set filter for select only .jpg files
+            if (fop.ShowDialog() == DialogResult.OK) //display open file dialog to user and only user select a image enter to if block
+            {
+                FileStream FS = new FileStream(@fop.FileName, FileMode.Open, FileAccess.Read); //create a file stream object associate to user selected file 
+                archivo = new byte[FS.Length]; //create a byte array with size of user select file stream length
+                FS.Read(archivo, 0, Convert.ToInt32(FS.Length));//read user selected file stream in to byte array       
+
+                MessageBox.Show("Archivo Cargado Exitosamente!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display save successful message to user
+            }
+            else
+            {
+                MessageBox.Show("Favor seleccionar una archivo .pdf!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display message to force select a image 
+            }
+        }
+
+        private void BTN_GuardaDatosClinicos_Click(object sender, EventArgs e)
+        {
+            bool cambiosGuardados = false;
+            if (CB_DatoClinico.Text!="" && archivo != null)
+            {
+                datosClinicos.agregarDato(CB_DatoClinico.Text);
+                datosClinicos.insertarArchivo(CB_DatoClinico.Text, archivo);
+                MessageBox.Show("Dato guardado Exitosamente!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display save successful message to user
+                cambiosGuardados = true;
+            }
+            else if (CB_DatoClinico.Text != "" && archivo == null)
+            {
+                datosClinicos.agregarDato(CB_DatoClinico.Text);
+                MessageBox.Show("Dato guardado Exitosamente!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display save successful message to user
+                cambiosGuardados = true;
+            }
+            else
+            {
+                MessageBox.Show("Favor seleccionar una archivo .pdf y un valor correcto para Datos!!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display message to force select a image 
+            }
+            if (cambiosGuardados)
+            {
+                VerPaciente paciente = new VerPaciente(cedula, nombre, apellido1, apellido2);
+                paciente.Show();
+                this.Hide();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            byte[] archivoDescargar;
+            if (CB_DatoClinico.Text != "")
+            {
+                MessageBox.Show("Empieza descarga");
+                archivoDescargar = datosClinicos.obtenerArchivo(CB_DatoClinico.Text);
+                SaveFileDialog saveFile = new SaveFileDialog();
+                if (saveFile.ShowDialog() == DialogResult.OK)
+                {
+                    Stream s = File.Open(saveFile.FileName, FileMode.CreateNew);
+                    StreamWriter sw = new StreamWriter(s);
+                    sw.Write(archivoDescargar);
+                    MessageBox.Show("El archivo se guardo Correctamente", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display message to force select a image 
+                }
+            }
+            else
+            {
+                MessageBox.Show("Favor seleccionar un valor correcto para Datos!!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display message to force select a image 
+            }
+        }
+
+        #region Menu
         /*             A partir de aqui empiezan los metodos para la cinta del menu  */
         private void InicioToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -318,6 +406,11 @@ namespace BD_Grupo3_VS
                 Application.Exit();
             }
         }
+
+
         /*             Hasta aqui las instrucciones de la cinta del menu  */
+        #endregion
+
+        
     }
 }
