@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,31 +15,43 @@ namespace BD_Grupo3_VS
     public partial class AgregarCita : Form
     {
         Cita cita;
-        public AgregarCita()
+        public AgregarCita(string cedBusq)
         {
             InitializeComponent();
             cita = new Cita();
+            TXT_Cedula.Text = cedBusq;
+            llenarComboBox(cedBusq);
         }
 
-        private void CB_Lugar_SelectedIndexChanged(object sender, EventArgs e)
+        private void llenarComboBox(string cedBusq)
         {
-
+            SqlDataReader datos = cita.obtieneTratamientos(cedBusq);
+            if(datos != null)
+            {
+                while (datos.Read())
+                {
+                    CB_Padecimiento.Items.Add(datos.GetValue(0));
+                }
+            }
+            else
+            {
+                CB_Padecimiento.Items.Clear();
+            }
+            
         }
 
         private void BTN_Agregar_Click(object sender, EventArgs e)
         {
             int precioAg = Convert.ToInt32(TXT_Precio.Text);
-            decimal duracionAg = Convert.ToDecimal(TXT_Duracion.Text);
      
 
-            int result = cita.agregarCita(TXT_Cedula.Text, TXT_Padecimiento.Text, dateTimePicker1.Value.ToString("dd/MM/yyyy HH:mm"), precioAg, TXT_Descripcion.Text,
-             duracionAg, CB_Lugar.Text,TXT_Estado.Text);
+            int result = cita.agregarCita(TXT_Cedula.Text, CB_Padecimiento.Text, dateTimePicker1.Value.ToString("dd/MM/yyyy HH:mm"), precioAg, TXT_Descripcion.Text,
+             TXT_Duracion.Text, CB_Lugar.Text,TXT_Estado.Text);
             
             if (result == 0)
             {
                 MessageBox.Show("¡La cita ha sido agregada correctamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
                 TXT_Cedula.Clear();
-                TXT_Padecimiento.Clear();
                 TXT_Estado.Clear();
                 TXT_Precio.Clear();
                 TXT_Descripcion.Clear();
@@ -66,7 +80,7 @@ namespace BD_Grupo3_VS
 
         private void LINK_ConsultarCita_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ConsultarCitas consulta = new ConsultarCitas();
+            ConsultarCitas consulta = new ConsultarCitas("");
             consulta.Show();
             this.Hide();
         }
@@ -121,11 +135,11 @@ namespace BD_Grupo3_VS
 
         private void BTN_Lista_Click(object sender, EventArgs e)
         {
-            ConsultarCitas cc = new ConsultarCitas();
+            ConsultarCitas cc = new ConsultarCitas("");
             cc.Show();
             this.Hide();
         }
 
-        /*             Hasta aqui las instrucciones de la cinta del menu  */
+
     }
 }

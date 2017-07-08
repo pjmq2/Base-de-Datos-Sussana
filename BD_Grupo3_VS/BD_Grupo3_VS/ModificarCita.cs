@@ -25,7 +25,10 @@ namespace BD_Grupo3_VS
             CB_Lugar.Text = lugarC;
             TXT_Estado.Text = estadoC;
             dtp_Fecha.Text = fechaC;
-
+            TXT_CeduCambiar.Text = cedulaC;
+            TXT_PadeCambiar.Text = padecimientoC;
+            TXT_FechaCambiar.Text = fechaC;
+    
         }
 
 
@@ -35,11 +38,12 @@ namespace BD_Grupo3_VS
 
         private void BTN_Modificar_Click(object sender, EventArgs e)
         {
-            ConsultarCitas cc = new ConsultarCitas();
+         
+            ConsultarCitas cc = new ConsultarCitas("");
             int precio = Convert.ToInt32(TXT_Precio.Text);
-            decimal duracion = Convert.ToDecimal(TXT_Duracion.Text);
+
             int result = cita.modificarCita(TXT_Cedula.Text, TXT_Padecimiento.Text, dtp_Fecha.Value.ToString("dd/MM/yyyy HH:mm"),
-                precio, TXT_Descripcion.Text, duracion, CB_Lugar.Text, TXT_Estado.Text);
+                precio, TXT_Descripcion.Text, TXT_Duracion.Text, CB_Lugar.Text, TXT_Estado.Text,TXT_CeduCambiar.Text,TXT_PadeCambiar.Text,TXT_FechaCambiar.Text);
             if(result == 0)
             {
                 MessageBox.Show("¡La cita se ha modificado con éxito!", "Results", MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -54,7 +58,7 @@ namespace BD_Grupo3_VS
 
         private void ModificarCita_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         /*             A partir de aqui empiezan los metodos para la cinta del menu  */

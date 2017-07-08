@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.GB_AgregarCita = new System.Windows.Forms.GroupBox();
+            this.BTN_Lista = new System.Windows.Forms.Button();
             this.CB_Lugar = new System.Windows.Forms.ComboBox();
             this.BTN_Agregar = new System.Windows.Forms.Button();
             this.TXT_Estado = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@
             this.LBL_Precio = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.LBL_FechaHora = new System.Windows.Forms.Label();
-            this.TXT_Padecimiento = new System.Windows.Forms.TextBox();
             this.TXT_Cedula = new System.Windows.Forms.TextBox();
             this.LBL_Padecimiento = new System.Windows.Forms.Label();
             this.LBL_Cedula = new System.Windows.Forms.Label();
@@ -55,9 +55,7 @@
             this.crearPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.BTN_Lista = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.CB_Padecimiento = new System.Windows.Forms.ComboBox();
             this.GB_AgregarCita.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -75,8 +73,7 @@
             // 
             // GB_AgregarCita
             // 
-            this.GB_AgregarCita.Controls.Add(this.label3);
-            this.GB_AgregarCita.Controls.Add(this.label2);
+            this.GB_AgregarCita.Controls.Add(this.CB_Padecimiento);
             this.GB_AgregarCita.Controls.Add(this.BTN_Lista);
             this.GB_AgregarCita.Controls.Add(this.CB_Lugar);
             this.GB_AgregarCita.Controls.Add(this.BTN_Agregar);
@@ -91,7 +88,6 @@
             this.GB_AgregarCita.Controls.Add(this.LBL_Precio);
             this.GB_AgregarCita.Controls.Add(this.dateTimePicker1);
             this.GB_AgregarCita.Controls.Add(this.LBL_FechaHora);
-            this.GB_AgregarCita.Controls.Add(this.TXT_Padecimiento);
             this.GB_AgregarCita.Controls.Add(this.TXT_Cedula);
             this.GB_AgregarCita.Controls.Add(this.LBL_Padecimiento);
             this.GB_AgregarCita.Controls.Add(this.LBL_Cedula);
@@ -101,6 +97,19 @@
             this.GB_AgregarCita.TabIndex = 5;
             this.GB_AgregarCita.TabStop = false;
             this.GB_AgregarCita.Text = "Agregar una Cita";
+            // 
+            // BTN_Lista
+            // 
+            this.BTN_Lista.Image = global::BD_Grupo3_VS.Properties.Resources.Cita_Buscar;
+            this.BTN_Lista.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_Lista.Location = new System.Drawing.Point(617, 223);
+            this.BTN_Lista.Name = "BTN_Lista";
+            this.BTN_Lista.Size = new System.Drawing.Size(80, 92);
+            this.BTN_Lista.TabIndex = 18;
+            this.BTN_Lista.Text = "Lista de Citas";
+            this.BTN_Lista.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_Lista.UseVisualStyleBackColor = true;
+            this.BTN_Lista.Click += new System.EventHandler(this.BTN_Lista_Click);
             // 
             // CB_Lugar
             // 
@@ -112,7 +121,7 @@
             this.CB_Lugar.Name = "CB_Lugar";
             this.CB_Lugar.Size = new System.Drawing.Size(142, 21);
             this.CB_Lugar.TabIndex = 17;
-            this.CB_Lugar.SelectedIndexChanged += new System.EventHandler(this.CB_Lugar_SelectedIndexChanged);
+           
             // 
             // BTN_Agregar
             // 
@@ -121,6 +130,8 @@
             this.BTN_Agregar.Name = "BTN_Agregar";
             this.BTN_Agregar.Size = new System.Drawing.Size(80, 92);
             this.BTN_Agregar.TabIndex = 16;
+            this.BTN_Agregar.Text = "Agregar Cita";
+            this.BTN_Agregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Agregar.UseVisualStyleBackColor = true;
             this.BTN_Agregar.Click += new System.EventHandler(this.BTN_Agregar_Click);
             // 
@@ -216,14 +227,6 @@
             this.LBL_FechaHora.TabIndex = 4;
             this.LBL_FechaHora.Text = "Fecha y Hora:";
             // 
-            // TXT_Padecimiento
-            // 
-            this.TXT_Padecimiento.Location = new System.Drawing.Point(114, 109);
-            this.TXT_Padecimiento.Name = "TXT_Padecimiento";
-            this.TXT_Padecimiento.Size = new System.Drawing.Size(142, 20);
-            this.TXT_Padecimiento.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.TXT_Padecimiento, "Digite el padecimiento actual del paciente");
-            // 
             // TXT_Cedula
             // 
             this.TXT_Cedula.Location = new System.Drawing.Point(114, 48);
@@ -301,34 +304,14 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // BTN_Lista
+            // CB_Padecimiento
             // 
-            this.BTN_Lista.Image = global::BD_Grupo3_VS.Properties.Resources.Cita_Buscar;
-            this.BTN_Lista.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_Lista.Location = new System.Drawing.Point(617, 223);
-            this.BTN_Lista.Name = "BTN_Lista";
-            this.BTN_Lista.Size = new System.Drawing.Size(80, 92);
-            this.BTN_Lista.TabIndex = 18;
-            this.BTN_Lista.UseVisualStyleBackColor = true;
-            this.BTN_Lista.Click += new System.EventHandler(this.BTN_Lista_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(518, 318);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Agregar Cita";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(627, 318);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Lista de Citas";
+            this.CB_Padecimiento.FormattingEnabled = true;
+            this.CB_Padecimiento.Location = new System.Drawing.Point(114, 106);
+            this.CB_Padecimiento.Name = "CB_Padecimiento";
+            this.CB_Padecimiento.Size = new System.Drawing.Size(142, 21);
+            this.CB_Padecimiento.TabIndex = 19;
+            
             // 
             // AgregarCita
             // 
@@ -359,7 +342,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label LBL_FechaHora;
-        private System.Windows.Forms.TextBox TXT_Padecimiento;
         private System.Windows.Forms.TextBox TXT_Cedula;
         private System.Windows.Forms.Label LBL_Padecimiento;
         private System.Windows.Forms.TextBox TXT_Duracion;
@@ -380,7 +362,6 @@
         private System.Windows.Forms.ToolStripMenuItem avanzadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Button BTN_Lista;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox CB_Padecimiento;
     }
 }

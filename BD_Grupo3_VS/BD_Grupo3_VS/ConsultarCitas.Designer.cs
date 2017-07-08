@@ -120,6 +120,8 @@
             this.BTN_Buscar.Name = "BTN_Buscar";
             this.BTN_Buscar.Size = new System.Drawing.Size(89, 79);
             this.BTN_Buscar.TabIndex = 11;
+            this.BTN_Buscar.Text = "Buscar";
+            this.BTN_Buscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Buscar.UseVisualStyleBackColor = true;
             this.BTN_Buscar.Click += new System.EventHandler(this.BTN_Buscar_Click);
             // 
@@ -181,6 +183,8 @@
             this.BTN_Modificar.Name = "BTN_Modificar";
             this.BTN_Modificar.Size = new System.Drawing.Size(89, 79);
             this.BTN_Modificar.TabIndex = 24;
+            this.BTN_Modificar.Text = "Modificar";
+            this.BTN_Modificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Modificar.UseVisualStyleBackColor = true;
             this.BTN_Modificar.Click += new System.EventHandler(this.BTN_Modificar_Click);
             // 
@@ -191,6 +195,8 @@
             this.BTN_Eliminar.Name = "BTN_Eliminar";
             this.BTN_Eliminar.Size = new System.Drawing.Size(89, 79);
             this.BTN_Eliminar.TabIndex = 25;
+            this.BTN_Eliminar.Text = "Eliminar";
+            this.BTN_Eliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_Eliminar.UseVisualStyleBackColor = true;
             this.BTN_Eliminar.Click += new System.EventHandler(this.BTN_Eliminar_Click);
             // 

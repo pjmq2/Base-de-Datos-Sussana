@@ -55,6 +55,9 @@
             this.crearPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TXT_CeduCambiar = new System.Windows.Forms.TextBox();
+            this.TXT_PadeCambiar = new System.Windows.Forms.TextBox();
+            this.TXT_FechaCambiar = new System.Windows.Forms.TextBox();
             this.GB_Modificar.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +75,9 @@
             // 
             // GB_Modificar
             // 
+            this.GB_Modificar.Controls.Add(this.TXT_FechaCambiar);
+            this.GB_Modificar.Controls.Add(this.TXT_PadeCambiar);
+            this.GB_Modificar.Controls.Add(this.TXT_CeduCambiar);
             this.GB_Modificar.Controls.Add(this.BTN_Modificar);
             this.GB_Modificar.Controls.Add(this.TXT_Estado);
             this.GB_Modificar.Controls.Add(this.label7);
@@ -290,6 +296,30 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // TXT_CeduCambiar
+            // 
+            this.TXT_CeduCambiar.Location = new System.Drawing.Point(0, 360);
+            this.TXT_CeduCambiar.Name = "TXT_CeduCambiar";
+            this.TXT_CeduCambiar.Size = new System.Drawing.Size(10, 20);
+            this.TXT_CeduCambiar.TabIndex = 24;
+            this.TXT_CeduCambiar.Visible = false;
+            // 
+            // TXT_PadeCambiar
+            // 
+            this.TXT_PadeCambiar.Location = new System.Drawing.Point(0, 360);
+            this.TXT_PadeCambiar.Name = "TXT_PadeCambiar";
+            this.TXT_PadeCambiar.Size = new System.Drawing.Size(10, 20);
+            this.TXT_PadeCambiar.TabIndex = 25;
+            this.TXT_PadeCambiar.Visible = false;
+            // 
+            // TXT_FechaCambiar
+            // 
+            this.TXT_FechaCambiar.Location = new System.Drawing.Point(0, 360);
+            this.TXT_FechaCambiar.Name = "TXT_FechaCambiar";
+            this.TXT_FechaCambiar.Size = new System.Drawing.Size(10, 20);
+            this.TXT_FechaCambiar.TabIndex = 26;
+            this.TXT_FechaCambiar.Visible = false;
+            // 
             // ModificarCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,5 +368,8 @@
         private System.Windows.Forms.ToolStripMenuItem crearPacienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem avanzadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.TextBox TXT_FechaCambiar;
+        private System.Windows.Forms.TextBox TXT_PadeCambiar;
+        private System.Windows.Forms.TextBox TXT_CeduCambiar;
     }
 }

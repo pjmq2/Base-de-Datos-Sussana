@@ -21,7 +21,7 @@ namespace BD_Grupo3_VS
         }
 
         public int agregarCita(string cedula, string padecimiento, string fechaHora, int precio, string descripcion,
-            decimal duracion, string lugar, string estado)
+            string duracion, string lugar, string estado)
         {
             String insertar = "INSERT into CITA (CedPaciente,Padec_Act,Fecha,Precio,Descripcion,Duracion,Lugar,Estado_Paciente)" +
                 " VALUES(" +cedula+ ",'" +padecimiento+ "','" +fechaHora+ "','" + precio + "','" + descripcion + "','" + duracion + "','" + lugar + "','" + estado + "')";
@@ -71,11 +71,25 @@ namespace BD_Grupo3_VS
         }
 
         public int modificarCita(string cedula, string padecimiento, string fechaHora, int precio, string descripcion,
-            decimal duracion, string lugar, string estado)
+            string duracion, string lugar, string estado, string cedulaCambiar, string padecimientoCambiar, string fechaCambiar)
         {
             String modificar = "EXEC ModificarCita  @cedula = '" + cedula + "', @padecimiento = '" + padecimiento + "', @fecha = '" + fechaHora + "', @precio" +
-                " = '" + precio + "', @descripcion = '" + descripcion + "', @duracion = '" + duracion + "', @lugar = '" + lugar + "', @estado = '" + estado + "'";
+                " = '" + precio + "', @descripcion = '" + descripcion + "', @duracion = '" + duracion + "', @lugar = '" + lugar + "', @estado = '" + estado + "', @cedulaCambiar = '"+cedulaCambiar + "', @padecimientoCambiar = '"+padecimientoCambiar+"'," +
+                " @fechaCambiar = '" + fechaCambiar + "'";
             return bd.actualizarDatos(modificar);
+        }
+
+        public SqlDataReader obtieneTratamientos(string cedulaBusq)
+        {
+            SqlDataReader data = null;
+            try
+            {
+                data = bd.ejecutarConsulta("Select distinct Pad_Actual from PLAN_TRATAMIENTO where CedPaciente = " + cedulaBusq);
+            }catch(SqlException ex)
+            {
+
+            }
+            return data;
         }
     }
 }
