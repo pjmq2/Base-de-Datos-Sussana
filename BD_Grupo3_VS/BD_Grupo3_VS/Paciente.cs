@@ -17,6 +17,8 @@ namespace BD_Grupo3_VS
             bd = new AccesoBaseDatos();
         }
 
+
+
         public int modificarCedula(string cedula, string cedulaNuevo)
         {
             string modificacion = "update PACIENTE set Cedula = '" + cedulaNuevo + "' where Cedula = '" + cedula + "'";
@@ -68,6 +70,18 @@ namespace BD_Grupo3_VS
         public int modificarComentarios(string cedula, string comentariosNuevo)
         {
             string modificacion = "update PACIENTE set Comentarios = '" + comentariosNuevo + "' where Cedula = '" + cedula + "'";
+            return bd.actualizarDatos(modificacion);
+        }
+
+        public int modificarSexo(string cedula, string sexoNuevo)
+        {
+            string modificacion = "update PACIENTE set Sexo = '" + sexoNuevo + "' where Cedula = '" + cedula + "'";
+            return bd.actualizarDatos(modificacion);
+        }
+
+        public int modificarCirugia(string cedula, string cirugia, string cirugiaNuevo)
+        {
+            string modificacion = "update CIRUGIAS set Cirugia = '" + cirugiaNuevo + "' where CedPaciente = '" + cedula + "' AND Cirugia = '" + cirugia + "'";
             return bd.actualizarDatos(modificacion);
         }
 
@@ -218,8 +232,6 @@ namespace BD_Grupo3_VS
             return datos;
         }
 
-        //Con este método se pueden consultar los pacientes aplicando filtros de nombre, apellido o cedula
-        //Se obtiene solo el nombre, cédula, y apellidos
         public DataTable obtenerPacientes(string filtroNombre, string filtroGeneral)
         {
             DataTable tabla = null;
@@ -231,25 +243,40 @@ namespace BD_Grupo3_VS
                     tabla = bd.ejecutarConsultaTabla("Select	Cedula, NombreP, Apellido1, Apellido2	from	PACIENTE");
                 }
                 //Si el	filtro de nombre no	es nulo, se carga los pacientes con ese nombre en el filtro
-				else if (filtroNombre != null)
+                else if (filtroNombre != null)
                 {
-                    tabla = bd.ejecutarConsultaTabla("Select	Cedula, NombreP, Apellido1, Apellido2	from	PACIENTE	where   NombreP like '%" +	filtroNombre + "%'");	
+                    tabla = bd.ejecutarConsultaTabla("Select	Cedula, NombreP, Apellido1, Apellido2	from	PACIENTE	where   NombreP like '%" + filtroNombre + "%'");
 
-                 }
+                }
                 //Si	el	filtro	general	no	es	nulo, se cargan	los	pacientes que contengan ese filtro como parte del atributo)
                 else if (filtroGeneral != null)
                 {
-                    tabla = bd.ejecutarConsultaTabla("Select	Cedula, NombreP, Apellido1, Apellido2	from	PACIENTE	where   Apellido1   like    '%" +	filtroGeneral	+	"%'   OR Apellido2   like    '%" +	filtroGeneral	+	"%'   OR  Cedula  like    '%" +	filtroGeneral	+	"%'");	
+                    tabla = bd.ejecutarConsultaTabla("Select	Cedula, NombreP, Apellido1, Apellido2	from	PACIENTE	where   Apellido1   like    '%" + filtroGeneral + "%'   OR Apellido2   like    '%" + filtroGeneral + "%'   OR  Cedula  like    '%" + filtroGeneral + "%'");
 
                 }
                 //Si ninguno de	los	filtros	es	nulo carga los pacientes que coincidan con los dos filtros
-				else if (filtroGeneral != null && filtroNombre != null)
+                else if (filtroGeneral != null && filtroNombre != null)
                 {
-                    tabla = bd.ejecutarConsultaTabla("Select	Cedula, NombreP, Apellido1, Apellido2	from	PACIENTE	where   NombreP = '" +	filtroNombre	+	"' &&   Apellido1   like    '%" 
-                        +	filtroGeneral	+	"%'   OR  Apellido2   like    '%" +	filtroGeneral	+	"%'     OR  cedula  like    '%" +	filtroGeneral	+	"%'");	
+                    tabla = bd.ejecutarConsultaTabla("Select	Cedula, NombreP, Apellido1, Apellido2	from	PACIENTE	where   NombreP = '" + filtroNombre + "' &&   Apellido1   like    '%"
+                        + filtroGeneral + "%'   OR  Apellido2   like    '%" + filtroGeneral + "%'     OR  cedula  like    '%" + filtroGeneral + "%'");
 
                 }
 
+            }
+            catch (SqlException ex)
+            {
+
+            }
+            return tabla;
+        }
+
+        //Con este método se pueden consultar las cirugías pertenecientes a un paciente
+        public DataTable obtenerCirugias(string cedula)
+        {
+            DataTable tabla = null;
+            try
+            {              
+                tabla = bd.ejecutarConsultaTabla("Select	Cirugia from	CIRUGIAS    WHERE CedPaciente = '" + cedula + "'");                           
             }
             catch (SqlException ex)
             {
@@ -272,5 +299,12 @@ namespace BD_Grupo3_VS
             string nombre = "";
             return nombre;
         }
+
+        public int eliminarCirugia(string cedula, string nombre)
+        {
+            String eliminar = "delete from CIRUGIAS where CedPaciente = '" + cedula + "' AND Cirugia = '" + nombre + "'";
+            return bd.actualizarDatos(eliminar);
+
+        }       
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LBL_Paciente = new System.Windows.Forms.Label();
             this.BG_Paciente = new System.Windows.Forms.GroupBox();
             this.TabPaciente = new System.Windows.Forms.TabControl();
@@ -57,7 +58,6 @@
             this.TP_DatoClinicos = new System.Windows.Forms.TabPage();
             this.LBL_DC = new System.Windows.Forms.Label();
             this.TP_Cirugias = new System.Windows.Forms.TabPage();
-            this.DGV_Cirugias = new System.Windows.Forms.DataGridView();
             this.TP_Ante = new System.Windows.Forms.TabPage();
             this.LBL_Antecedentes = new System.Windows.Forms.Label();
             this.DGV_Ante = new System.Windows.Forms.DataGridView();
@@ -73,14 +73,24 @@
             this.BTN_CrearPlanTratamiento = new System.Windows.Forms.Button();
             this.BTN_CitaBuscar = new System.Windows.Forms.Button();
             this.BTN_CitaNueva = new System.Windows.Forms.Button();
+            this.DGV_Cirugias = new System.Windows.Forms.DataGridView();
+            this.LBL_CirugiaSeleccionada = new System.Windows.Forms.Label();
+            this.BTN_EliminarCirugia = new System.Windows.Forms.Button();
+            this.BTN_ModificarCirugia = new System.Windows.Forms.Button();
+            this.LBL_CirugiaRealizada = new System.Windows.Forms.Label();
+            this.LBL_NuevaCirugia = new System.Windows.Forms.Label();
+            this.TXT_NuevaCirugia = new System.Windows.Forms.TextBox();
+            this.BTN_AgregarCirugia = new System.Windows.Forms.Button();
+            this.TXT_CirugiaSeleccionada = new System.Windows.Forms.TextBox();
+            this.LBL_CirugiaClick = new System.Windows.Forms.Label();
             this.TabPaciente.SuspendLayout();
             this.TP_InfoBasica.SuspendLayout();
             this.TP_DatoClinicos.SuspendLayout();
             this.TP_Cirugias.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Cirugias)).BeginInit();
             this.TP_Ante.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Ante)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Cirugias)).BeginInit();
             this.SuspendLayout();
             // 
             // LBL_Paciente
@@ -387,6 +397,15 @@
             // 
             // TP_Cirugias
             // 
+            this.TP_Cirugias.Controls.Add(this.LBL_CirugiaClick);
+            this.TP_Cirugias.Controls.Add(this.TXT_CirugiaSeleccionada);
+            this.TP_Cirugias.Controls.Add(this.BTN_AgregarCirugia);
+            this.TP_Cirugias.Controls.Add(this.TXT_NuevaCirugia);
+            this.TP_Cirugias.Controls.Add(this.LBL_NuevaCirugia);
+            this.TP_Cirugias.Controls.Add(this.LBL_CirugiaRealizada);
+            this.TP_Cirugias.Controls.Add(this.BTN_ModificarCirugia);
+            this.TP_Cirugias.Controls.Add(this.BTN_EliminarCirugia);
+            this.TP_Cirugias.Controls.Add(this.LBL_CirugiaSeleccionada);
             this.TP_Cirugias.Controls.Add(this.DGV_Cirugias);
             this.TP_Cirugias.Location = new System.Drawing.Point(4, 22);
             this.TP_Cirugias.Name = "TP_Cirugias";
@@ -395,14 +414,6 @@
             this.TP_Cirugias.TabIndex = 3;
             this.TP_Cirugias.Text = "Cirugías";
             this.TP_Cirugias.UseVisualStyleBackColor = true;
-            // 
-            // DGV_Cirugias
-            // 
-            this.DGV_Cirugias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Cirugias.Location = new System.Drawing.Point(45, 63);
-            this.DGV_Cirugias.Name = "DGV_Cirugias";
-            this.DGV_Cirugias.Size = new System.Drawing.Size(426, 254);
-            this.DGV_Cirugias.TabIndex = 0;
             // 
             // TP_Ante
             // 
@@ -566,6 +577,114 @@
             this.BTN_CitaNueva.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BTN_CitaNueva.UseVisualStyleBackColor = true;
             // 
+            // DGV_Cirugias
+            // 
+            this.DGV_Cirugias.AllowUserToAddRows = false;
+            this.DGV_Cirugias.AllowUserToDeleteRows = false;
+            this.DGV_Cirugias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
+            this.DGV_Cirugias.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.DGV_Cirugias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Cirugias.DefaultCellStyle = dataGridViewCellStyle1;
+            this.DGV_Cirugias.Location = new System.Drawing.Point(30, 41);
+            this.DGV_Cirugias.MultiSelect = false;
+            this.DGV_Cirugias.Name = "DGV_Cirugias";
+            this.DGV_Cirugias.ReadOnly = true;
+            this.DGV_Cirugias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Cirugias.Size = new System.Drawing.Size(358, 101);
+            this.DGV_Cirugias.TabIndex = 17;
+            this.DGV_Cirugias.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Cirugias_CellContentDoubleClick);
+            // 
+            // LBL_CirugiaSeleccionada
+            // 
+            this.LBL_CirugiaSeleccionada.AutoSize = true;
+            this.LBL_CirugiaSeleccionada.Location = new System.Drawing.Point(27, 194);
+            this.LBL_CirugiaSeleccionada.Name = "LBL_CirugiaSeleccionada";
+            this.LBL_CirugiaSeleccionada.Size = new System.Drawing.Size(110, 13);
+            this.LBL_CirugiaSeleccionada.TabIndex = 29;
+            this.LBL_CirugiaSeleccionada.Text = "Cirugía seleccionada:";
+            // 
+            // BTN_EliminarCirugia
+            // 
+            this.BTN_EliminarCirugia.Location = new System.Drawing.Point(154, 248);
+            this.BTN_EliminarCirugia.Name = "BTN_EliminarCirugia";
+            this.BTN_EliminarCirugia.Size = new System.Drawing.Size(93, 30);
+            this.BTN_EliminarCirugia.TabIndex = 31;
+            this.BTN_EliminarCirugia.Text = "Eliminar";
+            this.BTN_EliminarCirugia.UseVisualStyleBackColor = true;
+            this.BTN_EliminarCirugia.Click += new System.EventHandler(this.BTN_EliminarCirugia_Click);
+            // 
+            // BTN_ModificarCirugia
+            // 
+            this.BTN_ModificarCirugia.Location = new System.Drawing.Point(30, 248);
+            this.BTN_ModificarCirugia.Name = "BTN_ModificarCirugia";
+            this.BTN_ModificarCirugia.Size = new System.Drawing.Size(93, 30);
+            this.BTN_ModificarCirugia.TabIndex = 32;
+            this.BTN_ModificarCirugia.Text = "Modificar";
+            this.BTN_ModificarCirugia.UseVisualStyleBackColor = true;
+            this.BTN_ModificarCirugia.Click += new System.EventHandler(this.BTN_ModificarCirugia_Click);
+            // 
+            // LBL_CirugiaRealizada
+            // 
+            this.LBL_CirugiaRealizada.AutoSize = true;
+            this.LBL_CirugiaRealizada.Location = new System.Drawing.Point(27, 15);
+            this.LBL_CirugiaRealizada.Name = "LBL_CirugiaRealizada";
+            this.LBL_CirugiaRealizada.Size = new System.Drawing.Size(199, 13);
+            this.LBL_CirugiaRealizada.TabIndex = 33;
+            this.LBL_CirugiaRealizada.Text = "Cirugías que se ha realizado el paciente:";
+            // 
+            // LBL_NuevaCirugia
+            // 
+            this.LBL_NuevaCirugia.AutoSize = true;
+            this.LBL_NuevaCirugia.Location = new System.Drawing.Point(27, 307);
+            this.LBL_NuevaCirugia.Name = "LBL_NuevaCirugia";
+            this.LBL_NuevaCirugia.Size = new System.Drawing.Size(78, 13);
+            this.LBL_NuevaCirugia.TabIndex = 34;
+            this.LBL_NuevaCirugia.Text = "Nueva cirugía:";
+            // 
+            // TXT_NuevaCirugia
+            // 
+            this.TXT_NuevaCirugia.Location = new System.Drawing.Point(154, 298);
+            this.TXT_NuevaCirugia.Margin = new System.Windows.Forms.Padding(2);
+            this.TXT_NuevaCirugia.Multiline = true;
+            this.TXT_NuevaCirugia.Name = "TXT_NuevaCirugia";
+            this.TXT_NuevaCirugia.Size = new System.Drawing.Size(211, 39);
+            this.TXT_NuevaCirugia.TabIndex = 35;
+            // 
+            // BTN_AgregarCirugia
+            // 
+            this.BTN_AgregarCirugia.Location = new System.Drawing.Point(407, 298);
+            this.BTN_AgregarCirugia.Name = "BTN_AgregarCirugia";
+            this.BTN_AgregarCirugia.Size = new System.Drawing.Size(93, 30);
+            this.BTN_AgregarCirugia.TabIndex = 37;
+            this.BTN_AgregarCirugia.Text = "Agregar";
+            this.BTN_AgregarCirugia.UseVisualStyleBackColor = true;
+            this.BTN_AgregarCirugia.Click += new System.EventHandler(this.BTN_AgregarCirugia_Click);
+            // 
+            // TXT_CirugiaSeleccionada
+            // 
+            this.TXT_CirugiaSeleccionada.Location = new System.Drawing.Point(154, 191);
+            this.TXT_CirugiaSeleccionada.Multiline = true;
+            this.TXT_CirugiaSeleccionada.Name = "TXT_CirugiaSeleccionada";
+            this.TXT_CirugiaSeleccionada.Size = new System.Drawing.Size(123, 40);
+            this.TXT_CirugiaSeleccionada.TabIndex = 38;
+            this.TXT_CirugiaSeleccionada.TextChanged += new System.EventHandler(this.TXT_CirugiaSeleccionada_TextChanged);
+            // 
+            // LBL_CirugiaClick
+            // 
+            this.LBL_CirugiaClick.AutoSize = true;
+            this.LBL_CirugiaClick.Location = new System.Drawing.Point(27, 158);
+            this.LBL_CirugiaClick.Name = "LBL_CirugiaClick";
+            this.LBL_CirugiaClick.Size = new System.Drawing.Size(248, 13);
+            this.LBL_CirugiaClick.TabIndex = 39;
+            this.LBL_CirugiaClick.Text = "Haga doble click en una cirugía para seleccionarla";
+            // 
             // VerPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -591,12 +710,13 @@
             this.TP_DatoClinicos.ResumeLayout(false);
             this.TP_DatoClinicos.PerformLayout();
             this.TP_Cirugias.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Cirugias)).EndInit();
+            this.TP_Cirugias.PerformLayout();
             this.TP_Ante.ResumeLayout(false);
             this.TP_Ante.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Ante)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Cirugias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -646,8 +766,17 @@
         private System.Windows.Forms.TabPage TP_Cirugias;
         private System.Windows.Forms.Label LBL_DC;
         private System.Windows.Forms.TabPage TP_Ante;
-        private System.Windows.Forms.DataGridView DGV_Cirugias;
         private System.Windows.Forms.DataGridView DGV_Ante;
         private System.Windows.Forms.Label LBL_Antecedentes;
+        private System.Windows.Forms.Label LBL_CirugiaSeleccionada;
+        private System.Windows.Forms.DataGridView DGV_Cirugias;
+        private System.Windows.Forms.Label LBL_CirugiaRealizada;
+        private System.Windows.Forms.Button BTN_ModificarCirugia;
+        private System.Windows.Forms.Button BTN_EliminarCirugia;
+        private System.Windows.Forms.TextBox TXT_NuevaCirugia;
+        private System.Windows.Forms.Label LBL_NuevaCirugia;
+        private System.Windows.Forms.Button BTN_AgregarCirugia;
+        private System.Windows.Forms.TextBox TXT_CirugiaSeleccionada;
+        private System.Windows.Forms.Label LBL_CirugiaClick;
     }
 }
