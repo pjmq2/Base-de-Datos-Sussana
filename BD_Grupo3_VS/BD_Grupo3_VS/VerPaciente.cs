@@ -32,6 +32,7 @@ namespace BD_Grupo3_VS
         string apellido2;
         string cedula;
         byte[] archivo;
+        List<string> archivosTemp;
 
         public VerPaciente(string cedulaNueva, string nombreNuevo, string apellido1Nuevo, string apellido2Nuevo)
         {
@@ -46,6 +47,7 @@ namespace BD_Grupo3_VS
             TXT_Apellido2.Text = apellido2;
             TXT_Cedula.Text = cedula;
             datosClinicos = new DatosClinicos(cedula);
+            archivosTemp = new List<string>();
         }
 
         private void VerPaciente_Load(object sender, EventArgs e)
@@ -81,12 +83,10 @@ namespace BD_Grupo3_VS
 
         }
 
-
         private void Inicio()
         {
 
         }
-
 
         private void BTN_Eliminar_Click(object sender, EventArgs e)
         {
@@ -365,25 +365,38 @@ namespace BD_Grupo3_VS
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BTN_DescargarDatoClinico_Click(object sender, EventArgs e)
         {
             byte[] archivoDescargar;
+            bool archivoGuardado = false;
             if (CB_DatoClinico.Text != "")
             {
+                //string sFilePath = System.IO.Path.GetTempFileName();
+                string folderPath = "";
+                string nombreArchivo = "Dato Clinico-"+cedula+"-"+nombre+"-"+apellido1+"-"+CB_DatoClinico.Text;
+                FolderBrowserDialog directchoosedlg = new FolderBrowserDialog();
+                if (directchoosedlg.ShowDialog() == DialogResult.OK)
+                {
+                    folderPath = directchoosedlg.SelectedPath;
+                }
+
                 MessageBox.Show("Empieza descarga");
                 archivoDescargar = datosClinicos.obtenerArchivo(CB_DatoClinico.Text);
-                SaveFileDialog saveFile = new SaveFileDialog();
-                if (saveFile.ShowDialog() == DialogResult.OK)
-                {
-                    Stream s = File.Open(saveFile.FileName, FileMode.CreateNew);
-                    StreamWriter sw = new StreamWriter(s);
-                    sw.Write(archivoDescargar);
-                    MessageBox.Show("El archivo se guardo Correctamente", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display message to force select a image 
-                }
+                folderPath = folderPath + "\\" +nombreArchivo;
+                folderPath = System.IO.Path.ChangeExtension(folderPath, ".pdf");
+                System.IO.File.WriteAllBytes(folderPath, archivoDescargar);
+                MessageBox.Show("El archivo se guardo Correctamente \n "+folderPath, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display message to force select a image 
+                archivoGuardado = true;
             }
             else
             {
                 MessageBox.Show("Favor seleccionar un valor correcto para Datos!!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display message to force select a image 
+            }
+            if (archivoGuardado)
+            {
+                VerPaciente paciente = new VerPaciente(cedula, nombre,apellido1,apellido2);
+                paciente.Show();
+                this.Close();
             }
         }
 
@@ -531,13 +544,60 @@ namespace BD_Grupo3_VS
             }           
         }
 
-
         private void DGV_Cirugias_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
             DataGridViewRow row = DGV_Cirugias.CurrentRow;
             string cirugia = row.Cells[0].Value.ToString();
             TXT_CirugiaSeleccionada.Text = cirugia;            
+        }
+
+        private void BTN_EliminarDatoClinico_Click(object sender, EventArgs e)
+        {
+            if (CB_DatoClinico.Text!="")
+            {
+                int result = datosClinicos.eliminarDato(cedula, CB_DatoClinico.Text);
+                if (result==0)
+                {
+                    MessageBox.Show("El Dato Clinico se ha borrado efectivamente");
+                    VerPaciente vp = new VerPaciente(TXT_Cedula.Text, TXT_Nombre.Text, TXT_Apellido1.Text, TXT_Apellido2.Text);
+                    vp.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error al borrar el Dato");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Favor seleccionar el Dato Clinico a borrar");
+            }
+        }
+
+        private void BTN_AbrirDatoClinico_Click(object sender, EventArgs e)
+        {
+            byte[] archivoDescargar;
+            string sFilePath="";
+            if (CB_DatoClinico.Text != "")
+            {
+                archivoDescargar = datosClinicos.obtenerArchivo(CB_DatoClinico.Text);
+                sFilePath = System.IO.Path.GetTempFileName();
+                System.IO.File.Move(sFilePath, System.IO.Path.ChangeExtension(sFilePath, ".pdf"));
+                sFilePath = System.IO.Path.ChangeExtension(sFilePath, ".pdf");
+                System.IO.File.WriteAllBytes(sFilePath, archivoDescargar);
+                System.Diagnostics.Process.Start(sFilePath);
+                archivosTemp.Add(sFilePath);
+            }
+        }
+
+        private void VerPaciente_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            string porBorrar = "";
+            archivosTemp.ForEach(delegate(string s){
+                System.IO.File.Delete(s);
+            });
+            
         }
     }
 }

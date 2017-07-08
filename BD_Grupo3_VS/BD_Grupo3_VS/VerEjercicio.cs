@@ -69,7 +69,7 @@ namespace BD_Grupo3_VS
         private void BTN_EliminarMaterial_Click(object sender, EventArgs e)
         {
             int result = ejercicio.eliminarejercicio(nombre);
-            MessageBox.Show("¡El ejercicio ha sido agregado exitosamente! ", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
+            MessageBox.Show("¡El ejercicio ha sido eliminado exitosamente! ", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
             MenuPrincipal menu = new MenuPrincipal();
             menu.Show();
             this.Hide();
