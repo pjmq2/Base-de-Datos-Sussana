@@ -20,6 +20,7 @@ namespace BD_Grupo3_VS
             bd = new AccesoBaseDatos();
         }
 
+
         /*Método para agregar un nuevo ejercicio a la base de datos
             Recibe: Los datos del nuevo ejercicio
             Modifica: inserta en la base de datos el nuevo ejercicio
@@ -130,5 +131,6 @@ namespace BD_Grupo3_VS
             string modificacion = "update Ejercicio set nombre = '" + nombreNuevo + "' where nombre = '" + nombre + "'";
             return bd.actualizarDatos(modificacion);
         }
+
     }
 }

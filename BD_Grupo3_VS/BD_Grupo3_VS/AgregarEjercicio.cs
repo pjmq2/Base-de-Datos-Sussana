@@ -55,6 +55,7 @@ namespace BD_Grupo3_VS
         
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
+            bool cambioHecho = false;
             if (!nombreModificado)
             {
                 MessageBox.Show("Favor ponerle nombre al Ejercicio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -69,12 +70,7 @@ namespace BD_Grupo3_VS
                 if (result == 0)
                 {
                     MessageBox.Show("¡El ejercicio ha sido agregada correctamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
-                    txt_nombre.Clear();
-                    TXT_Descripcion.Clear();
-                    if (pictureBox1.Image!=null)
-                    {
-                        pictureBox1.Image.Dispose();
-                    }
+                    cambioHecho = true;
                     img = null;
                 }
                 else
@@ -89,6 +85,12 @@ namespace BD_Grupo3_VS
                         MessageBox.Show("Ha ocurrido un error al intentar agregar el ejercicio \n \n error: " + result, "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+            }
+            if (cambioHecho)
+            {
+                MenuConfig menu = new MenuConfig();
+                menu.Show();
+                this.Hide();
             }
         }
 

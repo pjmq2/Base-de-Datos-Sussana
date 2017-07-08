@@ -40,8 +40,10 @@ namespace BD_Grupo3_VS
             }
             for (int i = 0; i < DGV_Ejercicios.RowCount; i++)
             {
-                dataGridView.Rows[i].Height= 65;
+                DataGridViewRow row = dataGridView.Rows[i];
+                row.Height = 65;
             }
+            ((DataGridViewImageColumn)dataGridView.Columns[2]).ImageLayout = DataGridViewImageCellLayout.Stretch;
         }
 
         private void llenarCombobox()

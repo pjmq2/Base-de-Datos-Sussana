@@ -68,6 +68,8 @@ namespace BD_Grupo3_VS
             dato.Read();
             DTP_FechaNac.Value = dato.GetDateTime(0);
 
+            LBL_NombreCambiante.Text = "Nombre del Paciente: "+nombre +" "+ apellido1 + " " + apellido2;
+
         }
 
 

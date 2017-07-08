@@ -55,7 +55,9 @@
             this.TXT_Nombre = new System.Windows.Forms.TextBox();
             this.LBL_Nombre = new System.Windows.Forms.Label();
             this.TP_DatoClinicos = new System.Windows.Forms.TabPage();
-            this.LBL_DC = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CB_DatoClinico = new System.Windows.Forms.ComboBox();
+            this.LBL_NombreCambiante = new System.Windows.Forms.Label();
             this.TP_Cirugias = new System.Windows.Forms.TabPage();
             this.DGV_Cirugias = new System.Windows.Forms.DataGridView();
             this.TP_Ante = new System.Windows.Forms.TabPage();
@@ -73,6 +75,7 @@
             this.BTN_CrearPlanTratamiento = new System.Windows.Forms.Button();
             this.BTN_CitaBuscar = new System.Windows.Forms.Button();
             this.BTN_CitaNueva = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.TabPaciente.SuspendLayout();
             this.TP_InfoBasica.SuspendLayout();
             this.TP_DatoClinicos.SuspendLayout();
@@ -88,20 +91,19 @@
             this.LBL_Paciente.AutoSize = true;
             this.LBL_Paciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Paciente.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.LBL_Paciente.Location = new System.Drawing.Point(210, 28);
-            this.LBL_Paciente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBL_Paciente.Location = new System.Drawing.Point(280, 34);
             this.LBL_Paciente.Name = "LBL_Paciente";
-            this.LBL_Paciente.Size = new System.Drawing.Size(120, 31);
+            this.LBL_Paciente.Size = new System.Drawing.Size(150, 39);
             this.LBL_Paciente.TabIndex = 7;
             this.LBL_Paciente.Text = "Paciente";
             // 
             // BG_Paciente
             // 
-            this.BG_Paciente.Location = new System.Drawing.Point(6, 58);
-            this.BG_Paciente.Margin = new System.Windows.Forms.Padding(2);
+            this.BG_Paciente.Location = new System.Drawing.Point(8, 71);
+            this.BG_Paciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BG_Paciente.Name = "BG_Paciente";
-            this.BG_Paciente.Padding = new System.Windows.Forms.Padding(2);
-            this.BG_Paciente.Size = new System.Drawing.Size(538, 391);
+            this.BG_Paciente.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BG_Paciente.Size = new System.Drawing.Size(717, 481);
             this.BG_Paciente.TabIndex = 8;
             this.BG_Paciente.TabStop = false;
             // 
@@ -111,11 +113,11 @@
             this.TabPaciente.Controls.Add(this.TP_DatoClinicos);
             this.TabPaciente.Controls.Add(this.TP_Cirugias);
             this.TabPaciente.Controls.Add(this.TP_Ante);
-            this.TabPaciente.Location = new System.Drawing.Point(8, 63);
-            this.TabPaciente.Margin = new System.Windows.Forms.Padding(2);
+            this.TabPaciente.Location = new System.Drawing.Point(11, 78);
+            this.TabPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TabPaciente.Name = "TabPaciente";
             this.TabPaciente.SelectedIndex = 0;
-            this.TabPaciente.Size = new System.Drawing.Size(536, 382);
+            this.TabPaciente.Size = new System.Drawing.Size(715, 470);
             this.TabPaciente.TabIndex = 7;
             // 
             // TP_InfoBasica
@@ -142,20 +144,21 @@
             this.TP_InfoBasica.Controls.Add(this.LBL_Apellido1);
             this.TP_InfoBasica.Controls.Add(this.TXT_Nombre);
             this.TP_InfoBasica.Controls.Add(this.LBL_Nombre);
-            this.TP_InfoBasica.Location = new System.Drawing.Point(4, 22);
-            this.TP_InfoBasica.Margin = new System.Windows.Forms.Padding(2);
+            this.TP_InfoBasica.Location = new System.Drawing.Point(4, 25);
+            this.TP_InfoBasica.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TP_InfoBasica.Name = "TP_InfoBasica";
-            this.TP_InfoBasica.Padding = new System.Windows.Forms.Padding(2);
-            this.TP_InfoBasica.Size = new System.Drawing.Size(528, 356);
+            this.TP_InfoBasica.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TP_InfoBasica.Size = new System.Drawing.Size(707, 441);
             this.TP_InfoBasica.TabIndex = 1;
             this.TP_InfoBasica.Text = "Información Basica";
             this.TP_InfoBasica.UseVisualStyleBackColor = true;
             // 
             // BTN_Eliminar
             // 
-            this.BTN_Eliminar.Location = new System.Drawing.Point(168, 285);
+            this.BTN_Eliminar.Location = new System.Drawing.Point(224, 351);
+            this.BTN_Eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Eliminar.Name = "BTN_Eliminar";
-            this.BTN_Eliminar.Size = new System.Drawing.Size(79, 37);
+            this.BTN_Eliminar.Size = new System.Drawing.Size(105, 46);
             this.BTN_Eliminar.TabIndex = 29;
             this.BTN_Eliminar.Text = "Eliminar";
             this.BTN_Eliminar.UseVisualStyleBackColor = true;
@@ -163,9 +166,10 @@
             // 
             // BTN_Modificar
             // 
-            this.BTN_Modificar.Location = new System.Drawing.Point(21, 285);
+            this.BTN_Modificar.Location = new System.Drawing.Point(28, 351);
+            this.BTN_Modificar.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Modificar.Name = "BTN_Modificar";
-            this.BTN_Modificar.Size = new System.Drawing.Size(86, 37);
+            this.BTN_Modificar.Size = new System.Drawing.Size(115, 46);
             this.BTN_Modificar.TabIndex = 28;
             this.BTN_Modificar.Text = "Modificar";
             this.BTN_Modificar.UseVisualStyleBackColor = true;
@@ -173,79 +177,75 @@
             // 
             // TXT_Comentarios
             // 
-            this.TXT_Comentarios.Location = new System.Drawing.Point(344, 185);
-            this.TXT_Comentarios.Margin = new System.Windows.Forms.Padding(2);
+            this.TXT_Comentarios.Location = new System.Drawing.Point(459, 228);
+            this.TXT_Comentarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TXT_Comentarios.Multiline = true;
             this.TXT_Comentarios.Name = "TXT_Comentarios";
-            this.TXT_Comentarios.Size = new System.Drawing.Size(170, 95);
+            this.TXT_Comentarios.Size = new System.Drawing.Size(225, 116);
             this.TXT_Comentarios.TabIndex = 27;
             this.TXT_Comentarios.TextChanged += new System.EventHandler(this.TXT_Comentarios_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(265, 188);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(353, 231);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.Size = new System.Drawing.Size(91, 17);
             this.label2.TabIndex = 26;
             this.label2.Text = "Comentarios:";
             // 
             // TXT_Valoracion
             // 
-            this.TXT_Valoracion.Location = new System.Drawing.Point(344, 53);
-            this.TXT_Valoracion.Margin = new System.Windows.Forms.Padding(2);
+            this.TXT_Valoracion.Location = new System.Drawing.Point(459, 65);
+            this.TXT_Valoracion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TXT_Valoracion.Multiline = true;
             this.TXT_Valoracion.Name = "TXT_Valoracion";
-            this.TXT_Valoracion.Size = new System.Drawing.Size(170, 111);
+            this.TXT_Valoracion.Size = new System.Drawing.Size(225, 136);
             this.TXT_Valoracion.TabIndex = 25;
             this.TXT_Valoracion.TextChanged += new System.EventHandler(this.TXT_Valoracion_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(265, 56);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(353, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.Size = new System.Drawing.Size(79, 17);
             this.label1.TabIndex = 24;
             this.label1.Text = "Valoración:";
             // 
             // TXT_Sexo
             // 
-            this.TXT_Sexo.Location = new System.Drawing.Point(77, 156);
-            this.TXT_Sexo.Margin = new System.Windows.Forms.Padding(2);
+            this.TXT_Sexo.Location = new System.Drawing.Point(103, 192);
+            this.TXT_Sexo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TXT_Sexo.Name = "TXT_Sexo";
-            this.TXT_Sexo.Size = new System.Drawing.Size(30, 20);
+            this.TXT_Sexo.Size = new System.Drawing.Size(39, 22);
             this.TXT_Sexo.TabIndex = 23;
             this.TXT_Sexo.TextChanged += new System.EventHandler(this.TXT_Sexo_TextChanged);
             // 
             // LBL_Sexo
             // 
             this.LBL_Sexo.AutoSize = true;
-            this.LBL_Sexo.Location = new System.Drawing.Point(18, 163);
-            this.LBL_Sexo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBL_Sexo.Location = new System.Drawing.Point(24, 201);
             this.LBL_Sexo.Name = "LBL_Sexo";
-            this.LBL_Sexo.Size = new System.Drawing.Size(34, 13);
+            this.LBL_Sexo.Size = new System.Drawing.Size(43, 17);
             this.LBL_Sexo.TabIndex = 22;
             this.LBL_Sexo.Text = "Sexo:";
             // 
             // TXT_Email
             // 
-            this.TXT_Email.Location = new System.Drawing.Point(77, 226);
-            this.TXT_Email.Margin = new System.Windows.Forms.Padding(2);
+            this.TXT_Email.Location = new System.Drawing.Point(103, 278);
+            this.TXT_Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TXT_Email.Name = "TXT_Email";
-            this.TXT_Email.Size = new System.Drawing.Size(170, 20);
+            this.TXT_Email.Size = new System.Drawing.Size(225, 22);
             this.TXT_Email.TabIndex = 21;
             this.TXT_Email.TextChanged += new System.EventHandler(this.TXT_Email_TextChanged);
             // 
             // LBL_Email
             // 
             this.LBL_Email.AutoSize = true;
-            this.LBL_Email.Location = new System.Drawing.Point(18, 229);
-            this.LBL_Email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBL_Email.Location = new System.Drawing.Point(24, 282);
             this.LBL_Email.Name = "LBL_Email";
-            this.LBL_Email.Size = new System.Drawing.Size(35, 13);
+            this.LBL_Email.Size = new System.Drawing.Size(46, 17);
             this.LBL_Email.TabIndex = 20;
             this.LBL_Email.Text = "Email:";
             // 
@@ -253,145 +253,161 @@
             // 
             this.DTP_FechaNac.CustomFormat = "";
             this.DTP_FechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DTP_FechaNac.Location = new System.Drawing.Point(363, 18);
-            this.DTP_FechaNac.Margin = new System.Windows.Forms.Padding(2);
+            this.DTP_FechaNac.Location = new System.Drawing.Point(484, 22);
+            this.DTP_FechaNac.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DTP_FechaNac.Name = "DTP_FechaNac";
-            this.DTP_FechaNac.Size = new System.Drawing.Size(151, 20);
+            this.DTP_FechaNac.Size = new System.Drawing.Size(200, 22);
             this.DTP_FechaNac.TabIndex = 19;
             this.DTP_FechaNac.ValueChanged += new System.EventHandler(this.DTP_FechaNac_ValueChanged);
             // 
             // LBL_FechaNacimiento
             // 
             this.LBL_FechaNacimiento.AutoSize = true;
-            this.LBL_FechaNacimiento.Location = new System.Drawing.Point(265, 20);
-            this.LBL_FechaNacimiento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBL_FechaNacimiento.Location = new System.Drawing.Point(353, 25);
             this.LBL_FechaNacimiento.Name = "LBL_FechaNacimiento";
-            this.LBL_FechaNacimiento.Size = new System.Drawing.Size(96, 13);
+            this.LBL_FechaNacimiento.Size = new System.Drawing.Size(125, 17);
             this.LBL_FechaNacimiento.TabIndex = 18;
             this.LBL_FechaNacimiento.Text = "Fecha Nacimiento:";
             // 
             // TXT_Telefono
             // 
-            this.TXT_Telefono.Location = new System.Drawing.Point(77, 185);
-            this.TXT_Telefono.Margin = new System.Windows.Forms.Padding(2);
+            this.TXT_Telefono.Location = new System.Drawing.Point(103, 228);
+            this.TXT_Telefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TXT_Telefono.Name = "TXT_Telefono";
-            this.TXT_Telefono.Size = new System.Drawing.Size(170, 20);
+            this.TXT_Telefono.Size = new System.Drawing.Size(225, 22);
             this.TXT_Telefono.TabIndex = 17;
             this.TXT_Telefono.TextChanged += new System.EventHandler(this.TXT_Telefono_TextChanged);
             // 
             // LBL_Telefono
             // 
             this.LBL_Telefono.AutoSize = true;
-            this.LBL_Telefono.Location = new System.Drawing.Point(18, 188);
-            this.LBL_Telefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBL_Telefono.Location = new System.Drawing.Point(24, 231);
             this.LBL_Telefono.Name = "LBL_Telefono";
-            this.LBL_Telefono.Size = new System.Drawing.Size(52, 13);
+            this.LBL_Telefono.Size = new System.Drawing.Size(68, 17);
             this.LBL_Telefono.TabIndex = 16;
             this.LBL_Telefono.Text = "Telefono:";
             // 
             // TXT_Cedula
             // 
-            this.TXT_Cedula.Location = new System.Drawing.Point(77, 123);
-            this.TXT_Cedula.Margin = new System.Windows.Forms.Padding(2);
+            this.TXT_Cedula.Location = new System.Drawing.Point(103, 151);
+            this.TXT_Cedula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TXT_Cedula.Name = "TXT_Cedula";
-            this.TXT_Cedula.Size = new System.Drawing.Size(170, 20);
+            this.TXT_Cedula.Size = new System.Drawing.Size(225, 22);
             this.TXT_Cedula.TabIndex = 15;
             this.TXT_Cedula.TextChanged += new System.EventHandler(this.TXT_Cedula_TextChanged);
             // 
             // LBL_Cedula
             // 
             this.LBL_Cedula.AutoSize = true;
-            this.LBL_Cedula.Location = new System.Drawing.Point(18, 130);
-            this.LBL_Cedula.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBL_Cedula.Location = new System.Drawing.Point(24, 160);
             this.LBL_Cedula.Name = "LBL_Cedula";
-            this.LBL_Cedula.Size = new System.Drawing.Size(43, 13);
+            this.LBL_Cedula.Size = new System.Drawing.Size(56, 17);
             this.LBL_Cedula.TabIndex = 14;
             this.LBL_Cedula.Text = "Cedula:";
             // 
             // TXT_Apellido2
             // 
-            this.TXT_Apellido2.Location = new System.Drawing.Point(77, 89);
-            this.TXT_Apellido2.Margin = new System.Windows.Forms.Padding(2);
+            this.TXT_Apellido2.Location = new System.Drawing.Point(103, 110);
+            this.TXT_Apellido2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TXT_Apellido2.Name = "TXT_Apellido2";
-            this.TXT_Apellido2.Size = new System.Drawing.Size(170, 20);
+            this.TXT_Apellido2.Size = new System.Drawing.Size(225, 22);
             this.TXT_Apellido2.TabIndex = 13;
             this.TXT_Apellido2.TextChanged += new System.EventHandler(this.TXT_Apellido2_TextChanged);
             // 
             // LBL_Apellido2
             // 
             this.LBL_Apellido2.AutoSize = true;
-            this.LBL_Apellido2.Location = new System.Drawing.Point(18, 89);
-            this.LBL_Apellido2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBL_Apellido2.Location = new System.Drawing.Point(24, 110);
             this.LBL_Apellido2.Name = "LBL_Apellido2";
-            this.LBL_Apellido2.Size = new System.Drawing.Size(56, 13);
+            this.LBL_Apellido2.Size = new System.Drawing.Size(74, 17);
             this.LBL_Apellido2.TabIndex = 12;
             this.LBL_Apellido2.Text = "Apellido 2:";
             // 
             // TXT_Apellido1
             // 
-            this.TXT_Apellido1.Location = new System.Drawing.Point(77, 53);
-            this.TXT_Apellido1.Margin = new System.Windows.Forms.Padding(2);
+            this.TXT_Apellido1.Location = new System.Drawing.Point(103, 65);
+            this.TXT_Apellido1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TXT_Apellido1.Name = "TXT_Apellido1";
-            this.TXT_Apellido1.Size = new System.Drawing.Size(170, 20);
+            this.TXT_Apellido1.Size = new System.Drawing.Size(225, 22);
             this.TXT_Apellido1.TabIndex = 11;
             this.TXT_Apellido1.TextChanged += new System.EventHandler(this.TXT_Apellido1_TextChanged);
             // 
             // LBL_Apellido1
             // 
             this.LBL_Apellido1.AutoSize = true;
-            this.LBL_Apellido1.Location = new System.Drawing.Point(18, 53);
-            this.LBL_Apellido1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBL_Apellido1.Location = new System.Drawing.Point(24, 65);
             this.LBL_Apellido1.Name = "LBL_Apellido1";
-            this.LBL_Apellido1.Size = new System.Drawing.Size(56, 13);
+            this.LBL_Apellido1.Size = new System.Drawing.Size(74, 17);
             this.LBL_Apellido1.TabIndex = 10;
             this.LBL_Apellido1.Text = "Apellido 1:";
             // 
             // TXT_Nombre
             // 
-            this.TXT_Nombre.Location = new System.Drawing.Point(77, 20);
-            this.TXT_Nombre.Margin = new System.Windows.Forms.Padding(2);
+            this.TXT_Nombre.Location = new System.Drawing.Point(103, 25);
+            this.TXT_Nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TXT_Nombre.Name = "TXT_Nombre";
-            this.TXT_Nombre.Size = new System.Drawing.Size(170, 20);
+            this.TXT_Nombre.Size = new System.Drawing.Size(225, 22);
             this.TXT_Nombre.TabIndex = 9;
             this.TXT_Nombre.TextChanged += new System.EventHandler(this.TXT_Nombre_TextChanged);
             // 
             // LBL_Nombre
             // 
             this.LBL_Nombre.AutoSize = true;
-            this.LBL_Nombre.Location = new System.Drawing.Point(18, 20);
-            this.LBL_Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBL_Nombre.Location = new System.Drawing.Point(24, 25);
             this.LBL_Nombre.Name = "LBL_Nombre";
-            this.LBL_Nombre.Size = new System.Drawing.Size(47, 13);
+            this.LBL_Nombre.Size = new System.Drawing.Size(62, 17);
             this.LBL_Nombre.TabIndex = 8;
             this.LBL_Nombre.Text = "Nombre:";
             // 
             // TP_DatoClinicos
             // 
-            this.TP_DatoClinicos.Controls.Add(this.LBL_DC);
-            this.TP_DatoClinicos.Location = new System.Drawing.Point(4, 22);
+            this.TP_DatoClinicos.Controls.Add(this.label3);
+            this.TP_DatoClinicos.Controls.Add(this.CB_DatoClinico);
+            this.TP_DatoClinicos.Controls.Add(this.LBL_NombreCambiante);
+            this.TP_DatoClinicos.Location = new System.Drawing.Point(4, 25);
+            this.TP_DatoClinicos.Margin = new System.Windows.Forms.Padding(4);
             this.TP_DatoClinicos.Name = "TP_DatoClinicos";
-            this.TP_DatoClinicos.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_DatoClinicos.Size = new System.Drawing.Size(528, 356);
+            this.TP_DatoClinicos.Padding = new System.Windows.Forms.Padding(4);
+            this.TP_DatoClinicos.Size = new System.Drawing.Size(707, 441);
             this.TP_DatoClinicos.TabIndex = 2;
             this.TP_DatoClinicos.Text = "Datos Clínicos";
             this.TP_DatoClinicos.UseVisualStyleBackColor = true;
             // 
-            // LBL_DC
+            // label3
             // 
-            this.LBL_DC.AutoSize = true;
-            this.LBL_DC.Location = new System.Drawing.Point(20, 21);
-            this.LBL_DC.Name = "LBL_DC";
-            this.LBL_DC.Size = new System.Drawing.Size(78, 13);
-            this.LBL_DC.TabIndex = 27;
-            this.LBL_DC.Text = "Datos clínicos:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 62);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 17);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Dato Clinico: ";
+            // 
+            // CB_DatoClinico
+            // 
+            this.CB_DatoClinico.FormattingEnabled = true;
+            this.CB_DatoClinico.Location = new System.Drawing.Point(158, 62);
+            this.CB_DatoClinico.Name = "CB_DatoClinico";
+            this.CB_DatoClinico.Size = new System.Drawing.Size(257, 24);
+            this.CB_DatoClinico.TabIndex = 28;
+            // 
+            // LBL_NombreCambiante
+            // 
+            this.LBL_NombreCambiante.AutoSize = true;
+            this.LBL_NombreCambiante.Location = new System.Drawing.Point(17, 26);
+            this.LBL_NombreCambiante.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_NombreCambiante.Name = "LBL_NombreCambiante";
+            this.LBL_NombreCambiante.Size = new System.Drawing.Size(303, 17);
+            this.LBL_NombreCambiante.TabIndex = 27;
+            this.LBL_NombreCambiante.Text = "Nombre del paciente: Pablo Madrigal Quesada";
             // 
             // TP_Cirugias
             // 
             this.TP_Cirugias.Controls.Add(this.DGV_Cirugias);
-            this.TP_Cirugias.Location = new System.Drawing.Point(4, 22);
+            this.TP_Cirugias.Location = new System.Drawing.Point(4, 25);
+            this.TP_Cirugias.Margin = new System.Windows.Forms.Padding(4);
             this.TP_Cirugias.Name = "TP_Cirugias";
-            this.TP_Cirugias.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_Cirugias.Size = new System.Drawing.Size(528, 356);
+            this.TP_Cirugias.Padding = new System.Windows.Forms.Padding(4);
+            this.TP_Cirugias.Size = new System.Drawing.Size(707, 441);
             this.TP_Cirugias.TabIndex = 3;
             this.TP_Cirugias.Text = "Cirugías";
             this.TP_Cirugias.UseVisualStyleBackColor = true;
@@ -399,19 +415,21 @@
             // DGV_Cirugias
             // 
             this.DGV_Cirugias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Cirugias.Location = new System.Drawing.Point(45, 63);
+            this.DGV_Cirugias.Location = new System.Drawing.Point(60, 78);
+            this.DGV_Cirugias.Margin = new System.Windows.Forms.Padding(4);
             this.DGV_Cirugias.Name = "DGV_Cirugias";
-            this.DGV_Cirugias.Size = new System.Drawing.Size(426, 254);
+            this.DGV_Cirugias.Size = new System.Drawing.Size(568, 313);
             this.DGV_Cirugias.TabIndex = 0;
             // 
             // TP_Ante
             // 
             this.TP_Ante.Controls.Add(this.LBL_Antecedentes);
             this.TP_Ante.Controls.Add(this.DGV_Ante);
-            this.TP_Ante.Location = new System.Drawing.Point(4, 22);
+            this.TP_Ante.Location = new System.Drawing.Point(4, 25);
+            this.TP_Ante.Margin = new System.Windows.Forms.Padding(4);
             this.TP_Ante.Name = "TP_Ante";
-            this.TP_Ante.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_Ante.Size = new System.Drawing.Size(528, 356);
+            this.TP_Ante.Padding = new System.Windows.Forms.Padding(4);
+            this.TP_Ante.Size = new System.Drawing.Size(707, 441);
             this.TP_Ante.TabIndex = 4;
             this.TP_Ante.Text = "Antecedentes";
             this.TP_Ante.UseVisualStyleBackColor = true;
@@ -419,9 +437,10 @@
             // LBL_Antecedentes
             // 
             this.LBL_Antecedentes.AutoSize = true;
-            this.LBL_Antecedentes.Location = new System.Drawing.Point(48, 22);
+            this.LBL_Antecedentes.Location = new System.Drawing.Point(64, 27);
+            this.LBL_Antecedentes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Antecedentes.Name = "LBL_Antecedentes";
-            this.LBL_Antecedentes.Size = new System.Drawing.Size(182, 13);
+            this.LBL_Antecedentes.Size = new System.Drawing.Size(240, 17);
             this.LBL_Antecedentes.TabIndex = 28;
             this.LBL_Antecedentes.Text = "Antecedentes asociados al paciente:";
             // 
@@ -430,11 +449,12 @@
             this.DGV_Ante.AllowUserToAddRows = false;
             this.DGV_Ante.AllowUserToDeleteRows = false;
             this.DGV_Ante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Ante.Location = new System.Drawing.Point(51, 51);
+            this.DGV_Ante.Location = new System.Drawing.Point(68, 63);
+            this.DGV_Ante.Margin = new System.Windows.Forms.Padding(4);
             this.DGV_Ante.MultiSelect = false;
             this.DGV_Ante.Name = "DGV_Ante";
             this.DGV_Ante.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Ante.Size = new System.Drawing.Size(426, 254);
+            this.DGV_Ante.Size = new System.Drawing.Size(568, 313);
             this.DGV_Ante.TabIndex = 1;
             // 
             // menuStrip1
@@ -448,43 +468,43 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(615, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(772, 28);
             this.menuStrip1.TabIndex = 22;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // InicioToolStripMenuItem
             // 
             this.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem";
-            this.InicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.InicioToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
             this.InicioToolStripMenuItem.Text = "Inicio";
             this.InicioToolStripMenuItem.Click += new System.EventHandler(this.InicioToolStripMenuItem_Click_1);
             // 
             // buscarPacienteToolStripMenuItem
             // 
             this.buscarPacienteToolStripMenuItem.Name = "buscarPacienteToolStripMenuItem";
-            this.buscarPacienteToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.buscarPacienteToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
             this.buscarPacienteToolStripMenuItem.Text = "Buscar Paciente";
             this.buscarPacienteToolStripMenuItem.Click += new System.EventHandler(this.buscarPacienteToolStripMenuItem_Click_1);
             // 
             // crearPacienteToolStripMenuItem
             // 
             this.crearPacienteToolStripMenuItem.Name = "crearPacienteToolStripMenuItem";
-            this.crearPacienteToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.crearPacienteToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
             this.crearPacienteToolStripMenuItem.Text = "Crear Paciente";
             this.crearPacienteToolStripMenuItem.Click += new System.EventHandler(this.crearPacienteToolStripMenuItem_Click_1);
             // 
             // avanzadoToolStripMenuItem
             // 
             this.avanzadoToolStripMenuItem.Name = "avanzadoToolStripMenuItem";
-            this.avanzadoToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.avanzadoToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.avanzadoToolStripMenuItem.Text = "Avanzado";
             this.avanzadoToolStripMenuItem.Click += new System.EventHandler(this.avanzadoToolStripMenuItem_Click_1);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -492,10 +512,10 @@
             // 
             this.BTN_BuscarPlanEjercicios.Image = global::BD_Grupo3_VS.Properties.Resources.Plan_Ejercicio_Buscar;
             this.BTN_BuscarPlanEjercicios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_BuscarPlanEjercicios.Location = new System.Drawing.Point(458, 453);
-            this.BTN_BuscarPlanEjercicios.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_BuscarPlanEjercicios.Location = new System.Drawing.Point(611, 558);
+            this.BTN_BuscarPlanEjercicios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BTN_BuscarPlanEjercicios.Name = "BTN_BuscarPlanEjercicios";
-            this.BTN_BuscarPlanEjercicios.Size = new System.Drawing.Size(86, 95);
+            this.BTN_BuscarPlanEjercicios.Size = new System.Drawing.Size(115, 117);
             this.BTN_BuscarPlanEjercicios.TabIndex = 5;
             this.BTN_BuscarPlanEjercicios.Text = "Buscar Plan Ejercicios";
             this.BTN_BuscarPlanEjercicios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -505,10 +525,10 @@
             // 
             this.BTN_CrearPlanEjercicios.Image = global::BD_Grupo3_VS.Properties.Resources.Plan_Ejercicio_Nuevo;
             this.BTN_CrearPlanEjercicios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_CrearPlanEjercicios.Location = new System.Drawing.Point(368, 453);
-            this.BTN_CrearPlanEjercicios.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_CrearPlanEjercicios.Location = new System.Drawing.Point(491, 558);
+            this.BTN_CrearPlanEjercicios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BTN_CrearPlanEjercicios.Name = "BTN_CrearPlanEjercicios";
-            this.BTN_CrearPlanEjercicios.Size = new System.Drawing.Size(86, 95);
+            this.BTN_CrearPlanEjercicios.Size = new System.Drawing.Size(115, 117);
             this.BTN_CrearPlanEjercicios.TabIndex = 4;
             this.BTN_CrearPlanEjercicios.Text = "Crear Plan Ejercicios";
             this.BTN_CrearPlanEjercicios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -518,10 +538,10 @@
             // 
             this.BTN_ModificarPlanTratamiento.Image = global::BD_Grupo3_VS.Properties.Resources.Plan_de_Tratamiento_Buscar;
             this.BTN_ModificarPlanTratamiento.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_ModificarPlanTratamiento.Location = new System.Drawing.Point(280, 453);
-            this.BTN_ModificarPlanTratamiento.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_ModificarPlanTratamiento.Location = new System.Drawing.Point(373, 558);
+            this.BTN_ModificarPlanTratamiento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BTN_ModificarPlanTratamiento.Name = "BTN_ModificarPlanTratamiento";
-            this.BTN_ModificarPlanTratamiento.Size = new System.Drawing.Size(86, 95);
+            this.BTN_ModificarPlanTratamiento.Size = new System.Drawing.Size(115, 117);
             this.BTN_ModificarPlanTratamiento.TabIndex = 3;
             this.BTN_ModificarPlanTratamiento.Text = "Modificar Plan Tratamiento";
             this.BTN_ModificarPlanTratamiento.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -531,10 +551,10 @@
             // 
             this.BTN_CrearPlanTratamiento.Image = global::BD_Grupo3_VS.Properties.Resources.Plan_de_Tratamiento_Nuevo;
             this.BTN_CrearPlanTratamiento.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_CrearPlanTratamiento.Location = new System.Drawing.Point(190, 453);
-            this.BTN_CrearPlanTratamiento.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_CrearPlanTratamiento.Location = new System.Drawing.Point(253, 558);
+            this.BTN_CrearPlanTratamiento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BTN_CrearPlanTratamiento.Name = "BTN_CrearPlanTratamiento";
-            this.BTN_CrearPlanTratamiento.Size = new System.Drawing.Size(86, 95);
+            this.BTN_CrearPlanTratamiento.Size = new System.Drawing.Size(115, 117);
             this.BTN_CrearPlanTratamiento.TabIndex = 2;
             this.BTN_CrearPlanTratamiento.Text = "Crear Plan Tratamiento";
             this.BTN_CrearPlanTratamiento.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -544,10 +564,10 @@
             // 
             this.BTN_CitaBuscar.Image = global::BD_Grupo3_VS.Properties.Resources.Cita_Buscar;
             this.BTN_CitaBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_CitaBuscar.Location = new System.Drawing.Point(100, 453);
-            this.BTN_CitaBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_CitaBuscar.Location = new System.Drawing.Point(133, 558);
+            this.BTN_CitaBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BTN_CitaBuscar.Name = "BTN_CitaBuscar";
-            this.BTN_CitaBuscar.Size = new System.Drawing.Size(86, 95);
+            this.BTN_CitaBuscar.Size = new System.Drawing.Size(115, 117);
             this.BTN_CitaBuscar.TabIndex = 1;
             this.BTN_CitaBuscar.Text = "Buscar Cita";
             this.BTN_CitaBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -557,10 +577,10 @@
             // 
             this.BTN_CitaNueva.Image = global::BD_Grupo3_VS.Properties.Resources.Cita_Nueva;
             this.BTN_CitaNueva.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_CitaNueva.Location = new System.Drawing.Point(12, 453);
-            this.BTN_CitaNueva.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_CitaNueva.Location = new System.Drawing.Point(16, 558);
+            this.BTN_CitaNueva.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BTN_CitaNueva.Name = "BTN_CitaNueva";
-            this.BTN_CitaNueva.Size = new System.Drawing.Size(86, 95);
+            this.BTN_CitaNueva.Size = new System.Drawing.Size(115, 117);
             this.BTN_CitaNueva.TabIndex = 0;
             this.BTN_CitaNueva.Text = "Crear Cita";
             this.BTN_CitaNueva.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -568,9 +588,9 @@
             // 
             // VerPaciente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 559);
+            this.ClientSize = new System.Drawing.Size(772, 688);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.TabPaciente);
             this.Controls.Add(this.BG_Paciente);
@@ -581,7 +601,7 @@
             this.Controls.Add(this.BTN_CrearPlanTratamiento);
             this.Controls.Add(this.BTN_CitaBuscar);
             this.Controls.Add(this.BTN_CitaNueva);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "VerPaciente";
             this.Text = "VerPaciente";
             this.Load += new System.EventHandler(this.VerPaciente_Load);
@@ -644,10 +664,13 @@
         private System.Windows.Forms.Button BTN_Eliminar;
         private System.Windows.Forms.Button BTN_Modificar;
         private System.Windows.Forms.TabPage TP_Cirugias;
-        private System.Windows.Forms.Label LBL_DC;
+        private System.Windows.Forms.Label LBL_NombreCambiante;
         private System.Windows.Forms.TabPage TP_Ante;
         private System.Windows.Forms.DataGridView DGV_Cirugias;
         private System.Windows.Forms.DataGridView DGV_Ante;
         private System.Windows.Forms.Label LBL_Antecedentes;
+        private System.Windows.Forms.ComboBox CB_DatoClinico;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
