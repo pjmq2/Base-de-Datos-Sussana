@@ -69,10 +69,10 @@ namespace BD_Grupo3_VS
         private void BTN_EliminarMaterial_Click(object sender, EventArgs e)
         {
             int result = ejercicio.eliminarejercicio(nombre);
-            MessageBox.Show("¡El ejercicio ha sido agregado exitosamente! ", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
+            MessageBox.Show("¡El ejercicio ha sido eliminado exitosamente! ", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
             MenuPrincipal menu = new MenuPrincipal();
             menu.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void BTN_Guardar_Click(object sender, EventArgs e)
@@ -121,7 +121,7 @@ namespace BD_Grupo3_VS
                 MessageBox.Show("¡El ejercicio ha sido modificado exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
                 MenuConfig menu = new MenuConfig();
                 menu.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
