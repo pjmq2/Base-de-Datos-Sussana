@@ -75,13 +75,6 @@ namespace BD_Grupo3_VS
             this.Hide();
         }
 
-        private void menuAvanzadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuConfig menu = new MenuConfig();
-            menu.Show();
-            this.Hide();
-        }
-
         private void BTN_Guardar_Click(object sender, EventArgs e)
         {
             bool cambioHecho = false;
@@ -155,6 +148,13 @@ namespace BD_Grupo3_VS
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void menuAvanzadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenuConfig menu = new MenuConfig();
             menu.Show();
             this.Hide();
         }

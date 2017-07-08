@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,13 +13,52 @@ namespace BD_Grupo3_VS
 {
     public partial class BuscarAntecedentes : Form
     {
+        Paciente paciente;
         public BuscarAntecedentes()
-        {
+        {            
             InitializeComponent();
+            paciente = new Paciente();
+        }
+
+        private void llenarTabla(DataGridView dataGridView, string nombre)
+        {
+
+            DataTable tabla = paciente.obtenerAntecedentes(nombre);
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = tabla;
+            dataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+            dataGridView.DataSource = bindingSource;
+            for (int i = 0; i < DGV_Antecedentes.ColumnCount; i++)
+            {
+                dataGridView.Columns[i].Width = 100;
+            }
+        }
+
+        private void llenarCombobox(ComboBox combobox)
+        {
+            SqlDataReader datos = paciente.obtenerListaNombresAntecedentes();
+            if (datos != null)
+            {
+                while (datos.Read())
+                {
+                    combobox.Items.Add(datos.GetValue(0));
+                }
+            }
+            else
+            {
+                combobox.Items.Clear();
+            }
+            combobox.SelectedItem = 0;
+        }
+
+        private void BuscarAntecedentes_Load(object sender, EventArgs e)
+        {
+            llenarTabla(DGV_Antecedentes, null);
+            llenarCombobox(CB_Nombre);
         }
 
         /*             A partir de aqui empiezan los metodos para la cinta del menu  */
-        
+
 
         private void menuPrincipalToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -93,6 +133,43 @@ namespace BD_Grupo3_VS
             ejercicio.Show();
             this.Hide();
         }
+
+        private void CB_Nombre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            llenarTabla(DGV_Antecedentes, CB_Nombre.Text);
+        }
+
+        private void BTN_Buscar_Click(object sender, EventArgs e)
+        {
+            if (CB_Nombre.Text == "")
+            {
+                llenarTabla(DGV_Antecedentes, null);
+            }
+            else 
+            {
+                llenarTabla(DGV_Antecedentes, CB_Nombre.Text);
+            }            
+        }
+
+        private void BTN_Modificar_Click(object sender, EventArgs e)
+        {
+            if (DGV_Antecedentes.SelectedRows.Count == 0)
+            {
+                /*Mensaje no hay nada seleccionado*/
+            }
+            else
+            {
+                string nombre;
+                string tipo;
+                DataGridViewRow row = DGV_Antecedentes.CurrentRow;
+                nombre = row.Cells[0].Value.ToString();
+
+                VerAntecedente antecedente = new VerAntecedente(nombre);
+                antecedente.Show();
+                this.Hide();
+            }
+        }
+
         /*             Hasta aqui las instrucciones de la cinta del menu  */
     }
 }

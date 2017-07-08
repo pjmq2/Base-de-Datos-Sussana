@@ -60,7 +60,7 @@
             this.LBL_Titulo.AutoSize = true;
             this.LBL_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Titulo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.LBL_Titulo.Location = new System.Drawing.Point(124, 26);
+            this.LBL_Titulo.Location = new System.Drawing.Point(168, 26);
             this.LBL_Titulo.Name = "LBL_Titulo";
             this.LBL_Titulo.Size = new System.Drawing.Size(192, 33);
             this.LBL_Titulo.TabIndex = 5;
@@ -89,7 +89,7 @@
             this.GB_InfoAntecedente.Controls.Add(this.BTN_Agregar);
             this.GB_InfoAntecedente.Controls.Add(this.TXT_NombreAnte);
             this.GB_InfoAntecedente.Controls.Add(this.LBL_NombreAnte);
-            this.GB_InfoAntecedente.Location = new System.Drawing.Point(31, 62);
+            this.GB_InfoAntecedente.Location = new System.Drawing.Point(69, 62);
             this.GB_InfoAntecedente.Name = "GB_InfoAntecedente";
             this.GB_InfoAntecedente.Size = new System.Drawing.Size(371, 245);
             this.GB_InfoAntecedente.TabIndex = 13;

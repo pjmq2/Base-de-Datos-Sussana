@@ -27,15 +27,13 @@ namespace BD_Grupo3_VS
 
             //resultado es 0 cuando se pudo agregar un antecedente al paciente con éxito
             if (resultado == 0)
-            {
-                MessageBox.Show("¡El antecedente ha sido agregado exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
-
+            {               
                 //insertamos el tipo de antecedente
                 int resultado2 = paciente.agregarTipoAntecedente(TXT_NombreAnte.Text, TXT_TipoAnt.Text);
                 //resultado es 0 cuando se pudo agregar un antecedente al paciente con éxito
                 if (resultado2 == 0)
                 {
-                    MessageBox.Show("¡El tipo de antecedente ha sido agregado exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);                   
+                    MessageBox.Show("¡El antecedente y su tipo de antecedente ha sido agregado exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);                   
                     TXT_NombreAnte.Clear();
                     TXT_TipoAnt.Clear();
                 }
@@ -55,7 +53,7 @@ namespace BD_Grupo3_VS
             {
                 if (resultado == 2627)
                 {
-                    MessageBox.Show("Ya existe este antecedente asociada a ese paciente", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ya existe este antecedente", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
                 else

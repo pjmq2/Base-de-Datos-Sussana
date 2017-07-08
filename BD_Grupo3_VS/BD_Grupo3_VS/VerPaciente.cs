@@ -81,13 +81,6 @@ namespace BD_Grupo3_VS
 
         }
 
-
-        private void Inicio()
-        {
-
-        }
-
-
         private void BTN_Eliminar_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
@@ -98,7 +91,7 @@ namespace BD_Grupo3_VS
                 MessageBox.Show("¡El paciente ha sido eliminado exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
                 MenuPrincipal menu = new MenuPrincipal();
                 menu.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -437,11 +430,7 @@ namespace BD_Grupo3_VS
 
             //resultado es 0 cuando se pudo agregar un antecedente al paciente con éxito
             if (resultado == 0)
-            {
-
-                MessageBox.Show("¡La cirugía ha sido agregado exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
-                DGV_Cirugias.Refresh();
-
+            {                        
                 MessageBox.Show("¡La cirugía ha sido agregada exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
                 VerPaciente vp = new VerPaciente(TXT_Cedula.Text, TXT_Nombre.Text, TXT_Apellido1.Text, TXT_Apellido2.Text);
                 this.Dispose();
@@ -534,7 +523,8 @@ namespace BD_Grupo3_VS
 
         private void DGV_Cirugias_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            cambiosCirugia = false;
+            TXT_CirugiaSeleccionada.BackColor = System.Drawing.Color.White;
             DataGridViewRow row = DGV_Cirugias.CurrentRow;
             string cirugia = row.Cells[0].Value.ToString();
             TXT_CirugiaSeleccionada.Text = cirugia;            

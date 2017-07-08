@@ -34,6 +34,9 @@ create table CIRUGIAS(
 		on update no action
 )
 
+alter table Cirugias
+alter column Cirugia varchar(200)
+
 --Tabla Plan_Tratamiento
 create table PLAN_TRATAMIENTO(
 	CedPaciente	char(9)		not null,
@@ -87,8 +90,8 @@ create table TIPO_ANT(
 	Tipo			varchar(50)	not null,
 	Constraint PKTipo_Ant primary key (Nombre_Ant, Tipo),
 	Constraint FKTAaAnt_Pat foreign key (Nombre_Ant) references ANT_PAT(Nombre)
-		on delete no action
-		on update no action
+		on delete cascade
+		on update cascade
 )
 
 --Tabla de la relación M a N entre Antecedentes y Paciente

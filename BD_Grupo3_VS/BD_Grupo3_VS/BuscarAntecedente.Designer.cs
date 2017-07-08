@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.LBL_ConsultaAntecedentes = new System.Windows.Forms.Label();
-            this.LBL_Cedula = new System.Windows.Forms.Label();
-            this.TXT_Cedula = new System.Windows.Forms.TextBox();
+            this.LBL_Nombre = new System.Windows.Forms.Label();
             this.BTN_Buscar = new System.Windows.Forms.Button();
             this.DGV_Antecedentes = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -49,6 +48,8 @@
             this.crearEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CB_Nombre = new System.Windows.Forms.ComboBox();
+            this.BTN_Modificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Antecedentes)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -64,39 +65,37 @@
             this.LBL_ConsultaAntecedentes.TabIndex = 3;
             this.LBL_ConsultaAntecedentes.Text = "Buscar Antecedentes";
             // 
-            // LBL_Cedula
+            // LBL_Nombre
             // 
-            this.LBL_Cedula.AutoSize = true;
-            this.LBL_Cedula.Location = new System.Drawing.Point(49, 99);
-            this.LBL_Cedula.Name = "LBL_Cedula";
-            this.LBL_Cedula.Size = new System.Drawing.Size(43, 13);
-            this.LBL_Cedula.TabIndex = 18;
-            this.LBL_Cedula.Text = "Cédula:";
-            // 
-            // TXT_Cedula
-            // 
-            this.TXT_Cedula.BackColor = System.Drawing.SystemColors.Window;
-            this.TXT_Cedula.Location = new System.Drawing.Point(133, 96);
-            this.TXT_Cedula.Name = "TXT_Cedula";
-            this.TXT_Cedula.Size = new System.Drawing.Size(146, 20);
-            this.TXT_Cedula.TabIndex = 19;
+            this.LBL_Nombre.AutoSize = true;
+            this.LBL_Nombre.Location = new System.Drawing.Point(49, 99);
+            this.LBL_Nombre.Name = "LBL_Nombre";
+            this.LBL_Nombre.Size = new System.Drawing.Size(47, 13);
+            this.LBL_Nombre.TabIndex = 18;
+            this.LBL_Nombre.Text = "Nombre:";
             // 
             // BTN_Buscar
             // 
-            this.BTN_Buscar.Location = new System.Drawing.Point(493, 85);
+            this.BTN_Buscar.Location = new System.Drawing.Point(496, 90);
             this.BTN_Buscar.Name = "BTN_Buscar";
             this.BTN_Buscar.Size = new System.Drawing.Size(106, 31);
             this.BTN_Buscar.TabIndex = 20;
             this.BTN_Buscar.Text = "Buscar";
             this.BTN_Buscar.UseVisualStyleBackColor = true;
+            this.BTN_Buscar.Click += new System.EventHandler(this.BTN_Buscar_Click);
             // 
             // DGV_Antecedentes
             // 
+            this.DGV_Antecedentes.AllowUserToAddRows = false;
+            this.DGV_Antecedentes.AllowUserToDeleteRows = false;
             this.DGV_Antecedentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Antecedentes.GridColor = System.Drawing.SystemColors.Control;
-            this.DGV_Antecedentes.Location = new System.Drawing.Point(52, 137);
+            this.DGV_Antecedentes.Location = new System.Drawing.Point(52, 163);
+            this.DGV_Antecedentes.MultiSelect = false;
             this.DGV_Antecedentes.Name = "DGV_Antecedentes";
-            this.DGV_Antecedentes.Size = new System.Drawing.Size(545, 245);
+            this.DGV_Antecedentes.ReadOnly = true;
+            this.DGV_Antecedentes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Antecedentes.Size = new System.Drawing.Size(392, 219);
             this.DGV_Antecedentes.TabIndex = 21;
             // 
             // menuStrip1
@@ -229,19 +228,41 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // CB_Nombre
+            // 
+            this.CB_Nombre.FormattingEnabled = true;
+            this.CB_Nombre.Location = new System.Drawing.Point(122, 95);
+            this.CB_Nombre.Margin = new System.Windows.Forms.Padding(2);
+            this.CB_Nombre.Name = "CB_Nombre";
+            this.CB_Nombre.Size = new System.Drawing.Size(147, 21);
+            this.CB_Nombre.TabIndex = 37;
+            this.CB_Nombre.SelectedIndexChanged += new System.EventHandler(this.CB_Nombre_SelectedIndexChanged);
+            // 
+            // BTN_Modificar
+            // 
+            this.BTN_Modificar.Location = new System.Drawing.Point(496, 163);
+            this.BTN_Modificar.Name = "BTN_Modificar";
+            this.BTN_Modificar.Size = new System.Drawing.Size(106, 32);
+            this.BTN_Modificar.TabIndex = 38;
+            this.BTN_Modificar.Text = "Modificar";
+            this.BTN_Modificar.UseVisualStyleBackColor = true;
+            this.BTN_Modificar.Click += new System.EventHandler(this.BTN_Modificar_Click);
+            // 
             // BuscarAntecedentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 394);
+            this.Controls.Add(this.BTN_Modificar);
+            this.Controls.Add(this.CB_Nombre);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.DGV_Antecedentes);
             this.Controls.Add(this.BTN_Buscar);
-            this.Controls.Add(this.TXT_Cedula);
-            this.Controls.Add(this.LBL_Cedula);
+            this.Controls.Add(this.LBL_Nombre);
             this.Controls.Add(this.LBL_ConsultaAntecedentes);
             this.Name = "BuscarAntecedentes";
             this.Text = "BuscarAntecedentes";
+            this.Load += new System.EventHandler(this.BuscarAntecedentes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Antecedentes)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -253,8 +274,7 @@
         #endregion
 
         private System.Windows.Forms.Label LBL_ConsultaAntecedentes;
-        private System.Windows.Forms.Label LBL_Cedula;
-        private System.Windows.Forms.TextBox TXT_Cedula;
+        private System.Windows.Forms.Label LBL_Nombre;
         private System.Windows.Forms.Button BTN_Buscar;
         private System.Windows.Forms.DataGridView DGV_Antecedentes;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -273,5 +293,7 @@
         private System.Windows.Forms.ToolStripMenuItem crearEjercicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarEjercicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ComboBox CB_Nombre;
+        private System.Windows.Forms.Button BTN_Modificar;
     }
 }
