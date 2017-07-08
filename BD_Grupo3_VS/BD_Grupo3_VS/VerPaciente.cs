@@ -341,8 +341,11 @@ namespace BD_Grupo3_VS
             //resultado es 0 cuando se pudo agregar un antecedente al paciente con éxito
             if (resultado == 0)
             {
-                MessageBox.Show("¡La cirugía ha sido agregado exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
-                DGV_Cirugias.Refresh();
+                MessageBox.Show("¡La cirugía ha sido agregada exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
+                //DGV_Cirugias.Refresh();
+                VerPaciente vp = new VerPaciente(TXT_Cedula.Text, TXT_Nombre.Text, TXT_Apellido1.Text, TXT_Apellido2.Text);
+                this.Dispose();
+                vp.Show();
             }
             else
             {
