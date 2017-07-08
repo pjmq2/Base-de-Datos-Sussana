@@ -98,7 +98,7 @@ namespace BD_Grupo3_VS
                 MessageBox.Show("¡El paciente ha sido eliminado exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
                 MenuPrincipal menu = new MenuPrincipal();
                 menu.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -361,7 +361,7 @@ namespace BD_Grupo3_VS
             {
                 VerPaciente paciente = new VerPaciente(cedula, nombre, apellido1, apellido2);
                 paciente.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -406,28 +406,28 @@ namespace BD_Grupo3_VS
         {
             MenuPrincipal menu = new MenuPrincipal();
             menu.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void avanzadoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             MenuConfig menu = new MenuConfig();
             menu.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void buscarPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             BuscarPaciente paciente = new BuscarPaciente();
             paciente.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void crearPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             AgregarPaciente paciente = new AgregarPaciente();
             paciente.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
