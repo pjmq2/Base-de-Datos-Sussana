@@ -74,16 +74,10 @@ namespace BD_Grupo3_VS
             dato.Read();
             DTP_FechaNac.Value = dato.GetDateTime(0);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            LBL_NombreCambiante.Text = "Nombre del Paciente: "+nombre +" "+ apellido1 + " " + apellido2;
-            llenarComboBoxDatos(CB_DatoClinico);
-        }
-  
-=======
-=======
->>>>>>> da730c0c220a6e2a6c6798b349d226e486ac4e7f
+            //LBL_NombreCambiante.Text = "Nombre del Paciente: "+nombre +" "+ apellido1 + " " + apellido2;
+            llenarComboBoxDatos(CB_DatoClinico);       
             llenarTabla(DGV_Cirugias);
+            
 
         }
 
@@ -92,10 +86,7 @@ namespace BD_Grupo3_VS
         {
 
         }
-<<<<<<< HEAD
->>>>>>> 154ea1e6752105d0d8a9e09d93dcc137ced289af
-=======
->>>>>>> da730c0c220a6e2a6c6798b349d226e486ac4e7f
+
 
         private void BTN_Eliminar_Click(object sender, EventArgs e)
         {
@@ -210,21 +201,11 @@ namespace BD_Grupo3_VS
             if (cambioshechos)
             {
                 MessageBox.Show("¡El paciente se ha sido modificado exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
-                //this.VerPaciente_Load(this, null);
-                //this.Refresh();
                 VerPaciente vp = new VerPaciente(TXT_Cedula.Text, TXT_Nombre.Text, TXT_Apellido1.Text, TXT_Apellido2.Text);
                 this.Dispose();
                 vp.Show();
             }
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 154ea1e6752105d0d8a9e09d93dcc137ced289af
-=======
-
->>>>>>> da730c0c220a6e2a6c6798b349d226e486ac4e7f
 
         #region cambio color de fondo
         private void TXT_Nombre_TextChanged(object sender, EventArgs e)
@@ -317,7 +298,6 @@ namespace BD_Grupo3_VS
                 TXT_Comentarios.BackColor = System.Drawing.Color.LightBlue;
             }
             cambiosComentarios = true;
-<<<<<<< HEAD
         }
 #endregion
 
@@ -383,8 +363,6 @@ namespace BD_Grupo3_VS
                 paciente.Show();
                 this.Hide();
             }
-=======
->>>>>>> da730c0c220a6e2a6c6798b349d226e486ac4e7f
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -449,17 +427,9 @@ namespace BD_Grupo3_VS
                 Application.Exit();
             }
         }
-
-
         /*             Hasta aqui las instrucciones de la cinta del menu  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-        #endregion
 
-        
-=======
-=======
->>>>>>> da730c0c220a6e2a6c6798b349d226e486ac4e7f
+        #endregion
 
         private void BTN_AgregarCirugia_Click(object sender, EventArgs e)
         {
@@ -468,16 +438,14 @@ namespace BD_Grupo3_VS
             //resultado es 0 cuando se pudo agregar un antecedente al paciente con éxito
             if (resultado == 0)
             {
-<<<<<<< HEAD
+
                 MessageBox.Show("¡La cirugía ha sido agregado exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
                 DGV_Cirugias.Refresh();
-=======
+
                 MessageBox.Show("¡La cirugía ha sido agregada exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
-                //DGV_Cirugias.Refresh();
                 VerPaciente vp = new VerPaciente(TXT_Cedula.Text, TXT_Nombre.Text, TXT_Apellido1.Text, TXT_Apellido2.Text);
                 this.Dispose();
                 vp.Show();
->>>>>>> da730c0c220a6e2a6c6798b349d226e486ac4e7f
             }
             else
             {
@@ -526,7 +494,6 @@ namespace BD_Grupo3_VS
                 if (result == 0)
                 {
                     MessageBox.Show("¡La cirugía ha sido modificada exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
-                    //TXT_CirugiaSeleccionada.Clear();
                     VerPaciente vp = new VerPaciente(TXT_Cedula.Text, TXT_Nombre.Text, TXT_Apellido1.Text, TXT_Apellido2.Text);
                     this.Dispose();
                     vp.Show();
@@ -561,20 +528,17 @@ namespace BD_Grupo3_VS
             else
             {
                 MessageBox.Show("Ha ocurrido un error.", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }           
         }
 
 
         private void DGV_Cirugias_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+
             DataGridViewRow row = DGV_Cirugias.CurrentRow;
             string cirugia = row.Cells[0].Value.ToString();
-            TXT_CirugiaSeleccionada.Text = cirugia;
+            TXT_CirugiaSeleccionada.Text = cirugia;            
         }
-<<<<<<< HEAD
->>>>>>> 154ea1e6752105d0d8a9e09d93dcc137ced289af
-=======
->>>>>>> da730c0c220a6e2a6c6798b349d226e486ac4e7f
     }
 }
 
