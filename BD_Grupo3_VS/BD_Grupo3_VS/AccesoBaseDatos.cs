@@ -41,7 +41,7 @@ namespace BD_Grupo3_VS
                 cmd.Parameters.Add("@name", SqlDbType.VarChar).Value = nombre;//add parameter to the command object and set value to that parameter
                 cmd.Parameters.Add("@img", SqlDbType.Image).Value = img;//add parameter to the command object and set value to that parameter
                 cmd.ExecuteNonQuery();//execute command
-                MessageBox.Show("Image guardada exitosamente!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display save successful message to user
+                //MessageBox.Show("Image guardada exitosamente!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);//display save successful message to user
             }
             catch (Exception ex)//catch if any error occur
             {
