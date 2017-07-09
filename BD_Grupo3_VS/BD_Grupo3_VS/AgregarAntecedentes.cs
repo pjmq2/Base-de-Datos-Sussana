@@ -13,23 +13,23 @@ namespace BD_Grupo3_VS
     public partial class AgregarAntecedentes : Form
     {
         
-        Paciente paciente;
+        Antecedentes antecedente;
         public AgregarAntecedentes()
         {
             InitializeComponent();
-            paciente = new Paciente();
+            antecedente = new Antecedentes();
             
         }
 
         private void BTN_Agregar_Click(object sender, EventArgs e)
         {
-            int resultado = paciente.agregarAntecedente(TXT_NombreAnte.Text);
+            int resultado = antecedente.agregarAntecedente(TXT_NombreAnte.Text);
 
             //resultado es 0 cuando se pudo agregar un antecedente al paciente con éxito
             if (resultado == 0)
             {               
                 //insertamos el tipo de antecedente
-                int resultado2 = paciente.agregarTipoAntecedente(TXT_NombreAnte.Text, TXT_TipoAnt.Text);
+                int resultado2 = antecedente.agregarTipoAntecedente(TXT_NombreAnte.Text, TXT_TipoAnt.Text);
                 //resultado es 0 cuando se pudo agregar un antecedente al paciente con éxito
                 if (resultado2 == 0)
                 {

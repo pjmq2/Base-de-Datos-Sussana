@@ -13,17 +13,16 @@ namespace BD_Grupo3_VS
 {
     public partial class BuscarAntecedentes : Form
     {
-        Paciente paciente;
+        Antecedentes antecedente;
         public BuscarAntecedentes()
         {            
             InitializeComponent();
-            paciente = new Paciente();
+            antecedente = new Antecedentes();
         }
 
         private void llenarTabla(DataGridView dataGridView, string nombre)
         {
-
-            DataTable tabla = paciente.obtenerAntecedentes(nombre);
+            DataTable tabla = antecedente.obtenerAntecedentes(nombre);
             BindingSource bindingSource = new BindingSource();
             bindingSource.DataSource = tabla;
             dataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
@@ -36,7 +35,7 @@ namespace BD_Grupo3_VS
 
         private void llenarCombobox(ComboBox combobox)
         {
-            SqlDataReader datos = paciente.obtenerListaNombresAntecedentes();
+            SqlDataReader datos = antecedente.obtenerListaNombresAntecedentes();
             if (datos != null)
             {
                 while (datos.Read())
@@ -56,8 +55,6 @@ namespace BD_Grupo3_VS
             llenarTabla(DGV_Antecedentes, null);
             llenarCombobox(CB_Nombre);
         }
-
-
 
         #region Menu
         /*             A partir de aqui empiezan los metodos para la cinta del menu  */
@@ -158,15 +155,15 @@ namespace BD_Grupo3_VS
         {
             if (DGV_Antecedentes.SelectedRows.Count == 0)
             {
-                /*Mensaje no hay nada seleccionado*/
+                MessageBox.Show("No ha seleccionado ningún antecedente?", "Seleccionar Antecedente");
             }
             else
             {
                 string nombre;
                 DataGridViewRow row = DGV_Antecedentes.CurrentRow;
                 nombre = row.Cells[0].Value.ToString();
-                VerAntecedente antecedente = new VerAntecedente(nombre);
-                antecedente.Show();
+                VerAntecedente va = new VerAntecedente(nombre);
+                va.Show();
                 this.Close();
             }
         }       

@@ -14,6 +14,8 @@ namespace BD_Grupo3_VS
 {
     public partial class VerPaciente : Form
     {
+        Antecedentes antecedente;
+        Cirugias cirugia;
         Paciente paciente;
         DatosClinicos datosClinicos;
         bool cambiosNombre = false;
@@ -38,6 +40,7 @@ namespace BD_Grupo3_VS
         {
             InitializeComponent();
             paciente = new Paciente();
+            antecedente = new Antecedentes();
             nombre = nombreNuevo;
             apellido1 = apellido1Nuevo;
             apellido2 = apellido2Nuevo;
@@ -47,6 +50,7 @@ namespace BD_Grupo3_VS
             TXT_Apellido2.Text = apellido2;
             TXT_Cedula.Text = cedula;
             datosClinicos = new DatosClinicos(cedula);
+            cirugia = new Cirugias(cedula);
             archivosTemp = new List<string>();
         }
 
@@ -441,7 +445,7 @@ namespace BD_Grupo3_VS
 
         private void BTN_AgregarCirugia_Click(object sender, EventArgs e)
         {
-            int resultado = paciente.agregarCirugia(TXT_Cedula.Text, TXT_NuevaCirugia.Text);
+            int resultado = cirugia.agregarCirugia(TXT_Cedula.Text, TXT_NuevaCirugia.Text);
 
             //resultado es 0 cuando se pudo agregar una cirugía al paciente con éxito
             if (resultado == 0)
@@ -467,7 +471,7 @@ namespace BD_Grupo3_VS
         private void llenarTabla(DataGridView dataGridView)
         {
 
-            DataTable tabla = paciente.obtenerCirugias(TXT_Cedula.Text);
+            DataTable tabla = cirugia.obtenerCirugias(TXT_Cedula.Text);
             BindingSource bindingSource = new BindingSource();
             bindingSource.DataSource = tabla;
             dataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
@@ -494,7 +498,7 @@ namespace BD_Grupo3_VS
             string cirugiaVieja = row.Cells[0].Value.ToString();
             if (cambiosCirugia)
             {
-                result = paciente.modificarCirugia(cedula, cirugiaVieja, TXT_CirugiaSeleccionada.Text);
+                result = cirugia.modificarCirugia(cedula, cirugiaVieja, TXT_CirugiaSeleccionada.Text);
                 if (result == 0)
                 {
                     MessageBox.Show("¡La cirugía ha sido modificada exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -520,8 +524,8 @@ namespace BD_Grupo3_VS
         private void BTN_EliminarCirugia_Click(object sender, EventArgs e)
         {
             DataGridViewRow row = DGV_Cirugias.CurrentRow;
-            string cirugia = row.Cells[0].Value.ToString();
-            int result = paciente.eliminarCirugia(cedula, cirugia);
+            string nombre = row.Cells[0].Value.ToString();
+            int result = cirugia.eliminarCirugia(TXT_Cedula.Text, nombre);
             if (result == 0)
             {
                 MessageBox.Show("¡La cirugía ha sido eliminada exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -608,7 +612,7 @@ namespace BD_Grupo3_VS
 
         private void llenarComboboxAntecedente(ComboBox combobox)
         {
-            SqlDataReader datos = paciente.obtenerListaNombresAntecedentes();
+            SqlDataReader datos = antecedente.obtenerListaNombresAntecedentes();
             if (datos != null)
             {
                 while (datos.Read())
@@ -625,7 +629,7 @@ namespace BD_Grupo3_VS
 
         private void BTN_AgregarAnte_Click(object sender, EventArgs e)
         {
-            int resultado = paciente.agregarAntecedentePaciente(TXT_Cedula.Text, CB_Ante.Text, TXT_Descripcion.Text);           
+            int resultado = antecedente.agregarAntecedentePaciente(TXT_Cedula.Text, CB_Ante.Text, TXT_Descripcion.Text);           
             if (resultado == 0)
             {
                 MessageBox.Show("¡El antecedente ha sido agregado al paciente exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);

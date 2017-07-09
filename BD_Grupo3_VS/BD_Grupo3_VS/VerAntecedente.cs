@@ -13,7 +13,8 @@ namespace BD_Grupo3_VS
 {
     public partial class VerAntecedente : Form
     {
-        Paciente paciente;
+        //Paciente paciente;
+        Antecedentes ant;
         string nombre;
         bool cambiosNombre = false;
         bool cambiosTipo = false;
@@ -21,7 +22,8 @@ namespace BD_Grupo3_VS
         public VerAntecedente(string nombreNuevo)
         {
             InitializeComponent();
-            paciente = new Paciente();
+            //paciente = new Paciente();
+            ant = new Antecedentes();
             nombre = nombreNuevo;
             TXT_Nombre.Text = nombre;
         }
@@ -29,7 +31,7 @@ namespace BD_Grupo3_VS
         private void llenarTabla(DataGridView dataGridView)
         {
 
-            DataTable tabla = paciente.obtenerTipoAntecedentes(TXT_Nombre.Text);
+            DataTable tabla = ant.obtenerTipoAntecedentes(TXT_Nombre.Text);
             BindingSource bindingSource = new BindingSource();
             bindingSource.DataSource = tabla;
             dataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
@@ -68,7 +70,7 @@ namespace BD_Grupo3_VS
             string tipoViejo = row.Cells[0].Value.ToString();
             if (cambiosNombre)
             {
-                result = paciente.modificarNombreAntecedente(nombre, TXT_Nombre.Text);
+                result = ant.modificarNombreAntecedente(nombre, TXT_Nombre.Text);
                 if (result != 0)
                 {
                     MessageBox.Show("Ha ocurrido un error. Es posible que este nombre ya exista", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -77,7 +79,7 @@ namespace BD_Grupo3_VS
             }
             if (cambiosTipo)
             {
-                result = paciente.modificarTipoAntecedente(TXT_Nombre.Text, tipoViejo, TXT_TipoSeleccionado.Text);
+                result = ant.modificarTipoAntecedente(TXT_Nombre.Text, tipoViejo, TXT_TipoSeleccionado.Text);
                 if (result != 0)
                 {
                     MessageBox.Show("Ha ocurrido un error. Es posible que este tipo ya este asociado a este antecedente", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -100,7 +102,7 @@ namespace BD_Grupo3_VS
             DialogResult resultado = MessageBox.Show("¿Seguro que desea elimar el antecedente. Esto eliminará también los tipos asociados?", "Eliminar Antecedente", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
-                int result = paciente.eliminarAntecedente(nombre);
+                int result = ant.eliminarAntecedente(nombre);
                 if (result == 0)
                 {
                     MessageBox.Show("¡El antecedente ha sido eliminado exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -117,7 +119,7 @@ namespace BD_Grupo3_VS
 
         private void BTN_AgregarTipo_Click(object sender, EventArgs e)
         {
-            int resultado = paciente.agregarTipoAntecedente(nombre, TXT_NuevoTipo.Text);
+            int resultado = ant.agregarTipoAntecedente(nombre, TXT_NuevoTipo.Text);
 
             //resultado es 0 cuando se pudo agregar un antecedente al paciente con éxito
             if (resultado == 0)
@@ -146,7 +148,7 @@ namespace BD_Grupo3_VS
             DialogResult resultado = MessageBox.Show("¿Seguro que desea elimar el tipo de antecedente?", "Eliminar Tipo de Antecedente", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
-                int result = paciente.eliminarTipoAntecedente(nombre, TXT_TipoSeleccionado.Text);
+                int result = ant.eliminarTipoAntecedente(nombre, TXT_TipoSeleccionado.Text);
                 if (result == 0)
                 {
                     MessageBox.Show("¡El tipo de antecedente ha sido eliminado exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -259,8 +261,6 @@ namespace BD_Grupo3_VS
             string cirugia = row.Cells[0].Value.ToString();
             TXT_TipoSeleccionado.Text = cirugia;
         }
-
-
     }
 }
 

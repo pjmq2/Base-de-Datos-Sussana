@@ -106,34 +106,34 @@ namespace BD_Grupo3_VS
             }
             
         }
-
+        #region Menu
         /*             A partir de aqui empiezan los metodos para la cinta del menu  */
         private void InicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
             menu.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuscarPaciente paciente = new BuscarPaciente();
             paciente.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void crearPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AgregarPaciente paciente = new AgregarPaciente();
             paciente.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void avanzadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuConfig menu = new MenuConfig();
             menu.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -147,6 +147,7 @@ namespace BD_Grupo3_VS
             }
         }
 
-        /*             Hasta aqui las instrucciones de la cinta del menu  */       
+        /*             Hasta aqui las instrucciones de la cinta del menu  */
+        #endregion
     }
 }
