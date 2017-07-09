@@ -50,6 +50,7 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CB_Nombre = new System.Windows.Forms.ComboBox();
             this.BTN_VerModificar = new System.Windows.Forms.Button();
+            this.LNK_Volver = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Materiales)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -253,11 +254,23 @@
             this.BTN_VerModificar.UseVisualStyleBackColor = true;
             this.BTN_VerModificar.Click += new System.EventHandler(this.BTN_VerModificar_Click);
             // 
+            // LNK_Volver
+            // 
+            this.LNK_Volver.AutoSize = true;
+            this.LNK_Volver.Location = new System.Drawing.Point(445, 24);
+            this.LNK_Volver.Name = "LNK_Volver";
+            this.LNK_Volver.Size = new System.Drawing.Size(77, 13);
+            this.LNK_Volver.TabIndex = 50;
+            this.LNK_Volver.TabStop = true;
+            this.LNK_Volver.Text = "Volver al menú";
+            this.LNK_Volver.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LNK_Volver_LinkClicked);
+            // 
             // BuscarMateriales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 411);
+            this.Controls.Add(this.LNK_Volver);
             this.Controls.Add(this.BTN_VerModificar);
             this.Controls.Add(this.CB_Nombre);
             this.Controls.Add(this.menuStrip1);
@@ -303,5 +316,6 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ComboBox CB_Nombre;
         private System.Windows.Forms.Button BTN_VerModificar;
+        private System.Windows.Forms.LinkLabel LNK_Volver;
     }
 }

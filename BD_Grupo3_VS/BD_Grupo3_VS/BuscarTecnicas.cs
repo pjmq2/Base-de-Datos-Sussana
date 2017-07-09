@@ -93,6 +93,13 @@ namespace BD_Grupo3_VS
             }
         }
 
+        private void LNK_Volver_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MenuConfig menu = new MenuConfig();
+            menu.Show();
+            this.Dispose();
+        }
+
         /*  A partir de aqui empiezan los metodos para la cinta del menu */
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {

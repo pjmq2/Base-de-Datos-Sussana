@@ -54,6 +54,7 @@ namespace BD_Grupo3_VS
             DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicacion", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
+                this.Dispose();
                 Environment.Exit(0);
             }
             else
@@ -76,6 +77,7 @@ namespace BD_Grupo3_VS
             DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicacion", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
+                this.Dispose();
                 Environment.Exit(0);
             }
         }

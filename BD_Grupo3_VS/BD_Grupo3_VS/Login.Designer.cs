@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.GB_inicioDeSesion = new System.Windows.Forms.GroupBox();
-            this.bAceptar = new System.Windows.Forms.Button();
-            this.tbUsuario = new System.Windows.Forms.TextBox();
-            this.tbContraseña = new System.Windows.Forms.TextBox();
+            this.BTN_Aceptar = new System.Windows.Forms.Button();
+            this.TXT_Usuario = new System.Windows.Forms.TextBox();
+            this.TXT_Password = new System.Windows.Forms.TextBox();
             this.lContraseña = new System.Windows.Forms.Label();
             this.lUsuario = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -40,9 +40,9 @@
             // 
             // GB_inicioDeSesion
             // 
-            this.GB_inicioDeSesion.Controls.Add(this.bAceptar);
-            this.GB_inicioDeSesion.Controls.Add(this.tbUsuario);
-            this.GB_inicioDeSesion.Controls.Add(this.tbContraseña);
+            this.GB_inicioDeSesion.Controls.Add(this.BTN_Aceptar);
+            this.GB_inicioDeSesion.Controls.Add(this.TXT_Usuario);
+            this.GB_inicioDeSesion.Controls.Add(this.TXT_Password);
             this.GB_inicioDeSesion.Controls.Add(this.lContraseña);
             this.GB_inicioDeSesion.Controls.Add(this.lUsuario);
             this.GB_inicioDeSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -53,31 +53,35 @@
             this.GB_inicioDeSesion.TabStop = false;
             this.GB_inicioDeSesion.Text = "Inicio de sesión";
             // 
-            // bAceptar
+            // BTN_Aceptar
             // 
-            this.bAceptar.Location = new System.Drawing.Point(193, 143);
-            this.bAceptar.Name = "bAceptar";
-            this.bAceptar.Size = new System.Drawing.Size(75, 23);
-            this.bAceptar.TabIndex = 3;
-            this.bAceptar.Text = "Aceptar";
-            this.bAceptar.UseVisualStyleBackColor = true;
-            this.bAceptar.Click += new System.EventHandler(this.bAceptar_Click);
+            this.BTN_Aceptar.Enabled = false;
+            this.BTN_Aceptar.Location = new System.Drawing.Point(193, 143);
+            this.BTN_Aceptar.Name = "BTN_Aceptar";
+            this.BTN_Aceptar.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Aceptar.TabIndex = 3;
+            this.BTN_Aceptar.Text = "Aceptar";
+            this.BTN_Aceptar.UseVisualStyleBackColor = true;
+            this.BTN_Aceptar.TextChanged += new System.EventHandler(this.tbUsuario_TextChanged);
+            this.BTN_Aceptar.Click += new System.EventHandler(this.bAceptar_Click);
             // 
-            // tbUsuario
+            // TXT_Usuario
             // 
-            this.tbUsuario.Location = new System.Drawing.Point(101, 42);
-            this.tbUsuario.Name = "tbUsuario";
-            this.tbUsuario.Size = new System.Drawing.Size(167, 22);
-            this.tbUsuario.TabIndex = 1;
+            this.TXT_Usuario.Location = new System.Drawing.Point(101, 42);
+            this.TXT_Usuario.Name = "TXT_Usuario";
+            this.TXT_Usuario.Size = new System.Drawing.Size(167, 22);
+            this.TXT_Usuario.TabIndex = 1;
+            this.TXT_Usuario.TextChanged += new System.EventHandler(this.tbUsuario_TextChanged);
             // 
-            // tbContraseña
+            // TXT_Password
             // 
-            this.tbContraseña.Location = new System.Drawing.Point(101, 91);
-            this.tbContraseña.Name = "tbContraseña";
-            this.tbContraseña.PasswordChar = '*';
-            this.tbContraseña.Size = new System.Drawing.Size(167, 22);
-            this.tbContraseña.TabIndex = 2;
-            this.tbContraseña.UseSystemPasswordChar = true;
+            this.TXT_Password.Location = new System.Drawing.Point(101, 91);
+            this.TXT_Password.Name = "TXT_Password";
+            this.TXT_Password.PasswordChar = '*';
+            this.TXT_Password.Size = new System.Drawing.Size(167, 22);
+            this.TXT_Password.TabIndex = 2;
+            this.TXT_Password.UseSystemPasswordChar = true;
+            this.TXT_Password.TextChanged += new System.EventHandler(this.TXT_Password_TextChanged);
             // 
             // lContraseña
             // 
@@ -120,8 +124,8 @@
         private System.Windows.Forms.Label lContraseña;
         private System.Windows.Forms.Label lUsuario;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.TextBox tbUsuario;
-        private System.Windows.Forms.TextBox tbContraseña;
-        private System.Windows.Forms.Button bAceptar;
+        private System.Windows.Forms.TextBox TXT_Usuario;
+        private System.Windows.Forms.TextBox TXT_Password;
+        private System.Windows.Forms.Button BTN_Aceptar;
     }
 }
