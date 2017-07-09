@@ -34,14 +34,26 @@ namespace BD_Grupo3_VS
 
             if (filtroNombre == null)
             {
-                bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Tecnicas");
+                bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Tecnica ORDER BY Nombre");
             }
             else
             {
-                bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Tecnicas WHERE Nombre LIKE '%" + filtroNombre + "%' OR DESCRIPCION LIKE '%" + filtroNombre + "%'");
+                bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Tecnica WHERE Nombre LIKE '%" + filtroNombre + "%' OR DESCRIPCION LIKE '%" + filtroNombre + "%' ORDER BY Nombre");
             }
 
             return tabla;
+        }
+
+        public SqlDataReader obtenerListaNombres()
+        {
+            SqlDataReader datos = null;
+            try
+            {
+                datos = bd.ejecutarConsulta("Select distinct Nombre from Tecnica order by nombre");
+            }
+            catch (SqlException) { }
+
+            return datos;
         }
 
         public int agregarRequerimientoDeMaterial(string nombreTecnica, string nombreMaterial, int cantidad)

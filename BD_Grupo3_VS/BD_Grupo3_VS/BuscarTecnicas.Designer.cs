@@ -126,14 +126,14 @@
             // crearTecnicaToolStripMenuItem
             // 
             this.crearTecnicaToolStripMenuItem.Name = "crearTecnicaToolStripMenuItem";
-            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.crearTecnicaToolStripMenuItem.Text = "Crear técnica";
             this.crearTecnicaToolStripMenuItem.Click += new System.EventHandler(this.crearTecnicaToolStripMenuItem_Click);
             // 
             // buscarTecnicaToolStripMenuItem
             // 
             this.buscarTecnicaToolStripMenuItem.Name = "buscarTecnicaToolStripMenuItem";
-            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.buscarTecnicaToolStripMenuItem.Text = "Buscar técnica";
             this.buscarTecnicaToolStripMenuItem.Click += new System.EventHandler(this.buscarTecnicaToolStripMenuItem_Click);
             // 
@@ -215,7 +215,7 @@
             // 
             // BTN_VerModificar
             // 
-            this.BTN_VerModificar.Location = new System.Drawing.Point(402, 89);
+            this.BTN_VerModificar.Location = new System.Drawing.Point(402, 62);
             this.BTN_VerModificar.Name = "BTN_VerModificar";
             this.BTN_VerModificar.Size = new System.Drawing.Size(120, 23);
             this.BTN_VerModificar.TabIndex = 48;
@@ -241,6 +241,8 @@
             // 
             // CB_Nombre
             // 
+            this.CB_Nombre.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.CB_Nombre.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CB_Nombre.FormattingEnabled = true;
             this.CB_Nombre.Location = new System.Drawing.Point(65, 64);
             this.CB_Nombre.Name = "CB_Nombre";
@@ -249,7 +251,7 @@
             // 
             // BTN_Buscar
             // 
-            this.BTN_Buscar.Location = new System.Drawing.Point(271, 89);
+            this.BTN_Buscar.Location = new System.Drawing.Point(271, 62);
             this.BTN_Buscar.Name = "BTN_Buscar";
             this.BTN_Buscar.Size = new System.Drawing.Size(90, 23);
             this.BTN_Buscar.TabIndex = 44;
@@ -314,8 +316,8 @@
         private System.Windows.Forms.Button BTN_VerModificar;
         private System.Windows.Forms.Label LBL_Filtro;
         private System.Windows.Forms.TextBox TXT_Filtro;
-        private System.Windows.Forms.ComboBox CB_Nombre;
         private System.Windows.Forms.Button BTN_Buscar;
         private System.Windows.Forms.Label LBL_Nombre;
+        private System.Windows.Forms.ComboBox CB_Nombre;
     }
 }

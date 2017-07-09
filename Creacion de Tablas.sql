@@ -119,12 +119,12 @@ create table DATOS_CLINICOS(
 		on update no action
 )
 
---Tabla Tecnicas
-create table TECNICAS(
+--Tabla Tecnica
+create table TECNICA(
 	Nombre		varchar(50)		not null,
-	Descripcion	varchar(500)	not null,
+	Descripcion	varchar(500),
 	Precio		int
-	Constraint PKTecnicas primary key (Nombre)
+	Constraint PKTecnica primary key (Nombre)
 )
 
 --Tabla Se Realiza
@@ -137,9 +137,9 @@ create table SE_REALIZAN(
 	Constraint FKSRaCita foreign key (CedPaciente, Padec_Act, Fecha_Cita) references CITA(CedPaciente, Padec_Act, Fecha)
 		on delete no action
 		on update no action,
-	Constraint FKSRaTecnicas foreign key (Nombre_Tec) references TECNICAS(Nombre)
+	Constraint FKSRaTecnica foreign key (Nombre_Tec) references TECNICA(Nombre)
 		on delete no action
-		on update no action
+		on update cascade
 )
 
 --Tabla Material
@@ -155,12 +155,12 @@ create table REQUIERE_DE(
 	Nombre_Mat	varchar(50) not null ,
 	Cantidad	int,
 	Constraint PKRequiere_De primary key (Nombre_Tec, Nombre_Mat),
-	Constraint FKRDaTecnicas foreign key (Nombre_Tec) references Tecnicas(Nombre)
+	Constraint FKRDaTecnica foreign key (Nombre_Tec) references Tecnica(Nombre)
 		on delete no action
-		on update no action,
+		on update cascade,
 	Constraint FKRDaMaterial foreign key (Nombre_Mat) references MATERIAL(Nombre)
 		on delete no action
-		on update no action
+		on update cascade
 )
 
 --Tabla Tareas del plan de ejercicios
@@ -244,7 +244,7 @@ drop table TAREAS_PLAN_EJERCICIOS
 drop table REQUIERE_DE
 drop table MATERIAL
 drop table SE_REALIZAN
-drop table TECNICAS
+drop table TECNICA
 drop table DATOS_CLINICOS
 drop table TIPO_ANT
 drop table ANT_PAT
@@ -253,3 +253,9 @@ drop table PLAN_EJERCICIOS
 drop table PLAN_TRATAMIENTO
 drop table CIRUGIAS
 drop table PACIENTE
+
+SELECT M.Nombre
+FROM Requiere_De RD RIGHT OUTER JOIN Material M ON RD.Nombre_Mat = M.Nombre
+EXCEPT
+SELECT M.Nombre
+FROM Requiere_De RD RIGHT OUTER JOIN Material M ON RD.Nombre_Mat = M.Nombre JOIN Tecnica T ON T.Nombre = RD.Nombre_Tec AND T.Nombre = 'Tec1'
