@@ -8,16 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace BD_Grupo3_VS
 {
     public partial class AgregarPlanEjercicios : Form
     {
-        public AgregarPlanEjercicios()
+        Paciente paciente;
+        string cedula;
+        public AgregarPlanEjercicios(string cedulaNueva)
         {
             InitializeComponent();
+            paciente = new Paciente();
         }
 
         private void BTN_Agregar_Click(object sender, EventArgs e)

@@ -57,21 +57,22 @@ namespace BD_Grupo3_VS
             llenarCombobox(CB_Nombre);
         }
 
+
+
+        #region Menu
         /*             A partir de aqui empiezan los metodos para la cinta del menu  */
-
-
         private void menuPrincipalToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
             menu.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void menuAvanzadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuConfig menu = new MenuConfig();
             menu.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,50 +90,52 @@ namespace BD_Grupo3_VS
         {
             AgregarTecnica tecnica = new AgregarTecnica();
             tecnica.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void buscarTecnicaToolStripMenuItem_Click(object sender, EventArgs e)
         {         
             BuscarTecnicas tecnicas = new BuscarTecnicas();
             tecnicas.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void crearAntecedenteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AgregarAntecedentes antecedente = new AgregarAntecedentes();
             antecedente.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void crearMaterialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AgregarMaterial material = new AgregarMaterial();
             material.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void buscarMaterialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuscarMateriales material = new BuscarMateriales();
             material.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void crearEjercicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AgregarEjercicio ejercicio = new AgregarEjercicio();
             ejercicio.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void buscarEjercicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuscarEjercicios ejercicio = new BuscarEjercicios();
             ejercicio.Show();
-            this.Hide();
+            this.Close();
         }
+        /*             Hasta aqui las instrucciones de la cinta del menu  */
+        #endregion
 
         private void CB_Nombre_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -160,16 +163,12 @@ namespace BD_Grupo3_VS
             else
             {
                 string nombre;
-                string tipo;
                 DataGridViewRow row = DGV_Antecedentes.CurrentRow;
                 nombre = row.Cells[0].Value.ToString();
-
                 VerAntecedente antecedente = new VerAntecedente(nombre);
                 antecedente.Show();
-                this.Hide();
+                this.Close();
             }
-        }
-
-        /*             Hasta aqui las instrucciones de la cinta del menu  */
+        }       
     }
 }

@@ -79,8 +79,8 @@ namespace BD_Grupo3_VS
             //LBL_NombreCambiante.Text = "Nombre del Paciente: "+nombre +" "+ apellido1 + " " + apellido2;
             llenarComboBoxDatos(CB_DatoClinico);       
             llenarTabla(DGV_Cirugias);
-            
-
+            llenarAntecedentesPaciente(DGV_AntePaciente, TXT_Cedula.Text);
+            llenarComboboxAntecedente(CB_Ante);
         }
 
         private void BTN_Eliminar_Click(object sender, EventArgs e)
@@ -443,7 +443,7 @@ namespace BD_Grupo3_VS
         {
             int resultado = paciente.agregarCirugia(TXT_Cedula.Text, TXT_NuevaCirugia.Text);
 
-            //resultado es 0 cuando se pudo agregar un antecedente al paciente con éxito
+            //resultado es 0 cuando se pudo agregar una cirugía al paciente con éxito
             if (resultado == 0)
             {                        
                 MessageBox.Show("¡La cirugía ha sido agregada exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -590,7 +590,99 @@ namespace BD_Grupo3_VS
             archivosTemp.ForEach(delegate (string s) {
                 System.IO.File.Delete(s);
             });
-        }      
+        }
+
+        private void llenarAntecedentesPaciente(DataGridView dataGridView, string CedPaciente)
+        {
+
+            DataTable tabla = paciente.obtenerAntecedentesPaciente(CedPaciente);
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = tabla;
+            dataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+            dataGridView.DataSource = bindingSource;
+            for (int i = 0; i < DGV_AntePaciente.ColumnCount; i++)
+            {
+                dataGridView.Columns[i].Width = 100;
+            }
+        }
+
+        private void llenarComboboxAntecedente(ComboBox combobox)
+        {
+            SqlDataReader datos = paciente.obtenerListaNombresAntecedentes();
+            if (datos != null)
+            {
+                while (datos.Read())
+                {
+                    combobox.Items.Add(datos.GetValue(0));
+                }
+            }
+            else
+            {
+                combobox.Items.Clear();
+            }
+            combobox.SelectedItem = 0;
+        }
+
+        private void BTN_AgregarAnte_Click(object sender, EventArgs e)
+        {
+            int resultado = paciente.agregarAntecedentePaciente(TXT_Cedula.Text, CB_Ante.Text, TXT_Descripcion.Text);           
+            if (resultado == 0)
+            {
+                MessageBox.Show("¡El antecedente ha sido agregado al paciente exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
+                VerPaciente vp = new VerPaciente(TXT_Cedula.Text, TXT_Nombre.Text, TXT_Apellido1.Text, TXT_Apellido2.Text);
+                this.Dispose();
+                vp.Show();
+            }
+            else
+            {
+                if (resultado == 2627)
+                {
+                    MessageBox.Show("Ya existe este antecedente asociado a este paciente", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(resultado + ": Algo ha fallado.", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void BTN_CitaNueva_Click(object sender, EventArgs e)
+        {
+            AgregarCita ac = new AgregarCita(TXT_Cedula.Text);
+            ac.Show();
+            this.Close();
+        }
+
+        private void BTN_CitaBuscar_Click(object sender, EventArgs e)
+        {
+            ConsultarCitas cc = new ConsultarCitas(TXT_Cedula.Text);
+            cc.Show();
+            this.Close();
+        }
+
+        private void BTN_CrearPlanTratamiento_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BTN_BuscarPlanTratamiento_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BTN_CrearPlanEjercicios_Click(object sender, EventArgs e)
+        {
+            AgregarPlanEjercicios ap = new AgregarPlanEjercicios(TXT_Cedula.Text);
+            ap.Show();
+            this.Close();
+        }
+
+        private void BTN_BuscarPlanEjercicios_Click(object sender, EventArgs e)
+        {
+            BuscarPlanEjercicios bp = new BuscarPlanEjercicios(TXT_Cedula.Text);
+            bp.Show();
+            this.Close();
+        }
     }   
 }
 

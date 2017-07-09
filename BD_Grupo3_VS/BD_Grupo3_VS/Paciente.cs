@@ -277,6 +277,21 @@ namespace BD_Grupo3_VS
             return tabla;
         }
 
+        //Con este método se obtienen todos los antecedentes de un paciente
+        public DataTable obtenerAntecedentesPaciente(string cedula)
+        {
+            DataTable tabla = null;
+            try
+            {
+                tabla = bd.ejecutarConsultaTabla("Select Nombre_A, Descripcion  from HA_TENIDO  where CedulaPac = '" + cedula + "'");
+            }
+            catch (SqlException ex)
+            {
+
+            }
+            return tabla;
+        }
+
         //Con este método se pueden consultar los nombres de los antecedentes creados, agrupados por nombre
         public DataTable obtenerAntecedentes(string nombre)
         {
@@ -315,6 +330,15 @@ namespace BD_Grupo3_VS
         {
             String insertar = "INSERT	INTO	CIRUGIAS	(CedPaciente, Cirugia)	" +
                 "VALUES(" + cedula + ",'" + cirugia + "')";
+            return bd.actualizarDatos(insertar);
+
+
+        }
+
+        public int agregarAntecedentePaciente(string cedula, string nombreA, string descripcion)
+        {
+            String insertar = "INSERT	INTO	HA_TENIDO	(CedulaPac, Nombre_A, Descripcion)	" +
+                "VALUES('" + cedula + "','" + nombreA + "','" + descripcion + "')";
             return bd.actualizarDatos(insertar);
 
 
