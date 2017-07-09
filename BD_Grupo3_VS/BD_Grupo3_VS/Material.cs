@@ -38,6 +38,16 @@ namespace BD_Grupo3_VS
             return tabla;
         }
 
+        public int actualizarMaterial(string nombre)
+        {
+            return 1;
+        }
+
+        public int eliminarMaterial(string nombre)
+        {
+            return 1;
+        }
+
         public SqlDataReader obtenerListaNombres()
         {
             SqlDataReader datos = null;
@@ -49,16 +59,5 @@ namespace BD_Grupo3_VS
 
             return datos;
         }
-
-        public int actualizarMaterial(string nombre)
-        {
-            return 1;
-        }
-
-        public int eliminarMaterial(string nombre)
-        {
-            return 1;
-        }
-
     }
 }

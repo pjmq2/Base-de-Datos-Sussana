@@ -43,7 +43,7 @@ namespace BD_Grupo3_VS
 
         private void BTN_EliminarMaterial_Click(object sender, EventArgs e)
         {
-            materiales.eliminarMaterial(nombreMaterial);
+            int result = materiales.eliminarMaterial(nombreMaterial);
         }
 
         private void TXT_Nombre_TextChanged(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace BD_Grupo3_VS
             cambios = true;
         }
 
-        /* A partir de aqui empiezan los metodos para la cinta del menu  */
+        #region Métodos del Menu Strip
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
@@ -144,6 +144,6 @@ namespace BD_Grupo3_VS
             ejercicio.Show();
             this.Hide();
         }
-        /*  Hasta aqui las instrucciones de la cinta del menu   */
+        #endregion
     }
 }

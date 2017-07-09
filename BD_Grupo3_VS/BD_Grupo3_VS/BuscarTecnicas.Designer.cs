@@ -50,6 +50,7 @@
             this.CB_Nombre = new System.Windows.Forms.ComboBox();
             this.BTN_Buscar = new System.Windows.Forms.Button();
             this.LBL_Nombre = new System.Windows.Forms.Label();
+            this.LNK_Volver = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Tecnicas)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -252,11 +253,23 @@
             this.LBL_Nombre.TabIndex = 43;
             this.LBL_Nombre.Text = "Nombre:";
             // 
+            // LNK_Volver
+            // 
+            this.LNK_Volver.AutoSize = true;
+            this.LNK_Volver.Location = new System.Drawing.Point(445, 24);
+            this.LNK_Volver.Name = "LNK_Volver";
+            this.LNK_Volver.Size = new System.Drawing.Size(77, 13);
+            this.LNK_Volver.TabIndex = 49;
+            this.LNK_Volver.TabStop = true;
+            this.LNK_Volver.Text = "Volver al menú";
+            this.LNK_Volver.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LNK_Volver_LinkClicked);
+            // 
             // BuscarTecnicas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 411);
+            this.Controls.Add(this.LNK_Volver);
             this.Controls.Add(this.BTN_VerModificar);
             this.Controls.Add(this.CB_Nombre);
             this.Controls.Add(this.BTN_Buscar);
@@ -300,5 +313,6 @@
         private System.Windows.Forms.Button BTN_Buscar;
         private System.Windows.Forms.Label LBL_Nombre;
         private System.Windows.Forms.ComboBox CB_Nombre;
+        private System.Windows.Forms.LinkLabel LNK_Volver;
     }
 }

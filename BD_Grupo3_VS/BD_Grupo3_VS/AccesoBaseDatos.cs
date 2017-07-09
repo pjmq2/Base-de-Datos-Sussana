@@ -255,8 +255,6 @@ namespace BD_Grupo3_VS
 
             return error;
 
-
-
         }
 
         /*Método para llamar al procedimiento almacenado que permite agregar un nuevo usuario 

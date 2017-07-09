@@ -28,5 +28,28 @@ namespace BD_Grupo3_VS
         {
             Application.Exit();
         }
+
+        private void tbUsuario_TextChanged(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrWhiteSpace(this.TXT_Usuario.Text) && !string.IsNullOrWhiteSpace(this.TXT_Password.Text))
+            {
+                BTN_Aceptar.Enabled = true;
+            } else
+            {
+                BTN_Aceptar.Enabled = false;
+            }
+        }
+
+        private void TXT_Password_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(this.TXT_Usuario.Text) && !string.IsNullOrWhiteSpace(this.TXT_Password.Text))
+            {
+                BTN_Aceptar.Enabled = true;
+            }
+            else
+            {
+                BTN_Aceptar.Enabled = false;
+            }
+        }
     }
 }

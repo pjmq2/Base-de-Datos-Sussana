@@ -35,7 +35,6 @@ namespace BD_Grupo3_VS
             }
         }
 
-        //Verificar parámetros
         private void llenarComboBox()
         {
             SqlDataReader datos = material.obtenerListaNombres();
@@ -91,6 +90,13 @@ namespace BD_Grupo3_VS
                 material.Show();
                 this.Dispose();
             }
+        }
+
+        private void LNK_Volver_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MenuConfig menu = new MenuConfig();
+            menu.Show();
+            this.Dispose();
         }
 
         /*  A partir de aqui empiezan los metodos para la cinta del menu    */

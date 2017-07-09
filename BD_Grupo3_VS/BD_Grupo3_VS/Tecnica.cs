@@ -23,11 +23,6 @@ namespace BD_Grupo3_VS
             return bd.actualizarDatos(insertar);
         }
 
-        public int actualizarTecnica(string nombre)
-        {
-            return 1;
-        }
-
         public DataTable consultarTecnicas(string filtro)
         {
             DataTable tabla = null;
@@ -55,6 +50,11 @@ namespace BD_Grupo3_VS
             }
 
             return descripcion;
+        }
+
+        public int actualizarTecnica(string nombre)
+        {
+            return 1;
         }
 
         public SqlDataReader obtenerListaNombres()
