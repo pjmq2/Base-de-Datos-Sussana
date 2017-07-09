@@ -60,12 +60,14 @@
             this.crearEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NUD_CantidadNueva = new System.Windows.Forms.NumericUpDown();
             this.gb_informacionDeLaTecnica.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Precio)).BeginInit();
             this.GB_EliminarMateriales.SuspendLayout();
             this.GB_AddMaterialRequerido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Cantidad)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_CantidadNueva)).BeginInit();
             this.SuspendLayout();
             // 
             // gb_informacionDeLaTecnica
@@ -171,6 +173,7 @@
             // 
             // GB_EliminarMateriales
             // 
+            this.GB_EliminarMateriales.Controls.Add(this.NUD_CantidadNueva);
             this.GB_EliminarMateriales.Controls.Add(this.CB_MaterialesRequeridos);
             this.GB_EliminarMateriales.Controls.Add(this.BTN_EliminarRequisito);
             this.GB_EliminarMateriales.Location = new System.Drawing.Point(318, 38);
@@ -186,7 +189,7 @@
             this.CB_MaterialesRequeridos.FormattingEnabled = true;
             this.CB_MaterialesRequeridos.Location = new System.Drawing.Point(6, 29);
             this.CB_MaterialesRequeridos.Name = "CB_MaterialesRequeridos";
-            this.CB_MaterialesRequeridos.Size = new System.Drawing.Size(242, 21);
+            this.CB_MaterialesRequeridos.Size = new System.Drawing.Size(196, 21);
             this.CB_MaterialesRequeridos.TabIndex = 4;
             // 
             // BTN_EliminarRequisito
@@ -371,6 +374,13 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // NUD_CantidadNueva
+            // 
+            this.NUD_CantidadNueva.Location = new System.Drawing.Point(208, 30);
+            this.NUD_CantidadNueva.Name = "NUD_CantidadNueva";
+            this.NUD_CantidadNueva.Size = new System.Drawing.Size(40, 20);
+            this.NUD_CantidadNueva.TabIndex = 7;
+            // 
             // VerTecnica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,6 +404,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Cantidad)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_CantidadNueva)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,5 +444,6 @@
         private System.Windows.Forms.ToolStripMenuItem buscarEjercicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown NUD_Cantidad;
+        private System.Windows.Forms.NumericUpDown NUD_CantidadNueva;
     }
 }

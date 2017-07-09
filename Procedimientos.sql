@@ -55,6 +55,20 @@ drop table #temp
 
 ---
 GO
+Create procedure eliminarTecnica
+	@nombre	varchar(50)
+AS
+select distinct Tecnicas.Nombre
+into #temp
+FROM Tecnicas
+Where Tecnicas.Nombre = @nombre
+
+Delete Tecnicas
+Where Nombre in (SELECT * from #temp)
+
+drop table #temp
+---
+GO
 CREATE PROCEDURE eliminarPaciente 
 @cedula char(9)
 AS

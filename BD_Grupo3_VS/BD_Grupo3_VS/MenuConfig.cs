@@ -72,5 +72,10 @@ namespace BD_Grupo3_VS
             antecedente.Show();
             this.Hide();
         }
+
+        private void MenuConfig_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

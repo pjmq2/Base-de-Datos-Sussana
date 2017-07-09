@@ -18,8 +18,8 @@ namespace BD_Grupo3_VS
 
         public int agregarTecnica(string nombre, int precio, string descripcion)
         {
-            String insertar = "INSERT into Tecnicas (Nombre, Precio, Descripcion)" +
-                 " VALUES ('" + nombre + "'," + precio + ",'" + descripcion + "')";
+            String insertar = "INSERT into Tecnica (Nombre, Descripcion, Precio)" +
+                 " VALUES ('" + nombre + "','" + descripcion + "'," + precio + ")";
             return bd.actualizarDatos(insertar);
         }
 
@@ -28,20 +28,32 @@ namespace BD_Grupo3_VS
             return 1;
         }
 
-        public DataTable consultarTecnicas(string filtroNombre)
+        public DataTable consultarTecnicas(string filtro)
         {
             DataTable tabla = null;
 
-            if (filtroNombre == null)
+            if (filtro == null)
             {
-                bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Tecnicas");
+                bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Tecnica ORDER BY Nombre");
             }
             else
             {
-                bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Tecnicas WHERE Nombre LIKE '%" + filtroNombre + "%' OR DESCRIPCION LIKE '%" + filtroNombre + "%'");
+                bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Tecnica WHERE Nombre LIKE '%" + filtro + "%' OR DESCRIPCION LIKE '%" + filtro + "%' ORDER BY Nombre");
             }
 
             return tabla;
+        }
+
+        public SqlDataReader obtenerListaNombres()
+        {
+            SqlDataReader datos = null;
+            try
+            {
+                datos = bd.ejecutarConsulta("Select distinct Nombre from Tecnica order by nombre");
+            }
+            catch (SqlException) { }
+
+            return datos;
         }
 
         public int agregarRequerimientoDeMaterial(string nombreTecnica, string nombreMaterial, int cantidad)
