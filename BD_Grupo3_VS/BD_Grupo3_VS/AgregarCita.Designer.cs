@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.GB_AgregarCita = new System.Windows.Forms.GroupBox();
+            this.CB_Padecimiento = new System.Windows.Forms.ComboBox();
             this.BTN_Lista = new System.Windows.Forms.Button();
             this.CB_Lugar = new System.Windows.Forms.ComboBox();
             this.BTN_Agregar = new System.Windows.Forms.Button();
@@ -55,7 +56,6 @@
             this.crearPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CB_Padecimiento = new System.Windows.Forms.ComboBox();
             this.GB_AgregarCita.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +98,15 @@
             this.GB_AgregarCita.TabStop = false;
             this.GB_AgregarCita.Text = "Agregar una Cita";
             // 
+            // CB_Padecimiento
+            // 
+            this.CB_Padecimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_Padecimiento.FormattingEnabled = true;
+            this.CB_Padecimiento.Location = new System.Drawing.Point(114, 106);
+            this.CB_Padecimiento.Name = "CB_Padecimiento";
+            this.CB_Padecimiento.Size = new System.Drawing.Size(142, 21);
+            this.CB_Padecimiento.TabIndex = 19;
+            // 
             // BTN_Lista
             // 
             this.BTN_Lista.Image = global::BD_Grupo3_VS.Properties.Resources.Cita_Buscar;
@@ -121,7 +130,6 @@
             this.CB_Lugar.Name = "CB_Lugar";
             this.CB_Lugar.Size = new System.Drawing.Size(142, 21);
             this.CB_Lugar.TabIndex = 17;
-           
             // 
             // BTN_Agregar
             // 
@@ -303,15 +311,6 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // CB_Padecimiento
-            // 
-            this.CB_Padecimiento.FormattingEnabled = true;
-            this.CB_Padecimiento.Location = new System.Drawing.Point(114, 106);
-            this.CB_Padecimiento.Name = "CB_Padecimiento";
-            this.CB_Padecimiento.Size = new System.Drawing.Size(142, 21);
-            this.CB_Padecimiento.TabIndex = 19;
-            
             // 
             // AgregarCita
             // 

@@ -72,7 +72,7 @@ namespace BD_Grupo3_VS
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            DialogResult resultado = MessageBox.Show("Seguro que desea Salir ?", "Cerrar la aplicacion", botones);
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicacion", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
@@ -126,7 +126,7 @@ namespace BD_Grupo3_VS
             estadoC = row.Cells[10].Value.ToString();
             ModificarCita mc = new ModificarCita(cedulaC,padecimientoC,precioC,descripC,duracionC,lugarC,estadoC,fechaC);
             mc.Show();
-            this.Close();
+            this.Dispose();
             
         }
 

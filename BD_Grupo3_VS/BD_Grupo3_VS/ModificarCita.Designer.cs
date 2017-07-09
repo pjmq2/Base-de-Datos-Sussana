@@ -375,6 +375,7 @@
             // 
             // CB_AgregaTecnica
             // 
+            this.CB_AgregaTecnica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CB_AgregaTecnica.FormattingEnabled = true;
             this.CB_AgregaTecnica.Location = new System.Drawing.Point(85, 46);
             this.CB_AgregaTecnica.Name = "CB_AgregaTecnica";
@@ -383,6 +384,7 @@
             // 
             // CB_EliminaTecnica
             // 
+            this.CB_EliminaTecnica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CB_EliminaTecnica.FormattingEnabled = true;
             this.CB_EliminaTecnica.Location = new System.Drawing.Point(85, 55);
             this.CB_EliminaTecnica.Name = "CB_EliminaTecnica";

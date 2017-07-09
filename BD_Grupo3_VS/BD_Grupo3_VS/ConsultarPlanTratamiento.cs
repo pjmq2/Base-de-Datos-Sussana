@@ -67,7 +67,7 @@ namespace BD_Grupo3_VS
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            DialogResult resultado = MessageBox.Show("Seguro que desea Salir ?", "Cerrar la aplicacion", botones);
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicacion", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
@@ -82,19 +82,18 @@ namespace BD_Grupo3_VS
             string cedEnviar = row.Cells[0].Value.ToString();
             AgregarCita ac = new AgregarCita(cedEnviar);
             ac.Show();
-            this.Close();
+            this.Dispose();
 
         }
 
         private void BTN_AsignaPlanEjercicios_Click(object sender, EventArgs e)
         {
-            string cedulaEnviar, padeEnviar;
+            string cedulaEnviar;
             DataGridViewRow row = dataGridView1.CurrentRow;
             cedulaEnviar = row.Cells[0].Value.ToString();
-            padeEnviar = row.Cells[4].Value.ToString();
-            AgregarPlanEjercicios ap = new AgregarPlanEjercicios(cedulaEnviar); //, padeEnviar); //ESTABA DANDO ERROR!
+            AgregarPlanEjercicios ap = new AgregarPlanEjercicios(cedulaEnviar); 
             ap.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void InicioToolStripMenuItem_Click_1(object sender, EventArgs e)
