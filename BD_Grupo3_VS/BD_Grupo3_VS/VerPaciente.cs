@@ -451,9 +451,9 @@ namespace BD_Grupo3_VS
             if (resultado == 0)
             {                        
                 MessageBox.Show("¡La cirugía ha sido agregada exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
-                VerPaciente vp = new VerPaciente(TXT_Cedula.Text, TXT_Nombre.Text, TXT_Apellido1.Text, TXT_Apellido2.Text);
-                this.Dispose();
-                vp.Show();
+                //se recarga el data grid de las cirugías
+                llenarTabla(DGV_Cirugias);
+                TXT_NuevaCirugia.Clear();
             }
             else
             {
@@ -466,6 +466,7 @@ namespace BD_Grupo3_VS
                     MessageBox.Show(resultado + ": Algo ha fallado.", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            
         }
 
         private void llenarTabla(DataGridView dataGridView)
@@ -502,9 +503,9 @@ namespace BD_Grupo3_VS
                 if (result == 0)
                 {
                     MessageBox.Show("¡La cirugía ha sido modificada exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
-                    VerPaciente vp = new VerPaciente(TXT_Cedula.Text, TXT_Nombre.Text, TXT_Apellido1.Text, TXT_Apellido2.Text);
-                    this.Close();
-                    vp.Show();
+                    llenarTabla(DGV_Cirugias);
+                    TXT_CirugiaSeleccionada.Clear();
+                    TXT_CirugiaSeleccionada.BackColor = System.Drawing.Color.White;
                 }
                 else
                 {
@@ -516,7 +517,6 @@ namespace BD_Grupo3_VS
                     {
                         MessageBox.Show("Ha ocurrido un error.", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
                 }
             }
         }
@@ -529,9 +529,9 @@ namespace BD_Grupo3_VS
             if (result == 0)
             {
                 MessageBox.Show("¡La cirugía ha sido eliminada exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
-                VerPaciente vp = new VerPaciente(TXT_Cedula.Text, TXT_Nombre.Text, TXT_Apellido1.Text, TXT_Apellido2.Text);
-                this.Close();
-                vp.Show();
+                llenarTabla(DGV_Cirugias);
+                TXT_CirugiaSeleccionada.Clear();
+                TXT_CirugiaSeleccionada.BackColor = System.Drawing.Color.White;
             }
             else
             {
@@ -633,9 +633,10 @@ namespace BD_Grupo3_VS
             if (resultado == 0)
             {
                 MessageBox.Show("¡El antecedente ha sido agregado al paciente exitosamente!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
-                VerPaciente vp = new VerPaciente(TXT_Cedula.Text, TXT_Nombre.Text, TXT_Apellido1.Text, TXT_Apellido2.Text);
-                this.Dispose();
-                vp.Show();
+                llenarAntecedentesPaciente(DGV_AntePaciente, cedula);
+                llenarComboboxAntecedente(CB_Ante);
+                TXT_Descripcion.Clear();
+                TXT_Descripcion.BackColor = System.Drawing.Color.White;
             }
             else
             {
