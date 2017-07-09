@@ -18,7 +18,7 @@ namespace BD_Grupo3_VS
 
         public int agregarTecnica(string nombre, int precio, string descripcion)
         {
-            String insertar = "INSERT into Tecnicas (Nombre, Precio, Descripcion)" +
+            String insertar = "INSERT into Tecnica (Nombre, Precio, Descripcion)" +
                  " VALUES ('" + nombre + "'," + precio + ",'" + descripcion + "')";
             return bd.actualizarDatos(insertar);
         }
