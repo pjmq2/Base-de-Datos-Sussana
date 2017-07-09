@@ -47,8 +47,6 @@
             this.buscarEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BTN_VerModificar = new System.Windows.Forms.Button();
-            this.LBL_Filtro = new System.Windows.Forms.Label();
-            this.TXT_Filtro = new System.Windows.Forms.TextBox();
             this.CB_Nombre = new System.Windows.Forms.ComboBox();
             this.BTN_Buscar = new System.Windows.Forms.Button();
             this.LBL_Nombre = new System.Windows.Forms.Label();
@@ -74,12 +72,12 @@
             this.DGV_Tecnicas.AllowUserToDeleteRows = false;
             this.DGV_Tecnicas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Tecnicas.GridColor = System.Drawing.SystemColors.Control;
-            this.DGV_Tecnicas.Location = new System.Drawing.Point(12, 120);
+            this.DGV_Tecnicas.Location = new System.Drawing.Point(12, 91);
             this.DGV_Tecnicas.MultiSelect = false;
             this.DGV_Tecnicas.Name = "DGV_Tecnicas";
             this.DGV_Tecnicas.ReadOnly = true;
             this.DGV_Tecnicas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Tecnicas.Size = new System.Drawing.Size(510, 279);
+            this.DGV_Tecnicas.Size = new System.Drawing.Size(510, 308);
             this.DGV_Tecnicas.TabIndex = 9;
             // 
             // menuStrip1
@@ -223,22 +221,6 @@
             this.BTN_VerModificar.UseVisualStyleBackColor = true;
             this.BTN_VerModificar.Click += new System.EventHandler(this.BTN_VerModificar_Click);
             // 
-            // LBL_Filtro
-            // 
-            this.LBL_Filtro.AutoSize = true;
-            this.LBL_Filtro.Location = new System.Drawing.Point(13, 94);
-            this.LBL_Filtro.Name = "LBL_Filtro";
-            this.LBL_Filtro.Size = new System.Drawing.Size(70, 13);
-            this.LBL_Filtro.TabIndex = 47;
-            this.LBL_Filtro.Text = "Filtro general:";
-            // 
-            // TXT_Filtro
-            // 
-            this.TXT_Filtro.Location = new System.Drawing.Point(89, 91);
-            this.TXT_Filtro.Name = "TXT_Filtro";
-            this.TXT_Filtro.Size = new System.Drawing.Size(176, 20);
-            this.TXT_Filtro.TabIndex = 46;
-            // 
             // CB_Nombre
             // 
             this.CB_Nombre.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
@@ -274,8 +256,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 411);
             this.Controls.Add(this.BTN_VerModificar);
-            this.Controls.Add(this.LBL_Filtro);
-            this.Controls.Add(this.TXT_Filtro);
             this.Controls.Add(this.CB_Nombre);
             this.Controls.Add(this.BTN_Buscar);
             this.Controls.Add(this.LBL_Nombre);
@@ -285,6 +265,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "BuscarTecnicas";
             this.Text = "Buscar técnicas";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BuscarTecnicas_FormClosed);
             this.Load += new System.EventHandler(this.BuscarTecnicas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Tecnicas)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -314,8 +295,6 @@
         private System.Windows.Forms.ToolStripMenuItem buscarEjercicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Button BTN_VerModificar;
-        private System.Windows.Forms.Label LBL_Filtro;
-        private System.Windows.Forms.TextBox TXT_Filtro;
         private System.Windows.Forms.Button BTN_Buscar;
         private System.Windows.Forms.Label LBL_Nombre;
         private System.Windows.Forms.ComboBox CB_Nombre;

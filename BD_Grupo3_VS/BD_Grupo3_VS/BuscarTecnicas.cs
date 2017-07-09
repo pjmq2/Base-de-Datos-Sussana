@@ -71,6 +71,12 @@ namespace BD_Grupo3_VS
 
         }
 
+        private void BuscarTecnicas_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MenuConfig menuConfig = new MenuConfig();
+            menuConfig.Show();
+        }
+
         /*  A partir de aqui empiezan los metodos para la cinta del menu */
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {

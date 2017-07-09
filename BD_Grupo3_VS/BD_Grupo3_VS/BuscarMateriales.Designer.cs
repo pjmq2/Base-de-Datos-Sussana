@@ -283,6 +283,7 @@
             this.Controls.Add(this.DGV_Materiales);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "BuscarMateriales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar materiales";
             this.Load += new System.EventHandler(this.ConsultarMateriales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Materiales)).EndInit();

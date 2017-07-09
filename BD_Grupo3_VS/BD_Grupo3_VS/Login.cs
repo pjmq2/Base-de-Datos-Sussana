@@ -23,5 +23,10 @@ namespace BD_Grupo3_VS
             menu.Show();
             this.Hide();
         }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -92,7 +92,7 @@ namespace BD_Grupo3_VS
             DataGridViewRow row = dataGridView1.CurrentRow;
             cedulaEnviar = row.Cells[0].Value.ToString();
             padeEnviar = row.Cells[4].Value.ToString();
-            AgregarPlanEjercicios ap = new AgregarPlanEjercicios(cedulaEnviar,padeEnviar);
+            AgregarPlanEjercicios ap = new AgregarPlanEjercicios(cedulaEnviar); //, padeEnviar); //ESTABA DANDO ERROR!
             ap.Show();
             this.Close();
         }
