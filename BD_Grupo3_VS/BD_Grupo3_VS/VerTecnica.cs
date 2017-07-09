@@ -14,11 +14,13 @@ namespace BD_Grupo3_VS
     {
         Tecnica tecnica;
         string nombreTecnica;
+        int precio;
         bool cambios = false;
 
-        public VerTecnica(string nombre)
+        public VerTecnica(string nombre, int precio)
         {
             nombreTecnica = nombre;
+            this.precio = precio;
             InitializeComponent();
             tecnica = new Tecnica();
         }
@@ -79,7 +81,10 @@ namespace BD_Grupo3_VS
 
         private void VerTecnica_Load(object sender, EventArgs e)
         {
+            cambios = false;
             this.TXT_Nombre.Text = nombreTecnica;
+            this.NUD_Precio.Value = precio;
+            this.TXT_Descripcion.Text = tecnica.consultarDescripcion(nombreTecnica);
             this.llenarMaterialesRequeridos();
             this.llenarMateriales();
         }
@@ -90,10 +95,9 @@ namespace BD_Grupo3_VS
             {
                 TXT_Nombre.BackColor = System.Drawing.Color.LightBlue;
             }
-            cambios = true;
         }
 
-        private void NUD_Precio_TextChanged(object sender, EventArgs e)
+        private void NUD_Precio_ValueChanged(object sender, EventArgs e)
         {
             if (cambios)
             {
@@ -101,11 +105,11 @@ namespace BD_Grupo3_VS
             }
         }
 
-        private void NUD_Cantidad_TextChanged(object sender, EventArgs e)
+        private void NUD_CantidadNueva_ValueChanged(object sender, EventArgs e)
         {
             if (cambios)
             {
-                NUD_Precio.BackColor = System.Drawing.Color.LightBlue;
+                NUD_CantidadNueva.BackColor = System.Drawing.Color.LightBlue;
             }
         }
 
@@ -115,6 +119,7 @@ namespace BD_Grupo3_VS
             {
                 TXT_Descripcion.BackColor = System.Drawing.Color.LightBlue;
             }
+            cambios = true;
         }
 
         /*  A partir de aqui empiezan los metodos para la cinta del menu    */

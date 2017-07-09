@@ -14,11 +14,13 @@ namespace BD_Grupo3_VS
     {
         Material materiales;
         string nombreMaterial;
+        int precio;
         bool cambios = false;
 
-        public VerMaterial(string nombre)
+        public VerMaterial(string nombre, int precio)
         {
             nombreMaterial = nombre;
+            this.precio = precio;
             InitializeComponent();
             materiales = new Material();
         }
@@ -26,6 +28,7 @@ namespace BD_Grupo3_VS
         private void ModificarMaterial_Load(object sender, EventArgs e)
         {
             TXT_Nombre.Text = nombreMaterial;
+            NUD_Precio.Value = precio;
         }
 
         private void BTN_Guardar_Click(object sender, EventArgs e)
@@ -35,6 +38,7 @@ namespace BD_Grupo3_VS
             TXT_Nombre.BackColor = System.Drawing.SystemColors.Window;
             NUD_Precio.BackColor = System.Drawing.SystemColors.Window;
             TXT_Nombre.Clear();
+            NUD_Precio.Value = 0;
         }
 
         private void BTN_EliminarMaterial_Click(object sender, EventArgs e)
@@ -48,7 +52,6 @@ namespace BD_Grupo3_VS
             {
                 TXT_Nombre.BackColor = System.Drawing.Color.LightBlue;
             }
-            cambios = true;
         }
 
         private void NUD_Precio_TextChanged(object sender, EventArgs e)
@@ -57,6 +60,7 @@ namespace BD_Grupo3_VS
             {
                 NUD_Precio.BackColor = System.Drawing.Color.LightBlue;
             }
+            cambios = true;
         }
 
         /* A partir de aqui empiezan los metodos para la cinta del menu  */

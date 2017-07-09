@@ -23,6 +23,43 @@ namespace BD_Grupo3_VS
         private void BTN_Guardar_Click(object sender, EventArgs e)
         {
             int result = tecnica.agregarTecnica(TXT_Nombre.Text, (int)NUD_Precio.Value, TXT_Descripcion.Text);
+            if (result == 0)
+            {
+                MessageBox.Show("La técnica ha sido agregado exitosamente.",
+                    "Resultado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.None);
+                TXT_Nombre.Clear();
+                NUD_Precio.Value = 0;
+                TXT_Descripcion.Clear();
+            }
+            else if (result == 2627)
+            {
+                MessageBox.Show("Ya existe dicho material en el sistema.",
+                    "Resultado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            } else
+            {
+                MessageBox.Show("Ha ocurrido un error al agregar la técnica.",
+                    "Resultado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void AgregarTecnica_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MessageBoxButtons botones = MessageBoxButtons.YesNo;
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicacion", botones);
+            if (resultado == System.Windows.Forms.DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
 
         /*  A partir de aqui empiezan los metodos para la cinta del menu    */
@@ -39,8 +76,7 @@ namespace BD_Grupo3_VS
             DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicacion", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
-                this.Close();
-                Application.Exit();
+                Environment.Exit(0);
             }
         }
 

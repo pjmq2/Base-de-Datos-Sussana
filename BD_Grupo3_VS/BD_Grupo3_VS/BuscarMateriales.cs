@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -37,7 +38,16 @@ namespace BD_Grupo3_VS
         //Verificar parámetros
         private void llenarComboBox()
         {
+            SqlDataReader datos = material.obtenerListaNombres();
 
+            if (datos != null)
+            {
+                CB_Nombre.Items.Add("Seleccione");
+                while (datos.Read())
+                {
+                    CB_Nombre.Items.Add(datos.GetValue(0));
+                }
+            }
         }
 
         private void ConsultarMateriales_Load(object sender, EventArgs e)
@@ -48,12 +58,39 @@ namespace BD_Grupo3_VS
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            this.llenarTabla(DGV_Materiales, TXT_Filtro.Text);
+            if (CB_Nombre.Text != null)
+            {
+                this.llenarTabla(DGV_Materiales, CB_Nombre.Text);
+            }
+        }
+
+        private void CB_Nombre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CB_Nombre.Text != "Seleccione")
+            {
+                this.llenarTabla(DGV_Materiales, CB_Nombre.Text);
+            }
         }
 
         private void BTN_VerModificar_Click(object sender, EventArgs e)
         {
+            if (DGV_Materiales.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar la fila que desea modificar.",
+                    "Resultado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            else
+            {
+                DataGridViewRow row = DGV_Materiales.CurrentRow;
+                string nombre = row.Cells[0].Value.ToString(); ;
+                int precio = Convert.ToInt32(row.Cells[1].Value);
 
+                VerMaterial material = new VerMaterial(nombre, precio);
+                material.Show();
+                this.Close();
+            }
         }
 
         /*  A partir de aqui empiezan los metodos para la cinta del menu    */

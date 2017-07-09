@@ -38,6 +38,12 @@ namespace BD_Grupo3_VS
                     "Resultado",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
+            } else
+            {
+                MessageBox.Show("Ha ocurrido un error al agregar la técnica.",
+                    "Resultado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 

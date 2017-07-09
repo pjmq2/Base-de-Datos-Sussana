@@ -76,6 +76,7 @@
             this.DGV_Tecnicas.MultiSelect = false;
             this.DGV_Tecnicas.Name = "DGV_Tecnicas";
             this.DGV_Tecnicas.ReadOnly = true;
+            this.DGV_Tecnicas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.DGV_Tecnicas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Tecnicas.Size = new System.Drawing.Size(510, 308);
             this.DGV_Tecnicas.TabIndex = 9;
@@ -213,7 +214,7 @@
             // 
             // BTN_VerModificar
             // 
-            this.BTN_VerModificar.Location = new System.Drawing.Point(402, 62);
+            this.BTN_VerModificar.Location = new System.Drawing.Point(402, 64);
             this.BTN_VerModificar.Name = "BTN_VerModificar";
             this.BTN_VerModificar.Size = new System.Drawing.Size(120, 23);
             this.BTN_VerModificar.TabIndex = 48;
@@ -230,10 +231,11 @@
             this.CB_Nombre.Name = "CB_Nombre";
             this.CB_Nombre.Size = new System.Drawing.Size(200, 21);
             this.CB_Nombre.TabIndex = 45;
+            this.CB_Nombre.SelectedIndexChanged += new System.EventHandler(this.CB_Nombre_SelectedIndexChanged);
             // 
             // BTN_Buscar
             // 
-            this.BTN_Buscar.Location = new System.Drawing.Point(271, 62);
+            this.BTN_Buscar.Location = new System.Drawing.Point(271, 64);
             this.BTN_Buscar.Name = "BTN_Buscar";
             this.BTN_Buscar.Size = new System.Drawing.Size(90, 23);
             this.BTN_Buscar.TabIndex = 44;
@@ -265,7 +267,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "BuscarTecnicas";
             this.Text = "Buscar técnicas";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BuscarTecnicas_FormClosed);
             this.Load += new System.EventHandler(this.BuscarTecnicas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Tecnicas)).EndInit();
             this.menuStrip1.ResumeLayout(false);

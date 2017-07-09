@@ -34,14 +34,27 @@ namespace BD_Grupo3_VS
 
             if (filtro == null)
             {
-                bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Tecnica ORDER BY Nombre");
+                tabla = bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Tecnica ORDER BY Nombre");
             }
             else
             {
-                bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Tecnica WHERE Nombre LIKE '%" + filtro + "%' OR DESCRIPCION LIKE '%" + filtro + "%' ORDER BY Nombre");
+                tabla = bd.ejecutarConsultaTabla("SELECT Nombre, Precio FROM Tecnica WHERE Nombre LIKE '%" + filtro + "%' OR DESCRIPCION LIKE '%" + filtro + "%' ORDER BY Nombre");
             }
 
             return tabla;
+        }
+
+        public string consultarDescripcion(string nombre)
+        {
+            string descripcion = null;
+            SqlDataReader datos;
+            datos = bd.ejecutarConsulta("SELECT Descripcion FROM Tecnica WHERE Nombre = '" + nombre + "'");
+            if (datos.Read())
+            {
+                descripcion = datos.GetString(0);
+            }
+
+            return descripcion;
         }
 
         public SqlDataReader obtenerListaNombres()

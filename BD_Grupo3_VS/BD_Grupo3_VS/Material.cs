@@ -29,13 +29,25 @@ namespace BD_Grupo3_VS
 
             if(filtroNombre == null)
             {
-                bd.ejecutarConsultaTabla("SELECT * FROM Material");
+                tabla = bd.ejecutarConsultaTabla("SELECT * FROM Material");
             } else
             {
-                bd.ejecutarConsultaTabla("SELECT * FROM Material WHERE Nombre LIKE '%" + filtroNombre + "%'");
+                tabla = bd.ejecutarConsultaTabla("SELECT * FROM Material WHERE Nombre LIKE '%" + filtroNombre + "%'");
             }
 
             return tabla;
+        }
+
+        public SqlDataReader obtenerListaNombres()
+        {
+            SqlDataReader datos = null;
+            try
+            {
+                datos = bd.ejecutarConsulta("Select distinct Nombre from Material order by nombre");
+            }
+            catch (SqlException) { }
+
+            return datos;
         }
 
         public int actualizarMaterial(string nombre)

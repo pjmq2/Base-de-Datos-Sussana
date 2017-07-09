@@ -36,7 +36,6 @@ namespace BD_Grupo3_VS
             }
         }
 
-        //Verificar parámetros
         private void llenarComboBox()
         {
             SqlDataReader datos = tecnica.obtenerListaNombres();
@@ -49,7 +48,6 @@ namespace BD_Grupo3_VS
                     CB_Nombre.Items.Add(datos.GetValue(0));
                 }
             }
-
         }
 
         private void BuscarTecnicas_Load(object sender, EventArgs e)
@@ -66,15 +64,33 @@ namespace BD_Grupo3_VS
             }
         }
 
-        private void BTN_VerModificar_Click(object sender, EventArgs e)
+        private void CB_Nombre_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (CB_Nombre.Text != "Seleccione")
+            {
+                this.llenarTabla(DGV_Tecnicas, CB_Nombre.Text);
+            }
         }
 
-        private void BuscarTecnicas_FormClosed(object sender, FormClosedEventArgs e)
+        private void BTN_VerModificar_Click(object sender, EventArgs e)
         {
-            MenuConfig menuConfig = new MenuConfig();
-            menuConfig.Show();
+            if (DGV_Tecnicas.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar la fila que desea modificar.",
+                    "Resultado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            else
+            {
+                DataGridViewRow row = DGV_Tecnicas.CurrentRow;
+                string nombre = row.Cells[0].Value.ToString(); ;
+                int precio = Convert.ToInt32(row.Cells[1].Value);
+
+                VerTecnica tecnica = new VerTecnica(nombre, precio);
+                tecnica.Show();
+                this.Close();
+            }
         }
 
         /*  A partir de aqui empiezan los metodos para la cinta del menu */
@@ -88,11 +104,10 @@ namespace BD_Grupo3_VS
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicación", botones);
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicacion", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
-                this.Close();
-                Application.Exit();
+                Environment.Exit(0);
             }
         }
 

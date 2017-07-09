@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BTN_Guardar = new System.Windows.Forms.Button();
             this.GB_EliminarMateriales = new System.Windows.Forms.GroupBox();
+            this.NUD_CantidadNueva = new System.Windows.Forms.NumericUpDown();
             this.CB_MaterialesRequeridos = new System.Windows.Forms.ComboBox();
             this.BTN_EliminarRequisito = new System.Windows.Forms.Button();
             this.GB_AddMaterialRequerido = new System.Windows.Forms.GroupBox();
@@ -60,14 +61,13 @@
             this.crearEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.NUD_CantidadNueva = new System.Windows.Forms.NumericUpDown();
             this.gb_informacionDeLaTecnica.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Precio)).BeginInit();
             this.GB_EliminarMateriales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_CantidadNueva)).BeginInit();
             this.GB_AddMaterialRequerido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Cantidad)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NUD_CantidadNueva)).BeginInit();
             this.SuspendLayout();
             // 
             // gb_informacionDeLaTecnica
@@ -115,6 +115,7 @@
             this.NUD_Precio.Name = "NUD_Precio";
             this.NUD_Precio.Size = new System.Drawing.Size(210, 20);
             this.NUD_Precio.TabIndex = 7;
+            this.NUD_Precio.ValueChanged += new System.EventHandler(this.NUD_Precio_ValueChanged);
             // 
             // TXT_Descripcion
             // 
@@ -182,6 +183,14 @@
             this.GB_EliminarMateriales.TabIndex = 2;
             this.GB_EliminarMateriales.TabStop = false;
             this.GB_EliminarMateriales.Text = "Materiales requeridos";
+            // 
+            // NUD_CantidadNueva
+            // 
+            this.NUD_CantidadNueva.Location = new System.Drawing.Point(208, 30);
+            this.NUD_CantidadNueva.Name = "NUD_CantidadNueva";
+            this.NUD_CantidadNueva.Size = new System.Drawing.Size(40, 20);
+            this.NUD_CantidadNueva.TabIndex = 7;
+            this.NUD_CantidadNueva.ValueChanged += new System.EventHandler(this.NUD_CantidadNueva_ValueChanged);
             // 
             // CB_MaterialesRequeridos
             // 
@@ -374,13 +383,6 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // NUD_CantidadNueva
-            // 
-            this.NUD_CantidadNueva.Location = new System.Drawing.Point(208, 30);
-            this.NUD_CantidadNueva.Name = "NUD_CantidadNueva";
-            this.NUD_CantidadNueva.Size = new System.Drawing.Size(40, 20);
-            this.NUD_CantidadNueva.TabIndex = 7;
-            // 
             // VerTecnica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,11 +402,11 @@
             this.gb_informacionDeLaTecnica.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Precio)).EndInit();
             this.GB_EliminarMateriales.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_CantidadNueva)).EndInit();
             this.GB_AddMaterialRequerido.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Cantidad)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NUD_CantidadNueva)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

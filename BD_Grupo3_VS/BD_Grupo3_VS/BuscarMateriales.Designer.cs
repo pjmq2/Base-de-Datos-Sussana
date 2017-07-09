@@ -49,8 +49,6 @@
             this.buscarEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CB_Nombre = new System.Windows.Forms.ComboBox();
-            this.TXT_Filtro = new System.Windows.Forms.TextBox();
-            this.LBL_Filtro = new System.Windows.Forms.Label();
             this.BTN_VerModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Materiales)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -62,13 +60,14 @@
             this.DGV_Materiales.AllowUserToDeleteRows = false;
             this.DGV_Materiales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Materiales.GridColor = System.Drawing.SystemColors.Control;
-            this.DGV_Materiales.Location = new System.Drawing.Point(12, 119);
+            this.DGV_Materiales.Location = new System.Drawing.Point(12, 94);
             this.DGV_Materiales.MultiSelect = false;
             this.DGV_Materiales.Name = "DGV_Materiales";
             this.DGV_Materiales.ReadOnly = true;
             this.DGV_Materiales.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DGV_Materiales.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.DGV_Materiales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Materiales.Size = new System.Drawing.Size(510, 280);
+            this.DGV_Materiales.Size = new System.Drawing.Size(510, 305);
             this.DGV_Materiales.TabIndex = 0;
             // 
             // LBL_Nombre
@@ -82,7 +81,7 @@
             // 
             // BTN_Buscar
             // 
-            this.BTN_Buscar.Location = new System.Drawing.Point(271, 90);
+            this.BTN_Buscar.Location = new System.Drawing.Point(271, 65);
             this.BTN_Buscar.Name = "BTN_Buscar";
             this.BTN_Buscar.Size = new System.Drawing.Size(90, 23);
             this.BTN_Buscar.TabIndex = 3;
@@ -235,31 +234,18 @@
             // 
             // CB_Nombre
             // 
+            this.CB_Nombre.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.CB_Nombre.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CB_Nombre.FormattingEnabled = true;
             this.CB_Nombre.Location = new System.Drawing.Point(65, 65);
             this.CB_Nombre.Name = "CB_Nombre";
             this.CB_Nombre.Size = new System.Drawing.Size(200, 21);
             this.CB_Nombre.TabIndex = 39;
-            // 
-            // TXT_Filtro
-            // 
-            this.TXT_Filtro.Location = new System.Drawing.Point(89, 92);
-            this.TXT_Filtro.Name = "TXT_Filtro";
-            this.TXT_Filtro.Size = new System.Drawing.Size(176, 20);
-            this.TXT_Filtro.TabIndex = 40;
-            // 
-            // LBL_Filtro
-            // 
-            this.LBL_Filtro.AutoSize = true;
-            this.LBL_Filtro.Location = new System.Drawing.Point(13, 95);
-            this.LBL_Filtro.Name = "LBL_Filtro";
-            this.LBL_Filtro.Size = new System.Drawing.Size(70, 13);
-            this.LBL_Filtro.TabIndex = 41;
-            this.LBL_Filtro.Text = "Filtro general:";
+            this.CB_Nombre.SelectedIndexChanged += new System.EventHandler(this.CB_Nombre_SelectedIndexChanged);
             // 
             // BTN_VerModificar
             // 
-            this.BTN_VerModificar.Location = new System.Drawing.Point(402, 90);
+            this.BTN_VerModificar.Location = new System.Drawing.Point(402, 65);
             this.BTN_VerModificar.Name = "BTN_VerModificar";
             this.BTN_VerModificar.Size = new System.Drawing.Size(120, 23);
             this.BTN_VerModificar.TabIndex = 42;
@@ -273,8 +259,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 411);
             this.Controls.Add(this.BTN_VerModificar);
-            this.Controls.Add(this.LBL_Filtro);
-            this.Controls.Add(this.TXT_Filtro);
             this.Controls.Add(this.CB_Nombre);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.LBL_ConsultaDeMateriales);
@@ -317,8 +301,6 @@
         private System.Windows.Forms.ToolStripMenuItem buscarEjercicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ComboBox CB_Nombre;
-        private System.Windows.Forms.TextBox TXT_Filtro;
-        private System.Windows.Forms.Label LBL_Filtro;
         private System.Windows.Forms.Button BTN_VerModificar;
     }
 }

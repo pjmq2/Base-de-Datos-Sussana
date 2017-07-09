@@ -67,9 +67,9 @@
             this.GB_InformacionTecnica.Controls.Add(this.LBL_Descripcion);
             this.GB_InformacionTecnica.Controls.Add(this.LBL_Precio);
             this.GB_InformacionTecnica.Controls.Add(this.LBL_Nombre);
-            this.GB_InformacionTecnica.Location = new System.Drawing.Point(82, 40);
+            this.GB_InformacionTecnica.Location = new System.Drawing.Point(53, 40);
             this.GB_InformacionTecnica.Name = "GB_InformacionTecnica";
-            this.GB_InformacionTecnica.Size = new System.Drawing.Size(347, 250);
+            this.GB_InformacionTecnica.Size = new System.Drawing.Size(419, 250);
             this.GB_InformacionTecnica.TabIndex = 8;
             this.GB_InformacionTecnica.TabStop = false;
             this.GB_InformacionTecnica.Text = "Información de la técnica";
@@ -81,7 +81,7 @@
             0,
             0,
             0});
-            this.NUD_Precio.Location = new System.Drawing.Point(110, 56);
+            this.NUD_Precio.Location = new System.Drawing.Point(151, 55);
             this.NUD_Precio.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -93,7 +93,7 @@
             // 
             // BTN_Guardar
             // 
-            this.BTN_Guardar.Location = new System.Drawing.Point(240, 213);
+            this.BTN_Guardar.Location = new System.Drawing.Point(281, 212);
             this.BTN_Guardar.Name = "BTN_Guardar";
             this.BTN_Guardar.Size = new System.Drawing.Size(75, 23);
             this.BTN_Guardar.TabIndex = 6;
@@ -103,7 +103,7 @@
             // 
             // TXT_Descripcion
             // 
-            this.TXT_Descripcion.Location = new System.Drawing.Point(110, 82);
+            this.TXT_Descripcion.Location = new System.Drawing.Point(151, 81);
             this.TXT_Descripcion.Multiline = true;
             this.TXT_Descripcion.Name = "TXT_Descripcion";
             this.TXT_Descripcion.Size = new System.Drawing.Size(205, 125);
@@ -111,7 +111,7 @@
             // 
             // TXT_Nombre
             // 
-            this.TXT_Nombre.Location = new System.Drawing.Point(110, 30);
+            this.TXT_Nombre.Location = new System.Drawing.Point(151, 29);
             this.TXT_Nombre.Name = "TXT_Nombre";
             this.TXT_Nombre.Size = new System.Drawing.Size(205, 20);
             this.TXT_Nombre.TabIndex = 3;
@@ -119,7 +119,7 @@
             // LBL_Descripcion
             // 
             this.LBL_Descripcion.AutoSize = true;
-            this.LBL_Descripcion.Location = new System.Drawing.Point(18, 85);
+            this.LBL_Descripcion.Location = new System.Drawing.Point(59, 84);
             this.LBL_Descripcion.Name = "LBL_Descripcion";
             this.LBL_Descripcion.Size = new System.Drawing.Size(66, 13);
             this.LBL_Descripcion.TabIndex = 2;
@@ -128,7 +128,7 @@
             // LBL_Precio
             // 
             this.LBL_Precio.AutoSize = true;
-            this.LBL_Precio.Location = new System.Drawing.Point(18, 58);
+            this.LBL_Precio.Location = new System.Drawing.Point(59, 57);
             this.LBL_Precio.Name = "LBL_Precio";
             this.LBL_Precio.Size = new System.Drawing.Size(40, 13);
             this.LBL_Precio.TabIndex = 1;
@@ -137,7 +137,7 @@
             // LBL_Nombre
             // 
             this.LBL_Nombre.AutoSize = true;
-            this.LBL_Nombre.Location = new System.Drawing.Point(18, 33);
+            this.LBL_Nombre.Location = new System.Drawing.Point(59, 32);
             this.LBL_Nombre.Name = "LBL_Nombre";
             this.LBL_Nombre.Size = new System.Drawing.Size(47, 13);
             this.LBL_Nombre.TabIndex = 0;
@@ -187,14 +187,14 @@
             // crearTecnicaToolStripMenuItem
             // 
             this.crearTecnicaToolStripMenuItem.Name = "crearTecnicaToolStripMenuItem";
-            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.crearTecnicaToolStripMenuItem.Text = "Crear técnica";
             this.crearTecnicaToolStripMenuItem.Click += new System.EventHandler(this.crearTecnicaToolStripMenuItem_Click);
             // 
             // buscarTecnicaToolStripMenuItem
             // 
             this.buscarTecnicaToolStripMenuItem.Name = "buscarTecnicaToolStripMenuItem";
-            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.buscarTecnicaToolStripMenuItem.Text = "Buscar técnica";
             this.buscarTecnicaToolStripMenuItem.Click += new System.EventHandler(this.buscarTecnicaToolStripMenuItem_Click);
             // 
@@ -284,6 +284,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AgregarTecnica";
             this.Text = "Agregar técnica";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AgregarTecnica_FormClosing);
             this.GB_InformacionTecnica.ResumeLayout(false);
             this.GB_InformacionTecnica.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Precio)).EndInit();
