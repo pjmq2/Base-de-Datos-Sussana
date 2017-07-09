@@ -165,14 +165,14 @@
             // crearTecnicaToolStripMenuItem
             // 
             this.crearTecnicaToolStripMenuItem.Name = "crearTecnicaToolStripMenuItem";
-            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.crearTecnicaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.crearTecnicaToolStripMenuItem.Text = "Crear técnica";
             this.crearTecnicaToolStripMenuItem.Click += new System.EventHandler(this.crearTecnicaToolStripMenuItem_Click);
             // 
             // buscarTecnicaToolStripMenuItem
             // 
             this.buscarTecnicaToolStripMenuItem.Name = "buscarTecnicaToolStripMenuItem";
-            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.buscarTecnicaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.buscarTecnicaToolStripMenuItem.Text = "Buscar técnica";
             this.buscarTecnicaToolStripMenuItem.Click += new System.EventHandler(this.buscarTecnicaToolStripMenuItem_Click);
             // 
