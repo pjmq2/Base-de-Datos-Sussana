@@ -14,12 +14,13 @@ namespace BD_Grupo3_VS
 {
     public partial class AgregarPlanEjercicios : Form
     {
-        Paciente paciente;
+        Ejercicio ejercicio;
         string cedula;
         public AgregarPlanEjercicios(string cedulaNueva)
         {
             InitializeComponent();
-            paciente = new Paciente();
+            ejercicio = new Ejercicio();
+            cedula = cedulaNueva;
         }
 
         private void BTN_Agregar_Click(object sender, EventArgs e)
@@ -33,28 +34,28 @@ namespace BD_Grupo3_VS
         {
             MenuPrincipal menu = new MenuPrincipal();
             menu.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuscarPaciente paciente = new BuscarPaciente();
             paciente.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void crearPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AgregarPaciente paciente = new AgregarPaciente();
             paciente.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void avanzadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuConfig menu = new MenuConfig();
             menu.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -71,5 +72,9 @@ namespace BD_Grupo3_VS
         /*             Hasta aqui las instrucciones de la cinta del menu  */
         #endregion
 
+        private void AgregarPlanEjercicios_Load(object sender, EventArgs e)
+        {
+            TXT_Cedula.Text = cedula;
+        }
     }
 }

@@ -11,10 +11,11 @@ namespace BD_Grupo3_VS
     class PlanDeEjercicios
     {
         AccesoBaseDatos bd;
-
-        public PlanDeEjercicios()
+        string cedula;
+        public PlanDeEjercicios(string cedulaNueva)
         {
             bd = new AccesoBaseDatos();
+            cedula = cedulaNueva;
         }
 
         /*Método para agregar un nuevo Plan de Ejercicio a la base de datos

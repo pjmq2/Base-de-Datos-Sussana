@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TXT_Nombre = new System.Windows.Forms.TextBox();
             this.LBL_Nombre = new System.Windows.Forms.Label();
             this.LBL_Antecedente = new System.Windows.Forms.Label();
@@ -59,13 +59,15 @@
             this.TXT_NuevoTipo = new System.Windows.Forms.TextBox();
             this.BTN_AgregarTipo = new System.Windows.Forms.Button();
             this.BTN_EliminarTipo = new System.Windows.Forms.Button();
+            this.GB_InfoAnte = new System.Windows.Forms.GroupBox();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TipoAnte)).BeginInit();
+            this.GB_InfoAnte.SuspendLayout();
             this.SuspendLayout();
             // 
             // TXT_Nombre
             // 
-            this.TXT_Nombre.Location = new System.Drawing.Point(153, 96);
+            this.TXT_Nombre.Location = new System.Drawing.Point(140, 34);
             this.TXT_Nombre.Margin = new System.Windows.Forms.Padding(2);
             this.TXT_Nombre.Name = "TXT_Nombre";
             this.TXT_Nombre.Size = new System.Drawing.Size(147, 20);
@@ -75,7 +77,7 @@
             // LBL_Nombre
             // 
             this.LBL_Nombre.AutoSize = true;
-            this.LBL_Nombre.Location = new System.Drawing.Point(32, 96);
+            this.LBL_Nombre.Location = new System.Drawing.Point(20, 34);
             this.LBL_Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LBL_Nombre.Name = "LBL_Nombre";
             this.LBL_Nombre.Size = new System.Drawing.Size(47, 13);
@@ -96,7 +98,7 @@
             // 
             // BTN_Modificar
             // 
-            this.BTN_Modificar.Location = new System.Drawing.Point(35, 331);
+            this.BTN_Modificar.Location = new System.Drawing.Point(23, 258);
             this.BTN_Modificar.Name = "BTN_Modificar";
             this.BTN_Modificar.Size = new System.Drawing.Size(94, 45);
             this.BTN_Modificar.TabIndex = 29;
@@ -106,7 +108,7 @@
             // 
             // BTN_Eliminar
             // 
-            this.BTN_Eliminar.Location = new System.Drawing.Point(207, 331);
+            this.BTN_Eliminar.Location = new System.Drawing.Point(194, 258);
             this.BTN_Eliminar.Name = "BTN_Eliminar";
             this.BTN_Eliminar.Size = new System.Drawing.Size(93, 45);
             this.BTN_Eliminar.TabIndex = 30;
@@ -248,7 +250,7 @@
             // LBL_TiposAnte
             // 
             this.LBL_TiposAnte.AutoSize = true;
-            this.LBL_TiposAnte.Location = new System.Drawing.Point(32, 139);
+            this.LBL_TiposAnte.Location = new System.Drawing.Point(20, 68);
             this.LBL_TiposAnte.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LBL_TiposAnte.Name = "LBL_TiposAnte";
             this.LBL_TiposAnte.Size = new System.Drawing.Size(116, 13);
@@ -262,15 +264,15 @@
             this.DGV_TipoAnte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
             this.DGV_TipoAnte.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.DGV_TipoAnte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_TipoAnte.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DGV_TipoAnte.Location = new System.Drawing.Point(153, 139);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_TipoAnte.DefaultCellStyle = dataGridViewCellStyle1;
+            this.DGV_TipoAnte.Location = new System.Drawing.Point(141, 68);
             this.DGV_TipoAnte.MultiSelect = false;
             this.DGV_TipoAnte.Name = "DGV_TipoAnte";
             this.DGV_TipoAnte.ReadOnly = true;
@@ -282,17 +284,17 @@
             // LBL_TipoClick
             // 
             this.LBL_TipoClick.AutoSize = true;
-            this.LBL_TipoClick.Location = new System.Drawing.Point(32, 260);
+            this.LBL_TipoClick.Location = new System.Drawing.Point(20, 182);
             this.LBL_TipoClick.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LBL_TipoClick.Name = "LBL_TipoClick";
-            this.LBL_TipoClick.Size = new System.Drawing.Size(248, 13);
+            this.LBL_TipoClick.Size = new System.Drawing.Size(304, 13);
             this.LBL_TipoClick.TabIndex = 42;
-            this.LBL_TipoClick.Text = "Haga doble click en una cirugía para seleccionarla";
+            this.LBL_TipoClick.Text = "Haga doble click en un tipo de antecedente para seleccionarlo";
             // 
             // LBL_TipoSeleccionado
             // 
             this.LBL_TipoSeleccionado.AutoSize = true;
-            this.LBL_TipoSeleccionado.Location = new System.Drawing.Point(32, 295);
+            this.LBL_TipoSeleccionado.Location = new System.Drawing.Point(20, 217);
             this.LBL_TipoSeleccionado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LBL_TipoSeleccionado.Name = "LBL_TipoSeleccionado";
             this.LBL_TipoSeleccionado.Size = new System.Drawing.Size(97, 13);
@@ -301,7 +303,7 @@
             // 
             // TXT_TipoSeleccionado
             // 
-            this.TXT_TipoSeleccionado.Location = new System.Drawing.Point(153, 295);
+            this.TXT_TipoSeleccionado.Location = new System.Drawing.Point(141, 214);
             this.TXT_TipoSeleccionado.Margin = new System.Windows.Forms.Padding(2);
             this.TXT_TipoSeleccionado.Name = "TXT_TipoSeleccionado";
             this.TXT_TipoSeleccionado.Size = new System.Drawing.Size(147, 20);
@@ -311,7 +313,7 @@
             // LBL_NuevoTipo
             // 
             this.LBL_NuevoTipo.AutoSize = true;
-            this.LBL_NuevoTipo.Location = new System.Drawing.Point(367, 115);
+            this.LBL_NuevoTipo.Location = new System.Drawing.Point(327, 55);
             this.LBL_NuevoTipo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LBL_NuevoTipo.Name = "LBL_NuevoTipo";
             this.LBL_NuevoTipo.Size = new System.Drawing.Size(210, 13);
@@ -320,7 +322,7 @@
             // 
             // TXT_NuevoTipo
             // 
-            this.TXT_NuevoTipo.Location = new System.Drawing.Point(442, 139);
+            this.TXT_NuevoTipo.Location = new System.Drawing.Point(402, 81);
             this.TXT_NuevoTipo.Margin = new System.Windows.Forms.Padding(2);
             this.TXT_NuevoTipo.Name = "TXT_NuevoTipo";
             this.TXT_NuevoTipo.Size = new System.Drawing.Size(135, 20);
@@ -328,7 +330,7 @@
             // 
             // BTN_AgregarTipo
             // 
-            this.BTN_AgregarTipo.Location = new System.Drawing.Point(484, 164);
+            this.BTN_AgregarTipo.Location = new System.Drawing.Point(444, 115);
             this.BTN_AgregarTipo.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_AgregarTipo.Name = "BTN_AgregarTipo";
             this.BTN_AgregarTipo.Size = new System.Drawing.Size(93, 30);
@@ -339,7 +341,7 @@
             // 
             // BTN_EliminarTipo
             // 
-            this.BTN_EliminarTipo.Location = new System.Drawing.Point(344, 295);
+            this.BTN_EliminarTipo.Location = new System.Drawing.Point(314, 211);
             this.BTN_EliminarTipo.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_EliminarTipo.Name = "BTN_EliminarTipo";
             this.BTN_EliminarTipo.Size = new System.Drawing.Size(90, 24);
@@ -348,32 +350,44 @@
             this.BTN_EliminarTipo.UseVisualStyleBackColor = true;
             this.BTN_EliminarTipo.Click += new System.EventHandler(this.BTN_EliminarTipo_Click);
             // 
+            // GB_InfoAnte
+            // 
+            this.GB_InfoAnte.Controls.Add(this.LBL_Nombre);
+            this.GB_InfoAnte.Controls.Add(this.DGV_TipoAnte);
+            this.GB_InfoAnte.Controls.Add(this.LBL_TipoClick);
+            this.GB_InfoAnte.Controls.Add(this.LBL_TipoSeleccionado);
+            this.GB_InfoAnte.Controls.Add(this.TXT_TipoSeleccionado);
+            this.GB_InfoAnte.Controls.Add(this.BTN_EliminarTipo);
+            this.GB_InfoAnte.Controls.Add(this.TXT_Nombre);
+            this.GB_InfoAnte.Controls.Add(this.BTN_AgregarTipo);
+            this.GB_InfoAnte.Controls.Add(this.BTN_Modificar);
+            this.GB_InfoAnte.Controls.Add(this.BTN_Eliminar);
+            this.GB_InfoAnte.Controls.Add(this.LBL_TiposAnte);
+            this.GB_InfoAnte.Controls.Add(this.TXT_NuevoTipo);
+            this.GB_InfoAnte.Controls.Add(this.LBL_NuevoTipo);
+            this.GB_InfoAnte.Location = new System.Drawing.Point(26, 71);
+            this.GB_InfoAnte.Name = "GB_InfoAnte";
+            this.GB_InfoAnte.Size = new System.Drawing.Size(564, 319);
+            this.GB_InfoAnte.TabIndex = 49;
+            this.GB_InfoAnte.TabStop = false;
+            this.GB_InfoAnte.Text = "Información del Antecedente";
+            // 
             // VerAntecedente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 402);
-            this.Controls.Add(this.BTN_EliminarTipo);
-            this.Controls.Add(this.BTN_AgregarTipo);
-            this.Controls.Add(this.TXT_NuevoTipo);
-            this.Controls.Add(this.LBL_NuevoTipo);
-            this.Controls.Add(this.TXT_TipoSeleccionado);
-            this.Controls.Add(this.LBL_TipoSeleccionado);
-            this.Controls.Add(this.LBL_TipoClick);
-            this.Controls.Add(this.DGV_TipoAnte);
-            this.Controls.Add(this.LBL_TiposAnte);
+            this.Controls.Add(this.GB_InfoAnte);
             this.Controls.Add(this.menuStrip2);
-            this.Controls.Add(this.BTN_Eliminar);
-            this.Controls.Add(this.BTN_Modificar);
             this.Controls.Add(this.LBL_Antecedente);
-            this.Controls.Add(this.LBL_Nombre);
-            this.Controls.Add(this.TXT_Nombre);
             this.Name = "VerAntecedente";
             this.Text = "VerAntecedente";
             this.Load += new System.EventHandler(this.VerAntecedente_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_TipoAnte)).EndInit();
+            this.GB_InfoAnte.ResumeLayout(false);
+            this.GB_InfoAnte.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -410,5 +424,6 @@
         private System.Windows.Forms.TextBox TXT_NuevoTipo;
         private System.Windows.Forms.Button BTN_AgregarTipo;
         private System.Windows.Forms.Button BTN_EliminarTipo;
+        private System.Windows.Forms.GroupBox GB_InfoAnte;
     }
 }

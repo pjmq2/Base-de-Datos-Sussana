@@ -88,7 +88,7 @@
             this.GB_InfoPaciente.Controls.Add(this.LBL_Cedula);
             this.GB_InfoPaciente.Location = new System.Drawing.Point(25, 72);
             this.GB_InfoPaciente.Name = "GB_InfoPaciente";
-            this.GB_InfoPaciente.Size = new System.Drawing.Size(796, 377);
+            this.GB_InfoPaciente.Size = new System.Drawing.Size(636, 377);
             this.GB_InfoPaciente.TabIndex = 0;
             this.GB_InfoPaciente.TabStop = false;
             this.GB_InfoPaciente.Text = "Información del Paciente";
@@ -105,7 +105,7 @@
             // 
             // BTN_Agregar
             // 
-            this.BTN_Agregar.Location = new System.Drawing.Point(644, 317);
+            this.BTN_Agregar.Location = new System.Drawing.Point(494, 306);
             this.BTN_Agregar.Name = "BTN_Agregar";
             this.BTN_Agregar.Size = new System.Drawing.Size(113, 40);
             this.BTN_Agregar.TabIndex = 22;
@@ -288,7 +288,7 @@
             this.LBL_Titulo.AutoSize = true;
             this.LBL_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Titulo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.LBL_Titulo.Location = new System.Drawing.Point(329, 28);
+            this.LBL_Titulo.Location = new System.Drawing.Point(240, 36);
             this.LBL_Titulo.Name = "LBL_Titulo";
             this.LBL_Titulo.Size = new System.Drawing.Size(128, 33);
             this.LBL_Titulo.TabIndex = 4;
@@ -306,7 +306,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(860, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(675, 24);
             this.menuStrip1.TabIndex = 21;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -348,7 +348,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 461);
+            this.ClientSize = new System.Drawing.Size(675, 461);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.LBL_Titulo);
             this.Controls.Add(this.GB_InfoPaciente);
