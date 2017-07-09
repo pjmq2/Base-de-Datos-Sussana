@@ -16,6 +16,12 @@ namespace BD_Grupo3_VS
             bd = new AccesoBaseDatos();
         }
 
+        public int agregarTarea(string Cedula, string Padecimiento, string Nivel, string tarea)
+        {
+            String insertar = "insert into TAREAS_PLAN_EJERCICIOS (CedPaciente, Padec_Act, Nivel_Plan, Tarea)  VALUES ('" + Cedula + "','" + Padecimiento + "','" + Nivel + "','" + tarea + "')";
+            return bd.actualizarDatos(insertar);
+        }
+
         //obtenemos una lista de nombre de los planes de tratamiento asociados a un paciente
         public SqlDataReader obtenerListaPadecimiento(string cedula)
         {
@@ -42,8 +48,25 @@ namespace BD_Grupo3_VS
             return bd.actualizarDatos(insertar);
         }
 
+        /*Método para obtener las tareas de un plan de ejercicios*/
+
+        public DataTable obtenerTareas(string cedula, string padecimiento, string nivel)
+        {
+            DataTable tabla = null;
+            try
+            {
+                tabla = bd.ejecutarConsultaTabla("Select Tarea from TAREAS_PLAN_EJERCICIOS " +
+                    "where CedPaciente = '" + cedula + "' and Padec_Act = '" + padecimiento + "' and Nivel_Plan = '" + nivel + "'");
+            }
+            catch (SqlException ex)
+            {
+
+            }
+            return tabla;
+        }
+
         /*Método para obtener los planes de ejercicios de la base de datos usando la cédula*/
-            
+
         public DataTable obtenerPlanEjercicios(string cedula)
         {
             DataTable tabla = null;

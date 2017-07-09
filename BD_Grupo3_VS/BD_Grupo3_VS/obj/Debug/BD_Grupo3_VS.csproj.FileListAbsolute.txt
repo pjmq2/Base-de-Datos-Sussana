@@ -124,3 +124,4 @@ D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.VerAntecedente.resources
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.VerEjercicio.resources
 D:\Documentos\diego\Documents\GitHub\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.VerPaciente.resources
+C:\Users\Ana\Desktop\Proyecto Bases\Base-de-Datos-Sussana\BD_Grupo3_VS\BD_Grupo3_VS\obj\Debug\BD_Grupo3_VS.VerPlanEjercicios.resources

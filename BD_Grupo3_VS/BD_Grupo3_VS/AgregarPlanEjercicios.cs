@@ -43,8 +43,6 @@ namespace BD_Grupo3_VS
                 {
                     MessageBox.Show(resultado + ": Algo ha fallado.", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-
             }
         }
 
