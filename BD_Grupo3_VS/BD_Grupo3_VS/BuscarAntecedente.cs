@@ -155,7 +155,7 @@ namespace BD_Grupo3_VS
         {
             if (DGV_Antecedentes.SelectedRows.Count == 0)
             {
-                MessageBox.Show("No ha seleccionado ningún antecedente?", "Seleccionar Antecedente");
+                MessageBox.Show("No ha seleccionado ningún antecedente.", "Seleccionar Antecedente");
             }
             else
             {

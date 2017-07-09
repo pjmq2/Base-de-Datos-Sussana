@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.GB_AgregarCita = new System.Windows.Forms.GroupBox();
+            this.LBL_EscogerPadecimiento = new System.Windows.Forms.Label();
+            this.CB_Padecimiento = new System.Windows.Forms.ComboBox();
             this.TXT_Objetivos = new System.Windows.Forms.TextBox();
             this.BTN_Agregar = new System.Windows.Forms.Button();
             this.LBL_Objetivos = new System.Windows.Forms.Label();
             this.TXT_Nivel = new System.Windows.Forms.TextBox();
             this.LBL_Nivel = new System.Windows.Forms.Label();
-            this.TXT_Padecimiento = new System.Windows.Forms.TextBox();
             this.TXT_Cedula = new System.Windows.Forms.TextBox();
             this.LBL_Padecimiento = new System.Windows.Forms.Label();
             this.LBL_Cedula = new System.Windows.Forms.Label();
@@ -45,31 +46,52 @@
             this.crearPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BTN_BuscarPlan = new System.Windows.Forms.Button();
             this.GB_AgregarCita.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // GB_AgregarCita
             // 
+            this.GB_AgregarCita.Controls.Add(this.BTN_BuscarPlan);
+            this.GB_AgregarCita.Controls.Add(this.LBL_EscogerPadecimiento);
+            this.GB_AgregarCita.Controls.Add(this.CB_Padecimiento);
             this.GB_AgregarCita.Controls.Add(this.TXT_Objetivos);
             this.GB_AgregarCita.Controls.Add(this.BTN_Agregar);
             this.GB_AgregarCita.Controls.Add(this.LBL_Objetivos);
             this.GB_AgregarCita.Controls.Add(this.TXT_Nivel);
             this.GB_AgregarCita.Controls.Add(this.LBL_Nivel);
-            this.GB_AgregarCita.Controls.Add(this.TXT_Padecimiento);
             this.GB_AgregarCita.Controls.Add(this.TXT_Cedula);
             this.GB_AgregarCita.Controls.Add(this.LBL_Padecimiento);
             this.GB_AgregarCita.Controls.Add(this.LBL_Cedula);
             this.GB_AgregarCita.Location = new System.Drawing.Point(10, 93);
             this.GB_AgregarCita.Name = "GB_AgregarCita";
-            this.GB_AgregarCita.Size = new System.Drawing.Size(422, 281);
+            this.GB_AgregarCita.Size = new System.Drawing.Size(453, 352);
             this.GB_AgregarCita.TabIndex = 11;
             this.GB_AgregarCita.TabStop = false;
             this.GB_AgregarCita.Text = "Información del Plan de Ejercicios";
             // 
+            // LBL_EscogerPadecimiento
+            // 
+            this.LBL_EscogerPadecimiento.AutoSize = true;
+            this.LBL_EscogerPadecimiento.Location = new System.Drawing.Point(12, 66);
+            this.LBL_EscogerPadecimiento.Name = "LBL_EscogerPadecimiento";
+            this.LBL_EscogerPadecimiento.Size = new System.Drawing.Size(155, 13);
+            this.LBL_EscogerPadecimiento.TabIndex = 20;
+            this.LBL_EscogerPadecimiento.Text = "Escoja un padecimiento actual:";
+            // 
+            // CB_Padecimiento
+            // 
+            this.CB_Padecimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_Padecimiento.FormattingEnabled = true;
+            this.CB_Padecimiento.Location = new System.Drawing.Point(152, 95);
+            this.CB_Padecimiento.Name = "CB_Padecimiento";
+            this.CB_Padecimiento.Size = new System.Drawing.Size(267, 21);
+            this.CB_Padecimiento.TabIndex = 19;
+            // 
             // TXT_Objetivos
             // 
-            this.TXT_Objetivos.Location = new System.Drawing.Point(91, 132);
+            this.TXT_Objetivos.Location = new System.Drawing.Point(152, 173);
             this.TXT_Objetivos.Multiline = true;
             this.TXT_Objetivos.Name = "TXT_Objetivos";
             this.TXT_Objetivos.Size = new System.Drawing.Size(267, 95);
@@ -77,7 +99,7 @@
             // 
             // BTN_Agregar
             // 
-            this.BTN_Agregar.Location = new System.Drawing.Point(274, 233);
+            this.BTN_Agregar.Location = new System.Drawing.Point(152, 304);
             this.BTN_Agregar.Name = "BTN_Agregar";
             this.BTN_Agregar.Size = new System.Drawing.Size(84, 42);
             this.BTN_Agregar.TabIndex = 16;
@@ -88,7 +110,7 @@
             // LBL_Objetivos
             // 
             this.LBL_Objetivos.AutoSize = true;
-            this.LBL_Objetivos.Location = new System.Drawing.Point(12, 124);
+            this.LBL_Objetivos.Location = new System.Drawing.Point(12, 176);
             this.LBL_Objetivos.Name = "LBL_Objetivos";
             this.LBL_Objetivos.Size = new System.Drawing.Size(54, 13);
             this.LBL_Objetivos.TabIndex = 8;
@@ -96,7 +118,7 @@
             // 
             // TXT_Nivel
             // 
-            this.TXT_Nivel.Location = new System.Drawing.Point(91, 99);
+            this.TXT_Nivel.Location = new System.Drawing.Point(152, 134);
             this.TXT_Nivel.Name = "TXT_Nivel";
             this.TXT_Nivel.Size = new System.Drawing.Size(267, 20);
             this.TXT_Nivel.TabIndex = 7;
@@ -104,22 +126,15 @@
             // LBL_Nivel
             // 
             this.LBL_Nivel.AutoSize = true;
-            this.LBL_Nivel.Location = new System.Drawing.Point(12, 99);
+            this.LBL_Nivel.Location = new System.Drawing.Point(12, 137);
             this.LBL_Nivel.Name = "LBL_Nivel";
-            this.LBL_Nivel.Size = new System.Drawing.Size(31, 13);
+            this.LBL_Nivel.Size = new System.Drawing.Size(34, 13);
             this.LBL_Nivel.TabIndex = 6;
-            this.LBL_Nivel.Text = "Nivel";
-            // 
-            // TXT_Padecimiento
-            // 
-            this.TXT_Padecimiento.Location = new System.Drawing.Point(91, 64);
-            this.TXT_Padecimiento.Name = "TXT_Padecimiento";
-            this.TXT_Padecimiento.Size = new System.Drawing.Size(267, 20);
-            this.TXT_Padecimiento.TabIndex = 3;
+            this.LBL_Nivel.Text = "Nivel:";
             // 
             // TXT_Cedula
             // 
-            this.TXT_Cedula.Location = new System.Drawing.Point(91, 30);
+            this.TXT_Cedula.Location = new System.Drawing.Point(152, 33);
             this.TXT_Cedula.Name = "TXT_Cedula";
             this.TXT_Cedula.Size = new System.Drawing.Size(267, 20);
             this.TXT_Cedula.TabIndex = 2;
@@ -127,7 +142,7 @@
             // LBL_Padecimiento
             // 
             this.LBL_Padecimiento.AutoSize = true;
-            this.LBL_Padecimiento.Location = new System.Drawing.Point(12, 64);
+            this.LBL_Padecimiento.Location = new System.Drawing.Point(12, 98);
             this.LBL_Padecimiento.Name = "LBL_Padecimiento";
             this.LBL_Padecimiento.Size = new System.Drawing.Size(74, 13);
             this.LBL_Padecimiento.TabIndex = 1;
@@ -136,7 +151,7 @@
             // LBL_Cedula
             // 
             this.LBL_Cedula.AutoSize = true;
-            this.LBL_Cedula.Location = new System.Drawing.Point(12, 30);
+            this.LBL_Cedula.Location = new System.Drawing.Point(12, 33);
             this.LBL_Cedula.Name = "LBL_Cedula";
             this.LBL_Cedula.Size = new System.Drawing.Size(43, 13);
             this.LBL_Cedula.TabIndex = 0;
@@ -165,7 +180,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(453, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(475, 24);
             this.menuStrip1.TabIndex = 22;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -204,15 +219,25 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // BTN_BuscarPlan
+            // 
+            this.BTN_BuscarPlan.Location = new System.Drawing.Point(335, 304);
+            this.BTN_BuscarPlan.Name = "BTN_BuscarPlan";
+            this.BTN_BuscarPlan.Size = new System.Drawing.Size(84, 42);
+            this.BTN_BuscarPlan.TabIndex = 21;
+            this.BTN_BuscarPlan.Text = "Buscar";
+            this.BTN_BuscarPlan.UseVisualStyleBackColor = true;
+            this.BTN_BuscarPlan.Click += new System.EventHandler(this.BTN_BuscarPlan_Click);
+            // 
             // AgregarPlanEjercicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 384);
+            this.ClientSize = new System.Drawing.Size(475, 457);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.LBL_PlanEjercicios);
             this.Controls.Add(this.GB_AgregarCita);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AgregarPlanEjercicios";
             this.Text = "AgregarPlanEjercicios";
             this.Load += new System.EventHandler(this.AgregarPlanEjercicios_Load);
@@ -232,7 +257,6 @@
         private System.Windows.Forms.Label LBL_Objetivos;
         private System.Windows.Forms.TextBox TXT_Nivel;
         private System.Windows.Forms.Label LBL_Nivel;
-        private System.Windows.Forms.TextBox TXT_Padecimiento;
         private System.Windows.Forms.TextBox TXT_Cedula;
         private System.Windows.Forms.Label LBL_Padecimiento;
         private System.Windows.Forms.Label LBL_Cedula;
@@ -244,5 +268,8 @@
         private System.Windows.Forms.ToolStripMenuItem crearPacienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem avanzadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ComboBox CB_Padecimiento;
+        private System.Windows.Forms.Label LBL_EscogerPadecimiento;
+        private System.Windows.Forms.Button BTN_BuscarPlan;
     }
 }
