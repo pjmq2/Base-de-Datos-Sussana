@@ -66,9 +66,9 @@ namespace BD_Grupo3_VS
                 }
                 else
                 {
-                    MessageBox.Show("Ha ocurrido un error al intentar agregar la cita. Puede intentar lo siguiente:\n \n \n -Verifique que" +
+                    MessageBox.Show("Ha ocurrido un error al intentar agregar la cita. Puede intentar lo siguiente:\n \n -Verifique que" +
                         " el número de cédula corresponda al de algún paciente registrado en el sistema \n -Verifique que el padecimiento concuerde con el de " +
-                        "algún plan de tratamiento asociado al paciente", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        "algún plan de tratamiento asociado al paciente \n -Verifique su conexión a la base de datos.", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -78,12 +78,7 @@ namespace BD_Grupo3_VS
 
         }
 
-        private void LINK_ConsultarCita_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ConsultarCitas consulta = new ConsultarCitas("");
-            consulta.Show();
-            this.Hide();
-        }
+       
 
       
 
@@ -97,7 +92,7 @@ namespace BD_Grupo3_VS
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            DialogResult resultado = MessageBox.Show("Seguro que desea Salir ?", "Cerrar la aplicacion", botones);
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicacion", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();

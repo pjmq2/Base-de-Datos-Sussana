@@ -57,16 +57,10 @@ namespace BD_Grupo3_VS
                 llenaTabla(dgv1, null, null);
             }
             TXT_Cedula.Clear();
-
+            TXT_Fecha.Clear();
         }
 
-        private void LINK_Agregar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            AgregarCita agrega = new AgregarCita("");
-            agrega.Show();
-            this.Hide();
-        }
-
+        
        
     
 
@@ -132,7 +126,7 @@ namespace BD_Grupo3_VS
             estadoC = row.Cells[10].Value.ToString();
             ModificarCita mc = new ModificarCita(cedulaC,padecimientoC,precioC,descripC,duracionC,lugarC,estadoC,fechaC);
             mc.Show();
-            this.Hide();
+            this.Close();
             
         }
 
@@ -164,6 +158,6 @@ namespace BD_Grupo3_VS
 
         }
 
-        /*             Hasta aqui las instrucciones de la cinta del menu  */
+       
     }
 }

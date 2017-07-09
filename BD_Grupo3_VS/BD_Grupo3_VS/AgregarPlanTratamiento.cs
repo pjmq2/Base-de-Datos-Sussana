@@ -14,16 +14,14 @@ namespace BD_Grupo3_VS
     {
         PlanTratamiento planT;
 
-        public AgregarPlanTratamiento()
+        public AgregarPlanTratamiento(string cedRecibida)
         {
             InitializeComponent();
             planT = new PlanTratamiento();
+            TXT_Cedula.Text = cedRecibida;
         }
 
-        private void ToolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
+        
 
         private void BTN_Agregar_Click(object sender, EventArgs e)
         {
@@ -44,8 +42,8 @@ namespace BD_Grupo3_VS
                 }
                 else
                 {
-                    MessageBox.Show("Ha ocurrido un error al intentar agregar el plan de tratamiento. Puede intentar lo siguiente:\n \n \n -Verifique que" +
-                        " el número de cédula corresponda al de algún paciente registrado en el sistema","Oops",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Ha ocurrido un error al intentar agregar el plan de tratamiento. Puede intentar lo siguiente:\n \n -Verifique que" +
+                        " el número de cédula corresponda al de algún paciente registrado en el sistema \n -Verifique su conexión a la base de datos","Oops",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }
         }
@@ -55,42 +53,10 @@ namespace BD_Grupo3_VS
 
         }
 
-        private void LINK_ListaTrata_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ConsultarPlanTratamiento consulta = new ConsultarPlanTratamiento();
-            consulta.Show();
-            this.Hide();
-        }
+  
 
-        /*             A partir de aqui empiezan los metodos para la cinta del menu  */
-        private void InicioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
-            this.Hide();
-        }
-
-        private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BuscarPaciente paciente = new BuscarPaciente();
-            paciente.Show();
-            this.Hide();
-        }
-
-        private void crearPacienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AgregarPaciente paciente = new AgregarPaciente();
-            paciente.Show();
-            this.Hide();
-        }
-
-        private void avanzadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuConfig menu = new MenuConfig();
-            menu.Show();
-            this.Hide();
-        }
-
+   
+      
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
@@ -98,9 +64,46 @@ namespace BD_Grupo3_VS
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                //Aun no cierra todo el programa
+                Application.Exit();
             }
         }
+
+        private void BTN_VerPlanes_Click(object sender, EventArgs e)
+        {
+            ConsultarPlanTratamiento cp = new ConsultarPlanTratamiento("");
+            cp.Show();
+            this.Hide();
+        }
+
+        private void InicioToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void buscarPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            BuscarPaciente paciente = new BuscarPaciente();
+            paciente.Show();
+            this.Hide();
+        }
+
+        private void crearPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            AgregarPaciente paciente = new AgregarPaciente();
+            paciente.Show();
+            this.Hide();
+        }
+
+        private void avanzadoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MenuConfig menu = new MenuConfig();
+            menu.Show();
+            this.Hide();
+        }
+
+
 
         /*             Hasta aqui las instrucciones de la cinta del menu  */
     }

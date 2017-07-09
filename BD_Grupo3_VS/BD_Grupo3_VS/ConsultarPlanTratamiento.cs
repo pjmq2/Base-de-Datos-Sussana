@@ -15,10 +15,11 @@ namespace BD_Grupo3_VS
     {
 
         PlanTratamiento planT;
-        public ConsultarPlanTratamiento()
+        public ConsultarPlanTratamiento(string cedRecibida)
         {
             InitializeComponent();
             planT = new PlanTratamiento();
+            TXT_Cedula.Text = cedRecibida;
         }
 
         private void ConsultarPlanTratamiento_Load(object sender, EventArgs e)
@@ -60,41 +61,8 @@ namespace BD_Grupo3_VS
             }
         }
 
-        private void LINK_AgregaPlan_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            AgregarPlanTratamiento agrega = new AgregarPlanTratamiento();
-            agrega.Show();
-            this.Hide();
-        }
+      
 
-        /*             A partir de aqui empiezan los metodos para la cinta del menu  */
-        private void InicioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
-            this.Hide();
-        }
-
-        private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BuscarPaciente paciente = new BuscarPaciente();
-            paciente.Show();
-            this.Hide();
-        }
-
-        private void crearPacienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AgregarPaciente paciente = new AgregarPaciente();
-            paciente.Show();
-            this.Hide();
-        }
-
-        private void avanzadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuConfig menu = new MenuConfig();
-            menu.Show();
-            this.Hide();
-        }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -103,10 +71,59 @@ namespace BD_Grupo3_VS
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                //Aun no cierra todo el programa
+                Application.Exit();
+             
             }
         }
 
-        /*             Hasta aqui las instrucciones de la cinta del menu  */
+        private void BTN_AsignaCita_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dataGridView1.CurrentRow;
+            string cedEnviar = row.Cells[0].Value.ToString();
+            AgregarCita ac = new AgregarCita(cedEnviar);
+            ac.Show();
+            this.Close();
+
+        }
+
+        private void BTN_AsignaPlanEjercicios_Click(object sender, EventArgs e)
+        {
+            string cedulaEnviar, padeEnviar;
+            DataGridViewRow row = dataGridView1.CurrentRow;
+            cedulaEnviar = row.Cells[0].Value.ToString();
+            padeEnviar = row.Cells[4].Value.ToString();
+            AgregarPlanEjercicios ap = new AgregarPlanEjercicios(cedulaEnviar,padeEnviar);
+            ap.Show();
+            this.Close();
+        }
+
+        private void InicioToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void buscarPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            BuscarPaciente paciente = new BuscarPaciente();
+            paciente.Show();
+            this.Hide();
+        }
+
+        private void crearPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            AgregarPaciente paciente = new AgregarPaciente();
+            paciente.Show();
+            this.Hide();
+        }
+
+        private void avanzadoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MenuConfig menu = new MenuConfig();
+            menu.Show();
+            this.Hide();
+        }
+        
     }
 }
