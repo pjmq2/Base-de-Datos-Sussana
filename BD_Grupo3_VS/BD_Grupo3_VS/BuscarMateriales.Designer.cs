@@ -269,6 +269,7 @@
             this.Name = "BuscarMateriales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar materiales";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BuscarMateriales_FormClosing);
             this.Load += new System.EventHandler(this.ConsultarMateriales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Materiales)).EndInit();
             this.menuStrip1.ResumeLayout(false);

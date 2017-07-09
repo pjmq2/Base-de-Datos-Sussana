@@ -36,13 +36,17 @@
             this.BTN_BuscarAntecediente = new System.Windows.Forms.Button();
             this.BTN_BuscarMaterial = new System.Windows.Forms.Button();
             this.BTN_BuscarTecnica = new System.Windows.Forms.Button();
+            this.menúPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // BTN_CrearTecnica
             // 
             this.BTN_CrearTecnica.Image = global::BD_Grupo3_VS.Properties.Resources.Tecnica_Crear;
             this.BTN_CrearTecnica.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_CrearTecnica.Location = new System.Drawing.Point(25, 10);
+            this.BTN_CrearTecnica.Location = new System.Drawing.Point(25, 37);
             this.BTN_CrearTecnica.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_CrearTecnica.Name = "BTN_CrearTecnica";
             this.BTN_CrearTecnica.Size = new System.Drawing.Size(98, 103);
@@ -56,7 +60,7 @@
             // 
             this.BTN_CrearMaterial.Image = global::BD_Grupo3_VS.Properties.Resources.Material_Agregar;
             this.BTN_CrearMaterial.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_CrearMaterial.Location = new System.Drawing.Point(25, 118);
+            this.BTN_CrearMaterial.Location = new System.Drawing.Point(25, 145);
             this.BTN_CrearMaterial.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_CrearMaterial.Name = "BTN_CrearMaterial";
             this.BTN_CrearMaterial.Size = new System.Drawing.Size(98, 86);
@@ -70,7 +74,7 @@
             // 
             this.BTN_CrearAntecediente.Image = global::BD_Grupo3_VS.Properties.Resources.Antecedente_Agregar;
             this.BTN_CrearAntecediente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_CrearAntecediente.Location = new System.Drawing.Point(25, 212);
+            this.BTN_CrearAntecediente.Location = new System.Drawing.Point(25, 239);
             this.BTN_CrearAntecediente.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_CrearAntecediente.Name = "BTN_CrearAntecediente";
             this.BTN_CrearAntecediente.Size = new System.Drawing.Size(98, 97);
@@ -84,7 +88,7 @@
             // 
             this.BTN_CrearEjercicio.Image = global::BD_Grupo3_VS.Properties.Resources.Ejercicio_Agregar;
             this.BTN_CrearEjercicio.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_CrearEjercicio.Location = new System.Drawing.Point(25, 318);
+            this.BTN_CrearEjercicio.Location = new System.Drawing.Point(25, 345);
             this.BTN_CrearEjercicio.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_CrearEjercicio.Name = "BTN_CrearEjercicio";
             this.BTN_CrearEjercicio.Size = new System.Drawing.Size(98, 98);
@@ -98,7 +102,7 @@
             // 
             this.BTN_BuscarEjercicio.Image = global::BD_Grupo3_VS.Properties.Resources.Ejercicio_Buscar;
             this.BTN_BuscarEjercicio.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_BuscarEjercicio.Location = new System.Drawing.Point(184, 318);
+            this.BTN_BuscarEjercicio.Location = new System.Drawing.Point(184, 345);
             this.BTN_BuscarEjercicio.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_BuscarEjercicio.Name = "BTN_BuscarEjercicio";
             this.BTN_BuscarEjercicio.Size = new System.Drawing.Size(98, 98);
@@ -112,7 +116,7 @@
             // 
             this.BTN_BuscarAntecediente.Image = global::BD_Grupo3_VS.Properties.Resources.Antecedente_Buscar;
             this.BTN_BuscarAntecediente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_BuscarAntecediente.Location = new System.Drawing.Point(184, 212);
+            this.BTN_BuscarAntecediente.Location = new System.Drawing.Point(184, 239);
             this.BTN_BuscarAntecediente.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_BuscarAntecediente.Name = "BTN_BuscarAntecediente";
             this.BTN_BuscarAntecediente.Size = new System.Drawing.Size(98, 97);
@@ -126,7 +130,7 @@
             // 
             this.BTN_BuscarMaterial.Image = global::BD_Grupo3_VS.Properties.Resources.Material_Buscar;
             this.BTN_BuscarMaterial.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_BuscarMaterial.Location = new System.Drawing.Point(184, 118);
+            this.BTN_BuscarMaterial.Location = new System.Drawing.Point(184, 145);
             this.BTN_BuscarMaterial.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_BuscarMaterial.Name = "BTN_BuscarMaterial";
             this.BTN_BuscarMaterial.Size = new System.Drawing.Size(98, 86);
@@ -140,7 +144,7 @@
             // 
             this.BTN_BuscarTecnica.Image = global::BD_Grupo3_VS.Properties.Resources.Tecnica_Buscar;
             this.BTN_BuscarTecnica.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_BuscarTecnica.Location = new System.Drawing.Point(184, 10);
+            this.BTN_BuscarTecnica.Location = new System.Drawing.Point(184, 37);
             this.BTN_BuscarTecnica.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_BuscarTecnica.Name = "BTN_BuscarTecnica";
             this.BTN_BuscarTecnica.Size = new System.Drawing.Size(98, 103);
@@ -150,11 +154,36 @@
             this.BTN_BuscarTecnica.UseVisualStyleBackColor = true;
             this.BTN_BuscarTecnica.Click += new System.EventHandler(this.BTN_BuscarTecnica_Click);
             // 
+            // menúPrincipalToolStripMenuItem
+            // 
+            this.menúPrincipalToolStripMenuItem.Name = "menúPrincipalToolStripMenuItem";
+            this.menúPrincipalToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.menúPrincipalToolStripMenuItem.Text = "Menú principal";
+            this.menúPrincipalToolStripMenuItem.Click += new System.EventHandler(this.menúPrincipalToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menúPrincipalToolStripMenuItem,
+            this.salirToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(309, 24);
+            this.menuStrip2.TabIndex = 9;
+            this.menuStrip2.Text = "MS_MenúConfig";
+            // 
             // MenuConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(309, 433);
+            this.ClientSize = new System.Drawing.Size(309, 461);
             this.Controls.Add(this.BTN_BuscarEjercicio);
             this.Controls.Add(this.BTN_BuscarAntecediente);
             this.Controls.Add(this.BTN_BuscarMaterial);
@@ -163,12 +192,16 @@
             this.Controls.Add(this.BTN_CrearAntecediente);
             this.Controls.Add(this.BTN_CrearMaterial);
             this.Controls.Add(this.BTN_CrearTecnica);
+            this.Controls.Add(this.menuStrip2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuConfig";
-            this.Text = "Menu de configuración";
+            this.Text = "Menú de configuración";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MenuConfig_FormClosed);
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -182,5 +215,8 @@
         private System.Windows.Forms.Button BTN_BuscarAntecediente;
         private System.Windows.Forms.Button BTN_BuscarMaterial;
         private System.Windows.Forms.Button BTN_BuscarTecnica;
+        private System.Windows.Forms.ToolStripMenuItem menúPrincipalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip2;
     }
 }

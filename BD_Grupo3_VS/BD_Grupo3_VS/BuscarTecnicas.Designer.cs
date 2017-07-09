@@ -267,6 +267,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "BuscarTecnicas";
             this.Text = "Buscar técnicas";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BuscarTecnicas_FormClosing);
             this.Load += new System.EventHandler(this.BuscarTecnicas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Tecnicas)).EndInit();
             this.menuStrip1.ResumeLayout(false);

@@ -77,5 +77,23 @@ namespace BD_Grupo3_VS
         {
             Application.Exit();
         }
+
+        private void menúPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal menuPrinc = new MenuPrincipal();
+            menuPrinc.Show();
+            this.Dispose();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons botones = MessageBoxButtons.YesNo;
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicacion", botones);
+            if (resultado == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Dispose();
+                Environment.Exit(0);
+            }
+        }
     }
 }
