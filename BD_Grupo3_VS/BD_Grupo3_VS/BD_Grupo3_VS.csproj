@@ -202,6 +202,12 @@
     <Compile Include="VerMaterial.Designer.cs">
       <DependentUpon>VerMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerPlanEjercicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerPlanEjercicios.Designer.cs">
+      <DependentUpon>VerPlanEjercicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerTecnica.cs">
       <SubType>Form</SubType>
     </Compile>

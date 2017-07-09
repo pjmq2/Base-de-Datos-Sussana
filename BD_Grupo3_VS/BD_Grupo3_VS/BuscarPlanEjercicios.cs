@@ -12,12 +12,16 @@ namespace BD_Grupo3_VS
 {
     public partial class BuscarPlanEjercicios : Form
     {
+        PlanDeEjercicios planEjercicio;
         string cedula;
         public BuscarPlanEjercicios(string cedulaNueva)
         {
             cedula = cedulaNueva;
             InitializeComponent();
+            planEjercicio = new PlanDeEjercicios();
         }
+
+
 
         #region Menu
         /*             A partir de aqui empiezan los metodos para la cinta del menu  */
@@ -61,5 +65,46 @@ namespace BD_Grupo3_VS
         }
         /*             Hasta aqui las instrucciones de la cinta del menu  */
         #endregion
+
+        private void BuscarPlanEjercicios_Load(object sender, EventArgs e)
+        {
+            TXT_Cedula.Text = cedula;
+        }
+
+        private void BTN_Buscar_Click(object sender, EventArgs e)
+        {
+            llenarTabla(DGV_PlanEjercicio);
+        }
+
+        private void llenarTabla(DataGridView dataGridView)
+        {
+            DataTable tabla = planEjercicio.obtenerPlanEjercicios(cedula);
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = tabla;
+            dataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+            dataGridView.DataSource = bindingSource;
+            for (int i = 0; i < DGV_PlanEjercicio.ColumnCount; i++)
+            {
+                dataGridView.Columns[i].Width = 100;
+            }
+        }
+
+        private void BTN_Modificar_Click(object sender, EventArgs e)
+        {
+            if (DGV_PlanEjercicio.SelectedRows.Count == 0)
+            { 
+                MessageBox.Show("No ha seleccionado ningún plan de ejercicios.", "Seleccionar Antecedente");
+            }
+            else
+            {
+                DataGridViewRow row = DGV_PlanEjercicio.CurrentRow;
+                string ced = row.Cells[0].Value.ToString();
+                string padecimiento = row.Cells[1].Value.ToString();
+                string nivel = row.Cells[2].Value.ToString();
+                VerPlanEjercicios vpe = new VerPlanEjercicios(ced, padecimiento, nivel);
+                vpe.Show();
+                this.Close();
+            }
+        }
     }
 }

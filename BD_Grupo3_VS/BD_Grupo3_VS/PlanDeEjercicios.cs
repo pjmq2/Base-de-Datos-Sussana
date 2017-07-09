@@ -11,11 +11,24 @@ namespace BD_Grupo3_VS
     class PlanDeEjercicios
     {
         AccesoBaseDatos bd;
-        string cedula;
-        public PlanDeEjercicios(string cedulaNueva)
+        public PlanDeEjercicios()
         {
             bd = new AccesoBaseDatos();
-            cedula = cedulaNueva;
+        }
+
+        //obtenemos una lista de nombre de los planes de tratamiento asociados a un paciente
+        public SqlDataReader obtenerListaPadecimiento(string cedula)
+        {
+            SqlDataReader datos = null;
+            try
+            {
+                datos = bd.ejecutarConsulta("select distinct Pad_Actual  from PLAN_TRATAMIENTO   where CedPaciente = '" + cedula + "'");
+            }
+            catch (SqlException ex)
+            {
+
+            }
+            return datos;
         }
 
         /*Método para agregar un nuevo Plan de Ejercicio a la base de datos
@@ -25,61 +38,18 @@ namespace BD_Grupo3_VS
         */
         public int agregarPlanEjercicio(string Cedula, string Padecimiento, string Nivel, string Objetivos)
         {
-            String insertar = "Insert into Plan_Ejercicios (CedPaciente, Pad_Actual, Nivel, Objetivos) VALUES ('" + Cedula + "','" + Padecimiento + "','" + Nivel + "','" + Objetivos + "')";
+            String insertar = "insert into PLAN_EJERCICIOS (CedPaciente, Padec_Act, Nivel, Objetivos)  VALUES ('" + Cedula + "','" + Padecimiento + "','" + Nivel + "','" + Objetivos + "')";
             return bd.actualizarDatos(insertar);
         }
 
-        /*Metodo para obtener los nombres de los planes de ejercicios en la base de datos
-            Recibe: Nada
-            Realiza la selección de los nombres delos planes de  ejercicios y lo carga en un dataReader
-            Retorna: el dataReader con los datos
-        */
-        public SqlDataReader obtenerListaNombresPlanesEjercicios()
-        {
-            SqlDataReader datos = null;
-            try
-            {
-                datos = bd.ejecutarConsulta("Select distinct Nombre from Plan_Ejercicio");
-            }
-            catch (SqlException ex)
-            { }
-            return datos;
-        }
-
-        /*Método para obtener los planes de ejercicios de la base de datos
-            Recibe: dos tipos de filtros por los cuales se pueden filtrar las tuplas
-            Modifica: Realiza la selección de los plan de ejercicios y los carga en un dataTable
-            Retorna: el dataTable con los datos
-        */
-        public DataTable obtenerPlanEjercicios(string filtroCedula, string filtroPadecimiento, string filtroNivel, string filtro1)
+        /*Método para obtener los planes de ejercicios de la base de datos usando la cédula*/
+            
+        public DataTable obtenerPlanEjercicios(string cedula)
         {
             DataTable tabla = null;
             try
-            {
-                if ((filtroCedula == null) && (filtroPadecimiento == null) && (filtroNivel == null) && (filtro1 == null))
-                {
-                    tabla = bd.ejecutarConsultaTabla("Select * from plan_ejercicios");
-                }
-                else if ((filtroCedula != null) && (filtroPadecimiento != null) && (filtroNivel != null) && (filtro1 != null))
-                {
-
-                }
-                else if (filtroCedula != null)
-                {
-                    tabla = bd.ejecutarConsultaTabla("Select * from plan_ejercicios where CedPaciente = '" + filtroCedula + "' OR CedPaciente like '%" + filtro1 + "%' OR Pad_Actual = '" + filtroPadecimiento + "' OR Pad_Actual like '%" + filtro1 + "%' OR Nivel = '" + filtroNivel + "' OR Nivel like '%" + filtro1 + "%' OR Objetivos like '%" + filtroNivel + "%'");
-                }
-                else if (filtroPadecimiento != null)
-                {
-                    tabla = bd.ejecutarConsultaTabla("Select * from plan_ejercicios where Pad_Actual = '" + filtroPadecimiento + "'");
-                }
-                else if (filtroNivel != null)
-                {
-                    tabla = bd.ejecutarConsultaTabla("Select * from plan_ejercicios where Nivel = '" + filtroNivel + "'");
-                }
-                else if (filtro1 != null)
-                {
-                    tabla = bd.ejecutarConsultaTabla("Select * from plan_ejercicios where Objetivos like '%" + filtroNivel + "%'");
-                }
+            {                 
+                tabla = bd.ejecutarConsultaTabla("Select * from plan_ejercicios where CedPaciente = '" + cedula + "'");                
             }
             catch (SqlException ex)
             {

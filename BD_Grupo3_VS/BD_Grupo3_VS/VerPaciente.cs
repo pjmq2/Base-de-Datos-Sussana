@@ -666,11 +666,15 @@ namespace BD_Grupo3_VS
 
         private void BTN_CrearPlanTratamiento_Click(object sender, EventArgs e)
         {
+            AgregarPlanTratamiento apt = new AgregarPlanTratamiento(TXT_Cedula.Text);
+            apt.Show();
             this.Close();
         }
 
         private void BTN_BuscarPlanTratamiento_Click(object sender, EventArgs e)
         {
+            ConsultarPlanTratamiento cpt = new ConsultarPlanTratamiento(TXT_Cedula.Text);
+            cpt.Show();
             this.Close();
         }
 
