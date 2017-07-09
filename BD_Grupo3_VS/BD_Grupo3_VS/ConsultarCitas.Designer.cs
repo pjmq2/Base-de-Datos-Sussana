@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.LBL_Titulo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.LBL_Cedula = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.BTN_Eliminar = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +85,7 @@
             this.TXT_Cedula.Name = "TXT_Cedula";
             this.TXT_Cedula.Size = new System.Drawing.Size(154, 20);
             this.TXT_Cedula.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.TXT_Cedula, "Digite el número de cédula del paciente");
             // 
             // LBL_Fecha
             // 
@@ -99,6 +102,7 @@
             this.TXT_Fecha.Name = "TXT_Fecha";
             this.TXT_Fecha.Size = new System.Drawing.Size(154, 20);
             this.TXT_Fecha.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.TXT_Fecha, "Digite la fecha u hora de la cita");
             // 
             // dgv1
             // 
@@ -246,5 +250,6 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Button BTN_Modificar;
         private System.Windows.Forms.Button BTN_Eliminar;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
