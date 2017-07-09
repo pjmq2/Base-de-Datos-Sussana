@@ -74,9 +74,17 @@ CREATE PROCEDURE eliminarPaciente
 AS
 delete from PACIENTE
 where PACIENTE.Cedula = @cedula
-
-drop procedure eliminarPaciente
 ---
+GO
+CREATE PROCEDURE eliminarPlanEjercicio
+@cedula char(9),
+@padecimiento varchar(50),
+@nivel varchar(10)
+AS
+delete from PLAN_EJERCICIOS
+where CedPaciente = @cedula and Padec_Act = @padecimiento and Nivel = @nivel
+---
+
 GO
 CREATE PROCEDURE ModificarCita
 @cedula char(9),@padecimiento varchar(50),@fecha varchar(18), @precio int, @descripcion varchar(500), @duracion varchar(10),

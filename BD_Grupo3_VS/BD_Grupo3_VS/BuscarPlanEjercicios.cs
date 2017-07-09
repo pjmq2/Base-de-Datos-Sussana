@@ -69,6 +69,7 @@ namespace BD_Grupo3_VS
         private void BuscarPlanEjercicios_Load(object sender, EventArgs e)
         {
             TXT_Cedula.Text = cedula;
+            llenarTabla(DGV_PlanEjercicio);
         }
 
         private void BTN_Buscar_Click(object sender, EventArgs e)

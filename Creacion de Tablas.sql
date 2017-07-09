@@ -171,9 +171,11 @@ create table TAREAS_PLAN_EJERCICIOS(
 	Tarea		varchar(50)	not null
 	Constraint PKTareas_Plan_Ejercicios primary key (CedPaciente, Padec_Act, Nivel_Plan, Tarea),
 	Constraint FKTPEaPlan_Ejercicios foreign key (CedPaciente, Padec_Act, Nivel_Plan) references PLAN_EJERCICIOS(CedPaciente, Padec_Act, Nivel)
-		on delete no action
-		on update no action
+		on delete cascade
+		on update cascade
 )
+
+
 
 --Tabla Ejercicios
 create table EJERCICIO(

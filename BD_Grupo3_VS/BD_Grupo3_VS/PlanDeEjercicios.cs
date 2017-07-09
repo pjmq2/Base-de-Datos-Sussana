@@ -16,9 +16,18 @@ namespace BD_Grupo3_VS
             bd = new AccesoBaseDatos();
         }
 
+
+        public int agregarEjercicioAPlan(string Cedula, string Padecimiento, string Nivel, string nombreEjerc, int tiempo, int repeticiones)
+        {
+            String insertar = "insert into CONSTA_DE (CedPaciente, Padec_Act, Nivel_Plan, Nombre_Eje, Tiempo, Repeticion)  " +
+                "VALUES ('" + Cedula + "','" + Padecimiento + "','" + Nivel + "','" + nombreEjerc + "','" + tiempo + "','" + repeticiones + "')";
+            return bd.actualizarDatos(insertar);
+        }
+
         public int agregarTarea(string Cedula, string Padecimiento, string Nivel, string tarea)
         {
-            String insertar = "insert into TAREAS_PLAN_EJERCICIOS (CedPaciente, Padec_Act, Nivel_Plan, Tarea)  VALUES ('" + Cedula + "','" + Padecimiento + "','" + Nivel + "','" + tarea + "')";
+            String insertar = "insert into TAREAS_PLAN_EJERCICIOS (CedPaciente, Padec_Act, Nivel_Plan, Tarea)  " +
+                "VALUES ('" + Cedula + "','" + Padecimiento + "','" + Nivel + "','" + tarea + "')";
             return bd.actualizarDatos(insertar);
         }
 
@@ -44,7 +53,8 @@ namespace BD_Grupo3_VS
         */
         public int agregarPlanEjercicio(string Cedula, string Padecimiento, string Nivel, string Objetivos)
         {
-            String insertar = "insert into PLAN_EJERCICIOS (CedPaciente, Padec_Act, Nivel, Objetivos)  VALUES ('" + Cedula + "','" + Padecimiento + "','" + Nivel + "','" + Objetivos + "')";
+            String insertar = "insert into PLAN_EJERCICIOS (CedPaciente, Padec_Act, Nivel, Objetivos)  " +
+                "VALUES ('" + Cedula + "','" + Padecimiento + "','" + Nivel + "','" + Objetivos + "')";
             return bd.actualizarDatos(insertar);
         }
 
@@ -81,16 +91,32 @@ namespace BD_Grupo3_VS
             return tabla;
         }
 
-        /*Método para eliminar un plan de ejercicio mediante el procedimiento almacenado
-            Recibe: El nombre de los planes de ejercicios a eliminar
-            Modifica: Llama al método que elimina el plan de ejercicio mediante el nombre
-            Retorna: el tipo de error que generó el eliminar o cero si el eliminar fue exitoso
-        */
-        public int eliminarPlanEjercicio(string nombre)
+        /*Método para obtener los planes de ejercicios de la base de datos usando la cédula*/
+
+        public DataTable obtenerEjerciciosDePlan(string cedula, string Padecimiento, string Nivel)
         {
-            return 1;
+            DataTable tabla = null;
+            try
+            {
+                tabla = bd.ejecutarConsultaTabla("Select Nombre_Eje, Tiempo, Repeticion from CONSTA_DE " +
+                    "where CedPaciente = '" + cedula + "' and Padec_Act = '" + Padecimiento + "' and Nivel_Plan = '" + Nivel + "'");
+            }
+            catch (SqlException ex)
+            {
+
+            }
+            return tabla;
         }
 
-
+        /*Método para eliminar un plan de ejercicio mediante el procedimiento almacenado
+            Recibe: la cedula del paciente, nombre del padecimiento(plan de tratamiento) y nivel del plan de ejercicio
+            Modifica: Llama al método que elimina el plan de ejercicio mediante la llave primaria
+            Retorna: el tipo de error que generó el eliminar o cero si el eliminar fue exitoso
+       */
+        public int eliminarPlanEjercicio(string cedula, string padecAct, string nivel)
+        {
+            String eliminar = "EXEC eliminarPlanEjercicio '" + cedula + "', '" + padecAct + "', '" + nivel + "'";
+            return bd.actualizarDatos(eliminar);
+        }
     }
 }
