@@ -19,6 +19,33 @@ namespace BD_Grupo3_VS
         {
             bd = new AccesoBaseDatos();
         }
+        public SqlDataReader obtenerTodasTecnicas()
+        {
+            SqlDataReader datos = null;
+            try
+            {
+                datos = bd.ejecutarConsulta("select Nombre from tecnica");
+            }
+            catch (SqlException ex)
+            {
+
+            }
+            return datos;
+        }
+
+        public SqlDataReader obtenerTecnicasPorCita(string cedula, string padec, string fecha)
+        {
+            SqlDataReader datos = null;
+            try
+            {
+                datos = bd.ejecutarConsulta("select Nombre_Tec from Se_realizan where CedPaciente = '" +cedula+ "' and Padec_Act = '"+padec+"' and Fecha_Cita = '"+fecha+"'");
+            }
+            catch (SqlException ex)
+            {
+
+            }
+            return datos;
+        }
 
         public int agregarCita(string cedula, string padecimiento, string fechaHora, int precio, string descripcion,
             string duracion, string lugar, string estado)
@@ -90,6 +117,19 @@ namespace BD_Grupo3_VS
 
             }
             return data;
+        }
+
+        public int agregarTecnicaCita(string cedula, string padec, string fecha, string tecnica)
+        {
+            string agregar = "Insert into SE_REALIZAN (CedPaciente, Padec_Act, Fecha_Cita, Nombre_Tec)" +
+                " VALUES(" + cedula + ",'" + padec + "','" + fecha + "','" + tecnica + "')";
+           return bd.actualizarDatos(agregar);
+        }
+
+        public int eliminarTecnicaCita(string cedula, string padec, string fecha, string tecnica)
+        {
+            string eliminar = "DELETE from SE_REALIZAN where CedPaciente = '" + cedula + "' and Padec_Act = '" + padec + "' and Fecha_Cita = '" + fecha + "' and Nombre_Tec = '" + tecnica+"'";
+            return bd.actualizarDatos(eliminar);
         }
     }
 }

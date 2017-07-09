@@ -104,35 +104,35 @@ namespace BD_Grupo3_VS
         {
             BuscarPaciente paciente = new BuscarPaciente();
             paciente.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void InicioToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
             menu.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void crearPacienteToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             AgregarPaciente paciente = new AgregarPaciente();
             paciente.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void avanzadoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             MenuConfig menu = new MenuConfig();
             menu.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void BTN_Lista_Click(object sender, EventArgs e)
         {
             ConsultarCitas cc = new ConsultarCitas("");
             cc.Show();
-            this.Hide();
+            this.Dispose();
         }
 
 

@@ -94,8 +94,9 @@
             // TXT_Observaciones
             // 
             this.TXT_Observaciones.Location = new System.Drawing.Point(109, 213);
+            this.TXT_Observaciones.Multiline = true;
             this.TXT_Observaciones.Name = "TXT_Observaciones";
-            this.TXT_Observaciones.Size = new System.Drawing.Size(154, 20);
+            this.TXT_Observaciones.Size = new System.Drawing.Size(154, 98);
             this.TXT_Observaciones.TabIndex = 5;
             this.toolTip1.SetToolTip(this.TXT_Observaciones, "Digite las observaciones asociadas al plan de tratamiento");
             // 

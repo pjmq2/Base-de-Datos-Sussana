@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.GB_Modificar = new System.Windows.Forms.GroupBox();
+            this.TXT_FechaCambiar = new System.Windows.Forms.TextBox();
+            this.TXT_PadeCambiar = new System.Windows.Forms.TextBox();
+            this.TXT_CeduCambiar = new System.Windows.Forms.TextBox();
             this.BTN_Modificar = new System.Windows.Forms.Button();
             this.TXT_Estado = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -55,11 +58,19 @@
             this.crearPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avanzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TXT_CeduCambiar = new System.Windows.Forms.TextBox();
-            this.TXT_PadeCambiar = new System.Windows.Forms.TextBox();
-            this.TXT_FechaCambiar = new System.Windows.Forms.TextBox();
+            this.GB_AgregaTecnica = new System.Windows.Forms.GroupBox();
+            this.GB_EliminaTecnica = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CB_AgregaTecnica = new System.Windows.Forms.ComboBox();
+            this.CB_EliminaTecnica = new System.Windows.Forms.ComboBox();
+            this.BTN_AgregaTecnica = new System.Windows.Forms.Button();
+            this.BTN_EliminarTecnica = new System.Windows.Forms.Button();
+            this.LINK_Atras = new System.Windows.Forms.LinkLabel();
             this.GB_Modificar.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.GB_AgregaTecnica.SuspendLayout();
+            this.GB_EliminaTecnica.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -97,14 +108,38 @@
             this.GB_Modificar.Controls.Add(this.label5);
             this.GB_Modificar.Location = new System.Drawing.Point(24, 90);
             this.GB_Modificar.Name = "GB_Modificar";
-            this.GB_Modificar.Size = new System.Drawing.Size(886, 380);
+            this.GB_Modificar.Size = new System.Drawing.Size(506, 380);
             this.GB_Modificar.TabIndex = 1;
             this.GB_Modificar.TabStop = false;
             this.GB_Modificar.Text = "Digite los nuevos datos";
             // 
+            // TXT_FechaCambiar
+            // 
+            this.TXT_FechaCambiar.Location = new System.Drawing.Point(0, 360);
+            this.TXT_FechaCambiar.Name = "TXT_FechaCambiar";
+            this.TXT_FechaCambiar.Size = new System.Drawing.Size(10, 20);
+            this.TXT_FechaCambiar.TabIndex = 26;
+            this.TXT_FechaCambiar.Visible = false;
+            // 
+            // TXT_PadeCambiar
+            // 
+            this.TXT_PadeCambiar.Location = new System.Drawing.Point(0, 360);
+            this.TXT_PadeCambiar.Name = "TXT_PadeCambiar";
+            this.TXT_PadeCambiar.Size = new System.Drawing.Size(10, 20);
+            this.TXT_PadeCambiar.TabIndex = 25;
+            this.TXT_PadeCambiar.Visible = false;
+            // 
+            // TXT_CeduCambiar
+            // 
+            this.TXT_CeduCambiar.Location = new System.Drawing.Point(0, 360);
+            this.TXT_CeduCambiar.Name = "TXT_CeduCambiar";
+            this.TXT_CeduCambiar.Size = new System.Drawing.Size(10, 20);
+            this.TXT_CeduCambiar.TabIndex = 24;
+            this.TXT_CeduCambiar.Visible = false;
+            // 
             // BTN_Modificar
             // 
-            this.BTN_Modificar.Location = new System.Drawing.Point(761, 330);
+            this.BTN_Modificar.Location = new System.Drawing.Point(384, 291);
             this.BTN_Modificar.Name = "BTN_Modificar";
             this.BTN_Modificar.Size = new System.Drawing.Size(113, 36);
             this.BTN_Modificar.TabIndex = 23;
@@ -114,7 +149,7 @@
             // 
             // TXT_Estado
             // 
-            this.TXT_Estado.Location = new System.Drawing.Point(539, 170);
+            this.TXT_Estado.Location = new System.Drawing.Point(345, 176);
             this.TXT_Estado.Name = "TXT_Estado";
             this.TXT_Estado.Size = new System.Drawing.Size(152, 20);
             this.TXT_Estado.TabIndex = 22;
@@ -122,11 +157,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(442, 180);
+            this.label7.Location = new System.Drawing.Point(286, 173);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 13);
+            this.label7.Size = new System.Drawing.Size(43, 13);
             this.label7.TabIndex = 21;
-            this.label7.Text = "Estado Paciente:";
+            this.label7.Text = "Estado:";
             // 
             // CB_Lugar
             // 
@@ -134,7 +169,7 @@
             this.CB_Lugar.Items.AddRange(new object[] {
             "Consultorio",
             "Domicilio"});
-            this.CB_Lugar.Location = new System.Drawing.Point(539, 107);
+            this.CB_Lugar.Location = new System.Drawing.Point(345, 99);
             this.CB_Lugar.Name = "CB_Lugar";
             this.CB_Lugar.Size = new System.Drawing.Size(152, 21);
             this.CB_Lugar.TabIndex = 20;
@@ -142,7 +177,7 @@
             // LBL_Lugar
             // 
             this.LBL_Lugar.AutoSize = true;
-            this.LBL_Lugar.Location = new System.Drawing.Point(442, 111);
+            this.LBL_Lugar.Location = new System.Drawing.Point(286, 107);
             this.LBL_Lugar.Name = "LBL_Lugar";
             this.LBL_Lugar.Size = new System.Drawing.Size(37, 13);
             this.LBL_Lugar.TabIndex = 19;
@@ -150,7 +185,7 @@
             // 
             // TXT_Duracion
             // 
-            this.TXT_Duracion.Location = new System.Drawing.Point(539, 45);
+            this.TXT_Duracion.Location = new System.Drawing.Point(345, 45);
             this.TXT_Duracion.Name = "TXT_Duracion";
             this.TXT_Duracion.Size = new System.Drawing.Size(152, 20);
             this.TXT_Duracion.TabIndex = 18;
@@ -158,7 +193,7 @@
             // LBL_Duracion
             // 
             this.LBL_Duracion.AutoSize = true;
-            this.LBL_Duracion.Location = new System.Drawing.Point(442, 48);
+            this.LBL_Duracion.Location = new System.Drawing.Point(286, 48);
             this.LBL_Duracion.Name = "LBL_Duracion";
             this.LBL_Duracion.Size = new System.Drawing.Size(53, 13);
             this.LBL_Duracion.TabIndex = 17;
@@ -296,35 +331,103 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // TXT_CeduCambiar
+            // GB_AgregaTecnica
             // 
-            this.TXT_CeduCambiar.Location = new System.Drawing.Point(0, 360);
-            this.TXT_CeduCambiar.Name = "TXT_CeduCambiar";
-            this.TXT_CeduCambiar.Size = new System.Drawing.Size(10, 20);
-            this.TXT_CeduCambiar.TabIndex = 24;
-            this.TXT_CeduCambiar.Visible = false;
+            this.GB_AgregaTecnica.Controls.Add(this.BTN_AgregaTecnica);
+            this.GB_AgregaTecnica.Controls.Add(this.CB_AgregaTecnica);
+            this.GB_AgregaTecnica.Controls.Add(this.label2);
+            this.GB_AgregaTecnica.Location = new System.Drawing.Point(540, 90);
+            this.GB_AgregaTecnica.Name = "GB_AgregaTecnica";
+            this.GB_AgregaTecnica.Size = new System.Drawing.Size(378, 176);
+            this.GB_AgregaTecnica.TabIndex = 49;
+            this.GB_AgregaTecnica.TabStop = false;
+            this.GB_AgregaTecnica.Text = "Agregar Técnica";
             // 
-            // TXT_PadeCambiar
+            // GB_EliminaTecnica
             // 
-            this.TXT_PadeCambiar.Location = new System.Drawing.Point(0, 360);
-            this.TXT_PadeCambiar.Name = "TXT_PadeCambiar";
-            this.TXT_PadeCambiar.Size = new System.Drawing.Size(10, 20);
-            this.TXT_PadeCambiar.TabIndex = 25;
-            this.TXT_PadeCambiar.Visible = false;
+            this.GB_EliminaTecnica.Controls.Add(this.BTN_EliminarTecnica);
+            this.GB_EliminaTecnica.Controls.Add(this.CB_EliminaTecnica);
+            this.GB_EliminaTecnica.Controls.Add(this.label3);
+            this.GB_EliminaTecnica.Location = new System.Drawing.Point(540, 266);
+            this.GB_EliminaTecnica.Name = "GB_EliminaTecnica";
+            this.GB_EliminaTecnica.Size = new System.Drawing.Size(377, 203);
+            this.GB_EliminaTecnica.TabIndex = 50;
+            this.GB_EliminaTecnica.TabStop = false;
+            this.GB_EliminaTecnica.Text = "Eliminar Técnica";
             // 
-            // TXT_FechaCambiar
+            // label2
             // 
-            this.TXT_FechaCambiar.Location = new System.Drawing.Point(0, 360);
-            this.TXT_FechaCambiar.Name = "TXT_FechaCambiar";
-            this.TXT_FechaCambiar.Size = new System.Drawing.Size(10, 20);
-            this.TXT_FechaCambiar.TabIndex = 26;
-            this.TXT_FechaCambiar.Visible = false;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Nombre:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nombre:";
+            // 
+            // CB_AgregaTecnica
+            // 
+            this.CB_AgregaTecnica.FormattingEnabled = true;
+            this.CB_AgregaTecnica.Location = new System.Drawing.Point(85, 46);
+            this.CB_AgregaTecnica.Name = "CB_AgregaTecnica";
+            this.CB_AgregaTecnica.Size = new System.Drawing.Size(176, 21);
+            this.CB_AgregaTecnica.TabIndex = 1;
+            // 
+            // CB_EliminaTecnica
+            // 
+            this.CB_EliminaTecnica.FormattingEnabled = true;
+            this.CB_EliminaTecnica.Location = new System.Drawing.Point(85, 55);
+            this.CB_EliminaTecnica.Name = "CB_EliminaTecnica";
+            this.CB_EliminaTecnica.Size = new System.Drawing.Size(176, 21);
+            this.CB_EliminaTecnica.TabIndex = 1;
+            // 
+            // BTN_AgregaTecnica
+            // 
+            this.BTN_AgregaTecnica.Location = new System.Drawing.Point(263, 118);
+            this.BTN_AgregaTecnica.Name = "BTN_AgregaTecnica";
+            this.BTN_AgregaTecnica.Size = new System.Drawing.Size(87, 40);
+            this.BTN_AgregaTecnica.TabIndex = 2;
+            this.BTN_AgregaTecnica.Text = "Agregar";
+            this.BTN_AgregaTecnica.UseVisualStyleBackColor = true;
+            this.BTN_AgregaTecnica.Click += new System.EventHandler(this.BTN_AgregaTecnica_Click);
+            // 
+            // BTN_EliminarTecnica
+            // 
+            this.BTN_EliminarTecnica.Location = new System.Drawing.Point(263, 145);
+            this.BTN_EliminarTecnica.Name = "BTN_EliminarTecnica";
+            this.BTN_EliminarTecnica.Size = new System.Drawing.Size(87, 42);
+            this.BTN_EliminarTecnica.TabIndex = 2;
+            this.BTN_EliminarTecnica.Text = "Eliminar";
+            this.BTN_EliminarTecnica.UseVisualStyleBackColor = true;
+            this.BTN_EliminarTecnica.Click += new System.EventHandler(this.BTN_EliminarTecnica_Click);
+            // 
+            // LINK_Atras
+            // 
+            this.LINK_Atras.AutoSize = true;
+            this.LINK_Atras.Location = new System.Drawing.Point(17, 44);
+            this.LINK_Atras.Name = "LINK_Atras";
+            this.LINK_Atras.Size = new System.Drawing.Size(43, 13);
+            this.LINK_Atras.TabIndex = 51;
+            this.LINK_Atras.TabStop = true;
+            this.LINK_Atras.Text = "<<Atrás";
+            this.LINK_Atras.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_Atras_LinkClicked);
             // 
             // ModificarCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(940, 498);
+            this.Controls.Add(this.LINK_Atras);
+            this.Controls.Add(this.GB_EliminaTecnica);
+            this.Controls.Add(this.GB_AgregaTecnica);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.GB_Modificar);
             this.Controls.Add(this.label1);
@@ -335,6 +438,10 @@
             this.GB_Modificar.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.GB_AgregaTecnica.ResumeLayout(false);
+            this.GB_AgregaTecnica.PerformLayout();
+            this.GB_EliminaTecnica.ResumeLayout(false);
+            this.GB_EliminaTecnica.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,5 +478,14 @@
         private System.Windows.Forms.TextBox TXT_FechaCambiar;
         private System.Windows.Forms.TextBox TXT_PadeCambiar;
         private System.Windows.Forms.TextBox TXT_CeduCambiar;
+        private System.Windows.Forms.GroupBox GB_AgregaTecnica;
+        private System.Windows.Forms.GroupBox GB_EliminaTecnica;
+        private System.Windows.Forms.Button BTN_AgregaTecnica;
+        private System.Windows.Forms.ComboBox CB_AgregaTecnica;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button BTN_EliminarTecnica;
+        private System.Windows.Forms.ComboBox CB_EliminaTecnica;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel LINK_Atras;
     }
 }
