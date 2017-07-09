@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.gb_informacionDeLaTecnica = new System.Windows.Forms.GroupBox();
-            this.BTN_EliminarMaterial = new System.Windows.Forms.Button();
+            this.BTN_EliminarTecnica = new System.Windows.Forms.Button();
             this.NUD_Precio = new System.Windows.Forms.NumericUpDown();
             this.TXT_Descripcion = new System.Windows.Forms.TextBox();
             this.TXT_Nombre = new System.Windows.Forms.TextBox();
@@ -72,7 +72,7 @@
             // 
             // gb_informacionDeLaTecnica
             // 
-            this.gb_informacionDeLaTecnica.Controls.Add(this.BTN_EliminarMaterial);
+            this.gb_informacionDeLaTecnica.Controls.Add(this.BTN_EliminarTecnica);
             this.gb_informacionDeLaTecnica.Controls.Add(this.NUD_Precio);
             this.gb_informacionDeLaTecnica.Controls.Add(this.TXT_Descripcion);
             this.gb_informacionDeLaTecnica.Controls.Add(this.TXT_Nombre);
@@ -86,18 +86,18 @@
             this.gb_informacionDeLaTecnica.TabStop = false;
             this.gb_informacionDeLaTecnica.Text = "Información de la técnica";
             // 
-            // BTN_EliminarMaterial
+            // BTN_EliminarTecnica
             // 
-            this.BTN_EliminarMaterial.BackColor = System.Drawing.Color.Red;
-            this.BTN_EliminarMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_EliminarMaterial.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.BTN_EliminarMaterial.Location = new System.Drawing.Point(197, 171);
-            this.BTN_EliminarMaterial.Name = "BTN_EliminarMaterial";
-            this.BTN_EliminarMaterial.Size = new System.Drawing.Size(97, 23);
-            this.BTN_EliminarMaterial.TabIndex = 9;
-            this.BTN_EliminarMaterial.Text = "Eliminar material";
-            this.BTN_EliminarMaterial.UseVisualStyleBackColor = false;
-            this.BTN_EliminarMaterial.Click += new System.EventHandler(this.BTN_EliminarMaterial_Click);
+            this.BTN_EliminarTecnica.BackColor = System.Drawing.Color.Red;
+            this.BTN_EliminarTecnica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_EliminarTecnica.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.BTN_EliminarTecnica.Location = new System.Drawing.Point(197, 171);
+            this.BTN_EliminarTecnica.Name = "BTN_EliminarTecnica";
+            this.BTN_EliminarTecnica.Size = new System.Drawing.Size(97, 23);
+            this.BTN_EliminarTecnica.TabIndex = 9;
+            this.BTN_EliminarTecnica.Text = "Eliminar técnica";
+            this.BTN_EliminarTecnica.UseVisualStyleBackColor = false;
+            this.BTN_EliminarTecnica.Click += new System.EventHandler(this.BTN_EliminarTecnica_Click);
             // 
             // NUD_Precio
             // 
@@ -422,7 +422,7 @@
         private System.Windows.Forms.Label lbl_descripcion;
         private System.Windows.Forms.Label lbl_precio;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button BTN_EliminarMaterial;
+        private System.Windows.Forms.Button BTN_EliminarTecnica;
         private System.Windows.Forms.GroupBox GB_EliminarMateriales;
         private System.Windows.Forms.ComboBox CB_MaterialesRequeridos;
         private System.Windows.Forms.Button BTN_EliminarRequisito;

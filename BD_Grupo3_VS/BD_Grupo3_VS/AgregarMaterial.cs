@@ -47,7 +47,14 @@ namespace BD_Grupo3_VS
             }
         }
 
-        /*  A partir de aqui empiezan los metodos para la cinta del menu    */
+        private void LNK_Volver_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MenuConfig menu = new MenuConfig();
+            menu.Show();
+            this.Dispose();
+        }
+
+        #region Métodos del Menu Strip
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
@@ -128,6 +135,6 @@ namespace BD_Grupo3_VS
             ejercicio.Show();
             this.Dispose();
         }
-        /*  Hasta aqui las instrucciones de la cinta del menu   */
+        #endregion
     }
 }

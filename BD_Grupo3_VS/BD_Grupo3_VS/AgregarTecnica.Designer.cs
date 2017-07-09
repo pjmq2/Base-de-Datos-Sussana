@@ -53,6 +53,7 @@
             this.crearEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarEjercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LNK_Volver = new System.Windows.Forms.LinkLabel();
             this.GB_InformacionTecnica.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Precio)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -274,11 +275,23 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // LNK_Volver
+            // 
+            this.LNK_Volver.AutoSize = true;
+            this.LNK_Volver.Location = new System.Drawing.Point(435, 24);
+            this.LNK_Volver.Name = "LNK_Volver";
+            this.LNK_Volver.Size = new System.Drawing.Size(77, 13);
+            this.LNK_Volver.TabIndex = 51;
+            this.LNK_Volver.TabStop = true;
+            this.LNK_Volver.Text = "Volver al menú";
+            this.LNK_Volver.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LNK_Volver_LinkClicked);
+            // 
             // AgregarTecnica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 311);
+            this.Controls.Add(this.LNK_Volver);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.GB_InformacionTecnica);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -321,5 +334,6 @@
         private System.Windows.Forms.ToolStripMenuItem crearEjercicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarEjercicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.LinkLabel LNK_Volver;
     }
 }

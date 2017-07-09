@@ -25,11 +25,6 @@ namespace BD_Grupo3_VS
             tecnica = new Tecnica();
         }
 
-        private void BTN_EliminarMaterial_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BTN_Guardar_Click(object sender, EventArgs e)
         {
             //Falta código principal
@@ -43,9 +38,14 @@ namespace BD_Grupo3_VS
             NUD_Precio.Value = 0;
         }
 
+        private void BTN_EliminarTecnica_Click(object sender, EventArgs e)
+        {
+            int result;
+        }
+
         private void BTN_EliminarRequisito_Click(object sender, EventArgs e)
         {
-
+            int result;
         }
 
         private void BTN_AñadirRequisito_Click(object sender, EventArgs e)
@@ -89,6 +89,7 @@ namespace BD_Grupo3_VS
             this.llenarMateriales();
         }
 
+        #region Métodos de Text Changed
         private void TXT_Nombre_TextChanged(object sender, EventArgs e)
         {
             if (cambios)
@@ -121,8 +122,9 @@ namespace BD_Grupo3_VS
             }
             cambios = true;
         }
+        #endregion
 
-        /*  A partir de aqui empiezan los metodos para la cinta del menu    */
+        #region Métodos del Menu Strip
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
@@ -203,6 +205,6 @@ namespace BD_Grupo3_VS
             ejercicio.Show();
             this.Hide();
         }
-        /*  Hasta aqui las instrucciones de la cinta del menu   */
+        #endregion
     }
 }
