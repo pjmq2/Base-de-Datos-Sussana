@@ -26,22 +26,22 @@ EXEC agregarUsuario N'admin', N'admin17', @bit OUTPUT
 print @bit
 
 SELECT * FROM Usuario
-
-
+delete from Usuario
 
 ---
 GO
 CREATE PROCEDURE dbo.Login
-	@pLoginName nvarchar(50),
+	@pLoginName nvarchar(254),
 	@pPassword nvarchar(50),
 	@isInDB bit = 0 OUTPUT
 AS
 BEGIN
 	SET NOCOUNT ON
-	DECLARE @userID	INT
+	DECLARE @userID	NVARCHAR(254)
 	IF EXISTS (SELECT TOP 1 nombreUsuario FROM [dbo].[Usuario] WHERE nombreUsuario = @pLoginName)
 	BEGIN
-		SET @userID = (SELECT nombreUsuario FROM [dbo].[Usuario] WHERE nombreUsuario = @pLoginName AND passwordHash = HASHBYTES('SHA_512', @pPassword + CAST(SALT AS NVARCHAR(36))))
+	
+		SET @userID = (SELECT nombreUsuario FROM [dbo].[Usuario] WHERE nombreUsuario = @pLoginName AND passwordHash = HASHBYTES('SHA2_512', @pPassword + CAST(salt AS NVARCHAR(36))))
 		IF(@userID IS NULL)
 		BEGIN
 			SET @isInDB = 0
@@ -51,17 +51,15 @@ BEGIN
 	END
 	ELSE
 		SET @isInDB = 0
+			
 END
 
 DROP PROCEDURE Login
 
-DECLARE  @isInDB2 bit
-EXEC Login
-	@pLoginName = N'admin',
-	@pPassword = N'admin17',
-	@isInDB = @isInDB2 OUTPUT;
-SELECT @isInDB2 as N'@isInDB';
-
+declare @isInDB2 bit
+exec Login @pLoginName = N'admin', @pPassword = N'admin17', @isInDB = @isInDB2 OUTPUT
+select @isInDB2 as N'@isInDB'
+ 
 ---
 GO
 CREATE PROCEDURE consultaTodasCitas

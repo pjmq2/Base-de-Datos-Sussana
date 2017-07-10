@@ -35,7 +35,10 @@
             this.lContraseña = new System.Windows.Forms.Label();
             this.lUsuario = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.AgregarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GB_inicioDeSesion.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // GB_inicioDeSesion
@@ -46,7 +49,7 @@
             this.GB_inicioDeSesion.Controls.Add(this.lContraseña);
             this.GB_inicioDeSesion.Controls.Add(this.lUsuario);
             this.GB_inicioDeSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GB_inicioDeSesion.Location = new System.Drawing.Point(40, 30);
+            this.GB_inicioDeSesion.Location = new System.Drawing.Point(45, 62);
             this.GB_inicioDeSesion.Name = "GB_inicioDeSesion";
             this.GB_inicioDeSesion.Size = new System.Drawing.Size(300, 200);
             this.GB_inicioDeSesion.TabIndex = 0;
@@ -101,11 +104,31 @@
             this.lUsuario.TabIndex = 1;
             this.lUsuario.Text = "Usuario:";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AgregarUsuarioToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(384, 24);
+            this.menuStrip1.TabIndex = 23;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // AgregarUsuarioToolStripMenuItem
+            // 
+            this.AgregarUsuarioToolStripMenuItem.Name = "AgregarUsuarioToolStripMenuItem";
+            this.AgregarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
+            this.AgregarUsuarioToolStripMenuItem.Text = "Agregar usuario";
+            this.AgregarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.AgregarUsuarioToolStripMenuItem_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 261);
+            this.ClientSize = new System.Drawing.Size(384, 288);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.GB_inicioDeSesion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Login";
@@ -114,7 +137,10 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.GB_inicioDeSesion.ResumeLayout(false);
             this.GB_inicioDeSesion.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -127,5 +153,7 @@
         private System.Windows.Forms.TextBox TXT_Usuario;
         private System.Windows.Forms.TextBox TXT_Password;
         private System.Windows.Forms.Button BTN_Aceptar;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem AgregarUsuarioToolStripMenuItem;
     }
 }

@@ -342,7 +342,7 @@ namespace BD_Grupo3_VS
         #endregion
 
         /*Método para llamar al procedimiento almacenado que permite agregar un nuevo usuario 
-         Recibe: el usuario y la contraseña del nuevo usuario así como la cédula del estudiante a quién se asocia ese usuario
+         Recibe: el usuario y la contraseña del nuevo usuario
          Modifica: Agrega en la base de datos un nuevo usuario
          Retorna: 1 si se pudo guardar el nuevo usuario, un número diferente a cero que corresponde al número de error
          si no se pudo insertar*/

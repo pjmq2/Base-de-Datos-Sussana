@@ -62,5 +62,12 @@ namespace BD_Grupo3_VS
                 BTN_Aceptar.Enabled = false;
             }
         }
+
+        private void AgregarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarUsuario au = new AgregarUsuario(this);
+            au.Show();
+            this.Hide();
+        }
     }
 }
