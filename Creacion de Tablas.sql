@@ -256,8 +256,14 @@ drop table PLAN_TRATAMIENTO
 drop table CIRUGIAS
 drop table PACIENTE
 
-SELECT M.Nombre
-FROM Requiere_De RD RIGHT OUTER JOIN Material M ON RD.Nombre_Mat = M.Nombre
+SELECT Nombre
+From Material
 EXCEPT
 SELECT M.Nombre
-FROM Requiere_De RD RIGHT OUTER JOIN Material M ON RD.Nombre_Mat = M.Nombre JOIN Tecnica T ON T.Nombre = RD.Nombre_Tec AND T.Nombre = 'Tec1'
+FROM Requiere_De RD JOIN Material M ON RD.Nombre_Mat = M.Nombre JOIN Tecnica T ON RD.Nombre_Tec = 'Tec1'
+
+SELECT Cantidad FROM Requiere_De WHERE Nombre_Tec = 'Tec1' AND Nombre_Mat = 'Oro'
+
+update Requiere_De 
+set Cantidad = '" + cantidad +
+                " where Nombre_Tec = '" + nombreTecnica + "' AND Nombre_Mat = '" + nombreMaterial + "'

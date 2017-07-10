@@ -68,6 +68,23 @@ Where Nombre in (SELECT * from #temp)
 
 drop table #temp
 ---
+
+GO
+Create procedure eliminarRequiereDe
+	@nombreTec	varchar(50),
+	@nombreMat	varchar(50)
+AS
+select Requiere_De.Nombre_Tec, Requiere_De.Nombre_Mat
+into #temp
+FROM Requiere_De
+Where Requiere_De.Nombre_Tec = @nombreTec AND Requiere_De.Nombre_Mat = @nombreMat
+
+Delete Requiere_De
+Where Nombre_Tec in (SELECT Nombre_Tec from #temp) AND Requiere_De.Nombre_Mat in (SELECT Nombre_Mat from #temp)
+
+drop table #temp
+---
+
 GO
 CREATE PROCEDURE eliminarPaciente 
 @cedula char(9)

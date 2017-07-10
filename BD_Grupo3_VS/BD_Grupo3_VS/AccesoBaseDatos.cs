@@ -257,6 +257,90 @@ namespace BD_Grupo3_VS
 
         }
 
+        #region Eliminación de Técnica, Material y Requiere_De
+        public int eliminarTecnica(string nombre)
+        {
+            int error = 0;
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                using (SqlCommand cmd = new SqlCommand("eliminarTecnica", con))
+                {
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = nombre;
+
+                        con.Open();
+
+                        cmd.ExecuteNonQuery();
+                        return error;
+                    }
+                    catch (SqlException ex)
+                    {
+                        error = ex.Number;
+                        return error;
+                    }
+                }
+            }
+        }
+
+        public int eliminarMaterial(string nombre)
+        {
+            int error = 0;
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                using (SqlCommand cmd = new SqlCommand("eliminarMaterial", con))
+                {
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = nombre;
+
+                        con.Open();
+
+                        cmd.ExecuteNonQuery();
+                        return error;
+                    }
+                    catch (SqlException ex)
+                    {
+                        error = ex.Number;
+                        return error;
+                    }
+                }
+            }
+        }
+
+        public int eliminarRequiereDe(string nombreTec, string nombreMat)
+        {
+            int error = 0;
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                using (SqlCommand cmd = new SqlCommand("eliminarRequiereDe", con))
+                {
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("@nombreTec", SqlDbType.VarChar).Value = nombreTec;
+                        cmd.Parameters.Add("@nombreMat", SqlDbType.VarChar).Value = nombreMat;
+
+                        con.Open();
+
+                        cmd.ExecuteNonQuery();
+                        return error;
+                    }
+                    catch (SqlException ex)
+                    {
+                        error = ex.Number;
+                        return error;
+                    }
+                }
+            }
+        }
+        #endregion
+
         /*Método para llamar al procedimiento almacenado que permite agregar un nuevo usuario 
          Recibe: el usuario y la contraseña del nuevo usuario así como la cédula del estudiante a quién se asocia ese usuario
          Modifica: Agrega en la base de datos un nuevo usuario

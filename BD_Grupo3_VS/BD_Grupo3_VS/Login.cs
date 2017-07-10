@@ -12,16 +12,27 @@ namespace BD_Grupo3_VS
 {
     public partial class Login : Form
     {
+        AccesoBaseDatos db;
         public Login()
         {
             InitializeComponent();
+            db = new AccesoBaseDatos();
         }
 
         private void bAceptar_Click(object sender, EventArgs e)
         {
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
-            this.Hide();
+            if(db.login(TXT_Usuario.Text, TXT_Password.Text)){
+                MenuPrincipal menu = new MenuPrincipal();
+                menu.Show();
+                this.Hide();
+            } else
+            {
+                MessageBox.Show("Datos de inicio de sesión no válidos.",
+                    "Datos inválidos",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            
         }
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
