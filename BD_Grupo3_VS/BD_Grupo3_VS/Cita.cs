@@ -50,8 +50,8 @@ namespace BD_Grupo3_VS
         public int agregarCita(string cedula, string padecimiento, string fechaHora, int precio, string descripcion,
             string duracion, string lugar, string estado)
         {
-            String insertar = "INSERT into CITA (CedPaciente,Padec_Act,Fecha,Precio,Descripcion,Duracion,Lugar,Estado_Paciente)" +
-                " VALUES(" +cedula+ ",'" +padecimiento+ "','" +fechaHora+ "','" + precio + "','" + descripcion + "','" + duracion + "','" + lugar + "','" + estado + "')";
+            String insertar = "INSERT into CITA (CedPaciente,Padec_Act,Fecha,Precio,PrecioTotal,Descripcion,Duracion,Lugar,Estado_Paciente)" +
+                " VALUES(" +cedula+ ",'" +padecimiento+ "','" +fechaHora+ "','" + precio + "','" + precio + "','" + descripcion + "','" + duracion + "','" + lugar + "','" + estado + "')";
             return bd.actualizarDatos(insertar);
         }
 
@@ -66,17 +66,17 @@ namespace BD_Grupo3_VS
                 }
                 if(cedula != null && fecha == null)
                 {
-                    tabla = bd.ejecutarConsultaTabla("SELECT C.CedPaciente,NombreP,Apellido1,Apellido2,C.Padec_Act,C.Fecha,Precio,Descripcion,Duracion,Lugar,Estado_Paciente " +
+                    tabla = bd.ejecutarConsultaTabla("SELECT C.CedPaciente,NombreP,Apellido1,Apellido2,C.Padec_Act,C.Fecha,Precio,PrecioTotal,Descripcion,Duracion,Lugar,Estado_Paciente " +
                         "FROM CITA C JOIN PLAN_TRATAMIENTO P ON P.CedPaciente = C.CedPaciente join Paciente A ON A.Cedula = P.CedPaciente WHERE C.CedPaciente LIKE'%" + cedula + "%'");
                 }
                 if(cedula == null && fecha != null)
                 {
-                    tabla = bd.ejecutarConsultaTabla("SELECT C.CedPaciente,A.NombreP,A.Apellido1,A.Apellido2,C.Padec_Act,C.Fecha,C.Precio,C.Descripcion,C.Duracion,C.Lugar,C.Estado_Paciente " +
+                    tabla = bd.ejecutarConsultaTabla("SELECT C.CedPaciente,A.NombreP,A.Apellido1,A.Apellido2,C.Padec_Act,C.Fecha,C.Precio,C.PrecioTotal,C.Descripcion,C.Duracion,C.Lugar,C.Estado_Paciente " +
                         "FROM CITA C JOIN PLAN_TRATAMIENTO P ON P.CedPaciente = C.CedPaciente join Paciente A ON A.Cedula = P.CedPaciente WHERE C.Fecha LIKE '%" + fecha + "%'");
                 }
                 if(cedula != null && fecha != null)
                 {
-                    tabla = bd.ejecutarConsultaTabla("SELECT C.CedPaciente,A.NombreP,A.Apellido1,A.Apellido2,C.Padec_Act,C.Fecha,C.Precio,C.Descripcion,C.Duracion,C.Lugar,C.Estado_Paciente " +
+                    tabla = bd.ejecutarConsultaTabla("SELECT C.CedPaciente,A.NombreP,A.Apellido1,A.Apellido2,C.Padec_Act,C.Fecha,C.Precio,C.PrecioTotal,C.Descripcion,C.Duracion,C.Lugar,C.Estado_Paciente " +
                         "FROM CITA C JOIN PLAN_TRATAMIENTO P ON P.CedPaciente = C.CedPaciente join Paciente A ON A.Cedula = P.CedPaciente WHERE C.Fecha LIKE '%" + fecha + "%' OR C.CedPaciente LIKE '%" + cedula + "%'");
                 }
             }catch(SqlException ex)

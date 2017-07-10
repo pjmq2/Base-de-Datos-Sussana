@@ -106,3 +106,33 @@ DECLARE @retorno decimal(4,2)
 SET @retorno = CONVERT(decimal(4,2),replace(@valor,',','.'))
 RETURN @retorno
 END
+
+CREATE TRIGGER PrecioTotalCita
+on Se_realizan after insert,delete
+as
+declare @CedPac char(9),@padec varchar(50),@fecha varchar(18), @nombreTec varchar(50),
+@cedBorrar char(9), @padBorrar varchar(50), @fechaBorrar varchar(18), @nombreTecBorrar varchar(50)
+select @CedPac = i.CedPaciente, @padec = i.Padec_Act, @fecha = i.Fecha_Cita, @nombreTec = i.Nombre_Tec
+from inserted i
+select @cedBorrar = d.CedPaciente, @padBorrar = d.Padec_Act, @fechaBorrar = d.Fecha_Cita, @nombreTecBorrar = d.Nombre_Tec
+from deleted d
+ ----Caso en que se inserta una tupla----
+ if exists(select * from inserted) and not exists (select * from deleted)
+ begin
+ update CITA
+ set PrecioTotal = PrecioTotal + (select sum(t.Precio)
+								  from SE_REALIZAN s join TECNICA t on Nombre = Nombre_Tec
+					              where Nombre_Tec = @nombreTec
+								 )
+where CedPaciente = @CedPac and Padec_Act = @padec and Fecha = @fecha
+END
+----Caso en que se borra una tupla----
+else if exists(select * from deleted) and not exists(select * from inserted)
+begin
+UPDATE CITA
+ set PrecioTotal = PrecioTotal - (select sum(t.Precio)
+								  from SE_REALIZAN s join TECNICA t on Nombre = Nombre_Tec
+					              where Nombre_Tec = @nombreTecBorrar
+								 )
+where CedPaciente = @cedBorrar and Padec_Act = @padBorrar and Fecha = @fechaBorrar
+end
