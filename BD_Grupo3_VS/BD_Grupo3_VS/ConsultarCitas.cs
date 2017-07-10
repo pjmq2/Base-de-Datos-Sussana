@@ -120,10 +120,10 @@ namespace BD_Grupo3_VS
             padecimientoC = row.Cells[4].Value.ToString();
             fechaC = row.Cells[5].Value.ToString();
             precioC = row.Cells[6].Value.ToString();
-            descripC = row.Cells[7].Value.ToString();
-            duracionC = row.Cells[8].Value.ToString();
-            lugarC = row.Cells[9].Value.ToString();
-            estadoC = row.Cells[10].Value.ToString();
+            descripC = row.Cells[8].Value.ToString();
+            duracionC = row.Cells[9].Value.ToString();
+            lugarC = row.Cells[10].Value.ToString();
+            estadoC = row.Cells[11].Value.ToString();
             ModificarCita mc = new ModificarCita(cedulaC,padecimientoC,precioC,descripC,duracionC,lugarC,estadoC,fechaC);
             mc.Show();
             this.Dispose();
