@@ -3,8 +3,7 @@ Use DB_GRUPO3
 --Tabla Usuario
 
 CREATE TABLE Usuario(
-	cedulaUsuario	char(9)	NOT NULL,
-	nombreUsuario	varchar(40)	NOT NULL,
+	nombreUsuario	varchar(40)	primary key,
 	passwordHash	binary(64)	NOT NULL,
 	salt UNIQUEIDENTIFIER
 )

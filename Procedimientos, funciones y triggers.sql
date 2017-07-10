@@ -6,24 +6,61 @@ GO
 CREATE PROCEDURE dbo.agregarUsuario
 	@pLogin NVARCHAR(50),
 	@pPassword NVARCHAR(50), 
-	@cedula char(9),
 	@estado bit OUTPUT
 AS
 BEGIN
 SET NOCOUNT ON
-	DECLARE @salt UNIQUEIDENTIFIER=NEWID()
+	DECLARE @salt UNIQUEIDENTIFIER = NEWID()
 BEGIN TRY
-	INSERT INTO dbo.[Usuario] (cedulaUsuario, nombreUsuario, PasswordHash, Salt)
-	VALUES(@cedula, @pLogin, HASHBYTES('SHA2_512', @pPassword+CAST(@salt AS 
-	NVARCHAR(36))), @salt)
-	SET @estado=1
+	INSERT INTO dbo.[Usuario] (nombreUsuario, PasswordHash, Salt)
+	VALUES(@pLogin, HASHBYTES('SHA2_512', @pPassword+CAST(@salt AS NVARCHAR(36))), @salt)
+	SET @estado = 1
 END TRY
 BEGIN CATCH
 	SET @estado=ERROR_MESSAGE()
 END CATCH
 END
 
+Declare @bit as bit
+EXEC agregarUsuario N'admin', N'admin17', @bit OUTPUT
+print @bit
 
+SELECT * FROM Usuario
+
+
+
+---
+GO
+CREATE PROCEDURE dbo.Login
+	@pLoginName nvarchar(50),
+	@pPassword nvarchar(50),
+	@isInDB bit = 0 OUTPUT
+AS
+BEGIN
+	SET NOCOUNT ON
+	DECLARE @userID	INT
+	IF EXISTS (SELECT nombreUsuario FROM [dbo].[Usuario] WHERE nombreUsuario = @pLoginName)
+	BEGIN
+		SET @userID = (SELECT nombreUsuario FROM [dbo].[Usuario] WHERE nombreUsuario = @pLoginName AND passwordHash = HASHBYTES('SHA_512', @pPassword + CAST(SALT AS nvarchar(36))))
+		IF(@userID IS NULL)
+		BEGIN
+			SET @isInDB = 0
+		END
+		ELSE
+			SET @isInDB = 1
+	END
+	ELSE
+		SET @isInDB = 0
+END
+
+DROP PROCEDURE Login
+
+DECLARE  @isInDB2 bit
+EXEC Login
+	@pLoginName = N'admin',
+	@pPassword = N'admin17',
+	@isInDB = @isInDB2 OUTPUT;
+SELECT @isInDB2 as N'@isInDB';
 
 ---
 GO
