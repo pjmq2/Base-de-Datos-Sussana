@@ -89,6 +89,7 @@
             // 
             // BTN_Guardar
             // 
+            this.BTN_Guardar.Enabled = false;
             this.BTN_Guardar.Location = new System.Drawing.Point(155, 152);
             this.BTN_Guardar.Name = "BTN_Guardar";
             this.BTN_Guardar.Size = new System.Drawing.Size(75, 23);
@@ -121,6 +122,7 @@
             this.TXT_Nombre.Name = "TXT_Nombre";
             this.TXT_Nombre.Size = new System.Drawing.Size(211, 20);
             this.TXT_Nombre.TabIndex = 1;
+            this.TXT_Nombre.TextChanged += new System.EventHandler(this.TXT_Nombre_TextChanged);
             // 
             // menuStrip1
             // 

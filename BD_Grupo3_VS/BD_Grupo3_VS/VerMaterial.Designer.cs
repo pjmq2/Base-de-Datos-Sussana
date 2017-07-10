@@ -109,6 +109,7 @@
             this.NUD_Precio.Name = "NUD_Precio";
             this.NUD_Precio.Size = new System.Drawing.Size(214, 20);
             this.NUD_Precio.TabIndex = 6;
+            this.NUD_Precio.ValueChanged += new System.EventHandler(this.NUD_Precio_ValueChanged);
             // 
             // BTN_Guardar
             // 

@@ -152,5 +152,17 @@ namespace BD_Grupo3_VS
             this.Dispose();
         }
         #endregion
+
+        private void TXT_Nombre_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(this.TXT_Nombre.Text))
+            {
+                BTN_Guardar.Enabled = true;
+            }
+            else
+            {
+                BTN_Guardar.Enabled = false;
+            }
+        }
     }
 }

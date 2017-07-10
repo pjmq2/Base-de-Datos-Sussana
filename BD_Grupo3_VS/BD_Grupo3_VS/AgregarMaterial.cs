@@ -54,6 +54,18 @@ namespace BD_Grupo3_VS
             this.Dispose();
         }
 
+        private void TXT_Nombre_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(this.TXT_Nombre.Text))
+            {
+                BTN_Guardar.Enabled = true;
+            }
+            else
+            {
+                BTN_Guardar.Enabled = false;
+            }
+        }
+
         #region Métodos del Menu Strip
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -136,5 +148,7 @@ namespace BD_Grupo3_VS
             this.Dispose();
         }
         #endregion
+
+        
     }
 }

@@ -38,14 +38,20 @@ namespace BD_Grupo3_VS
             return tabla;
         }
 
-        public int actualizarMaterial(string nombre)
+        public int actualizarMaterial(string nombre, string nuevoNombre, int nuevoPrecio)
         {
-            return 1;
+            int result;
+            string update = "update Material set Nombre = '" + nuevoNombre +
+                "', Precio = " + nuevoPrecio +
+                " where Nombre = '" + nombre + "'";
+            result = bd.actualizarDatos(update);
+            return result;
         }
 
         public int eliminarMaterial(string nombre)
         {
-            return 1;
+            int result = bd.eliminarMaterial(nombre);
+            return result;
         }
 
         public SqlDataReader obtenerListaNombres()

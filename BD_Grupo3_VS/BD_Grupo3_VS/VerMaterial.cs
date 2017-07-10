@@ -12,7 +12,7 @@ namespace BD_Grupo3_VS
 {
     public partial class VerMaterial : Form
     {
-        Material materiales;
+        Material material;
         string nombreMaterial;
         int precio;
         bool cambios = false;
@@ -22,28 +22,66 @@ namespace BD_Grupo3_VS
             nombreMaterial = nombre;
             this.precio = precio;
             InitializeComponent();
-            materiales = new Material();
+            material = new Material();
         }
 
         private void ModificarMaterial_Load(object sender, EventArgs e)
         {
-            TXT_Nombre.Text = nombreMaterial;
             NUD_Precio.Value = precio;
+            TXT_Nombre.Text = nombreMaterial;
         }
 
         private void BTN_Guardar_Click(object sender, EventArgs e)
         {
-            //Falta código principal
-            nombreMaterial = TXT_Nombre.Text;
-            TXT_Nombre.BackColor = System.Drawing.SystemColors.Window;
-            NUD_Precio.BackColor = System.Drawing.SystemColors.Window;
-            TXT_Nombre.Clear();
-            NUD_Precio.Value = 0;
+            int result = material.actualizarMaterial(nombreMaterial, TXT_Nombre.Text, (int)NUD_Precio.Value);
+            if (result == 0)
+            {
+                MessageBox.Show("El material ha sido actualizado exitosamente.",
+                    "Resultado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.None);                
+                nombreMaterial = TXT_Nombre.Text;
+                TXT_Nombre.BackColor = System.Drawing.SystemColors.Window;
+                NUD_Precio.BackColor = System.Drawing.SystemColors.Window;
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido actualizar el material.",
+                    "Resultado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
 
         private void BTN_EliminarMaterial_Click(object sender, EventArgs e)
         {
-            int result = materiales.eliminarMaterial(nombreMaterial);
+            int result = material.eliminarMaterial(nombreMaterial);
+            if (result == 0)
+            {
+                MessageBox.Show("El material ha sido borrado exitosamente.",
+                    "Resultado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.None);
+                BuscarMateriales buscarMat = new BuscarMateriales();
+                buscarMat.Show();
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido eliminar el material, intente eliminar sus requisitos primero.",
+                    "Resultado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void NUD_Precio_ValueChanged(object sender, EventArgs e)
+        {
+            if (cambios)
+            {
+                NUD_Precio.BackColor = System.Drawing.Color.LightBlue;
+            }
+
         }
 
         private void TXT_Nombre_TextChanged(object sender, EventArgs e)
@@ -52,13 +90,16 @@ namespace BD_Grupo3_VS
             {
                 TXT_Nombre.BackColor = System.Drawing.Color.LightBlue;
             }
-        }
 
-        private void NUD_Precio_TextChanged(object sender, EventArgs e)
-        {
-            if (cambios)
+            if (!string.IsNullOrWhiteSpace(this.TXT_Nombre.Text))
             {
-                NUD_Precio.BackColor = System.Drawing.Color.LightBlue;
+                BTN_Guardar.Enabled = true;
+                BTN_EliminarMaterial.Enabled = true;
+            }
+            else
+            {
+                BTN_Guardar.Enabled = false;
+                BTN_EliminarMaterial.Enabled = false;
             }
             cambios = true;
         }
@@ -68,7 +109,7 @@ namespace BD_Grupo3_VS
         {
             MenuPrincipal menu = new MenuPrincipal();
             menu.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,8 +118,8 @@ namespace BD_Grupo3_VS
             DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicación", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
-                this.Close();
-                Application.Exit();
+                this.Dispose();
+                Environment.Exit(0);
             }
         }
 
@@ -86,63 +127,63 @@ namespace BD_Grupo3_VS
         {
             MenuConfig menu = new MenuConfig();
             menu.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void crearTecnicaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AgregarTecnica tecnica = new AgregarTecnica();
             tecnica.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void buscarTecnicaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuscarTecnicas tecnicas = new BuscarTecnicas();
             tecnicas.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void crearAntecedenteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AgregarAntecedentes antecedente = new AgregarAntecedentes();
             antecedente.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void buscarAntecedenteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuscarAntecedentes antecedente = new BuscarAntecedentes();
             antecedente.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void crearMaterialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AgregarMaterial material = new AgregarMaterial();
             material.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void buscarMaterialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuscarMateriales material = new BuscarMateriales();
             material.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void crearEjercicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AgregarEjercicio ejercicio = new AgregarEjercicio();
             ejercicio.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void buscarEjercicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuscarEjercicios ejercicio = new BuscarEjercicios();
             ejercicio.Show();
-            this.Hide();
+            this.Dispose();
         }
         #endregion
     }
