@@ -1,5 +1,6 @@
 use DB_GRUPO3
 
+
 ---
 GO
 CREATE PROCEDURE dbo.agregarUsuario
@@ -22,6 +23,8 @@ BEGIN CATCH
 END CATCH
 END
 
+
+
 ---
 GO
 CREATE PROCEDURE consultaTodasCitas
@@ -30,6 +33,8 @@ SELECT C.CedPaciente,A.NombreP,A.Apellido1,A.Apellido2,C.Padec_Act, C.Fecha,C.Pr
 FROM CITA C JOIN PLAN_TRATAMIENTO P ON P.CedPaciente = C.CedPaciente and P.Pad_Actual = C.Padec_Act join Paciente A ON A.Cedula = P.CedPaciente
 
 drop procedure consultaTodasCitas
+
+
 ---
 GO
 CREATE PROCEDURE eliminarCita
@@ -37,6 +42,8 @@ CREATE PROCEDURE eliminarCita
 AS
 DELETE FROM CITA
 WHERE CedPaciente = @cedula and Fecha = @fecha
+
+
 
 ---
 GO
@@ -53,6 +60,8 @@ Where Nombre in (SELECT * from #temp)
 
 drop table #temp
 
+
+
 ---
 GO
 Create procedure eliminarTecnica
@@ -67,8 +76,10 @@ Delete Tecnicas
 Where Nombre in (SELECT * from #temp)
 
 drop table #temp
----
 
+
+
+---
 GO
 Create procedure eliminarRequiereDe
 	@nombreTec	varchar(50),
@@ -83,14 +94,19 @@ Delete Requiere_De
 Where Nombre_Tec in (SELECT Nombre_Tec from #temp) AND Requiere_De.Nombre_Mat in (SELECT Nombre_Mat from #temp)
 
 drop table #temp
----
 
+
+
+---
 GO
 CREATE PROCEDURE eliminarPaciente 
 @cedula char(9)
 AS
 delete from PACIENTE
 where PACIENTE.Cedula = @cedula
+
+
+
 ---
 GO
 CREATE PROCEDURE eliminarPlanEjercicio
@@ -100,8 +116,10 @@ CREATE PROCEDURE eliminarPlanEjercicio
 AS
 delete from PLAN_EJERCICIOS
 where CedPaciente = @cedula and Padec_Act = @padecimiento and Nivel = @nivel
----
 
+
+
+---
 GO
 CREATE PROCEDURE ModificarCita
 @cedula char(9),@padecimiento varchar(50),@fecha varchar(18), @precio int, @descripcion varchar(500), @duracion varchar(10),
@@ -114,6 +132,9 @@ SET CedPaciente = @cedula, Padec_Act = @padecimiento, Fecha = @fecha, Precio = @
 Duracion = @nuevaDuracion, Lugar = @lugar, Estado_Paciente = @estado
 where CedPaciente = @cedulaCambiar and Padec_Act = @padecimientoCambiar and Fecha = @fechaCambiar
 
+
+
+---
 CREATE FUNCTION convierteDecimal(
 @valor varchar(10))
 RETURNS decimal(4,2)
@@ -124,6 +145,9 @@ SET @retorno = CONVERT(decimal(4,2),replace(@valor,',','.'))
 RETURN @retorno
 END
 
+
+
+---
 CREATE TRIGGER PrecioTotalCita
 on Se_realizan after insert,delete
 as
