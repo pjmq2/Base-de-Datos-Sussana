@@ -52,28 +52,28 @@ namespace BD_Grupo3_VS
         {
             MenuPrincipal menu = new MenuPrincipal();
             menu.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuscarPaciente paciente = new BuscarPaciente();
             paciente.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void crearPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AgregarPaciente paciente = new AgregarPaciente();
             paciente.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void avanzadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuConfig menu = new MenuConfig();
             menu.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -82,7 +82,7 @@ namespace BD_Grupo3_VS
             DialogResult resultado = MessageBox.Show("Seguro que desea Salir ?", "Cerrar la aplicacion", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
-                this.Close();
+                this.Dispose();
                 Application.Exit();
             }
         }

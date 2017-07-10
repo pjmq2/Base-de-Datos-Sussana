@@ -62,14 +62,14 @@ namespace BD_Grupo3_VS
         {
             MenuPrincipal menu = new MenuPrincipal();
             menu.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void menuAvanzadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuConfig menu = new MenuConfig();
             menu.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -78,7 +78,7 @@ namespace BD_Grupo3_VS
             DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Cerrar la aplicacion", botones);
             if (resultado == System.Windows.Forms.DialogResult.Yes)
             {
-                this.Close();
+                this.Dispose();
                 Application.Exit();
             }
         }
@@ -87,49 +87,49 @@ namespace BD_Grupo3_VS
         {
             AgregarTecnica tecnica = new AgregarTecnica();
             tecnica.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void buscarTecnicaToolStripMenuItem_Click(object sender, EventArgs e)
         {         
             BuscarTecnicas tecnicas = new BuscarTecnicas();
             tecnicas.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void crearAntecedenteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AgregarAntecedentes antecedente = new AgregarAntecedentes();
             antecedente.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void crearMaterialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AgregarMaterial material = new AgregarMaterial();
             material.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void buscarMaterialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuscarMateriales material = new BuscarMateriales();
             material.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void crearEjercicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AgregarEjercicio ejercicio = new AgregarEjercicio();
             ejercicio.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void buscarEjercicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuscarEjercicios ejercicio = new BuscarEjercicios();
             ejercicio.Show();
-            this.Close();
+            this.Dispose();
         }
         /*             Hasta aqui las instrucciones de la cinta del menu  */
         #endregion
