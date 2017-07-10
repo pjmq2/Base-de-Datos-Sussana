@@ -21,7 +21,7 @@ namespace BD_Grupo3_VS
 
         private void bAceptar_Click(object sender, EventArgs e)
         {
-            if(!db.login(TXT_Usuario.Text, TXT_Password.Text)){
+            if(db.login(TXT_Usuario.Text, TXT_Password.Text)){
                 MenuPrincipal menu = new MenuPrincipal();
                 menu.Show();
                 this.Hide();
