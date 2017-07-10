@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DGV_PlanEjercicio = new System.Windows.Forms.DataGridView();
-            this.BTN_Buscar = new System.Windows.Forms.Button();
             this.LBL_Cedula = new System.Windows.Forms.Label();
             this.LBL_ConsultaPlanEjercicios = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -70,19 +69,6 @@
             this.DGV_PlanEjercicio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_PlanEjercicio.Size = new System.Drawing.Size(472, 122);
             this.DGV_PlanEjercicio.TabIndex = 44;
-            // 
-            // BTN_Buscar
-            // 
-            this.BTN_Buscar.Image = global::BD_Grupo3_VS.Properties.Resources.Plan_Ejercicio_Buscar;
-            this.BTN_Buscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_Buscar.Location = new System.Drawing.Point(334, 89);
-            this.BTN_Buscar.Name = "BTN_Buscar";
-            this.BTN_Buscar.Size = new System.Drawing.Size(69, 98);
-            this.BTN_Buscar.TabIndex = 43;
-            this.BTN_Buscar.Text = "Buscar Plan";
-            this.BTN_Buscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BTN_Buscar.UseVisualStyleBackColor = true;
-            this.BTN_Buscar.Click += new System.EventHandler(this.BTN_Buscar_Click);
             // 
             // LBL_Cedula
             // 
@@ -185,7 +171,6 @@
             this.Controls.Add(this.BTN_Modificar);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.DGV_PlanEjercicio);
-            this.Controls.Add(this.BTN_Buscar);
             this.Controls.Add(this.LBL_Cedula);
             this.Controls.Add(this.LBL_ConsultaPlanEjercicios);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -203,7 +188,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DGV_PlanEjercicio;
-        private System.Windows.Forms.Button BTN_Buscar;
         private System.Windows.Forms.Label LBL_Cedula;
         private System.Windows.Forms.Label LBL_ConsultaPlanEjercicios;
         private System.Windows.Forms.MenuStrip menuStrip1;

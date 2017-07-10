@@ -71,11 +71,7 @@ namespace BD_Grupo3_VS
             TXT_Cedula.Text = cedula;
             llenarTabla(DGV_PlanEjercicio);
         }
-
-        private void BTN_Buscar_Click(object sender, EventArgs e)
-        {
-            llenarTabla(DGV_PlanEjercicio);
-        }
+        
 
         private void llenarTabla(DataGridView dataGridView)
         {
