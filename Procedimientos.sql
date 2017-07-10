@@ -26,7 +26,7 @@ END
 GO
 CREATE PROCEDURE consultaTodasCitas
 AS
-SELECT C.CedPaciente,A.NombreP,A.Apellido1,A.Apellido2,C.Padec_Act, C.Fecha,C.Precio,C.Descripcion,C.Duracion,C.Lugar,C.Estado_Paciente
+SELECT C.CedPaciente,A.NombreP,A.Apellido1,A.Apellido2,C.Padec_Act, C.Fecha,C.Precio,C.PrecioTotal, C.Descripcion,C.Duracion,C.Lugar,C.Estado_Paciente
 FROM CITA C JOIN PLAN_TRATAMIENTO P ON P.CedPaciente = C.CedPaciente and P.Pad_Actual = C.Padec_Act join Paciente A ON A.Cedula = P.CedPaciente
 
 drop procedure consultaTodasCitas
