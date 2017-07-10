@@ -72,7 +72,7 @@ namespace BD_Grupo3_VS
         {
             ConsultarPlanTratamiento cp = new ConsultarPlanTratamiento(TXT_Cedula.Text);
             cp.Show();
-            this.Dispose();
+            this.Hide();
         }
 
         private void InicioToolStripMenuItem_Click_1(object sender, EventArgs e)

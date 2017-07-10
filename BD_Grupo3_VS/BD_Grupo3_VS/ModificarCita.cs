@@ -164,8 +164,9 @@ namespace BD_Grupo3_VS
             int result = cita.eliminarTecnicaCita(TXT_Cedula.Text, TXT_Padecimiento.Text, dtp_Fecha.Value.ToString("dd/MM/yyyy HH:mm"), CB_EliminaTecnica.Text);
             if (result == 0)
             {
+                llenarComboEliminar(TXT_Cedula.Text, TXT_Padecimiento.Text, dtp_Fecha.Value.ToString("dd/MM/yyyy HH:mm"));
                 MessageBox.Show("¡La técnica ha sido eliminada de la cita!", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
-
+               
             }
             else
             {
