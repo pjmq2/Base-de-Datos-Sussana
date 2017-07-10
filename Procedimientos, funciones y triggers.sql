@@ -39,9 +39,9 @@ AS
 BEGIN
 	SET NOCOUNT ON
 	DECLARE @userID	INT
-	IF EXISTS (SELECT nombreUsuario FROM [dbo].[Usuario] WHERE nombreUsuario = @pLoginName)
+	IF EXISTS (SELECT TOP 1 nombreUsuario FROM [dbo].[Usuario] WHERE nombreUsuario = @pLoginName)
 	BEGIN
-		SET @userID = (SELECT nombreUsuario FROM [dbo].[Usuario] WHERE nombreUsuario = @pLoginName AND passwordHash = HASHBYTES('SHA_512', @pPassword + CAST(SALT AS nvarchar(36))))
+		SET @userID = (SELECT nombreUsuario FROM [dbo].[Usuario] WHERE nombreUsuario = @pLoginName AND passwordHash = HASHBYTES('SHA_512', @pPassword + CAST(SALT AS NVARCHAR(36))))
 		IF(@userID IS NULL)
 		BEGIN
 			SET @isInDB = 0

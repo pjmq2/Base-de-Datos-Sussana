@@ -346,7 +346,7 @@ namespace BD_Grupo3_VS
          Modifica: Agrega en la base de datos un nuevo usuario
          Retorna: 1 si se pudo guardar el nuevo usuario, un número diferente a cero que corresponde al número de error
          si no se pudo insertar*/
-        public int agregarUsuario(string usuario, string password, string cedula)
+        public int agregarUsuario(string usuario, string password)
         {
             int error = 0;
             using (SqlConnection con = new SqlConnection(conexion))
@@ -363,7 +363,6 @@ namespace BD_Grupo3_VS
                         //Se preparan los parámetros que recibe el procedimiento almacenado
                         cmd.Parameters.Add("@pLogin", SqlDbType.VarChar).Value = usuario;
                         cmd.Parameters.Add("@pPassword", SqlDbType.VarChar).Value = password;
-                        cmd.Parameters.Add("@cedula", SqlDbType.VarChar).Value = cedula;
 
                         //se prepara el parámetro de retorno del procedimiento almacenado
                         cmd.Parameters.Add("@estado", SqlDbType.Bit).Direction = ParameterDirection.Output;
