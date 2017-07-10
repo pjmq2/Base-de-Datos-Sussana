@@ -2,13 +2,8 @@ Use DB_GRUPO3
 
 --Tabla Usuario
 
-<<<<<<< HEAD
 CREATE TABLE Usuario(
 	nombreUsuario	varchar(40)	primary key,
-=======
-CREATE TABLE Usuario(	
-	nombreUsuario	varchar(40)	NOT NULL,
->>>>>>> 70bb94bc8bb61c1b3f6a7c1fb059a8218271822b
 	passwordHash	binary(64)	NOT NULL,
 	salt UNIQUEIDENTIFIER
 )
