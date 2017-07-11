@@ -69,10 +69,21 @@ namespace BD_Grupo3_VS
         private void BTN_EliminarMaterial_Click(object sender, EventArgs e)
         {
             int result = ejercicio.eliminarejercicio(nombre);
-            MessageBox.Show("¡El ejercicio ha sido eliminado exitosamente! ", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
-            this.Close();
+            if (result == 0)
+            {
+                MessageBox.Show("¡El ejercicio ha sido eliminado exitosamente! ", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MenuPrincipal menu = new MenuPrincipal();
+                menu.Show();
+                this.Close();
+            }
+            else if (result == 547)
+            {
+                MessageBox.Show("El ejercicio esta siendo utilizado en un plan de ejercicios.\n Si desea eliminarlo, favor eliminar primero el plan de ejercicios al que pertenece", "Error", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            else
+            {
+                MessageBox.Show(result+": Ha ocurrido un error ", "Error", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
         }
 
         private void BTN_Guardar_Click(object sender, EventArgs e)
