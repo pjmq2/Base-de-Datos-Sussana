@@ -21,6 +21,7 @@ namespace BD_Grupo3_VS
             cita = new Cita();
             TXT_Cedula.Text = cedBusq;
             llenarComboBox(cedBusq);
+            TXT_Precio.Text = "0";
         }
 
         private void llenarComboBox(string cedBusq)
@@ -63,6 +64,10 @@ namespace BD_Grupo3_VS
                 {
                     MessageBox.Show("Ya existe esta cita para este paciente en esta fecha", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                }
+                else if(result == 547)
+                {
+                    MessageBox.Show("Ha ocurrido un error, verifique que ´la duración esté en el rango de 1.0 a 4.0 y que los campos obligatorios hayan sido llenados.", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -130,7 +135,7 @@ namespace BD_Grupo3_VS
 
         private void BTN_Lista_Click(object sender, EventArgs e)
         {
-            ConsultarCitas cc = new ConsultarCitas("");
+            ConsultarCitas cc = new ConsultarCitas(TXT_Cedula.Text);
             cc.Show();
             this.Dispose();
         }

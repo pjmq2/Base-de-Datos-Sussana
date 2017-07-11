@@ -13,17 +13,19 @@ namespace BD_Grupo3_VS
     public partial class ConsultarCitas : Form
     {
         Cita cita;
+        string cedula;
         
         public ConsultarCitas(string ceduBusq)
         {
             InitializeComponent();
             cita = new Cita();
-            TXT_Cedula.Text = ceduBusq;
+            LBL_CedulaValor.Text = ceduBusq;
+            cedula = ceduBusq;
         }
 
         private void ConsultarCitas_Load(object sender, EventArgs e)
         {
-           llenaTabla(dgv1,null,null);
+           llenaTabla(dgv1,cedula,null);
         }
         public void llenaTabla(DataGridView dgv, string porCedula, string porFecha)
         {
@@ -40,23 +42,23 @@ namespace BD_Grupo3_VS
 
         private void BTN_Buscar_Click(object sender, EventArgs e)
         {
-            if(TXT_Cedula.Text != "" && TXT_Fecha.Text != "")
+            if(LBL_CedulaValor.Text != "" && TXT_Fecha.Text != "")
             {
-                llenaTabla(dgv1, TXT_Cedula.Text, TXT_Fecha.Text);
+                llenaTabla(dgv1, LBL_CedulaValor.Text, TXT_Fecha.Text);
             }
-            if(TXT_Cedula.Text != "" && TXT_Fecha.Text == "")
+            if(LBL_CedulaValor.Text != "" && TXT_Fecha.Text == "")
             {
-                llenaTabla(dgv1, TXT_Cedula.Text, null);
+                llenaTabla(dgv1, LBL_CedulaValor.Text, null);
             }
-            if(TXT_Cedula.Text == "" && TXT_Fecha.Text != "")
+            if(LBL_CedulaValor.Text == "" && TXT_Fecha.Text != "")
             {
                 llenaTabla(dgv1, null, TXT_Fecha.Text);
             }
-            if(TXT_Cedula.Text == "" && TXT_Fecha.Text == "")
+            if(LBL_CedulaValor.Text == "" && TXT_Fecha.Text == "")
             {
                 llenaTabla(dgv1, null, null);
             }
-            TXT_Cedula.Clear();
+            LBL_CedulaValor.Text = "";
             TXT_Fecha.Clear();
         }
 
