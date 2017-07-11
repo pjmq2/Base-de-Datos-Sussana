@@ -5,6 +5,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
 
 namespace BD_Grupo3_VS
 {
@@ -59,5 +62,6 @@ namespace BD_Grupo3_VS
             }
             return tabla;
         }
+
     }
 }

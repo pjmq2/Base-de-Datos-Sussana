@@ -187,16 +187,17 @@ on Se_realizan after insert
 as
 declare @CedPac char(9),@padec varchar(50),@fecha varchar(18), @nombreTecnica varchar(50)
 select @CedPac = i.CedPaciente, @padec = i.Padec_Act, @fecha = i.Fecha_Cita, @nombreTecnica = i.Nombre_Tec
-from inserted i
+from inserted i 
  update CITA
  set PrecioTotal = PrecioTotal + (select sum(t.Precio)
-								  from SE_REALIZAN s join TECNICA t on Nombre = Nombre_Tec join requiere_de r on t.Nombre = r.Nombre_Tec join Material m on m.nombre = r.Nombre_Mat
+								  from inserted i join TECNICA t on t.Nombre = i.Nombre_Tec join requiere_de r on t.Nombre = r.Nombre_Tec join Material m on m.nombre = r.Nombre_Mat
 					              where t.Nombre = @nombreTecnica
 								 ) + (select sum(m.Precio*r.Cantidad)
-										from SE_REALIZAN s join TECNICA t on Nombre = Nombre_Tec join requiere_de r on t.Nombre = r.Nombre_Tec join Material m on m.nombre = r.Nombre_Mat
+										from inserted i join TECNICA t on t.Nombre = i.Nombre_Tec join requiere_de r on t.Nombre = r.Nombre_Tec join Material m on m.nombre = r.Nombre_Mat
 										where r.Nombre_Tec = @nombreTecnica
 										)
-where CedPaciente = @CedPac and Padec_Act = @padec and Fecha = @fecha
+where CedPaciente = @CedPac and Padec_Act = @padec and Fecha = @fecha 
+
 
 
 ---
@@ -209,15 +210,16 @@ select @cedBorrar = d.CedPaciente, @padBorrar = d.Padec_Act, @fechaBorrar = d.Fe
 from deleted d
 UPDATE CITA
  set PrecioTotal = PrecioTotal - (select sum(t.Precio)
-								  from SE_REALIZAN s join TECNICA t on Nombre = Nombre_Tec join requiere_de r on t.Nombre = r.Nombre_Tec join Material m on m.nombre = r.Nombre_Mat
+								  from deleted d join TECNICA t on t.Nombre = d.Nombre_Tec join requiere_de r on t.Nombre = r.Nombre_Tec join Material m on m.nombre = r.Nombre_Mat
 					              where t.Nombre = @nombreTecBorrar
 								 ) - (select sum(m.Precio*r.Cantidad)
-										from SE_REALIZAN s join TECNICA t on Nombre = Nombre_Tec join requiere_de r on t.Nombre = r.Nombre_Tec join Material m on m.nombre = r.Nombre_Mat
+										from deleted d join TECNICA t on t.Nombre = d.Nombre_Tec join requiere_de r on t.Nombre = r.Nombre_Tec join Material m on m.nombre = r.Nombre_Mat
 										where r.Nombre_Tec = @nombreTecBorrar
 										)
 where CedPaciente = @cedBorrar and Padec_Act = @padBorrar and Fecha = @fechaBorrar
 DELETE FROM SE_REALIZAN
 where CedPaciente = @cedBorrar and Padec_Act = @padBorrar and Fecha_Cita = @fechaBorrar and Nombre_Tec = @nombreTecBorrar
+
 
 
 
